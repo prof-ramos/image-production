@@ -12,6 +12,7 @@ Planejamento e pesquisa concluídos em 16/10/2026. A skill final ainda não est�
 - [Relatório de reaproveitamento](docs/planning/02-reaproveitamento.md)
 - [Arquitetura proposta](docs/planning/03-arquitetura.md)
 - [Implementação e homologação](docs/planning/04-implementacao-homologacao.md)
+- [Plano operacional sem API paga](docs/planning/05-plano-operacional-sem-api.md)
 
 ## Direção técnica
 

@@ -73,7 +73,7 @@ Convenção de nome de entrega: `AAAA-MM-DD_projeto_peca_LxA_vNN.ext`; a indica�
 | **F5 — Homologação** | Reexecutar matriz existente e cenários institucionais | Resultados observados e evidências, incluindo falhas | Todos os gates técnicos e visuais críticos aprovados |
 | **F6 — Integrações opcionais** | Testar compartilhamento oficial no Google Drive/Work, uma operação por vez | Confirmação de capacidades de leitura/escrita e destino real | Nenhuma promessa de exportação autônoma sem teste |
 
-O PR #1 registra **14 testes locais aprovados** e geração integrada real no Codex CLI 0.163.0, mas **não** homologa a revisão visual; o halo persistiu inclusive após edição. [Evidência de homologação parcial](https://github.com/prof-ramos/image-production/blob/feat/image-production-v1/docs/validation/v1-macos.md). Até a revisão do PR, esses recursos não devem ser descritos como já disponíveis em `main`.
+O PR #1 registra **14 testes locais aprovados** e geração integrada real no Codex CLI 0.163.0, mas **não** homologa a revisão visual; o halo persistiu inclusive após edição. [Evidência de homologação parcial](https://github.com/prof-ramos/image-production/blob/8d604bbacb9e2a8ccccb924a2bd9b811cf5021d2/docs/validation/v1-macos.md). Até a revisão do PR, esses recursos não devem ser descritos como já disponíveis em `main`.
 
 ## 6. Operação cotidiana
 
