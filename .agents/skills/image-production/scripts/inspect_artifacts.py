@@ -29,7 +29,10 @@ def now():
 
 
 def safe_path(value):
-    p = Path(value).expanduser()
+    try:
+        p = Path(value).expanduser()
+    except RuntimeError as error:
+        raise ValueError('Cannot resolve home directory') from error
     if '..' in p.parts:
         raise ValueError('Parent traversal is not allowed')
     p = p.absolute()
@@ -39,9 +42,8 @@ def safe_path(value):
     return p
 
 
-def inside(root, relative):
-    """Return one absolute path that is strictly inside a confined root."""
-    root = safe_path(root)
+def relative_path(relative):
+    """Validate manifest path syntax without requiring its artifact to exist."""
     relative = Path(relative)
     if relative.is_absolute():
         raise ValueError('Manifest paths must be relative')
@@ -49,6 +51,15 @@ def inside(root, relative):
         raise ValueError('Manifest paths must stay inside the run')
     if any(part == '..' for part in relative.parts):
         raise ValueError('Parent traversal is not allowed')
+    if '\x00' in str(relative):
+        raise ValueError('Manifest paths must not contain null bytes')
+    return relative
+
+
+def inside(root, relative):
+    """Return one absolute path that is strictly inside a confined root."""
+    root = safe_path(root)
+    relative = relative_path(relative)
     result = safe_path(root / relative)
     if result == root or not result.is_relative_to(root):
         raise ValueError('Manifest paths must stay inside the run')
@@ -60,7 +71,10 @@ def digest(data):
 
 
 def read_json(path):
-    return json.loads(safe_path(path).read_text(encoding='utf-8'))
+    try:
+        return json.loads(safe_path(path).read_text(encoding='utf-8'))
+    except RecursionError as error:
+        raise ValueError('JSON nesting is too deep') from error
 
 
 def write_new(path, data):
@@ -90,25 +104,28 @@ def inspect(path, transparent=False):
     if not path.is_file():
         raise ValueError('Image source must be an existing regular file')
     data = path.read_bytes()
-    with warnings.catch_warnings():
-        warnings.simplefilter('error', Image.DecompressionBombWarning)
-        with Image.open(path) as im:
-            if im.format not in {'PNG', 'JPEG', 'WEBP'}:
-                raise ValueError('Only PNG, JPEG and WebP are supported')
-            if getattr(im, 'n_frames', 1) != 1:
-                raise ValueError('Animated images are not supported')
-            im.load()
-            rgba = im.convert('RGBA')
-            histogram = rgba.getchannel('A').histogram()
-            visible = sum(histogram[1:])
-            if not visible:
-                raise ValueError('Image is entirely transparent')
-            has_alpha = 'A' in im.getbands() or 'transparency' in im.info
-            if transparent and (not has_alpha or not histogram[0]):
-                raise ValueError('Requested transparency requires actual transparent pixels')
-            return {'format': im.format, 'width': im.width, 'height': im.height,
-                    'bytes': len(data), 'sha256': digest(data), 'has_alpha': has_alpha,
-                    'transparent_pixels': histogram[0], 'visible_pixels': visible}
+    try:
+        with warnings.catch_warnings():
+            warnings.simplefilter('error', Image.DecompressionBombWarning)
+            with Image.open(path) as im:
+                if im.format not in {'PNG', 'JPEG', 'WEBP'}:
+                    raise ValueError('Only PNG, JPEG and WebP are supported')
+                if getattr(im, 'n_frames', 1) != 1:
+                    raise ValueError('Animated images are not supported')
+                im.load()
+                rgba = im.convert('RGBA')
+                histogram = rgba.getchannel('A').histogram()
+                visible = sum(histogram[1:])
+                if not visible:
+                    raise ValueError('Image is entirely transparent')
+                has_alpha = 'A' in im.getbands() or 'transparency' in im.info
+                if transparent and (not has_alpha or not histogram[0]):
+                    raise ValueError('Requested transparency requires actual transparent pixels')
+                return {'format': im.format, 'width': im.width, 'height': im.height,
+                        'bytes': len(data), 'sha256': digest(data), 'has_alpha': has_alpha,
+                        'transparent_pixels': histogram[0], 'visible_pixels': visible}
+    except (SyntaxError, EOFError) as error:
+        raise ValueError('Image could not be decoded') from error
 
 
 def validate_brief(b):
@@ -187,7 +204,8 @@ def validate_manifest(m):
     outputs = m.get('outputs')
     if not isinstance(brief, dict) or not isinstance(inputs, list) or not isinstance(outputs, list):
         raise ValueError('Malformed manifest')
-    if type(brief.get('transparent')) is not bool or type(brief.get('variants')) is not int:
+    if (type(brief.get('transparent')) is not bool or type(brief.get('variants')) is not int
+            or not 1 <= brief['variants'] <= 20):
         raise ValueError('Malformed manifest')
     if not isinstance(brief.get('text'), str):
         raise ValueError('Malformed manifest')
@@ -196,13 +214,20 @@ def validate_manifest(m):
             raise ValueError('Malformed manifest')
         if not isinstance(item.get('path'), str) or not isinstance(item.get('sha256'), str):
             raise ValueError('Malformed manifest')
+        relative_path(item['path'])
     required = applicable_criteria(brief, inputs)
+    output_paths = set()
     for item in outputs:
         if not isinstance(item, dict) or not isinstance(item.get('metadata'), dict) or 'review' not in item:
             raise ValueError('Malformed manifest')
         for key in ('path', 'prompt_path', 'prompt_sha256'):
             if not isinstance(item.get(key), str):
                 raise ValueError('Malformed manifest')
+        path = relative_path(item['path'])
+        relative_path(item['prompt_path'])
+        if path in output_paths:
+            raise ValueError('Duplicate output path in manifest')
+        output_paths.add(path)
         history = item.get('review_history', [])
         if not isinstance(history, list):
             raise ValueError('Malformed review history')
@@ -210,6 +235,8 @@ def validate_manifest(m):
             checked_review(item['review'], required)
         for stored in history:
             checked_review(stored, required)
+    if m['state'] == 'approved' and approval_state(outputs, brief['variants']) != 'approved':
+        raise ValueError('Approved state requires all variants and passing reviews')
     return m
 
 
@@ -239,8 +266,8 @@ def collect(args):
     data = source.read_bytes()
     if digest(data) != metadata['sha256']:
         raise ValueError('Source changed during inspection')
-    prompt = safe_path(args.prompt).read_text(encoding='utf-8')
-    if not prompt.strip():
+    encoded = safe_path(args.prompt).read_bytes()
+    if not encoded.decode('utf-8').strip():
         raise ValueError('Submitted prompt must not be empty')
     extension = {'PNG': '.png', 'JPEG': '.jpg', 'WEBP': '.webp'}[metadata['format']]
     # Exclusive creation preserves earlier outputs even on a name collision.
@@ -254,7 +281,6 @@ def collect(args):
         except FileExistsError:
             version += 1
     prompt_rel = 'work/prompt-' + str(uuid.uuid4()) + '.txt'
-    encoded = prompt.encode('utf-8')
     write_new(inside(run, prompt_rel), encoded)
     m['outputs'].append({'path': 'final/' + name, 'metadata': metadata,
                          'prompt_path': prompt_rel, 'prompt_sha256': digest(encoded), 'review': None})
@@ -382,7 +408,7 @@ def main():
         result = command(args)
         print(json.dumps(result, ensure_ascii=False))
         return 0
-    except (OSError, ValueError, KeyError, TypeError, Image.DecompressionBombError,
+    except (OSError, ValueError, KeyError, TypeError, RecursionError, Image.DecompressionBombError,
             Image.DecompressionBombWarning) as error:
         # Avoid dumping filesystem paths or arbitrary reference content into logs.
         message = str(error) if isinstance(error, ValueError) else type(error).__name__

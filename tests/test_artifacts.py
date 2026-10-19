@@ -9,6 +9,7 @@ import tempfile
 import subprocess
 import sys
 import unittest
+import zlib
 from unittest.mock import patch
 from pathlib import Path
 
@@ -97,6 +98,48 @@ class ArtifactsTest(unittest.TestCase):
         frames[0].save(p, format='WEBP', save_all=True, append_images=frames[1:])
         with self.assertRaises(ValueError):
             self.collect(run, source=p)
+
+    def test_png_decoder_syntax_error_is_a_structured_cli_failure(self):
+        source = self.root / 'broken-chunk.png'
+        Image.new('RGB', (4, 4), 'blue').save(source)
+        data = source.read_bytes()
+        chunks = [data[:8]]
+        offset = 8
+
+        def chunk(kind, payload):
+            return (len(payload).to_bytes(4, 'big') + kind + payload
+                    + zlib.crc32(kind + payload).to_bytes(4, 'big'))
+
+        while offset < len(data):
+            size = int.from_bytes(data[offset:offset + 4], 'big')
+            kind = data[offset + 4:offset + 8]
+            payload = data[offset + 8:offset + 8 + size]
+            if kind == b'IDAT':
+                chunks.extend([chunk(kind, payload[:1]), chunk(b'\x00bad', payload[1:])])
+            else:
+                chunks.append(data[offset:offset + size + 12])
+            offset += size + 12
+        source.write_bytes(b''.join(chunks))
+        run = self.prepare()
+        before = (run / 'manifest.json').read_bytes()
+        self.brief['references'] = [{'path': str(source), 'role': 'reference'}]
+        self.brief_file.write_text(json.dumps(self.brief))
+        for args in (
+                ['prepare', '--root', str(self.root / 'bad-runs'), '--brief', str(self.brief_file),
+                 '--surface', 'exec'],
+                ['collect', '--run', str(run), '--source', str(source),
+                 '--prompt', str(self.prompt), '--name', 'bad']):
+            with self.subTest(command=args[0]):
+                result = subprocess.run([sys.executable, str(SCRIPT), *args],
+                                        capture_output=True, text=True)
+                self.assertEqual(result.returncode, 2, result.stderr)
+                self.assertEqual(result.stdout, '')
+                self.assertEqual(list(json.loads(result.stderr)), ['error'])
+                self.assertNotIn('Traceback', result.stderr)
+                self.assertNotIn(str(self.root), result.stderr)
+        self.assertEqual((run / 'manifest.json').read_bytes(), before)
+        self.assertEqual(list((run / 'final').iterdir()), [])
+        self.assertFalse((self.root / 'bad-runs').exists())
 
     def test_confinement_errors_omit_paths_and_manifest_is_private(self):
         run = self.prepare()
@@ -193,6 +236,88 @@ class ArtifactsTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.review(run, asset='mug-alt.png')
         self.assertEqual(path.read_bytes(), before)
+
+    def test_approved_manifest_requires_complete_passing_reviews(self):
+        run = self.prepare()
+        self.collect(run)
+        self.review(run)
+        path = run / 'manifest.json'
+        valid = json.loads(path.read_text())
+        cases = []
+        missing = copy.deepcopy(valid)
+        missing['outputs'] = []
+        cases.append(missing)
+        pending = copy.deepcopy(valid)
+        pending['outputs'][0]['review'] = None
+        cases.append(pending)
+        failing = copy.deepcopy(valid)
+        failing['outputs'][0]['review']['criteria']['objective']['score'] = 0
+        cases.append(failing)
+        partial = copy.deepcopy(valid)
+        partial['brief']['variants'] = 2
+        cases.append(partial)
+        for broken in cases:
+            path.write_text(json.dumps(broken))
+            before = path.read_bytes()
+            with self.assertRaises(ValueError):
+                a.verify(argparse.Namespace(run=str(run)))
+            self.assertEqual(path.read_bytes(), before)
+
+    def test_manifest_variants_range_is_checked_on_resume(self):
+        run = self.prepare()
+        path = run / 'manifest.json'
+        valid = json.loads(path.read_text())
+        for variants in (0, -1, 21, True, '1'):
+            broken = copy.deepcopy(valid)
+            broken['brief']['variants'] = variants
+            path.write_text(json.dumps(broken))
+            before = path.read_bytes()
+            with self.subTest(variants=variants), self.assertRaises(ValueError):
+                a.status(argparse.Namespace(run=str(run), state='failed', reason='test'))
+            self.assertEqual(path.read_bytes(), before)
+
+    def test_duplicate_outputs_cannot_count_as_two_variants(self):
+        run = self.prepare()
+        self.collect(run)
+        self.review(run)
+        path = run / 'manifest.json'
+        valid = json.loads(path.read_text())
+        for alias in ('final/mug.png', 'final/./mug.png', 'final//mug.png'):
+            broken = copy.deepcopy(valid)
+            duplicate = copy.deepcopy(broken['outputs'][0])
+            duplicate['path'] = alias
+            broken['outputs'].append(duplicate)
+            broken['brief']['variants'] = 2
+            path.write_text(json.dumps(broken))
+            before = path.read_bytes()
+            with self.subTest(alias=alias), self.assertRaises(ValueError):
+                self.review(run)
+            self.assertEqual(path.read_bytes(), before)
+
+    def test_malformed_snapshot_paths_fail_before_status_write(self):
+        run = self.prepare(references=[{'path': str(self.image), 'role': 'reference'}])
+        self.collect(run)
+        path = run / 'manifest.json'
+        valid = json.loads(path.read_text())
+        for collection, field in (('inputs', 'path'), ('outputs', 'path'),
+                                   ('outputs', 'prompt_path')):
+            for relative in ('', '.', '../outside', '/absolute', 'final/../../outside', 'bad\x00path'):
+                broken = copy.deepcopy(valid)
+                broken[collection][0][field] = relative
+                path.write_text(json.dumps(broken))
+                before = path.read_bytes()
+                with self.subTest(field=(collection, field), relative=relative), self.assertRaises(ValueError):
+                    a.status(argparse.Namespace(run=str(run), state='failed', reason='test'))
+                self.assertEqual(path.read_bytes(), before)
+
+    def test_status_can_record_failure_when_artifacts_are_missing(self):
+        run = self.prepare()
+        self.collect(run)
+        (run / 'final/mug.png').unlink()
+        result = a.status(argparse.Namespace(run=str(run), state='failed', reason='Asset missing'))
+        self.assertEqual(result, {'state': 'failed'})
+        with self.assertRaises(ValueError):
+            a.verify(argparse.Namespace(run=str(run)))
 
     def test_invalid_stored_reviews_fail_as_json_before_any_write(self):
         run = self.prepare()
@@ -313,6 +438,86 @@ class ArtifactsTest(unittest.TestCase):
         self.assertIn('error', json.loads(result.stderr))
         self.assertEqual(result.stdout, '')
         self.assertEqual(a.load(run)[1]['outputs'], [])
+
+    def test_unexpandable_home_and_deep_json_fail_as_json(self):
+        deep = self.root / 'deep.json'
+        deep.write_text('[' * 20000 + '0' + ']' * 20000, encoding='utf-8')
+        cases = [
+            ['verify', '--run', '~imageproduction_missing_user_971620/run'],
+            ['prepare', '--root', str(self.root / 'runs'), '--brief', str(deep),
+             '--surface', 'exec'],
+        ]
+        for args in cases:
+            with self.subTest(command=args[0]):
+                result = subprocess.run([sys.executable, str(SCRIPT), *args],
+                                        capture_output=True, text=True)
+                self.assertEqual(result.returncode, 2, result.stderr)
+                self.assertEqual(result.stdout, '')
+                self.assertEqual(list(json.loads(result.stderr)), ['error'])
+                self.assertNotIn(str(self.root), result.stderr)
+                self.assertNotIn('Traceback', result.stderr)
+        self.assertFalse((self.root / 'runs').exists())
+
+    def test_prompt_snapshot_preserves_exact_utf8_bytes(self):
+        run = self.prepare()
+        submitted = 'Café azul\r\nTexto exato: Olá\r\n'.encode('utf-8')
+        self.prompt.write_bytes(submitted)
+        self.collect(run)
+        output = a.load(run)[1]['outputs'][0]
+        self.assertEqual((run / output['prompt_path']).read_bytes(), submitted)
+        self.assertEqual(output['prompt_sha256'], a.digest(submitted))
+        a.verify_manifest(run, a.load(run)[1])
+
+    def test_cli_roundtrip_png_jpeg_webp_and_resume(self):
+        def cli(*args):
+            result = subprocess.run([sys.executable, str(SCRIPT), *map(str, args)],
+                                    capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertEqual(result.stderr, '')
+            return json.loads(result.stdout)
+
+        jpeg = self.root / 'photo.dat'
+        webp = self.root / 'graphic.dat'
+        brand = self.root / 'brand.md'
+        Image.new('RGB', (8, 8), 'blue').save(jpeg, format='JPEG')
+        Image.new('RGBA', (8, 8), 'blue').save(webp, format='WEBP', lossless=True)
+        brand.write_text('Synthetic fixture: blue; no real brand', encoding='utf-8')
+        self.brief.update(variants=3, transparent=False, brand_kit=str(brand),
+                          references=[{'path': str(self.image), 'role': 'edit-target'}])
+        self.brief_file.write_text(json.dumps(self.brief), encoding='utf-8')
+        prepared = cli('prepare', '--root', self.root / 'runs', '--brief', self.brief_file,
+                       '--surface', 'exec')
+        run = Path(prepared['run'])
+        self.assertEqual(prepared['state'], 'prepared')
+        self.assertEqual(cli('status', '--run', run, '--state', 'blocked',
+                             '--reason', 'Synthetic interruption')['state'], 'blocked')
+        assets = []
+        for index, (source, extension) in enumerate(((self.image, '.png'), (jpeg, '.jpg'), (webp, '.webp'))):
+            collected = cli('collect', '--run', run, '--source', source, '--prompt', self.prompt,
+                            '--name', f'asset-{index}')
+            self.assertEqual(collected['asset'], f'asset-{index}' + extension)
+            self.assertEqual(collected['state'], 'generated')
+            assets.append(collected['asset'])
+        review_file = self.root / 'cli-review.json'
+        payload = {'reviewer': 'CLI synthetic test', 'criteria': {
+            key: {'score': 2, 'evidence': 'Synthetic assertion, not visual approval'} for key in a.CRITERIA}}
+        review_file.write_text(json.dumps(payload), encoding='utf-8')
+        for index, asset in enumerate(assets):
+            reviewed = cli('review', '--run', run, '--asset', asset, '--review', review_file)
+            self.assertEqual(reviewed['state'], 'approved' if index == 2 else 'needs_revision')
+        cli('review', '--run', run, '--asset', assets[0], '--review', review_file)
+        self.assertEqual(len(a.load(run)[1]['outputs'][0]['review_history']), 1)
+        for source in (self.image, self.prompt, jpeg, webp, brand):
+            source.unlink()
+        before = (run / 'manifest.json').read_bytes()
+        for _ in range(2):
+            self.assertEqual(cli('verify', '--run', run), {'valid': True, 'state': 'approved', 'outputs': 3})
+            self.assertEqual((run / 'manifest.json').read_bytes(), before)
+        payload['criteria']['objective']['score'] = 1
+        review_file.write_text(json.dumps(payload), encoding='utf-8')
+        self.assertEqual(cli('review', '--run', run, '--asset', assets[0],
+                             '--review', review_file)['state'], 'needs_revision')
+        self.assertEqual(cli('verify', '--run', run)['state'], 'needs_revision')
 
     def test_approval_policy_does_not_touch_files(self):
         self.assertEqual(a.applicable_criteria({'text': 'Olá', 'transparent': True},

@@ -30,6 +30,8 @@ A suíte usa fixtures sintéticas locais, sem API, credenciais ou geração paga
 
 [Resultados e limitações no Mac](docs/validation/v1-macos.md). A repetição da suíte em 19/10/2026 foi em Linux/cloud e está em [v1-linux-cloud.md](docs/validation/v1-linux-cloud.md); ela não substitui o registro do Mac. O corte interno do helper está em [refactor-log.md](docs/refactor-log.md). Artefatos de execução reais ficam em `work/` ignorado; o relatório versionado contém apenas evidências sanitizadas. Não trate testes de arquivos como homologação visual de marketing/produto/institucional.
 
+A [revisão independente de 19/10/2026](docs/validation/independent-review-20261019.md) reconcilia os comentários do PR, documenta as correções adicionais e registra 33 testes, incluindo CLI ponta a ponta para PNG/JPEG/WebP. As homologações visuais pendentes continuam separadas desses resultados técnicos.
+
 ## Planejamento e fontes
 
 - [Inventário de referências](docs/planning/01-inventario.md)

@@ -1,0 +1,42 @@
+Independent review — 19 October 2026
+Python 3.12.14; Pillow 12.3.0; Debian 13 Linux x86_64
+Command: python -m unittest discover -s tests -v
+
+test_actual_format_hash_and_no_overwrite (test_artifacts.ArtifactsTest.test_actual_format_hash_and_no_overwrite) ... ok
+test_approval_policy_does_not_touch_files (test_artifacts.ArtifactsTest.test_approval_policy_does_not_touch_files) ... ok
+test_approved_manifest_requires_complete_passing_reviews (test_artifacts.ArtifactsTest.test_approved_manifest_requires_complete_passing_reviews) ... ok
+test_blocked_status_cannot_force_approval (test_artifacts.ArtifactsTest.test_blocked_status_cannot_force_approval) ... ok
+test_brief_validation_and_brand_snapshot (test_artifacts.ArtifactsTest.test_brief_validation_and_brand_snapshot) ... ok
+test_cli_error_is_structured_and_nonzero (test_artifacts.ArtifactsTest.test_cli_error_is_structured_and_nonzero) ... ok
+test_cli_roundtrip_png_jpeg_webp_and_resume (test_artifacts.ArtifactsTest.test_cli_roundtrip_png_jpeg_webp_and_resume) ... ok
+test_confinement_errors_omit_paths_and_manifest_is_private (test_artifacts.ArtifactsTest.test_confinement_errors_omit_paths_and_manifest_is_private) ... ok
+test_corrupt_missing_and_animated_rejected (test_artifacts.ArtifactsTest.test_corrupt_missing_and_animated_rejected) ... ok
+test_duplicate_outputs_cannot_count_as_two_variants (test_artifacts.ArtifactsTest.test_duplicate_outputs_cannot_count_as_two_variants) ... ok
+test_help_remains_plain_text (test_artifacts.ArtifactsTest.test_help_remains_plain_text) ... ok
+test_invalid_name_and_parent_traversal (test_artifacts.ArtifactsTest.test_invalid_name_and_parent_traversal) ... ok
+test_invalid_stored_reviews_fail_as_json_before_any_write (test_artifacts.ArtifactsTest.test_invalid_stored_reviews_fail_as_json_before_any_write) ... ok
+test_malformed_manifest_fails_before_write (test_artifacts.ArtifactsTest.test_malformed_manifest_fails_before_write) ... ok
+test_malformed_snapshot_paths_fail_before_status_write (test_artifacts.ArtifactsTest.test_malformed_snapshot_paths_fail_before_status_write) ... ok
+test_manifest_states_match_result_schema (test_artifacts.ArtifactsTest.test_manifest_states_match_result_schema) ... ok
+test_manifest_temporary_is_private_from_creation (test_artifacts.ArtifactsTest.test_manifest_temporary_is_private_from_creation) ... ok
+test_manifest_variants_range_is_checked_on_resume (test_artifacts.ArtifactsTest.test_manifest_variants_range_is_checked_on_resume) ... ok
+test_no_visual_approval_from_metadata_or_partial_score (test_artifacts.ArtifactsTest.test_no_visual_approval_from_metadata_or_partial_score) ... ok
+test_opaque_and_all_transparent_rejected (test_artifacts.ArtifactsTest.test_opaque_and_all_transparent_rejected) ... ok
+test_parser_errors_are_json_and_nonzero (test_artifacts.ArtifactsTest.test_parser_errors_are_json_and_nonzero) ... ok
+test_png_decoder_syntax_error_is_a_structured_cli_failure (test_artifacts.ArtifactsTest.test_png_decoder_syntax_error_is_a_structured_cli_failure) ... ok
+test_prompt_snapshot_preserves_exact_utf8_bytes (test_artifacts.ArtifactsTest.test_prompt_snapshot_preserves_exact_utf8_bytes) ... ok
+test_required_gate_and_evidence_and_boolean_scores (test_artifacts.ArtifactsTest.test_required_gate_and_evidence_and_boolean_scores) ... ok
+test_roundtrip_and_resume_without_source (test_artifacts.ArtifactsTest.test_roundtrip_and_resume_without_source) ... ok
+test_status_can_record_failure_when_artifacts_are_missing (test_artifacts.ArtifactsTest.test_status_can_record_failure_when_artifacts_are_missing) ... ok
+test_stored_empty_review_cannot_approve_another_variant (test_artifacts.ArtifactsTest.test_stored_empty_review_cannot_approve_another_variant) ... ok
+test_symlink_manifest_cannot_overwrite_external_file (test_artifacts.ArtifactsTest.test_symlink_manifest_cannot_overwrite_external_file) ... ok
+test_symlink_root_and_final_directory_rejected (test_artifacts.ArtifactsTest.test_symlink_root_and_final_directory_rejected) ... ok
+test_tamper_output_input_prompt (test_artifacts.ArtifactsTest.test_tamper_output_input_prompt) ... ok
+test_unexpandable_home_and_deep_json_fail_as_json (test_artifacts.ArtifactsTest.test_unexpandable_home_and_deep_json_fail_as_json) ... ok
+test_variants_require_all_reviews (test_artifacts.ArtifactsTest.test_variants_require_all_reviews) ... ok
+test_verify_is_idempotent (test_artifacts.ArtifactsTest.test_verify_is_idempotent) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 3.651s
+
+OK
