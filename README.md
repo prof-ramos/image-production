@@ -28,7 +28,7 @@ uv run --with-requirements requirements-dev.txt python -m unittest discover -s t
 
 A suíte usa fixtures sintéticas locais, sem API, credenciais ou geração paga. O validador oficial `quick_validate.py` do Skill Creator pode ser executado contra `.agents/skills/image-production` num runtime com PyYAML. Ele valida estrutura, não comportamento.
 
-[Resultados e limitações no Mac](docs/validation/v1-macos.md). Artefatos de execução reais ficam em `work/` ignorado; o relatório versionado contém apenas evidências sanitizadas. Não trate testes de arquivos como homologação visual de marketing/produto/institucional.
+[Resultados e limitações no Mac](docs/validation/v1-macos.md). A repetição da suíte em 19/10/2026 foi em Linux/cloud e está em [v1-linux-cloud.md](docs/validation/v1-linux-cloud.md); ela não substitui o registro do Mac. Artefatos de execução reais ficam em `work/` ignorado; o relatório versionado contém apenas evidências sanitizadas. Não trate testes de arquivos como homologação visual de marketing/produto/institucional.
 
 ## Planejamento e fontes
 

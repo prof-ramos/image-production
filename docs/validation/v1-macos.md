@@ -58,3 +58,7 @@ Com o Skill Creator instalado, executar `quick_validate.py .agents/skills/image-
 Um processo por run; sem locking ou recuperação transacional de crash entre candidato e manifesto. Um crash pode deixar arquivo órfão que exige inspeção. Caminhos são verificados no acesso, sem defesa contra troca maliciosa concorrente de diretórios. Raiz de saída é escolha explícita do chamador, não allowlist de sistema. Para corretivas após coletar o número de variantes previsto, abrir outro run mantém histórico e evita ambiguidade de seleção; seleção/arquivamento de candidatos dentro do mesmo run fica para evolução futura.
 
 Não houve benchmark, homologação de impressão, OCR, grader API, teste de custos, avaliação humana de marca ou instalação em outro perfil limpo. Aprovação visual completa continua pendente; esta versão está pronta para revisão de código e uso experimental com inspeção, não para aprovação autônoma de campanhas.
+
+## Rodada posterior
+
+As seções acima permanecem o registro do Mac em 16/10/2026 e não foram reescritas nem reexecutadas. Em 19/10/2026 a suíte e o validador foram repetidos em Linux/cloud, não no Mac, depois da correção dos erros de parsing da CLI. O veredito visual das amostras com halo continua `needs_revision`. Registro: [v1-linux-cloud.md](v1-linux-cloud.md).
