@@ -1,6 +1,6 @@
 # Run contract (v1)
 
-Helper: `scripts/inspect_artifacts.py`, Python >=3.10 and Pillow >=10,<13. Commands return JSON to stdout and exit 2 with a JSON error on invalid input. No network access, SDK, image generation, conversion or API fallback. Paths in command arguments are literal paths, never shell fragments. Quote paths; do not interpolate brief text into shell code.
+Helper: `scripts/inspect_artifacts.py`, Python >=3.10 and Pillow >=10,<13. A successful command prints one JSON object to stdout and exits 0. Invalid input prints one JSON object `{"error": "..."}` to stderr, prints nothing to stdout, and exits 2. That includes argument-parsing failures: missing required flags, invalid choices, unknown subcommands and unrecognized arguments. Those failures do not print argparse usage text. `--help` stays plain text and exits 0. No network access, SDK, image generation, conversion or API fallback. Paths in command arguments are literal paths, never shell fragments. Quote paths; do not interpolate brief text into shell code.
 
 ## Prepare
 

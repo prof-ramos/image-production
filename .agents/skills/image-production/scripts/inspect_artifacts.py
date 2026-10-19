@@ -278,9 +278,21 @@ def status(args):
     return {'state': m['state']}
 
 
+def emit_error(message):
+    print(json.dumps({'error': message}), file=sys.stderr)
+
+
+class JsonArgumentParser(argparse.ArgumentParser):
+    """Parser failures use the same stderr JSON object and exit code as runtime failures."""
+
+    def error(self, message):
+        emit_error(message)
+        self.exit(2)
+
+
 def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    sub = parser.add_subparsers(dest='command', required=True)
+    parser = JsonArgumentParser(description=__doc__)
+    sub = parser.add_subparsers(dest='command', required=True, parser_class=JsonArgumentParser)
     p = sub.add_parser('prepare')
     p.add_argument('--root', required=True)
     p.add_argument('--brief', required=True)
@@ -312,7 +324,7 @@ def main():
             Image.DecompressionBombWarning) as error:
         # Avoid dumping filesystem paths or arbitrary reference content into logs.
         message = str(error) if isinstance(error, ValueError) else type(error).__name__
-        print(json.dumps({'error': message}), file=sys.stderr)
+        emit_error(message)
         return 2
 
 

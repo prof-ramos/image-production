@@ -178,6 +178,36 @@ class ArtifactsTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.review(run, changes={'brand_reference': {'score': 'na', 'evidence': 'ignored'}})
 
+    def test_parser_errors_are_json_and_nonzero(self):
+        cases = [
+            (['collect', '--run', str(self.root)], '--source'),
+            (['prepare', '--root', str(self.root), '--brief', str(self.brief_file),
+              '--surface', 'nope'], 'invalid choice'),
+            (['status', '--run', str(self.root), '--state', 'approved', '--reason', 'x'],
+             'invalid choice'),
+            (['nope'], 'invalid choice'),
+            ([], 'command'),
+            (['verify', '--run', str(self.root), '--extra', 'x'], 'unrecognized arguments'),
+        ]
+        for args, snippet in cases:
+            result = subprocess.run([sys.executable, str(SCRIPT), *args],
+                                    capture_output=True, text=True)
+            self.assertEqual(result.returncode, 2, args)
+            self.assertEqual(result.stdout, '', args)
+            self.assertFalse(result.stderr.startswith('usage:'), args)
+            self.assertEqual(result.stderr.count('\n'), 1, args)
+            payload = json.loads(result.stderr)
+            self.assertEqual(list(payload), ['error'], args)
+            self.assertIn(snippet, payload['error'], args)
+
+    def test_help_remains_plain_text(self):
+        for args in (['--help'], ['prepare', '--help']):
+            result = subprocess.run([sys.executable, str(SCRIPT), *args],
+                                    capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, args)
+            self.assertIn('usage:', result.stdout, args)
+            self.assertEqual(result.stderr, '', args)
+
     def test_cli_error_is_structured_and_nonzero(self):
         run = self.prepare()
         result = subprocess.run([sys.executable, str(SCRIPT), 'collect', '--run', str(run),
