@@ -5,7 +5,6 @@ import hashlib
 import json
 import re
 import sys
-import tempfile
 import uuid
 import warnings
 from datetime import datetime, timezone
@@ -39,11 +38,18 @@ def safe_path(value):
 
 
 def inside(root, relative):
-    p = Path(relative)
-    if p.is_absolute():
+    """Return one absolute path that is strictly inside a confined root."""
+    root = safe_path(root)
+    relative = Path(relative)
+    if relative.is_absolute():
         raise ValueError('Manifest paths must be relative')
-    result = safe_path(root / p)
-    result.relative_to(root)
+    if not relative.parts:
+        raise ValueError('Manifest paths must stay inside the run')
+    if any(part == '..' for part in relative.parts):
+        raise ValueError('Parent traversal is not allowed')
+    result = safe_path(root / relative)
+    if result == root or not result.is_relative_to(root):
+        raise ValueError('Manifest paths must stay inside the run')
     return result
 
 
@@ -65,14 +71,13 @@ def save(run, m):
     m['updated_at'] = now()
     data = json.dumps(m, ensure_ascii=False, indent=2).encode('utf-8')
     # Same-directory replacement avoids a partially written manifest.
-    temp = None
+    temp = inside(run, '.manifest-' + uuid.uuid4().hex + '.tmp')
     try:
-        with tempfile.NamedTemporaryFile(dir=run, prefix='.manifest-', delete=False) as f:
-            temp = Path(f.name)
-            f.write(data)
+        write_new(temp, data)
+        temp.chmod(0o600)
         temp.replace(target)
     finally:
-        if temp and temp.exists():
+        if temp.exists():
             temp.unlink()
 
 

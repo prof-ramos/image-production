@@ -94,6 +94,18 @@ class ArtifactsTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.collect(run, source=p)
 
+    def test_confinement_errors_omit_paths_and_manifest_is_private(self):
+        run = self.prepare()
+        for relative in ('../escape', '', '/tmp/outside', 'final/../../outside'):
+            with self.assertRaises(ValueError) as caught:
+                a.inside(run, relative)
+            message = str(caught.exception)
+            self.assertNotIn(str(run), message)
+            self.assertNotIn(str(self.root), message)
+        self.collect(run)
+        self.assertEqual(list(run.glob('.manifest-*')), [])
+        self.assertEqual((run / 'manifest.json').stat().st_mode & 0o777, 0o600)
+
     def test_invalid_name_and_parent_traversal(self):
         run = self.prepare()
         for name in ('../escape', '/absolute', 'mug.png', 'a;touch nope'):
