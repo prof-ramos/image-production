@@ -228,29 +228,27 @@ def collect(args):
     return {'asset': name, 'state': m['state'], 'metadata': metadata}
 
 
-def review(args):
-    run, m = load(args.run)
-    verify_manifest(run, m)
-    if Path(args.asset).name != args.asset:
-        raise ValueError('Review asset must be a filename')
-    item = next((x for x in m['outputs'] if x['path'] == 'final/' + args.asset), None)
-    if item is None:
-        raise ValueError('Unknown asset')
-    r = read_json(args.review)
-    if not isinstance(r, dict) or not isinstance(r.get('reviewer'), str) or not r['reviewer'].strip():
+def applicable_criteria(brief, inputs):
+    """Criteria that cannot be na for this brief. Core three are always required."""
+    required = {'objective', 'composition', 'visual_integrity'}
+    if brief['text']:
+        required.add('text_facts')
+    if inputs:
+        required.add('brand_reference')
+    if any(item['role'] == 'edit-target' for item in inputs):
+        required.add('preservation')
+    if brief['transparent']:
+        required.add('transparency')
+    return required
+
+
+def checked_review(payload, required):
+    """Validate a review document. Does not read the clock or the filesystem."""
+    if not isinstance(payload, dict) or not isinstance(payload.get('reviewer'), str) or not payload['reviewer'].strip():
         raise ValueError('Reviewer required')
-    criteria = r.get('criteria')
+    criteria = payload.get('criteria')
     if not isinstance(criteria, dict) or set(criteria) != CRITERIA:
         raise ValueError('Review must contain all seven rubric criteria')
-    required = {'objective', 'composition', 'visual_integrity'}
-    if m['brief']['text']:
-        required.add('text_facts')
-    if m['inputs']:
-        required.add('brand_reference')
-    if any(x['role'] == 'edit-target' for x in m['inputs']):
-        required.add('preservation')
-    if m['brief']['transparent']:
-        required.add('transparency')
     for key, entry in criteria.items():
         if not isinstance(entry, dict):
             raise ValueError('Invalid criterion')
@@ -261,12 +259,29 @@ def review(args):
             raise ValueError('Evidence/reason required for every criterion')
         if key in required and score == 'na':
             raise ValueError('Applicable criterion cannot be na: ' + key)
+    return {'reviewer': payload['reviewer'], 'criteria': criteria}
+
+
+def approval_state(outputs, variants):
+    """approved only when every collected output passes and the count matches."""
+    passed = all(item['review'] is not None and all(
+        entry['score'] in (2, 'na') for entry in item['review']['criteria'].values()) for item in outputs)
+    return 'approved' if passed and len(outputs) == variants else 'needs_revision'
+
+
+def review(args):
+    run, m = load(args.run)
+    verify_manifest(run, m)
+    if Path(args.asset).name != args.asset:
+        raise ValueError('Review asset must be a filename')
+    item = next((x for x in m['outputs'] if x['path'] == 'final/' + args.asset), None)
+    if item is None:
+        raise ValueError('Unknown asset')
+    checked = checked_review(read_json(args.review), applicable_criteria(m['brief'], m['inputs']))
     if item['review'] is not None:
         item.setdefault('review_history', []).append(item['review'])
-    item['review'] = {'reviewer': r['reviewer'], 'criteria': criteria, 'reviewed_at': now()}
-    passed = all(x['review'] is not None and all(
-        e['score'] in (2, 'na') for e in x['review']['criteria'].values()) for x in m['outputs'])
-    m['state'] = 'approved' if passed and len(m['outputs']) == m['brief']['variants'] else 'needs_revision'
+    item['review'] = {**checked, 'reviewed_at': now()}
+    m['state'] = approval_state(m['outputs'], m['brief']['variants'])
     m['error'] = None
     save(run, m)
     return {'state': m['state'], 'asset': args.asset}

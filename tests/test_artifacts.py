@@ -230,6 +230,23 @@ class ArtifactsTest(unittest.TestCase):
         self.assertEqual(result.stdout, '')
         self.assertEqual(a.load(run)[1]['outputs'], [])
 
+    def test_approval_policy_does_not_touch_files(self):
+        self.assertEqual(a.applicable_criteria({'text': 'Olá', 'transparent': True},
+                                                [{'role': 'edit-target'}]), a.CRITERIA)
+        self.assertEqual(a.applicable_criteria({'text': '', 'transparent': False}, []),
+                         {'objective', 'composition', 'visual_integrity'})
+        pending = [{'review': None}]
+        self.assertEqual(a.approval_state(pending, 1), 'needs_revision')
+        passing = [{'review': {'criteria': {'objective': {'score': 2}, 'text_facts': {'score': 'na'}}}}]
+        self.assertEqual(a.approval_state(passing, 1), 'approved')
+        self.assertEqual(a.approval_state(passing, 2), 'needs_revision')
+        passing[0]['review']['criteria']['objective'] = {'score': 1}
+        self.assertEqual(a.approval_state(passing, 1), 'needs_revision')
+        with self.assertRaises(ValueError):
+            a.checked_review({'reviewer': 'unit-test', 'criteria': {
+                key: {'score': True, 'evidence': 'bool is not an int'} for key in a.CRITERIA
+            }}, {'objective'})
+
     def test_verify_is_idempotent(self):
         run = self.prepare()
         self.collect(run)
