@@ -247,6 +247,25 @@ class ArtifactsTest(unittest.TestCase):
                 key: {'score': True, 'evidence': 'bool is not an int'} for key in a.CRITERIA
             }}, {'objective'})
 
+    def test_malformed_manifest_fails_before_write(self):
+        run = self.prepare()
+        self.collect(run)
+        path = run / 'manifest.json'
+        manifest = json.loads(path.read_text(encoding='utf-8'))
+        del manifest['outputs'][0]['prompt_path']
+        path.write_text(json.dumps(manifest), encoding='utf-8')
+        before = path.read_bytes()
+        with self.assertRaises(ValueError) as caught:
+            a.load(run)
+        self.assertEqual(str(caught.exception), 'Malformed manifest')
+        with self.assertRaises(ValueError):
+            a.status(argparse.Namespace(run=str(run), state='failed', reason='must not write'))
+        self.assertEqual(path.read_bytes(), before)
+
+    def test_manifest_states_match_result_schema(self):
+        schema = json.loads((SCRIPT.parents[1] / 'references' / 'result.schema.json').read_text(encoding='utf-8'))
+        self.assertEqual(set(schema['properties']['state']['enum']), a.STATES)
+
     def test_verify_is_idempotent(self):
         run = self.prepare()
         self.collect(run)

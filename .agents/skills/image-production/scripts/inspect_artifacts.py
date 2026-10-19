@@ -14,6 +14,7 @@ from PIL import Image
 
 CRITERIA = {'objective', 'text_facts', 'composition', 'brand_reference',
             'visual_integrity', 'preservation', 'transparency'}
+STATES = {'prepared', 'generated', 'needs_revision', 'approved', 'blocked', 'failed'}
 ROLES = {'reference', 'edit-target', 'insert', 'brand-kit'}
 USE_CASES = set('photorealistic-natural product-mockup ui-mockup infographic-diagram '
                 'scientific-educational ads-marketing productivity-visual logo-brand '
@@ -170,17 +171,40 @@ def prepare(args):
     return {'run': str(run), 'manifest': str(run / 'manifest.json'), 'state': m['state']}
 
 
-def load(run_value):
-    run = safe_path(run_value)
-    m = read_json(inside(run, 'manifest.json'))
+def validate_manifest(m):
+    """Check the shape commands read. Do not reopen original reference files."""
     if not isinstance(m, dict):
         raise ValueError('Manifest must be an object')
     if m.get('schema_version') != 1 or m.get('mode') != 'built-in':
         raise ValueError('Unsupported manifest')
-    validate_brief_shape = m.get('brief')
-    if not isinstance(validate_brief_shape, dict) or not isinstance(m.get('outputs'), list):
+    if m.get('state') not in STATES:
         raise ValueError('Malformed manifest')
-    return run, m
+    brief = m.get('brief')
+    inputs = m.get('inputs')
+    outputs = m.get('outputs')
+    if not isinstance(brief, dict) or not isinstance(inputs, list) or not isinstance(outputs, list):
+        raise ValueError('Malformed manifest')
+    if type(brief.get('transparent')) is not bool or type(brief.get('variants')) is not int:
+        raise ValueError('Malformed manifest')
+    if not isinstance(brief.get('text'), str):
+        raise ValueError('Malformed manifest')
+    for item in inputs:
+        if not isinstance(item, dict) or item.get('role') not in ROLES:
+            raise ValueError('Malformed manifest')
+        if not isinstance(item.get('path'), str) or not isinstance(item.get('sha256'), str):
+            raise ValueError('Malformed manifest')
+    for item in outputs:
+        if not isinstance(item, dict) or not isinstance(item.get('metadata'), dict) or 'review' not in item:
+            raise ValueError('Malformed manifest')
+        for key in ('path', 'prompt_path', 'prompt_sha256'):
+            if not isinstance(item.get(key), str):
+                raise ValueError('Malformed manifest')
+    return m
+
+
+def load(run_value):
+    run = safe_path(run_value)
+    return run, validate_manifest(read_json(inside(run, 'manifest.json')))
 
 
 def verify_manifest(run, m):
