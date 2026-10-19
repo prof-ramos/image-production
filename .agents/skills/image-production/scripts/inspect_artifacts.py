@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import os
 import re
 import sys
 import uuid
@@ -74,7 +75,9 @@ def save(run, m):
     # Same-directory replacement avoids a partially written manifest.
     temp = inside(run, '.manifest-' + uuid.uuid4().hex + '.tmp')
     try:
-        write_new(temp, data)
+        # Set owner-only access at exclusive creation, before any brief bytes.
+        with open(temp, 'xb', opener=lambda path, flags: os.open(path, flags, 0o600)) as f:
+            f.write(data)
         temp.chmod(0o600)
         temp.replace(target)
     finally:
@@ -193,12 +196,20 @@ def validate_manifest(m):
             raise ValueError('Malformed manifest')
         if not isinstance(item.get('path'), str) or not isinstance(item.get('sha256'), str):
             raise ValueError('Malformed manifest')
+    required = applicable_criteria(brief, inputs)
     for item in outputs:
         if not isinstance(item, dict) or not isinstance(item.get('metadata'), dict) or 'review' not in item:
             raise ValueError('Malformed manifest')
         for key in ('path', 'prompt_path', 'prompt_sha256'):
             if not isinstance(item.get(key), str):
                 raise ValueError('Malformed manifest')
+        history = item.get('review_history', [])
+        if not isinstance(history, list):
+            raise ValueError('Malformed review history')
+        if item['review'] is not None:
+            checked_review(item['review'], required)
+        for stored in history:
+            checked_review(stored, required)
     return m
 
 

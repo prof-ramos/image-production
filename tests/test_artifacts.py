@@ -1,11 +1,15 @@
 import argparse
+import builtins
 import copy
 import importlib.util
 import json
+import os
+from contextlib import contextmanager
 import tempfile
 import subprocess
 import sys
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 from PIL import Image
@@ -176,6 +180,86 @@ class ArtifactsTest(unittest.TestCase):
         self.assertEqual(self.review(run)['state'], 'needs_revision')
         self.collect(run, name='mug-alt')
         self.assertEqual(self.review(run, asset='mug-alt.png')['state'], 'approved')
+
+    def test_stored_empty_review_cannot_approve_another_variant(self):
+        run = self.prepare(variants=2)
+        self.collect(run)
+        self.collect(run, name='mug-alt')
+        path = run / 'manifest.json'
+        manifest = json.loads(path.read_text())
+        manifest['outputs'][0]['review'] = {'criteria': {}}
+        path.write_text(json.dumps(manifest))
+        before = path.read_bytes()
+        with self.assertRaises(ValueError):
+            self.review(run, asset='mug-alt.png')
+        self.assertEqual(path.read_bytes(), before)
+
+    def test_invalid_stored_reviews_fail_as_json_before_any_write(self):
+        run = self.prepare()
+        self.collect(run)
+        self.review(run)
+        self.review(run)
+        path = run / 'manifest.json'
+        valid = json.loads(path.read_text())
+        cases = []
+        for field, value in [('review', {'criteria': {}}), ('review_history', None),
+                             ('review_history', [{'criteria': {}}])]:
+            broken = copy.deepcopy(valid)
+            broken['outputs'][0][field] = value
+            cases.append(broken)
+        for field in ('review', 'review_history'):
+            broken = copy.deepcopy(valid)
+            review = broken['outputs'][0][field]
+            if isinstance(review, list):
+                review = review[0]
+            review['criteria']['transparency']['score'] = 'na'
+            cases.append(broken)
+        broken = copy.deepcopy(valid)
+        broken['outputs'][0].update(review=None, review_history=[None])
+        cases.append(broken)
+        for case_index, broken in enumerate(cases):
+            for command in (['verify'], ['status', '--state', 'failed', '--reason', 'test'],
+                            ['review', '--asset', 'mug.png', '--review', str(self.root / 'review.json')]):
+                with self.subTest(case=case_index, command=command[0]):
+                    path.write_text(json.dumps(broken))
+                    before = path.read_bytes()
+                    result = subprocess.run([sys.executable, str(SCRIPT), *command,
+                                             '--run', str(run)], capture_output=True, text=True)
+                    self.assertEqual(result.returncode, 2, result.stderr)
+                    self.assertEqual(result.stdout, '')
+                    self.assertEqual(list(json.loads(result.stderr)), ['error'])
+                    self.assertEqual(path.read_bytes(), before)
+
+    def test_manifest_temporary_is_private_from_creation(self):
+        run = self.prepare()
+        manifest = a.load(run)[1]
+        real_open = Path.open
+        real_builtin_open = builtins.open
+        observed = []
+
+        @contextmanager
+        def inspect_open(path, *args, **kwargs):
+            with real_open(path, *args, **kwargs) as stream:
+                if path.name.startswith('.manifest-'):
+                    observed.append(path.stat().st_mode & 0o777)
+                yield stream
+
+        @contextmanager
+        def inspect_builtin_open(path, *args, **kwargs):
+            with real_builtin_open(path, *args, **kwargs) as stream:
+                if Path(path).name.startswith('.manifest-'):
+                    observed.append(os.fstat(stream.fileno()).st_mode & 0o777)
+                yield stream
+
+        previous = os.umask(0o022)
+        try:
+            with patch.object(Path, 'open', inspect_open), patch.object(builtins, 'open', inspect_builtin_open):
+                a.save(run, manifest)
+        finally:
+            os.umask(previous)
+        self.assertEqual(observed, [0o600])
+        self.assertEqual((run / 'manifest.json').stat().st_mode & 0o777, 0o600)
+        self.assertEqual(list(run.glob('.manifest-*')), [])
 
     def test_brief_validation_and_brand_snapshot(self):
         for value in (0, True, 21, '1'):
