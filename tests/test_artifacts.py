@@ -218,6 +218,17 @@ class ArtifactsTest(unittest.TestCase):
         self.assertEqual(result.stdout, '')
         self.assertEqual(a.load(run)[1]['outputs'], [])
 
+    def test_verify_is_idempotent(self):
+        run = self.prepare()
+        self.collect(run)
+        before = (run / 'manifest.json').read_bytes()
+        args = argparse.Namespace(run=str(run))
+        first = a.verify(args)
+        second = a.verify(args)
+        self.assertEqual(first, {'valid': True, 'state': 'generated', 'outputs': 1})
+        self.assertEqual(second, first)
+        self.assertEqual((run / 'manifest.json').read_bytes(), before)
+
     def test_blocked_status_cannot_force_approval(self):
         run = self.prepare()
         a.status(argparse.Namespace(run=str(run), state='blocked', reason='Tool unavailable'))

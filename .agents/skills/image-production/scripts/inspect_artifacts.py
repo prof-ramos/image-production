@@ -278,6 +278,15 @@ def status(args):
     return {'state': m['state']}
 
 
+def verify(args):
+    run, m = load(args.run)
+    verify_manifest(run, m)
+    return {'valid': True, 'state': m['state'], 'outputs': len(m['outputs'])}
+
+
+COMMANDS = {'prepare': prepare, 'collect': collect, 'review': review, 'verify': verify, 'status': status}
+
+
 def emit_error(message):
     print(json.dumps({'error': message}), file=sys.stderr)
 
@@ -312,12 +321,10 @@ def main():
             p.add_argument('--reason', required=True)
     args = parser.parse_args()
     try:
-        if args.command == 'verify':
-            run, m = load(args.run)
-            verify_manifest(run, m)
-            result = {'valid': True, 'state': m['state'], 'outputs': len(m['outputs'])}
-        else:
-            result = globals()[args.command](args)
+        command = COMMANDS.get(args.command)
+        if command is None:
+            raise ValueError('Unknown command')
+        result = command(args)
         print(json.dumps(result, ensure_ascii=False))
         return 0
     except (OSError, ValueError, KeyError, TypeError, Image.DecompressionBombError,
