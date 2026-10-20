@@ -1,6 +1,6 @@
 {
   "name": "image-production",
-  "version": "0.1.5-main.g2553f8ef5a36015b881ae96084e7a1a2cfdcd22b",
+  "version": "0.1.6-main.g2dc1385767cf49e6cc5be37b4435906aa7913cb7",
   "description": "Produção de imagens com referências, catálogo observado de ChatGPT Images, perguntas e opções contextuais, entrega local e revisão documentada.",
   "author": {
     "name": "prof-ramos"
@@ -15,6 +15,6 @@
     "capabilities": [
       "Interactive"
     ],
-    "defaultPrompt": "Use o catálogo para esclarecer o briefing antes de produzir uma imagem."
+    "defaultPrompt": "Antes de gerar, aproveite o que já foi informado e pergunte apenas o que faltar sobre finalidade, público, canal, envio, conteúdo, logo e estilo. Use o catálogo quando pertinente."
   }
 }

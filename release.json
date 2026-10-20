@@ -1,6 +1,6 @@
 {
   "files": {
-    "agent-bundle/README.md": "78e320f3acc7e33396eea9ebe8cf6d912d375a7dc11dc249a51db69baaeb7add",
+    "agent-bundle/README.md": "ef4d4f12e67e6f9b96ca1f384a049f70bc52e2c04cec0db4ac27122000d2c581",
     "agent-bundle/agents/chief_of_staff.toml": "b1e9907f3577a71a189365cd8ffbaee3e58b6ad69db6f9d1fabdd4d847796ef7",
     "agent-bundle/agents/image_coordinator.toml": "21d8a1198cadd8968c7780ffc0a5a28ed8c5f1f35cc85ab957d2886b7892fb9f",
     "agent-bundle/agents/image_director.toml": "5b6734b9552adc24d7e8c2ff28a0a045ac6246b809866a17e389fe3108b4357f",
@@ -9,15 +9,16 @@
     "agent-bundle/agents/image_technical.toml": "264564ab11d9f5bd3be7c872dacf5b8ac67274d95f2875057e3a1c3fc4677112",
     "agent-bundle/agents/image_visual.toml": "4faf7ffb22a55648cdd74346579cdcd0b524b8f02e7f51d26f30853c5cf0ec9a",
     "agent-bundle/config.example.toml": "1e06bfd210e266c34e46aa0c116829b9bbc6e837b23fa4e7343668c59ecf0103",
-    "plugins/image-production/.codex-plugin/plugin.json": "36f33e2423055b2508ed5953036947a8b5fa1c964d137a4416e429dca473d789",
-    "plugins/image-production/plugin.json": "0cc0a8bd8a7f62ce01c5526bfd27eb661a491bacf29db30fb6d878191b54b35d",
-    "plugins/image-production/skills/image-production/SKILL.md": "d6c76e815645b1a8a912f96284c54cf9012791e4822ac6f5f586b9b66e91e298",
+    "plugins/image-production/.codex-plugin/plugin.json": "21ee15dcbebae8ea1a34d97c3f4677fd4940823438def9ddb73f1971759f06ee",
+    "plugins/image-production/plugin.json": "4f2167d8f3f6cd97604569c93759528eed08bd2bac3fa2064ccc7cf5a704db95",
+    "plugins/image-production/skills/image-production/SKILL.md": "6ba83e0077d4e8e427b26a648ee8ed9e61caa2785caf807f644dcd10b47eb5a9",
     "plugins/image-production/skills/image-production/references/agent-evals.md": "a1bae3ba3a5670f54501cb654fbfaa41ce2502a53ea46d53ceb95a8c052b9501",
     "plugins/image-production/skills/image-production/references/agent-playbook.md": "41e939a51771969fa281bd5cd65a83f8c8bba7b7e7e75e9520f869500c939806",
     "plugins/image-production/skills/image-production/references/chatgpt-images-catalog.json": "9d34a7e80c7913bd059998010a1901ceacc0046f8e842c670449c080be5893dd",
     "plugins/image-production/skills/image-production/references/chatgpt-images-catalog.schema.json": "d2187f0e1eb3380dad572f44656f1759f3bf177127d4f610e8eaee477979fdf4",
     "plugins/image-production/skills/image-production/references/chatgpt-images-evidence.md": "3b823d4d988d4548c5d535d89e7c804a821b5e788d9ba2c1094769697b747368",
     "plugins/image-production/skills/image-production/references/chatgpt-images-index.md": "056987b8df21e5b24bd78e7b19bb441d39e78d5124e373f56a1f62086c9535d8",
+    "plugins/image-production/skills/image-production/references/communication-brief.md": "b4bfe0a6f2c4f254209d87c987c1cfb84ace551d40c374c4c6f809b4f6883159",
     "plugins/image-production/skills/image-production/references/quality-rubric.md": "4b2bfae88da434c57e1872bf92fcdfae73dbfc31bd44c0704353e01fc8b5cf43",
     "plugins/image-production/skills/image-production/references/result.schema.json": "ad136b897184581e908414752cd8ee987993f50598923f3eb5ee85c278a2360f",
     "plugins/image-production/skills/image-production/references/run-contract.md": "3f7db219f35977825ffbb0bbae9051dec763353c8d378e9a013c18f94c15c4af",
@@ -26,6 +27,6 @@
   },
   "repository": "prof-ramos/image-production",
   "schema_version": 1,
-  "source_sha": "2553f8ef5a36015b881ae96084e7a1a2cfdcd22b",
-  "version": "0.1.5-main.g2553f8ef5a36015b881ae96084e7a1a2cfdcd22b"
+  "source_sha": "2dc1385767cf49e6cc5be37b4435906aa7913cb7",
+  "version": "0.1.6-main.g2dc1385767cf49e6cc5be37b4435906aa7913cb7"
 }
