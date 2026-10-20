@@ -29,3 +29,24 @@ Este registro supera o estado de automação inexistente como implementação lo
 sem confundir código pronto com ativação na main. O [checkpoint geral](execucao-main.md)
 registra o progresso remoto; [índice](index.md), [plugin](plugin-e-cards.md) e
 [CI](ci-testes.md) trazem contexto relacionado.
+
+## Primeira publicação e instalação comprovadas — 2026-10-20
+
+Em `prof-ramos/image-production@c40075a8769261a1099c40e9fe686637a0024ca6`, o
+[PR #5](https://github.com/prof-ramos/image-production/pull/5) integrou a automação
+à main. O [run 39423538379](https://github.com/prof-ramos/image-production/actions/runs/39423538379)
+passou nos testes/build/preparo e no job de publicação com GITHUB_TOKEN.
+A branch plugin-release foi promovida a `10799cb4067755dd2c91859dee97026198bac410`,
+com catálogo fixando payload `2bafb4a153c9c95c87622c8b5723eb955d0cac77`.
+A proveniência aponta ao commit de origem e à versão
+`0.1.5-main.gc40075a8769261a1099c40e9fe686637a0024ca6`; 23 arquivos conferiram os hashes.
+
+O atualizador oficial executou na instalação real e retornou verificação positiva.
+Listagens Codex no repo e em diretório neutro confirmaram essa versão habilitada
+e o marketplace Git. Não houve edição manual de cache, novo token pessoal ou
+plano pago. A sessão aberta não foi recarregada. Fontes: run/PR acima e
+[relatório de ativação](../validation/automatic-release-20261020.md).
+
+Isso supera os registros de publicação/instalação ainda não comprovadas como
+estado desse experimento. As instruções de atualização continuam distinguindo
+publicação remota, instalação local e carregamento numa sessão do host.

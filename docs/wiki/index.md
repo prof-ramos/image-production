@@ -4,7 +4,7 @@ Em 2026-10-20 o usuário aprovou esta wiki em `docs/wiki/` e OptMem como índice
 
 ## Decisões
 
-- [Publicação automática](publicacao-automatica.md) — implementação rastreável e evidência de ativação.
+- [Publicação automática](publicacao-automatica.md) — implementação rastreável, primeira publicação e instalação verificadas.
 
 - [Memória local](memoria-local.md) — autorização, instalação reproduzível e uso do OptMem fora da distribuição do plugin.
 - [Base do plugin e cards](plugin-e-cards.md) — fonte canônica, publicação pela main planejada e limites da coleta de prompts.

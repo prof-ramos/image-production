@@ -37,3 +37,9 @@ implementou publicação automática em branch Git e atualizador CLI, com 82 tes
 locais e duas revisões independentes sem achados. Isso supera automação inexistente
 como implementação local; ativação hospedada ainda depende da integração. Fonte:
 [publicação automática](publicacao-automatica.md).
+
+Em 2026-10-20, `prof-ramos/image-production@c40075a8769261a1099c40e9fe686637a0024ca6`
+ativou publicação automática e teve pacote e instalação local verificados. Isso
+supera a limitação anterior de código apenas local. Fonte: [ativação](publicacao-automatica.md).
+A skill segue dentro do pacote do plugin; agentes permanecem bundle separado e
+configuração manual, sem alterar permissões do projeto automaticamente.

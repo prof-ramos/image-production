@@ -16,3 +16,11 @@ Em 2026-10-20, o [run 39421270501](https://github.com/prof-ramos/image-productio
 executou testes/build no GitHub para `prof-ramos/image-production@bea9f975e6d8a2d8813cd7e49432d93472ee3efa`,
 com sucesso em Python 3.10 e 3.13. Isso supera a limitação anterior de verificação
 apenas local para esse workflow/head. Ver [execução](execucao-main.md).
+
+Em 2026-10-20 o [run 39423538379](https://github.com/prof-ramos/image-production/actions/runs/39423538379)
+executou a automação de `prof-ramos/image-production@c40075a8769261a1099c40e9fe686637a0024ca6`
+e publicou após a matriz verde. Em PRs, o job publicador foi corretamente omitido;
+o [run do head final](https://github.com/prof-ramos/image-production/actions/runs/39423439779)
+comprovou os testes/preparo sem publicação. Isso supera a descrição histórica do
+CI limitado somente a testes/build para a implementação nova. Fontes adicionais:
+[relatório](../validation/automatic-release-20261020.md).

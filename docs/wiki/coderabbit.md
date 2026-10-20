@@ -45,3 +45,15 @@ O bot recusou por 153 arquivos excederem 100; logo não revisou o head. Isso sup
 somente o retrato anterior de ausência de solicitação real no head novo, sem
 transformar o skip em aprovação. Fontes: [pedido](https://github.com/prof-ramos/image-production/pull/4#issuecomment-6290668201)
 e [resposta](https://github.com/prof-ramos/image-production/pull/4#issuecomment-6290669977).
+
+Em 2026-10-20 o CodeRabbit realizou revisão real no PR #5, head
+`prof-ramos/image-production@44ee5dcb9a96cdb802448327581540a9e22f5df7`, selecionando
+19 arquivos. Encontrou um ajuste Minor de espaçamento/referência de commit na wiki;
+foi corrigido em `prof-ramos/image-production@3fa7b4bd860d9267ecb2e3e801567e1c2e81c577`
+e a [thread](https://github.com/prof-ramos/image-production/pull/5#discussion_r4324962017)
+foi resolvida com evidência. Nenhum achado de código foi relatado. A revisão externa
+continua ligada ao head original; a atualização posterior foi textual e passou
+em CI. Não se alegou nova revisão nem aprovação formal do bot no head posterior.
+A cota incluída foi consumida; não houve novo disparo ou cobrança para a correção.
+Isso supera ausência de review comprovada para esse PR, sem alterar o histórico
+de recusa do PR #4 por 153 arquivos. Fonte: PR/thread e [ativação](publicacao-automatica.md).
