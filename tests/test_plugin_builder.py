@@ -1,4 +1,6 @@
 import json
+import importlib.util
+from unittest.mock import patch
 from pathlib import Path
 import shutil
 import subprocess
@@ -117,6 +119,128 @@ class PluginBuilderTests(unittest.TestCase):
                 self.assertNotEqual(result.returncode, 0)
                 self.assertIn('symlink', result.stderr.lower())
                 self.assertFalse(missing.exists())
+
+    def test_missing_or_file_source_preserves_previous_build(self):
+        for kind in ('missing', 'file'):
+            with self.subTest(kind=kind):
+                self.create_fixture()
+                self.assertEqual(self.run_builder().returncode, 0)
+                sentinel = self.destination / 'skills/image-production/sentinel.txt'
+                sentinel.write_bytes(b'previous build must survive')
+                before = {str(p.relative_to(self.destination)): p.read_bytes()
+                          for p in self.destination.rglob('*') if p.is_file()}
+                shutil.rmtree(self.source)
+                if kind == 'file':
+                    self.source.write_bytes(b'not a directory')
+                result = self.run_builder()
+                after = {str(p.relative_to(self.destination)): p.read_bytes()
+                         for p in self.destination.rglob('*') if p.is_file()}
+                self.assertEqual(after, before)
+                self.assertNotEqual(result.returncode, 0)
+                self.assertIn('directory', result.stderr.lower())
+
+    def test_missing_or_file_source_does_not_create_fresh_destination(self):
+        for kind in ('missing', 'file'):
+            with self.subTest(kind=kind):
+                self.create_fixture()
+                shutil.rmtree(self.source)
+                if kind == 'file':
+                    self.source.write_bytes(b'not a directory')
+                result = self.run_builder()
+                self.assertNotEqual(result.returncode, 0)
+                self.assertFalse(self.destination.exists())
+
+    def test_empty_source_is_rejected_without_touching_previous_build(self):
+        self.create_fixture()
+        self.assertEqual(self.run_builder().returncode, 0)
+        sentinel = self.destination / 'skills/image-production/sentinel.txt'
+        sentinel.write_bytes(b'previous')
+        (self.source / 'SKILL.md').unlink()
+        result = self.run_builder()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertEqual(sentinel.read_bytes(), b'previous')
+
+    def test_partial_copy_failure_preserves_old_or_absent_destination(self):
+        for existing in (False, True):
+            with self.subTest(existing=existing):
+                self.create_fixture()
+                if existing:
+                    self.assertEqual(self.run_builder().returncode, 0)
+                    (self.destination / 'skills/image-production/sentinel.txt').write_bytes(b'previous')
+                before = {str(p.relative_to(self.destination)): p.read_bytes()
+                          for p in self.destination.rglob('*') if p.is_file()}
+                spec = importlib.util.spec_from_file_location('fixture_builder', self.root / 'scripts/build_plugin.py')
+                builder = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(builder)
+                def fail_after_partial_copy(source, target, **kwargs):
+                    target.mkdir(parents=True)
+                    (target / 'partial.txt').write_bytes(b'partial')
+                    raise OSError('injected copy failure')
+                with patch.object(builder.shutil, 'copytree', side_effect=fail_after_partial_copy):
+                    with self.assertRaises(OSError):
+                        builder.build()
+                after = {str(p.relative_to(self.destination)): p.read_bytes()
+                         for p in self.destination.rglob('*') if p.is_file()}
+                self.assertEqual(after, before)
+                self.assertEqual(self.destination.exists(), existing)
+                self.assertEqual(list(self.destination.parent.iterdir()),
+                                 [self.destination] if existing else [])
+
+    def test_manifest_render_failure_preserves_previous_build(self):
+        self.create_fixture()
+        self.assertEqual(self.run_builder().returncode, 0)
+        sentinel = self.destination / 'skills/image-production/sentinel.txt'
+        sentinel.write_bytes(b'previous')
+        manifest_path = self.root / '.codex-plugin/plugin.json'
+        manifest = json.loads(manifest_path.read_text())
+        del manifest['interface']
+        manifest_path.write_text(json.dumps(manifest))
+        self.assertNotEqual(self.run_builder().returncode, 0)
+        self.assertEqual(sentinel.read_bytes(), b'previous')
+
+    def test_failed_publish_rename_restores_previous_package(self):
+        self.create_fixture()
+        self.assertEqual(self.run_builder().returncode, 0)
+        (self.destination / 'skills/image-production/sentinel.txt').write_bytes(b'previous')
+        before = {str(p.relative_to(self.destination)): p.read_bytes()
+                  for p in self.destination.rglob('*') if p.is_file()}
+        spec = importlib.util.spec_from_file_location('fixture_builder', self.root / 'scripts/build_plugin.py')
+        builder = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(builder)
+        rename = Path.rename
+        def fail_stage_publish(path, target):
+            if path.name.startswith('.image-production-') and not path.name.endswith('.previous'):
+                raise OSError('injected publish failure')
+            return rename(path, target)
+        with patch.object(Path, 'rename', fail_stage_publish):
+            with self.assertRaises(OSError):
+                builder.build()
+        after = {str(p.relative_to(self.destination)): p.read_bytes()
+                 for p in self.destination.rglob('*') if p.is_file()}
+        self.assertEqual(after, before)
+        self.assertEqual(list(self.destination.parent.iterdir()), [self.destination])
+
+    def test_successful_rebuild_replaces_old_package_without_leftovers(self):
+        self.create_fixture()
+        self.assertEqual(self.run_builder().returncode, 0)
+        sentinel = self.destination / 'skills/image-production/sentinel.txt'
+        sentinel.write_bytes(b'previous')
+        (self.source / 'SKILL.md').write_bytes(b'updated')
+        result = self.run_builder()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertFalse(sentinel.exists())
+        self.assertEqual((self.destination / 'skills/image-production/SKILL.md').read_bytes(), b'updated')
+        self.assertEqual(list(self.destination.parent.iterdir()), [self.destination])
+
+    def test_regular_file_destination_is_preserved(self):
+        self.create_fixture()
+        self.destination.parent.mkdir(parents=True)
+        self.destination.write_bytes(b'unexpected user file')
+        result = self.run_builder()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertTrue(self.destination.is_file())
+        self.assertEqual(self.destination.read_bytes(), b'unexpected user file')
+        self.assertEqual(list(self.destination.parent.iterdir()), [self.destination])
 
     def test_rejected_source_does_not_create_destination(self):
         self.create_fixture()
