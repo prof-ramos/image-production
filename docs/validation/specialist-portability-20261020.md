@@ -40,3 +40,7 @@ A hipótese inicial de indisponibilidade nativa foi superada: o `config/read` do
 O teste de execução usou somente `image_technical`; as quatro definições foram verificadas na configuração efetiva. Nenhuma geração, edição de imagem ou nova correção da caneca foi realizada. O modo de carga explícita continua disponível quando um host admitir agentes genéricos mas não papéis nativos.
 
 Nova tentativa oficial de recuperar material cloud: `codex cloud list --json --limit 20` retornou `tasks=[]`, sem cursor. O UUID da conversa não é um ID de tarefa cloud aceito (`cloud status` retornou 404). Comentários dos PRs #1/#3 e issue #2 não forneciam IDs `task_e_` ou referências ao material ausente; GitHub Actions não tinha artifacts. Busca apenas por nomes relacionados em Downloads não encontrou o catálogo. Não há fonte recuperada que permita declarar entregue a biblioteca de 56 prompts ou os pilotos cloud.
+
+## Recuperação posterior dos pilotos — 20/10/2026
+
+A afirmação anterior de pilotos não recuperados foi superada após o usuário fornecer `12-ativos-transparentes-sem-api-2026-10-19.zip`. O [registro de recuperação](pilot-transparent-assets-20261019/README.md) conserva evidências, prompts e pareceres com hashes; o pacote completo ficou localmente em `work/recovered/`. O catálogo de 56 prompts continua ausente. Os pareceres 10/2 são históricos; a margem de 10% acrescentada pelo fluxo anterior não é requisito original do usuário.

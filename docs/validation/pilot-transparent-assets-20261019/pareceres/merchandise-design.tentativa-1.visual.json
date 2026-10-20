@@ -1,0 +1,41 @@
+{
+  "name": "merchandise-design",
+  "run_id": "56c529a2-39d5-4430-b953-0d03756ca2ce",
+  "candidate_relative": "final/merchandise-design.png",
+  "sha256": "4bb32c091cef133b1f4bc4a40fa00707165f1e86a3e5c3b75435092cc9da28b2",
+  "role": "image_visual",
+  "verdict": "approved",
+  "review": {
+    "reviewer": "Independent visual reviewer; explicitly loaded image_visual role instructions",
+    "criteria": {
+      "objective": {
+        "score": 2,
+        "evidence": "One outdoors illustration includes an amber setting sun, slate-blue mountains, evergreen pines, a pale turquoise river and small coral wildflowers, with visible screen-print grain."
+      },
+      "text_facts": {
+        "score": 2,
+        "evidence": "No readable text, logo or watermark appears."
+      },
+      "composition": {
+        "score": 2,
+        "evidence": "The landscape forms a compact organic circular arrangement, fully visible with tree tips, cloud edges and foreground contours intact. No bounding badge or garment appears."
+      },
+      "brand_reference": {
+        "score": 2,
+        "evidence": "The requested outdoor subjects, warm sun, cool mountain palette, turquoise water, coral flowers and textured illustration style correspond to the source. Different peaks and river course are acceptable fresh-generation variations."
+      },
+      "visual_integrity": {
+        "score": 2,
+        "evidence": "Mountains, trees, rocks, river and flowers form a coherent landscape. Fine pine tips and flower details remain legible without conspicuous rendering defects."
+      },
+      "preservation": {
+        "score": "na",
+        "evidence": "Fresh text-only generation; exact reference pixels and geometry were not preservation targets."
+      },
+      "transparency": {
+        "score": 2,
+        "evidence": "Light and dark composites show clean surrounding transparency and open sky gaps among clouds, sun, mountains and pine tips. No white rectangle, enclosing badge, broad halo or filled backdrop is visible."
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "design-sticker",
+  "run_id": "5a02807e-79a2-425a-86d0-fcb5d96065af",
+  "candidate_relative": "final/design-sticker.png",
+  "sha256": "ccd1f00369bde4d42de474b152559bbd7728d60ef555474931ad9fe7abd49778",
+  "role": "image_visual",
+  "verdict": "approved",
+  "review": {
+    "reviewer": "Independent visual reviewer; explicitly loaded image_visual role instructions",
+    "criteria": {
+      "objective": {
+        "score": 2,
+        "evidence": "One illustrated coral-red strawberry character has muted sage-green leaves, seeds, a smiling face and a close-fitting cream die-cut border."
+      },
+      "text_facts": {
+        "score": 2,
+        "evidence": "No readable text or watermark appears."
+      },
+      "composition": {
+        "score": 2,
+        "evidence": "The entire character and border are visible, including leaf tips, hands and feet. The cream contour follows the character rather than creating a broad surrounding panel."
+      },
+      "brand_reference": {
+        "score": 2,
+        "evidence": "The coral fruit, muted green crown, friendly face and cream sticker edge correspond to the source concept. Added cartoon arms and legs remain consistent with the requested strawberry character."
+      },
+      "visual_integrity": {
+        "score": 2,
+        "evidence": "The face, seeds, leafy crown and two arms and legs form a coherent illustration. The die-cut border is continuous around narrow extremities and concavities."
+      },
+      "preservation": {
+        "score": "na",
+        "evidence": "Fresh text-only generation; source pixels and exact artwork geometry were not preservation targets."
+      },
+      "transparency": {
+        "score": 2,
+        "evidence": "Light and dark composites show clean space beyond the cream border, including concave gaps beside the limbs and leaves. No broad halo, cast shadow or filled canvas appears."
+      }
+    }
+  }
+}

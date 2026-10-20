@@ -46,6 +46,8 @@ A suíte usa fixtures sintéticas locais, sem API, credenciais ou geração paga
 
 A [revisão independente de 19/10/2026](docs/validation/independent-review-20261019.md) reconcilia os comentários do PR, documenta as correções adicionais e registra 33 testes, incluindo CLI ponta a ponta para PNG/JPEG/WebP. As homologações visuais pendentes continuam separadas desses resultados técnicos.
 
+[Piloto recuperado: 12 ativos transparentes, prompts e pareceres históricos](docs/validation/pilot-transparent-assets-20261019/README.md).
+
 ## Planejamento e fontes
 
 - [Inventário de referências](docs/planning/01-inventario.md)

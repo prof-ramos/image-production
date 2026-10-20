@@ -1,0 +1,41 @@
+{
+  "name": "merchandise-blank-tshirt",
+  "run_id": "0e67b9ae-2dde-474f-9da7-37ce664e41b7",
+  "candidate_relative": "final/merchandise-blank-tshirt.png",
+  "sha256": "738860fdeeb2d63e475532ce11172d935e2d303f29f5e71aeb399d5b638b4278",
+  "role": "image_visual",
+  "verdict": "approved",
+  "review": {
+    "reviewer": "Independent visual reviewer; explicitly loaded image_visual role instructions",
+    "criteria": {
+      "objective": {
+        "score": 2,
+        "evidence": "One photorealistic ivory unisex crew-neck T-shirt is shown flat and front-facing, with a completely blank chest and no wearer, hanger or mannequin."
+      },
+      "text_facts": {
+        "score": 2,
+        "evidence": "No readable text, logo or watermark appears."
+      },
+      "composition": {
+        "score": 2,
+        "evidence": "The shirt is centered and fully visible, including both sleeves, neckline and bottom hem. Clear surrounding space supports placement as a mockup asset."
+      },
+      "brand_reference": {
+        "score": 2,
+        "evidence": "Ivory fabric, short sleeves, ribbed crew neck and premium unisex silhouette correspond to the reference. Different seams and small fabric folds are acceptable fresh-generation variations."
+      },
+      "visual_integrity": {
+        "score": 2,
+        "evidence": "Collar ribbing, shoulder seams, sleeve hems and bottom stitching form coherent garment construction. Natural fabric texture and shallow folds remain visible without a printed mark or graphic."
+      },
+      "preservation": {
+        "score": "na",
+        "evidence": "Fresh text-only generation; exact reference pixels and geometry were not preservation targets."
+      },
+      "transparency": {
+        "score": 2,
+        "evidence": "Light and dark composites show clean garment edges and background clearance beside sleeves, underarms, neckline and hem. No broad ivory halo, external cast shadow or background panel appears; fabric-fold shading stays within the garment."
+      }
+    }
+  }
+}

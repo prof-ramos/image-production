@@ -1,0 +1,70 @@
+{
+  "name": "design-sticker",
+  "role": "image_technical",
+  "activation": "Generic worker explicitly loaded technical role TOML.",
+  "run_id": "5a02807e-79a2-425a-86d0-fcb5d96065af",
+  "candidate_relative": "final/design-sticker.png",
+  "sha256": "ccd1f00369bde4d42de474b152559bbd7728d60ef555474931ad9fe7abd49778",
+  "verdict": "pass",
+  "checks": {
+    "helper_valid": true,
+    "run_id_matches": true,
+    "candidate_path_matches": true,
+    "candidate_sha256_matches": true,
+    "full_decode": true,
+    "single_frame": true,
+    "supported_format": true,
+    "metadata_matches": true,
+    "real_transparency_and_visible_pixels": true,
+    "input_hashes_match": true,
+    "prompt_hash_matches": true,
+    "submitted_prompt_matches": true,
+    "frozen_manifest_hash_matches": true,
+    "manifest_unchanged": true
+  },
+  "helper": {
+    "command": [
+      "/workspace/image-production/.venv/bin/python",
+      "/workspace/image-production/.agents/skills/image-production/scripts/inspect_artifacts.py",
+      "verify",
+      "--run",
+      "/workspace/image-production/work/cookbook-transparent-reproduction/runs/5a02807e-79a2-425a-86d0-fcb5d96065af"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"valid\": true, \"state\": \"generated\", \"outputs\": 1}",
+    "stderr": ""
+  },
+  "independent_check": {
+    "command": "Python/Pillow read-only decode, hash and alpha verification via stdin using .venv/bin/python",
+    "exit_code": 0,
+    "inputs": [
+      {
+        "path": "inputs/ref-1.png",
+        "recorded": "5167aa8b8a456b65a9c083aad437da77564deade03e1a0ee02bdb686831d8996",
+        "actual": "5167aa8b8a456b65a9c083aad437da77564deade03e1a0ee02bdb686831d8996"
+      }
+    ],
+    "prompt_sha256": "76fe349cb1c5c82ca87d7db879ea567bcdb32c4c6145af648345848a5131d94d",
+    "manifest_sha256": "9c87b8ebd57fe2c47339ab042ec92519f09120fdc537fbd587a0b2fb264109f2"
+  },
+  "metadata": {
+    "format": "PNG",
+    "width": 1223,
+    "height": 1286,
+    "bytes": 1662444,
+    "sha256": "ccd1f00369bde4d42de474b152559bbd7728d60ef555474931ad9fe7abd49778",
+    "has_alpha": true,
+    "transparent_pixels": 717149,
+    "visible_pixels": 855629,
+    "frames": 1,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  "limitations": [
+    "Technical integrity only; alpha does not validate visual quality, text, design fidelity or absence of halos.",
+    "No visual or generation self-reports read; candidates, references and manifests unchanged."
+  ]
+}

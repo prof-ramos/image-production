@@ -1,0 +1,40 @@
+{
+  "role": "image_visual",
+  "run_id": "5e3810f6-b93d-43db-ad88-678c1c000a6b",
+  "candidate_relative": "final/reed-diffuser.png",
+  "sha256": "61b1d7e8072f79c13ed4b5982f06a83ce592171ab50c1f5941eef3bb949c3dd9",
+  "verdict": "approved",
+  "review": {
+    "reviewer": "Independent visual reviewer; explicitly loaded image_visual role instructions",
+    "criteria": {
+      "objective": {
+        "score": 2,
+        "evidence": "Rounded low amber-glass diffuser contains golden oil, five separately identifiable blonde reeds and one feathery pampas stem."
+      },
+      "text_facts": {
+        "score": 2,
+        "evidence": "Five reed tips are visible in addition to the pampas stem. No readable writing, label or watermark appears."
+      },
+      "composition": {
+        "score": 2,
+        "evidence": "Vessel, reed tips and pampas wisps remain fully visible with clear surrounding space; the broad vessel balances the upward botanical fan."
+      },
+      "brand_reference": {
+        "score": 2,
+        "evidence": "Honey-amber glass, golden oil, brushed brass collar, blonde reeds and fine ivory botanical fibers match the reference's subject and material language. A broader vessel and denser plume remain semantically equivalent."
+      },
+      "visual_integrity": {
+        "score": 2,
+        "evidence": "Vessel contours, oil surface, collar and reed arrangement are coherent. Fine branching pampas fibers remain individually discernible."
+      },
+      "preservation": {
+        "score": "na",
+        "evidence": "Fresh text-only generation; reference pixels and exact silhouette were not preservation targets."
+      },
+      "transparency": {
+        "score": 2,
+        "evidence": "White and dark composites show clean gaps between reeds and around the vessel. Pampas wisps retain delicate edges without a broad surrounding haze, opaque rectangle or cast shadow."
+      }
+    }
+  }
+}

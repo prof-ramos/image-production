@@ -1,0 +1,42 @@
+{
+  "name": "botanical-oil",
+  "role": "image_visual",
+  "run_id": "8f076365-ca70-4cff-bbec-8385b1bf2ef1",
+  "candidate_relative": "final/botanical-oil.png",
+  "sha256": "c71b4e303e90dec94eb8477ad6f66e351c27602859f7edebb464534a45d47284",
+  "verdict": "needs_revision",
+  "review": {
+    "reviewer": "Independent visual reviewer; explicit image-visual role-file loading",
+    "criteria": {
+      "objective": {
+        "score": 2,
+        "evidence": "One complete slender cylindrical amber botanical-oil bottle is visible, with a brushed-brass dropper collar, ivory rubber bulb, golden oil and a delicate fennel-like sprig suspended inside. No extra objects or plinth."
+      },
+      "text_facts": {
+        "score": "na",
+        "evidence": "No readable text or factual labels are required; no visible label text or watermark is introduced."
+      },
+      "composition": {
+        "score": 1,
+        "evidence": "The complete bottle is centered with comfortable lateral space and a visible base, but the explicit minimum 10% top clearance is not achieved. In both composites the bulb begins slightly above the central-80% boundary. Read-only alpha >64 bounding box is (377,139,648,1354) on 1024x1536: top clearance 9.05% and bottom 11.85%. The bottom passes; the top fails, even excluding faint exterior alpha."
+      },
+      "brand_reference": {
+        "score": 2,
+        "evidence": "The official reference and candidate share the essential amber cylindrical apothecary form, warm editorial lighting, brass cap, ivory bulb, transparent golden liquid and finely branched green/gold botanical sprig. Differences in branch arrangement and bottle proportions are acceptable for semantic/material reproduction from text alone."
+      },
+      "visual_integrity": {
+        "score": 2,
+        "evidence": "The bulb, cap, cylindrical shoulders and heavy glass base are coherent. Fine foliage and seed heads remain visibly resolved within the liquid, with plausible glass refraction and highlights. No conspicuous damaged contour or rendering defect is visible in the inspected views."
+      },
+      "preservation": {
+        "score": "na",
+        "evidence": "Fresh text-only generation with no edit target; the supplied official image is solely an evaluation reference."
+      },
+      "transparency": {
+        "score": 2,
+        "evidence": "Inspected original candidate and light/dark composites against the corresponding reference views. Both destination backgrounds remain visually clean directly outside the bulb, cap, bottle sides and base, without a material broad glow, matte rectangle, cast shadow or checkerboard. Glass edges, liquid and fine sprig remain legible. This is visual acceptance of the cutout appearance, not an assertion of zero alpha at every exterior pixel."
+      }
+    }
+  },
+  "prompt_improvement": "For a future separately authorized attempt, place the complete bottle including bulb and base inside the central 70% of canvas height, centered vertically with at least 15% empty margin above and below. Retain the resolved fennel sprig and existing glass/brass material quality."
+}

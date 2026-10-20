@@ -1,0 +1,41 @@
+{
+  "name": "regional-pipeline-mix",
+  "run_id": "ba13cfda-13d3-48c0-8f54-e4facf50bd7c",
+  "candidate_relative": "final/regional-pipeline-mix.png",
+  "sha256": "c109a377b574f832f9ef5ce1925c19a5d2deca06f1d83f9a8f1178067913ac43",
+  "role": "image_visual",
+  "verdict": "approved",
+  "review": {
+    "reviewer": "Independent visual reviewer; explicitly loaded image_visual role instructions",
+    "criteria": {
+      "objective": {
+        "score": 2,
+        "evidence": "Three-segment doughnut, central 100% and a matching three-row regional legend are present."
+      },
+      "text_facts": {
+        "score": 2,
+        "evidence": "Dark composite reads North America 46%, Europe 29%, APAC 25% and center 100%; segment labels repeat 46%, 29% and 25%. Coral occupies one quarter, turquoise slightly less than half, and cobalt slightly more than one quarter, visually consistent with the requested shares."
+      },
+      "composition": {
+        "score": 2,
+        "evidence": "Doughnut and adjacent legend are fully visible with separated rows, aligned percentage values and readable white text on dark. Center label fits cleanly inside the opening."
+      },
+      "brand_reference": {
+        "score": 2,
+        "evidence": "Turquoise North America, cobalt Europe and coral APAC correspond to the source data and palette. Flat joined segments rather than beveled separated segments are acceptable fresh-generation styling."
+      },
+      "visual_integrity": {
+        "score": 2,
+        "evidence": "Circular ring, inner opening, segment boundaries, legend markers and lettering are coherent without visible distortions or data-label collisions."
+      },
+      "preservation": {
+        "score": "na",
+        "evidence": "Fresh text-only generation; exact source pixels and artwork geometry were not preservation targets."
+      },
+      "transparency": {
+        "score": 2,
+        "evidence": "Light and dark composites show clean background throughout the center opening, legend area and surrounding canvas, with no filled center, panel, frame or material halo. White text remains legible on the intended dark destination."
+      }
+    }
+  }
+}
