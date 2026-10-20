@@ -1,0 +1,1716 @@
+{
+  "observed_at": "2026-10-20",
+  "source_url": "https://chatgpt.com/images/",
+  "method": "Derived offline from saved CUA accessibility text; no new UI actions. Heading checked against card name; Esboço editor exception explicit.",
+  "cards": [
+    {
+      "name": "Vista aérea",
+      "category": "Em alta",
+      "modal_heading": [
+        "Vista aérea"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Transform this picture to a drone view angle.",
+      "prompt_character_count": 45,
+      "prompt_completeness": "visible_text_no_truncation_detected",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/0",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    },
+    {
+      "name": "Lata colecionável",
+      "category": "Em alta",
+      "modal_heading": [
+        "Lata colecionável"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Usando uma lata retangular de colecionador, preencha os dois lados com objetos que sejam a minha cara, com base apenas no que você sabe sobre mim, e pinte-a com a minha cor favorita.",
+      "prompt_character_count": 182,
+      "prompt_completeness": "visible_text_no_truncation_detected",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/1",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    },
+    {
+      "name": "De volta aos anos 80",
+      "category": "Em alta",
+      "modal_heading": [
+        "De volta aos anos 80"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Usando a foto que enviei, mostre como seria minha aparência por volta de 1985. Preserve minha identidade, meus traços faciais, meu tom de pele e minha idade, mantendo minha aparência reconhecível. Reimagine meu cabelo, minhas roupas, meus acessórios e o ambiente ao meu redor com o estilo ousado e inconfundível de meados dos anos 1980: silhuetas expressivas, acessórios marcantes, detalhes em camadas, cores e texturas características. Faça a imagem parecer uma fotografia autêntica de 1985, com granulação analógica, cores desbotadas, flash direto e suavidade sutil. Adicione um carimbo de data vermelho-alaranjado em um dos cantos inferiores, fiel ao estilo dos anos 1980. Sem pôsteres reconhecíveis. Sem objetos modernos ou texto.",
+      "prompt_character_count": 734,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/2",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Usando a foto que enviei, mostre como seria minha aparência por volta de 1985. Preserve minha identidade, meus traços faciais, meu tom de pele e minha idade, mantendo minha aparência reconhecível. Reimagine meu cabelo, minhas roupas, meus acessórios e o ambiente ao meu redor com o estilo ousado e inconfundível de meados dos anos 1980: silhuetas expressivas, acessórios marcantes, detalhes em camadas, cores e texturas características. Faça a imagem parecer uma fotografia autêntica de 1985, com granulação anal",
+      "prompt_character_count_ax": 512,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | De volta aos anos 80 ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Caricatura",
+      "category": "Em alta",
+      "modal_heading": [
+        "Caricatura"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma caricatura minha com base no que você sabe sobre mim e meus interesses. Use um estilo lúdico e exagerado, com feições desproporcionalmente grandes, linhas marcantes, expressões bem-humoradas, um visual de cartum com traço solto e pouco texto.",
+      "prompt_character_count": 251,
+      "prompt_completeness": "visible_text_no_truncation_detected",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/3",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    },
+    {
+      "name": "Esboço",
+      "category": "Em alta",
+      "modal_heading": [
+        "Editor de esboços"
+      ],
+      "kind": "sketch_editor",
+      "prompt_observed": null,
+      "prompt_character_count": 0,
+      "prompt_completeness": "not_applicable",
+      "controls_observed_raw": [
+        "Fechar editor de esboço",
+        "\"alternar\" Selecionar, Value: 0",
+        "\"alternar\" Caneta, Value: 1",
+        "\"alternar\" Texto, Value: 0",
+        "\"alternar\" Formas, Value: 0",
+        "\"alternar\" Borracha, Value: 0",
+        "(disabled) Desfazer",
+        "(disabled) Refazer",
+        "\"alternar\" Usar branco, Value: 1",
+        "\"alternar\" Usar cinza, Value: 0",
+        "\"alternar\" Usar marrom, Value: 0",
+        "\"alternar\" Usar vermelho, Value: 0",
+        "\"alternar\" Usar laranja, Value: 0",
+        "\"alternar\" Usar amarelo, Value: 0",
+        "\"alternar\" Usar verde, Value: 0",
+        "\"alternar\" Usar verde-azulado, Value: 0",
+        "\"alternar\" Usar ciano, Value: 0",
+        "\"alternar\" Usar azul, Value: 0",
+        "\"alternar\" Usar índigo, Value: 0",
+        "\"alternar\" Usar roxo, Value: 0",
+        "\"alternar\" Usar rosa, Value: 0",
+        "(disabled) Anexar esboço"
+      ],
+      "editor_controls_raw": [
+        "36 controle deslizante Espessura do traço, Value: 12, Secondary Actions: Increment, Decrement",
+        "41 quadro de cores Escolher uma cor personalizada, Value: rgb 0.65882 0.33333 0.96863 1"
+      ],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/4",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    },
+    {
+      "name": "Figurinhas",
+      "category": "Em alta",
+      "modal_heading": [
+        "Figurinhas"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie um pacote de figurinhas de meme com base nas imagens anexadas, remixando-as com 😎😛💕🚀🥳. Use expressões exageradas de reação da internet, incluindo choro, confusão, choque, presunção, olhar de lado e incredulidade impassível, com poses constrangedoras, texturas de recorte lo-fi e humor absurdo.",
+      "prompt_character_count": 298,
+      "prompt_completeness": "visible_text_no_truncation_detected",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/5",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    },
+    {
+      "name": "Oktoberfest retrô",
+      "category": "Em alta",
+      "modal_heading": [
+        "Oktoberfest retrô"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Use a foto anexada como referência de identidade para a pessoa ou as pessoas em primeiro plano, preservando os traços faciais. Crie uma foto espontânea da Oktoberfest dos anos 1980: em plena gargalhada, com a boca aberta e os cantos dos olhos franzidos de alegria. Vestindo trajes bávaros tradicionais e recatados. Cada pessoa carrega, em cada mão, cinco canecas enormes de vidro cheias de cerveja, segurando-as pelas alças, com espuma transbordando. As mãos ficam escondidas atrás das canecas. Tenda de cerveja movimentada, multidões vestindo lederhosen, banda de metais em um palco elevado, folhagens suspensas, vigas de madeira, toldo azul e branco, lâmpadas acesas. Enquadramento da cintura para cima, com leve efeito de grande-angular, canecas dominando o primeiro plano. Tons quentes de âmbar, flash direto, foco suave, granulação de filme analógico, cores desbotadas. Adicione um carimbo de data em vermelho-alaranjado, fiel ao padrão dos anos 1980, em um dos cantos inferiores. Sem logotipos.",
+      "prompt_character_count": 1000,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/6",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Use a foto anexada como referência de identidade para a pessoa ou as pessoas em primeiro plano, preservando os traços faciais. Crie uma foto espontânea da Oktoberfest dos anos 1980: em plena gargalhada, com a boca aberta e os cantos dos olhos franzidos de alegria. Vestindo trajes bávaros tradicionais e recatados. Cada pessoa carrega, em cada mão, cinco canecas enormes de vidro cheias de cerveja, segurando-as pelas alças, com espuma transbordando. As mãos ficam escondidas atrás das canecas. Tenda de cerveja ",
+      "prompt_character_count_ax": 512,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | Oktoberfest retrô ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Cabine de fotos",
+      "category": "Em alta",
+      "modal_heading": [
+        "Cabine de fotos"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Usando o retrato que enviei como referência de identidade, crie uma colagem de fotos de cabine fotográfica: três tiras verticais em preto e branco, lado a lado e desalinhadas, com quatro fotos em cada tira. Cada tira deve ficar levemente inclinada para se sobrepor às outras em uma composição 9:16. Preserve a identidade facial, as roupas e os penteados das pessoas. As poses e expressões são variadas, divertidas e bobas. Em algumas fotos, as pessoas ficam parcial ou totalmente fora do enquadramento, trocam de lugar ou aparecem mais perto da câmera. Use flash direto com luz dura, contraste extremo, pretos fechados, brancos estourados, poucos tons médios e perda de detalhes. Adicione granulação grossa de filme, superexposição, bordas pretas grossas e marcas de desgaste muito leves. Impressão de cabine fotográfica analógica.",
+      "prompt_character_count": 831,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/7",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Usando o retrato que enviei como referência de identidade, crie uma colagem de fotos de cabine fotográfica: três tiras verticais em preto e branco, lado a lado e desalinhadas, com quatro fotos em cada tira. Cada tira deve ficar levemente inclinada para se sobrepor às outras em uma composição 9:16. Preserve a identidade facial, as roupas e os penteados das pessoas. As poses e expressões são variadas, divertidas e bobas. Em algumas fotos, as pessoas ficam parcial ou totalmente fora do enquadramento, trocam de",
+      "prompt_character_count_ax": 512,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | Cabine de fotos ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Câmera digital dos anos 2000",
+      "category": "Em alta",
+      "modal_heading": [
+        "Câmera digital dos anos 2000"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Preserve os traços da pessoa retratada e o ambiente da imagem de referência, recriando a cena no estilo de uma foto espontânea tirada com câmera digital no início dos anos 2000: óculos de sol e acessórios típicos da época, roupas datadas, penteado exagerado do início dos anos 2000 e detalhes do ambiente ajustados para combinar. Flash direto da câmera, exposição irregular, áreas iluminadas da pele levemente estouradas, sombras duras, fundos mais escuros em ambientes internos e de baixo contraste em ambientes externos. Foco suave, ruído digital discreto nas sombras e compressão JPEG sutil. Enquadramento casual e um pouco desajeitado. Apenas a imagem, sem marcações de hora ou data.",
+      "prompt_character_count": 687,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/8",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Preserve os traços da pessoa retratada e o ambiente da imagem de referência, recriando a cena no estilo de uma foto espontânea tirada com câmera digital no início dos anos 2000: óculos de sol e acessórios típicos da época, roupas datadas, penteado exagerado do início dos anos 2000 e detalhes do ambiente ajustados para combinar. Flash direto da câmera, exposição irregular, áreas iluminadas da pele levemente estouradas, sombras duras, fundos mais escuros em ambientes internos e de baixo contraste em ambientes",
+      "prompt_character_count_ax": 512,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | Câmera digital dos anos 2000 ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Anime",
+      "category": "Em alta",
+      "modal_heading": [
+        "Anime"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma imagem em um estilo de arte anime popular a partir do elemento enviado. Use line-work marcante, com leve variação, e cel shading mínimo com formas chapadas de sombra. Use cores brilhantes e saturadas e uma iluminação gráfica limpa. O estilo traz proporções de personagem exageradas e em estilo cartoon, com traços faciais simples e muito expressivos que permitem uma ampla gama de emoções, além de anatomia alongada e bem variada. Transforme o ambiente em um espaço levemente distorcido, com uma distorção de perspectiva divertida e objetos simplificados. A composição e o tom devem ter energia, animação e comicidade, em um mundo totalmente estilizado e não realista.",
+      "prompt_character_count": 677,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver mais",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/9",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Crie uma imagem em um estilo de arte anime popular a partir do elemento enviado. Use line-work marcante, com leve variação, e cel shading mínimo com formas chapadas de sombra. Use cores brilhantes e saturadas e uma iluminação gráfica limpa. O estilo traz proporções de personagem exageradas e em estilo cartoon, com traços faciais simples e muito expressivos que permitem uma ampla gama de emoções, além de anatomia alongada e bem variada. Transforme o ambiente em um espaço levemente distorcido, com uma distorç",
+      "prompt_character_count_ax": 512,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | Anime ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Retrato dos anos 70",
+      "category": "Em alta",
+      "modal_heading": [
+        "Retrato dos anos 70"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Preserve os traços da pessoa e o ambiente da imagem de referência, recriando a cena como um retrato sem pose em slide de 1970 a 1975: óculos de sol e acessórios típicos do período, roupas de época, cabelo do início dos anos 70 e detalhes do ambiente ajustados para combinar. Adicione tons de vermelho quentes e desbotados, pretos levemente fechados, granulação fina de filme analógico e uma vinheta suave. Dê à imagem o tom levemente amarelado e desbotado pelo sol de um antigo slide de família, com variações sutis de cor nas sombras.",
+      "prompt_character_count": 535,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/10",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Preserve os traços da pessoa e o ambiente da imagem de referência, recriando a cena como um retrato sem pose em slide de 1970 a 1975: óculos de sol e acessórios típicos do período, roupas de época, cabelo do início dos anos 70 e detalhes do ambiente ajustados para combinar. Adicione tons de vermelho quentes e desbotados, pretos levemente fechados, granulação fina de filme analógico e uma vinheta suave. Dê à imagem o tom levemente amarelado e desbotado pelo sol de um antigo slide de família, com variações su",
+      "prompt_character_count_ax": 512,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | Retrato dos anos 70 ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Pintura impressionista",
+      "category": "Em alta",
+      "modal_heading": [
+        "Pintura impressionista"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme esta foto em uma pintura impressionista.",
+      "prompt_character_count": 51,
+      "prompt_completeness": "visible_text_no_truncation_detected",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/11",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    },
+    {
+      "name": "Coleção de pins",
+      "category": "Em alta",
+      "modal_heading": [
+        "Coleção de pins"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Com base no que você sabe sobre mim e meus interesses, crie um conjunto de 8 pins esmaltados hiper-realistas ilustrados em uma imagem 4×5. Um pin médio é um retrato meu, um pin pequeno é uma palavra que me descreve e um pin pequeno é meu nome. O estilo é ousado, plano, com cores vivas e chamativas. Se ainda não souber o bastante sobre mim, use pistas da foto.",
+      "prompt_character_count": 361,
+      "prompt_completeness": "visible_text_no_truncation_detected",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/12",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    },
+    {
+      "name": "Embaixo d’água",
+      "category": "Em alta",
+      "modal_heading": [
+        "Embaixo d’água"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie um retrato subaquático em close extremo logo após a pessoa saltar em uma piscina ou em água rasa e cristalina. Mantenha o clima calmo, leve e etéreo, destacando os reflexos da luz. Sem esforço nem urgência.",
+      "prompt_character_count": 211,
+      "prompt_completeness": "visible_text_no_truncation_detected",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/13",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    },
+    {
+      "name": "Avatar 3D",
+      "category": "Em alta",
+      "modal_heading": [
+        "Avatar 3D"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma renderização 3D com acabamento brilhante e premium, em estilo \"designer toy\" da(s) pessoa(s), usando a imagem enviada como única referência. Renderize uma cabeça flutuante por pessoa (sem duplicação), recortada com precisão abaixo da mandíbula, com pescoço visível e a cabeça inteira bem enquadrada. Estilo: figura de vinil de alta qualidade, com formas ultralisas e simplificadas, volumes arredondados e fortes reflexos brilhantes nas principais áreas do rosto. O cabelo deve ser estruturado, brilhante e estilizado, incluindo acessórios divertidos. Inclua óculos escuros retrô tipo máscara e oversized, com armação e lentes em cores vibrantes e combinando. Use iluminação de estúdio forte, com brilhos bem marcados. Fundo: céu azul com nuvens suaves.",
+      "prompt_character_count": 761,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/14",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Crie uma renderização 3D com acabamento brilhante e premium, em estilo \"designer toy\" da(s) pessoa(s), usando a imagem enviada como única referência. Renderize uma cabeça flutuante por pessoa (sem duplicação), recortada com precisão abaixo da mandíbula, com pescoço visível e a cabeça inteira bem enquadrada. Estilo: figura de vinil de alta qualidade, com formas ultralisas e simplificadas, volumes arredondados e fortes reflexos brilhantes nas principais áreas do rosto. O cabelo deve ser estruturado, brilhante",
+      "prompt_character_count_ax": 512,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | Avatar 3D ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Pintura acrílica",
+      "category": "Em alta",
+      "modal_heading": [
+        "Pintura acrílica"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme cada imagem em uma pintura acrílica vibrante, com aspecto plano. Reduza cada objeto a formas simplificadas de cor sólida. Sem sombreamento, sem sombras, sem degradês. Adicione textura de pintura à mão, com contornos imperfeitos e bordas irregulares. Mínimo de detalhes.",
+      "prompt_character_count": 280,
+      "prompt_completeness": "visible_text_no_truncation_detected",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/15",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    },
+    {
+      "name": "Miniatura de feltro",
+      "category": "Em alta",
+      "modal_heading": [
+        "Miniatura de feltro"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme a foto enviada em uma obra de arte têxtil criada por feltragem com agulha. Estilo de miniatura artesanal em lã feltrada com agulha, formas arredondadas e simplificadas, poucos detalhes faciais, fibras macias e felpudas, textura visível da lã, imperfeições artesanais que transmitem aconchego, bonecos fofinhos de feltro, diorama em miniatura, iluminação quente e suave, estética encantadora de stop-motion.",
+      "prompt_character_count": 417,
+      "prompt_completeness": "visible_text_no_truncation_detected",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/16",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    },
+    {
+      "name": "Carta de tarô",
+      "category": "Em alta",
+      "modal_heading": [
+        "Carta de tarô"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma carta de tarô com base no que você sabe sobre mim, no estilo clássico Rider-Waite. Me represente como uma figura desenhada à mão, com traços de tinta preta fortes, porém imperfeitos, com leve tremor e variação, cores chapadas sem sombreamento. Sobreponha elementos visuais sutis de tarô ao redor da figura. Adicione textura de papel e aspecto de impressão.",
+      "prompt_character_count": 365,
+      "prompt_completeness": "visible_text_no_truncation_detected",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/17",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    },
+    {
+      "name": "Estátua",
+      "category": "Em alta",
+      "modal_heading": [
+        "Estátua"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma estátua neoclássica grega detalhada em mármore branco de Carrara respeitando a imagem enviada. Se a imagem tiver uma pessoa, retrate-a na estátua como uma poderosa figura alegórica em movimento, com vestes esvoaçantes, pose confiante e expressão séria. Se não for uma pessoa, não adicione uma pessoa. Inclua elementos da foto para dar personalidade à estátua e artefatos históricos não genéricos com base no que você sabe sobre mim. Em uma sala de museu. Fotorrealista, com profundidade de campo média, perspectiva natural e iluminação quente de museu criando sombras dramáticas e realistas.",
+      "prompt_character_count": 600,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "(disabled) Enviar uma foto",
+        "\"alternar\" (disabled) Foto 1, Value: 0",
+        "\"alternar\" (disabled) Foto 2, Value: 0",
+        "\"alternar\" (disabled) Foto 3, Value: 0",
+        "\"alternar\" (disabled) Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/18",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Crie uma estátua neoclássica grega detalhada em mármore branco de Carrara respeitando a imagem enviada. Se a imagem tiver uma pessoa, retrate-a na estátua como uma poderosa figura alegórica em movimento, com vestes esvoaçantes, pose confiante e expressão séria. Se não for uma pessoa, não adicione uma pessoa. Inclua elementos da foto para dar personalidade à estátua e artefatos históricos não genéricos com base no que você sabe sobre mim. Em uma sala de museu. Fotorrealista, com profundidade de campo média, ",
+      "prompt_character_count_ax": 512,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | Estátua ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Mundo de massinha",
+      "category": "Em alta",
+      "modal_heading": [
+        "Mundo de massinha"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme a figura e o ambiente da imagem enviada em um mundo artesanal de animação em stop-motion com massinha. Preserve a identidade, a pose, o figurino, o ambiente e a composição, recriando tudo de forma lúdica em esculturas. Dê ao rosto uma expressão bem definida, animada e cheia de personalidade, em vez de uma expressão fotográfica neutra. Modele a pele, o cabelo, as roupas, os objetos e o cenário em massinha de modelar fosca, com impressões digitais visíveis, marcas de modelagem, bordas irregulares, formas volumosas e imperfeições artesanais. Use iluminação de estúdio para miniaturas e profundidade física. O resultado deve parecer um cenário real de stop-motion fotografado, não uma imagem de computação gráfica com acabamento liso.",
+      "prompt_character_count": 747,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/19",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Transforme a figura e o ambiente da imagem enviada em um mundo artesanal de animação em stop-motion com massinha. Preserve a identidade, a pose, o figurino, o ambiente e a composição, recriando tudo de forma lúdica em esculturas. Dê ao rosto uma expressão bem definida, animada e cheia de personalidade, em vez de uma expressão fotográfica neutra. Modele a pele, o cabelo, as roupas, os objetos e o cenário em massinha de modelar fosca, com impressões digitais visíveis, marcas de modelagem, bordas irregulares, ",
+      "prompt_character_count_ax": 512,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | Mundo de massinha ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Kit de modelismo",
+      "category": "Em alta",
+      "modal_heading": [
+        "Kit de modelismo"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme esta cena em uma cartela de peças de um kit de modelismo em plástico, usando uma única cor. Escolha uma cor vibrante que se destaque na cena. Mantenha cada pessoa e cada animal em uma só peça. Faça o fundo em um tom mais escuro da cor da cartela.",
+      "prompt_character_count": 257,
+      "prompt_completeness": "visible_text_no_truncation_detected",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/20",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    },
+    {
+      "name": "Arcade de 16 bits",
+      "category": "Em alta",
+      "modal_heading": [
+        "Arcade de 16 bits"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme a figura principal e o ambiente da imagem enviada em pixel art no estilo de um jogo de luta retrô de fliperama de 16 bits. Preserve a identidade ao redesenhar o figurino com formas marcantes e fáceis de reconhecer, típicas de personagens de fliperama. Dê ao personagem o nome de \"Player 1\" e coloque-o em uma pose de corpo inteiro, com expressões exageradas. Evite dar aos pixels um acabamento vetorial moderno e polido. Recrie o ambiente como um cenário detalhado de jogo de luta em vista lateral, com elementos em pixels organizados em camadas, iluminação dramática e elementos de interface de fliperama típicos da época.",
+      "prompt_character_count": 634,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/21",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Transforme a figura principal e o ambiente da imagem enviada em pixel art no estilo de um jogo de luta retrô de fliperama de 16 bits. Preserve a identidade ao redesenhar o figurino com formas marcantes e fáceis de reconhecer, típicas de personagens de fliperama. Dê ao personagem o nome de \"Player 1\" e coloque-o em uma pose de corpo inteiro, com expressões exageradas. Evite dar aos pixels um acabamento vetorial moderno e polido. Recrie o ambiente como um cenário detalhado de jogo de luta em vista lateral, co",
+      "prompt_character_count_ax": 512,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | Arcade de 16 bits ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Estilo manuscrito",
+      "category": "Em alta",
+      "modal_heading": [
+        "Estilo manuscrito"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Adicione uma sobreposição desenhada à mão sobre a imagem. O resultado final deve ser estiloso, descontraído e casual sem esforço. Regras do desenho: use linhas finas, desenhadas à mão, como se fossem feitas com uma caneta branca. Mantenha um estilo de traço contínuo: rústico e levemente irregular. Adicione contornos acompanhando as bordas externas dos objetos. Use setas ou linhas pontilhadas para guiar o olhar do observador. Regras do texto: texto manuscrito. Mantenha-o curto, como um monólogo interno casual. Tom: estilo diário, breve e focado na emoção. Os comentários devem ser positivos e delicados. Decorações: adicione vapor, brilhos, corações e rostinhos tipo emoticon com moderação. Evite exagerar; deixe algum “espaço negativo”.",
+      "prompt_character_count": 742,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/22",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Adicione uma sobreposição desenhada à mão sobre a imagem. O resultado final deve ser estiloso, descontraído e casual sem esforço. Regras do desenho: use linhas finas, desenhadas à mão, como se fossem feitas com uma caneta branca. Mantenha um estilo de traço contínuo: rústico e levemente irregular. Adicione contornos acompanhando as bordas externas dos objetos. Use setas ou linhas pontilhadas para guiar o olhar do observador. Regras do texto: texto manuscrito. Mantenha-o curto, como um monólogo interno casua",
+      "prompt_character_count_ax": 512,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | Estilo manuscrito ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Guia de maquiagem",
+      "category": "Em alta",
+      "modal_heading": [
+        "Guia de maquiagem"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie um infográfico de alta qualidade no estilo “Guia de Análise de Maquiagem” com base na foto de retrato que enviei. Dê a ele um visual profissional e limpo, como uma matéria moderna de revista de beleza. Use a foto enviada como base, preservando os traços faciais reais e mantendo a pessoa reconhecível, sem retoques excessivos. Priorize elementos visuais que destaquem os pontos principais, com pouco texto e sem parágrafos longos. Use proporção 9:16.",
+      "prompt_character_count": 455,
+      "prompt_completeness": "visible_text_no_truncation_detected",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/23",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    },
+    {
+      "name": "Rabisco",
+      "category": "Em alta",
+      "modal_heading": [
+        "Rabisco"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Desenhe novamente a imagem anexada do jeito mais desajeitado, rabiscado e completamente patético possível. Use um fundo branco e faça parecer que foi desenhada com o mouse num programa de pintura antigo de computador. Deve ser vagamente parecida, mas também nem tanto, meio que combinando mas também toda errada de um jeito confuso e esquisito, com aquela cara de baixa qualidade, pixel por pixel, que deixa bem claro como ela é ruim. Aliás, quer saber? Tanto faz, desenhe do jeito que você quiser.",
+      "prompt_character_count": 498,
+      "prompt_completeness": "visible_text_no_truncation_detected",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/24",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    },
+    {
+      "name": "Seu boneco de cabeça grande",
+      "category": "Em alta",
+      "modal_heading": [
+        "Seu boneco de cabeça grande"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma fotografia de estúdio de um boneco de plástico com cabeça de mola, barato e produzido em massa, inspirado na foto enviada. Use como referência a identidade e os traços exatos do rosto da pessoa, mas deixe o rosto mais jovem, com um sorriso largo e amigável e cabelo de plástico moldado em mechas grossas. O brinquedo deve ter a aparência de um objeto fotografado de verdade, não de uma imagem gerada por computador (CGI) ou de uma renderização 3D. Cabeça desproporcionalmente grande, comicamente enorme, com cerca de 12 vezes o tamanho do corpo minúsculo. Rosto simplificado de vinil moldado, com olhos pintados, sobrancelhas pintadas, sorriso moldado, limites visíveis da pintura, minúsculos desalinhamentos na pintura, linhas sutis de junção do molde, textura de plástico moldado por injeção, pequenas marcas de desgaste e reflexos especulares suaves. Cabelo de plástico moldado com sulcos largos esculpidos, não fios individuais. Ambiente inspirado na foto.",
+      "prompt_character_count": 969,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/25",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Crie uma fotografia de estúdio de um boneco de plástico com cabeça de mola, barato e produzido em massa, inspirado na foto enviada. Use como referência a identidade e os traços exatos do rosto da pessoa, mas deixe o rosto mais jovem, com um sorriso largo e amigável e cabelo de plástico moldado em mechas grossas. O brinquedo deve ter a aparência de um objeto fotografado de verdade, não de uma imagem gerada por computador (CGI) ou de uma renderização 3D. Cabeça desproporcionalmente grande, comicamente enorme,",
+      "prompt_character_count_ax": 512,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | Seu boneco de cabeça grande ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Versão mini",
+      "category": "Em alta",
+      "modal_heading": [
+        "Versão mini"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme esta foto em um mundo mágico de “Mini Eu”, onde versões minúsculas e animadas de você ganham vida ao seu redor. Esses minipersonagens fofos em estilo 3D interagem com o seu dia a dia — sobem nos seus ombros, sentam na sua bolsa, acenam, brincam e imitam suas poses — criando uma cena divertida, emotiva e digna de um story nas redes sociais, cheia de personalidade e narrativa. A foto original fica intocada, enquanto os personagens minúsculos dão vida à imagem com profundidade, movimento, sombras realistas e uma vibe estética suave.",
+      "prompt_character_count": 546,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/26",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Transforme esta foto em um mundo mágico de “Mini Eu”, onde versões minúsculas e animadas de você ganham vida ao seu redor. Esses minipersonagens fofos em estilo 3D interagem com o seu dia a dia — sobem nos seus ombros, sentam na sua bolsa, acenam, brincam e imitam suas poses — criando uma cena divertida, emotiva e digna de um story nas redes sociais, cheia de personalidade e narrativa. A foto original fica intocada, enquanto os personagens minúsculos dão vida à imagem com profundidade, movimento, sombras re",
+      "prompt_character_count_ax": 512,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | Versão mini ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Corte transversal",
+      "category": "Em alta",
+      "modal_heading": [
+        "Corte transversal"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme o assunto principal da imagem enviada em um diagrama educacional de corte limpo sobre um fundo branco. Mantenha as características distintas do assunto da imagem original, mostre uma seção transversal ou interior em camadas que seja verossímil e adicione legendas explicativas claras. O visual deve assemelhar-se a um gráfico de livro didático ou de museu de ciências, priorizando a clareza e a precisão em vez de um estilo dramático ou artístico.",
+      "prompt_character_count": 458,
+      "prompt_completeness": "visible_text_no_truncation_detected",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/27",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    },
+    {
+      "name": "Melhore fotos",
+      "category": "Em alta",
+      "modal_heading": [
+        "Melhore fotos"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Melhore a qualidade da minha foto e deixe-a mais nítida.",
+      "prompt_character_count": 56,
+      "prompt_completeness": "visible_text_no_truncation_detected",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/28",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    },
+    {
+      "name": "Desejo de viajar",
+      "category": "Em alta",
+      "modal_heading": [
+        "Desejo de viajar"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Use esta imagem para criar uma colagem de viagem, colocando o elemento principal da imagem original em um destino de viagem, dentro de uma foto instantânea, com ambientação adequada ao local e iluminação, cor e qualidade de foto instantânea. Inclua um cartão-postal de algum destino menos visitado, com uma mensagem em caneta de tinta azul me inspirando a viajar para novos lugares. A imagem deve parecer íntima, pessoal e bem organizada. Adicione lembranças e pequenos detalhes que criem um clima de recordação, em uma composição equilibrada e com luz natural.",
+      "prompt_character_count": 561,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/29",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Use esta imagem para criar uma colagem de viagem, colocando o elemento principal da imagem original em um destino de viagem, dentro de uma foto instantânea, com ambientação adequada ao local e iluminação, cor e qualidade de foto instantânea. Inclua um cartão-postal de algum destino menos visitado, com uma mensagem em caneta de tinta azul me inspirando a viajar para novos lugares. A imagem deve parecer íntima, pessoal e bem organizada. Adicione lembranças e pequenos detalhes que criem um clima de recordação,",
+      "prompt_character_count_ax": 512,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | Desejo de viajar ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Flash noturno",
+      "category": "Em alta",
+      "modal_heading": [
+        "Flash noturno"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme a foto em uma fotografia noturna chique com flash. Use flash direto na câmera, forte, com realces distintos, sombras profundas e leve superexposição na pessoa. Defina a cena à noite, com um fundo escuro e um clima dramático, mantendo cores e texturas realistas. Adicione um ar espontâneo e editorial, enquadramento levemente imperfeito, energia de movimento e expressão natural. Enfatize o alto contraste, os brilhos na pele e um efeito de granulação sutil para uma estética \"raw\" fashion noturna.",
+      "prompt_character_count": 508,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/30",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Transforme a foto em uma fotografia noturna chique com flash. Use flash direto na câmera, forte, com realces distintos, sombras profundas e leve superexposição na pessoa. Defina a cena à noite, com um fundo escuro e um clima dramático, mantendo cores e texturas realistas. Adicione um ar espontâneo e editorial, enquadramento levemente imperfeito, energia de movimento e expressão natural. Enfatize o alto contraste, os brilhos na pele e um efeito de granulação sutil para uma estética \"raw\" fashion noturna.",
+      "prompt_character_count_ax": 508,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | Flash noturno ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Pôster blueprint",
+      "category": "Em alta",
+      "modal_heading": [
+        "Pôster blueprint"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie um pôster estilo blueprint com um único assunto, usando apenas o tema principal da imagem enviada. Renderize-o como um desenho técnico limpo em linhas brancas sobre um fundo azul-cobalto profundo, estilo blueprint, com uma grade sutil. Use linework esquemático 2D plano, contornos ortográficos, linhas de construção, marcas de medição, setas e o mínimo de rótulos técnicos. A composição também pode incluir de 2 a 3 estudos menores em destaque ou vistas alternativas. Mantenha o layout simples e equilibrado, sem sombreamento, sem 3D, sem iluminação e sem objetos extras.",
+      "prompt_character_count": 576,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/31",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Crie um pôster estilo blueprint com um único assunto, usando apenas o tema principal da imagem enviada. Renderize-o como um desenho técnico limpo em linhas brancas sobre um fundo azul-cobalto profundo, estilo blueprint, com uma grade sutil. Use linework esquemático 2D plano, contornos ortográficos, linhas de construção, marcas de medição, setas e o mínimo de rótulos técnicos. A composição também pode incluir de 2 a 3 estudos menores em destaque ou vistas alternativas. Mantenha o layout simples e equilibrado",
+      "prompt_character_count_ax": 512,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | Pôster blueprint ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Colorimetria",
+      "category": "Em alta",
+      "modal_heading": [
+        "Colorimetria"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma arte de coloração pessoal usando este retrato. Mostre comparações lado a lado de cores de roupa para destacar quais cores valorizam mais a pessoa. Priorize o visual, apenas com rótulos curtos e sem parágrafos.",
+      "prompt_character_count": 218,
+      "prompt_completeness": "visible_text_no_truncation_detected",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/32",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    },
+    {
+      "name": "Quadrinho",
+      "category": "Em alta",
+      "modal_heading": [
+        "Quadrinho"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma tira em quadrinhos a partir do elemento principal da imagem enviada. Dê à tira um estilo marcante de quadrinhos coloridos de jornal de domingo, com contornos grossos, texturas em meio-tom e cores vibrantes dos anos 1980. Escolha um elemento visual claro e exagerado da foto e construa a história em torno dele, chegando a um desfecho engraçado ou inesperado. Mantenha os diálogos curtos, naturais e fáceis de ler, e faça a piada funcionar de primeira, sem aleatoriedade nem confusão.",
+      "prompt_character_count": 492,
+      "prompt_completeness": "visible_text_no_truncation_detected",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/33",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    },
+    {
+      "name": "Quadrinho estilo anime",
+      "category": "Em alta",
+      "modal_heading": [
+        "Quadrinho estilo anime"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma tira em quadrinhos totalmente original, simples, em preto e branco, no estilo mangá retrô desenhado à mão com tinta. Use de 2 a 3 quadros horizontais. Use a imagem enviada como referência do personagem; redesenhe a pessoa inteiramente em formato mangá, com traço e sombreamento consistentes em todos os quadros. Interprete a pessoa como protagonista e, com base na aparência dela, crie um encontro inspirador com uma estrutura clara de “apresentação-reforço-reviravolta”: o primeiro quadro estabelece o contexto, o segundo desenvolve a situação e o terceiro traz uma surpresa. Mantenha os diálogos curtos, naturais e otimistas. Sem tecnologia.",
+      "prompt_character_count": 652,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/34",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Crie uma tira em quadrinhos totalmente original, simples, em preto e branco, no estilo mangá retrô desenhado à mão com tinta. Use de 2 a 3 quadros horizontais. Use a imagem enviada como referência do personagem; redesenhe a pessoa inteiramente em formato mangá, com traço e sombreamento consistentes em todos os quadros. Interprete a pessoa como protagonista e, com base na aparência dela, crie um encontro inspirador com uma estrutura clara de “apresentação-reforço-reviravolta”: o primeiro quadro estabelece o ",
+      "prompt_character_count_ax": 512,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | Quadrinho estilo anime ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Jornal de fantasia",
+      "category": "Em alta",
+      "modal_heading": [
+        "Jornal de fantasia"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme a pessoa da foto enviada em uma capa de jornal vintage em preto e branco, com um toque fantasioso. Coloque-a como retrato principal no centro, no estilo de uma foto antiga em gravura. Cerque-a com manchetes grandes e exageradas, colunas estreitas de jornal e subtítulos divertidos. Use tinta preta de alto contraste sobre fundo branco puro, textura sutil de papel e fontes serifadas clássicas. Adicione manchetes excêntricas, mágicas ou bem-humoradas para criar um tom charmoso e levemente surreal. Mantenha o layout denso, editorial e que lembre um antigo jornal de fantasia. Garanta que o rosto continue reconhecível, mas estilizado para combinar com a estética de jornal impresso.",
+      "prompt_character_count": 694,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/35",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Transforme a pessoa da foto enviada em uma capa de jornal vintage em preto e branco, com um toque fantasioso. Coloque-a como retrato principal no centro, no estilo de uma foto antiga em gravura. Cerque-a com manchetes grandes e exageradas, colunas estreitas de jornal e subtítulos divertidos. Use tinta preta de alto contraste sobre fundo branco puro, textura sutil de papel e fontes serifadas clássicas. Adicione manchetes excêntricas, mágicas ou bem-humoradas para criar um tom charmoso e levemente surreal. Ma",
+      "prompt_character_count_ax": 512,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | Jornal de fantasia ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Tira de filme",
+      "category": "Em alta",
+      "modal_heading": [
+        "Tira de filme"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme a imagem enviada em film stills cinematográficos sequenciais de 3 quadros (quadros horizontais empilhados verticalmente), em full bleed de ponta a ponta. Cada quadro deve mostrar um momento diferente da mesma cena, com progressão clara. Varie a composição, o ângulo de câmera e as distâncias para criar sensação de movimento e narrativa. Use um visual cinematográfico, de tons mais frios, alto contraste e pretos profundos, com color grade natural. Adicione granulação sutil, leve motion blur e imperfeições naturais para emular fotografia analógica. Mantenha a composição espontânea e emocionalmente realista, com sensação de movimento e narrativa silenciosa. Estética geral: cinematográfica, nostálgica e orgânica, como film stills sem tratamento.",
+      "prompt_character_count": 760,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/36",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Transforme a imagem enviada em film stills cinematográficos sequenciais de 3 quadros (quadros horizontais empilhados verticalmente), em full bleed de ponta a ponta. Cada quadro deve mostrar um momento diferente da mesma cena, com progressão clara. Varie a composição, o ângulo de câmera e as distâncias para criar sensação de movimento e narrativa. Use um visual cinematográfico, de tons mais frios, alto contraste e pretos profundos, com color grade natural. Adicione granulação sutil, leve motion blur e imperf",
+      "prompt_character_count_ax": 512,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | Tira de filme ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Papel de parede hiper-realista",
+      "category": "Em alta",
+      "modal_heading": [
+        "Papel de parede hiper-realista"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma imagem macro da natureza de uma cena com texturas realistas, profundidade de campo rasa com bokeh cremoso, em um ambiente natural ao ar livre. A imagem tem uma qualidade analógica, imperfeita, wabi sabi, de filme 35mm — granulação, reprodução natural de cores e uma curva de contraste suave. Detalhe ultrarrealista, fotografia macro, proporção 9:16. Antes de criar a imagem, faça uma pergunta complementar com uma lista numerada de algumas opções inesperadas de tema e depois renderize a imagem.",
+      "prompt_character_count": 504,
+      "prompt_completeness": "full_rendered_modal_text_verified",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/37",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      },
+      "prompt_observed_ax": "Crie uma imagem macro da natureza de uma cena com texturas realistas, profundidade de campo rasa com bokeh cremoso, em um ambiente natural ao ar livre. A imagem tem uma qualidade analógica, imperfeita, wabi sabi, de filme 35mm — granulação, reprodução natural de cores e uma curva de contraste suave. Detalhe ultrarrealista, fotografia macro, proporção 9:16. Antes de criar a imagem, faça uma pergunta complementar com uma lista numerada de algumas opções inesperadas de tema e depois renderize a imagem.",
+      "prompt_character_count_ax": 504,
+      "prompt_complete": true,
+      "prompt_capture_method": "Rendered modal text copied through native UI Cmd+A/C and TextEdit Cmd+V; last exact card heading and Proporção/Fotos delimiters verified.",
+      "prompt_source_ref": {
+        "file": "em-alta-rendered-source.txt",
+        "section": "=== UI CARD: Em alta | Papel de parede hiper-realista ===",
+        "sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f"
+      }
+    },
+    {
+      "name": "Cor do cabelo",
+      "category": "Em alta",
+      "modal_heading": [
+        "Cor do cabelo"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Mostre algumas opções de cor de cabelo que combinem comigo. Organize da mais escura à mais clara e inclua o loiro como uma das opções. Foque só no visual e em nomes curtos e descritivos. O layout deve ser moderno e minimalista.",
+      "prompt_character_count": 227,
+      "prompt_completeness": "visible_text_no_truncation_detected",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/38",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    },
+    {
+      "name": "Leitura de mão",
+      "category": "Em alta",
+      "modal_heading": [
+        "Leitura de mão"
+      ],
+      "kind": "prompt_modal",
+      "prompt_observed": "Use esta imagem para criar um infográfico completo de guia de leitura de mão. Observe as linhas da palma e destaque as principais, analise a palma em detalhe e apresente a leitura sobre um fundo off-white em um estilo editorial clean, minimalista e luxuoso. Use linhas finas, cards arredondados, espaçamento elegante e uma estética sofisticada de alto padrão. Mantenha o foco na leitura da mão em si.",
+      "prompt_character_count": 400,
+      "prompt_completeness": "visible_text_no_truncation_detected",
+      "controls_observed_raw": [
+        "Fechar caixa de diálogo",
+        "Ver menos",
+        "(disabled) Proporções anteriores",
+        "Avançar para as próximas proporções",
+        "\"alternar\" Automático, Value: 1",
+        "\"alternar\" 1:1, Value: 0",
+        "\"alternar\" 2:3, Value: 0",
+        "\"alternar\" 3:2, Value: 0",
+        "\"alternar\" 16:9, Value: 0",
+        "\"alternar\" 9:16, Value: 0",
+        "(disabled) Imagens sugeridas anteriores",
+        "Próximas imagens sugeridas",
+        "Enviar uma foto",
+        "\"alternar\" Foto 1, Value: 0",
+        "\"alternar\" Foto 2, Value: 0",
+        "\"alternar\" Foto 3, Value: 0",
+        "\"alternar\" Foto 4, Value: 0",
+        "(disabled) Experimente"
+      ],
+      "editor_controls_raw": [],
+      "submitted": false,
+      "source_ref": {
+        "file": "ui-modal-source.json",
+        "json_pointer": "/captures/39",
+        "source_sha256": "080bef0e8860f597b9b7aa42fd5a17575865af6c39b0fa7abc20a35978c448fd"
+      }
+    }
+  ],
+  "rejected_captures": [],
+  "limitations": [
+    "Prompts are exact extracted visible text, never reconstructed beyond source.",
+    "Length >=500 is a truncation warning, not proof of a particular hidden length.",
+    "Controls retain AX disabled and toggle values. No conversation flow inferred from modal text."
+  ]
+}

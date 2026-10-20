@@ -1,0 +1,672 @@
+{
+  "observed_at": "2026-10-20",
+  "scope": "Saved current Images inventory and CUA captures; not the historical 56-prompt snapshot.",
+  "counts": {
+    "inventory": 56,
+    "inventory_by_category": {
+      "Modelos": 16,
+      "Em alta": 40
+    },
+    "captured_by_category": {
+      "Modelos": 16,
+      "Em alta": 40
+    },
+    "captured_total": 56,
+    "prompt_modals": 55,
+    "special_editors": 1,
+    "uncaptured": 0
+  },
+  "conversation_probe": {
+    "card": "Cartaz",
+    "response_rounds": 2,
+    "questions": 12,
+    "source": "cartaz.json",
+    "branch_coverage_universal": false,
+    "limitation": "Only captured initial response and Vae Victis/dynamic follow-up; no downstream answers or generation established."
+  },
+  "cards": [
+    {
+      "category": "Modelos",
+      "name": "Cartaz",
+      "captured": true,
+      "source": "modelos-modal.json",
+      "prompt_character_count": 522,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": true
+    },
+    {
+      "category": "Modelos",
+      "name": "Design de interiores",
+      "captured": true,
+      "source": "modelos-modal.json",
+      "prompt_character_count": 537,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Modelos",
+      "name": "Logo",
+      "captured": true,
+      "source": "modelos-modal.json",
+      "prompt_character_count": 534,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Modelos",
+      "name": "Ilustração",
+      "captured": true,
+      "source": "modelos-modal.json",
+      "prompt_character_count": 462,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Modelos",
+      "name": "Retrato profissional",
+      "captured": true,
+      "source": "modelos-modal.json",
+      "prompt_character_count": 570,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Modelos",
+      "name": "Ícone",
+      "captured": true,
+      "source": "modelos-modal.json",
+      "prompt_character_count": 451,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Modelos",
+      "name": "Foto de produto",
+      "captured": true,
+      "source": "modelos-modal.json",
+      "prompt_character_count": 587,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Modelos",
+      "name": "Produtos personalizados",
+      "captured": true,
+      "source": "modelos-modal.json",
+      "prompt_character_count": 622,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Modelos",
+      "name": "Infográfico",
+      "captured": true,
+      "source": "modelos-modal.json",
+      "prompt_character_count": 500,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Modelos",
+      "name": "Panfleto",
+      "captured": true,
+      "source": "modelos-modal.json",
+      "prompt_character_count": 610,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Modelos",
+      "name": "Capa de livro",
+      "captured": true,
+      "source": "modelos-modal.json",
+      "prompt_character_count": 664,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Modelos",
+      "name": "Mockup de aplicativo",
+      "captured": true,
+      "source": "modelos-modal.json",
+      "prompt_character_count": 611,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Modelos",
+      "name": "Embalagem",
+      "captured": true,
+      "source": "modelos-modal.json",
+      "prompt_character_count": 748,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Modelos",
+      "name": "Anúncio",
+      "captured": true,
+      "source": "modelos-modal.json",
+      "prompt_character_count": 626,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Modelos",
+      "name": "Miniatura",
+      "captured": true,
+      "source": "modelos-modal.json",
+      "prompt_character_count": 547,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Modelos",
+      "name": "Mockup de site",
+      "captured": true,
+      "source": "modelos-modal.json",
+      "prompt_character_count": 576,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Vista aérea",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 45,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Lata colecionável",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 182,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "De volta aos anos 80",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 734,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Caricatura",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 251,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Esboço",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 0,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "sketch_editor",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Figurinhas",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 298,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Oktoberfest retrô",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 1000,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Cabine de fotos",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 831,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Câmera digital dos anos 2000",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 687,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Anime",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 677,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Retrato dos anos 70",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 535,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Pintura impressionista",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 51,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Coleção de pins",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 361,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Embaixo d’água",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 211,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Avatar 3D",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 761,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Pintura acrílica",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 280,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Miniatura de feltro",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 417,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Carta de tarô",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 365,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Estátua",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 600,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Mundo de massinha",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 747,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Kit de modelismo",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 257,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Arcade de 16 bits",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 634,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Estilo manuscrito",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 742,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Guia de maquiagem",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 455,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Rabisco",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 498,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Seu boneco de cabeça grande",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 969,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Versão mini",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 546,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Corte transversal",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 458,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Melhore fotos",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 56,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Desejo de viajar",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 561,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Flash noturno",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 508,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Pôster blueprint",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 576,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Colorimetria",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 218,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Quadrinho",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 492,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Quadrinho estilo anime",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 652,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Jornal de fantasia",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 694,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Tira de filme",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 760,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Papel de parede hiper-realista",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 504,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": true,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Cor do cabelo",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 227,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    },
+    {
+      "category": "Em alta",
+      "name": "Leitura de mão",
+      "captured": true,
+      "source": "em-alta-modal.json",
+      "prompt_character_count": 400,
+      "ui_text_limit_warning": false,
+      "prompt_complete_source_assertion": null,
+      "kind": "prompt_modal",
+      "conversation_probe": false
+    }
+  ],
+  "rejected_captures": [],
+  "limitations": [
+    "Captured counts require a nonempty matching modal heading and prompt, or the explicit Esboço editor.",
+    "Modelos entries are structured saved observations without raw AX in this source; their labels cannot be independently rechecked here.",
+    "AX text at >=500 characters is uncertain unless a separate rendered source with verified delimiters establishes the full prompt.",
+    "No modal capture establishes conversational questions or universal branches."
+  ],
+  "conversation_probe_plan": {
+    "target_cards": 17,
+    "modelos_native_target": 16,
+    "em_alta_modified_clarification_only_target": 1,
+    "em_alta_modified_target_name": "Papel de parede hiper-realista",
+    "completed_cards_from_progress": [
+      "Cartaz",
+      "Design de interiores",
+      "Logo",
+      "Ilustração"
+    ],
+    "pending_cards_from_progress": [
+      "Retrato profissional"
+    ],
+    "modified_probe_pending": true,
+    "direct_em_alta_native_probes_omitted": 38,
+    "omission_reason": "Avoid generation from direct prompts; omission is not an observed absence of questions.",
+    "universal": false,
+    "progress_source": "probe-progress.json"
+  }
+}

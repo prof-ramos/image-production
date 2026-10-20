@@ -48,6 +48,8 @@ A [revisão independente de 19/10/2026](docs/validation/independent-review-20261
 
 [Piloto recuperado: 12 ativos transparentes, prompts e pareceres históricos](docs/validation/pilot-transparent-assets-20261019/README.md).
 
+[Catálogo observado de 56 cards e fluxos de esclarecimento](docs/validation/image-card-flows-20261020/README.md): 55 prompts completos e o editor Esboço, coletados em 20/10/2026; exemplos conversacionais têm cobertura delimitada. A cópia portátil está nas referências da skill.
+
 ## Planejamento e fontes
 
 - [Inventário de referências](docs/planning/01-inventario.md)

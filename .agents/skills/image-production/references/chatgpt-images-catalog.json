@@ -1,0 +1,2410 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-20",
+  "source_url": "https://chatgpt.com/images/",
+  "evidence_type": "observed_ui",
+  "method": "Derived from saved native CUA accessibility and rendered modal text; no hidden state.",
+  "scope": "Current 2026-10-20 inventory; not equivalent to the historical 2026-10-19 snapshot of 56 prompts.",
+  "limitations": [
+    "Modal prompts and controls do not establish conversational question sets or universal branch rules.",
+    "User-specific probe inputs are deliberately excluded from portable defaults.",
+    "Source references identify repository evidence; that documentation is not bundled when copying this skill alone.",
+    "No image generation or output quality is established by the catalog."
+  ],
+  "cards": [
+    {
+      "name": "Cartaz",
+      "category": "Modelos",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie um cartaz que expresse minha ideia com uma hierarquia clara, textos obrigatórios legíveis, imagens e tipografia que funcionem em conjunto no contexto de visualização previsto. Preserve todos os detalhes exatamente como foram fornecidos; não invente nomes, datas, locais, patrocinadores ou logotipos, nem inclua texto adicional.\n\nFaça perguntas para esclarecer e definir a mensagem, o conteúdo obrigatório, o layout e o estilo visual do cartaz. Apresente opções relevantes de layout e estilo visual quando disponíveis.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "flow_status": "bounded_conversation_response_observed",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/modelos-modal.json",
+          "card_name": "Cartaz"
+        }
+      ],
+      "clarification_instruction": "explicit_in_observed_prompt",
+      "question_observations": {
+        "observed_at": "2026-10-20",
+        "universal": false,
+        "usage": "contextual_examples_not_requirements",
+        "questions": [
+          {
+            "text": "Qual é a ideia central?",
+            "usage": "contextual_example_not_requirement",
+            "details": "O que o cartaz deve comunicar e o que você quer provocar em quem o vê: curiosidade, impacto, reflexão, identificação, vontade de participar ou outra reação?"
+          },
+          {
+            "text": "Qual é o texto obrigatório?",
+            "usage": "contextual_example_not_requirement",
+            "details": "Cole o texto completo exatamente como deverá aparecer, incluindo grafia, pontuação e maiúsculas. Se houver uma frase ou informação que deva receber mais destaque, indique."
+          },
+          {
+            "text": "Onde e por quem ele será visto?",
+            "usage": "contextual_example_not_requirement",
+            "details": "Informe o uso previsto: impressão, publicação no Instagram, story, WhatsApp, tela ou outro contexto. Diga também quem é o público e, se houver, o tamanho obrigatório. Se ainda não souber as dimensões, basta informar o uso."
+          },
+          {
+            "text": "Qual composição você prefere?",
+            "usage": "contextual_example_not_requirement",
+            "options": [
+              {
+                "value": "A",
+                "label": "Texto protagonista",
+                "description": "Tipografia ocupa a maior parte do cartaz; imagens e elementos gráficos têm papel de apoio."
+              },
+              {
+                "value": "B",
+                "label": "Imagem protagonista",
+                "description": "Uma imagem concentra a atenção; o texto entra em uma área de leitura bem definida."
+              },
+              {
+                "value": "C",
+                "label": "Composição editorial",
+                "description": "Texto e imagem dividem o espaço, com alinhamentos precisos e hierarquia organizada."
+              },
+              {
+                "value": "D",
+                "label": "Composição dinâmica",
+                "description": "Assimetria, diferenças de escala e uso expressivo do espaço criam movimento e tensão visual."
+              }
+            ]
+          },
+          {
+            "text": "Que linguagem visual combina com sua ideia?",
+            "usage": "contextual_example_not_requirement",
+            "options": [
+              {
+                "label": "Minimalista",
+                "description": "poucos elementos, bastante espaço livre e contraste controlado."
+              },
+              {
+                "label": "Artística e poética",
+                "description": "metáfora visual, textura e significados sugeridos."
+              },
+              {
+                "label": "Gráfica e contundente",
+                "description": "formas marcantes, tipografia forte e contraste alto."
+              },
+              {
+                "label": "Fotográfica",
+                "description": "fotografia como base, com tratamento de luz e cor coerente com a mensagem."
+              },
+              {
+                "label": "Retrô e impressa",
+                "description": "linguagem de cartazes antigos, gravura, colagem ou serigrafia."
+              }
+            ]
+          },
+          {
+            "text": "O que deve ser usado ou evitado?",
+            "usage": "contextual_example_not_requirement",
+            "details": "Anexe imagens, referências ou logotipos que devam entrar no cartaz. Informe também cores obrigatórias, elementos proibidos e qualquer preferência de tipografia. Se enviar uma referência, diga o que deseja aproveitar nela: composição, cores, fonte, imagem ou atmosfera."
+          }
+        ],
+        "option_tables": [],
+        "source_refs": [
+          {
+            "repository_relative_file": "docs/validation/image-card-flows-20261020/probes.json",
+            "card_name": "Cartaz"
+          }
+        ],
+        "limitations": [
+          "Only completed captured responses supply these examples. Association and nesting should be checked against repository raw Markdown."
+        ]
+      }
+    },
+    {
+      "name": "Design de interiores",
+      "category": "Modelos",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma visualização de design de interiores que mostre como meu espaço poderia ficar e funcionar. Preserve a arquitetura existente e as proporções do ambiente; não invente alterações estruturais, aberturas, elementos fixos ou dimensões.\n\nPeça uma foto ou descrição do ambiente e depois faça perguntas para esclarecer como o espaço é usado, quais mudanças são desejadas ou quais restrições existem, quais itens devem ser preservados e qual é o estilo de decoração. Apresente opções relevantes de estilos de decoração quando disponíveis.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "flow_status": "bounded_conversation_response_observed",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/modelos-modal.json",
+          "card_name": "Design de interiores"
+        }
+      ],
+      "clarification_instruction": "explicit_in_observed_prompt",
+      "question_observations": {
+        "observed_at": "2026-10-20",
+        "universal": false,
+        "usage": "contextual_examples_not_requirements",
+        "questions": [
+          {
+            "text": "Envie uma foto do ambiente que você quer transformar — ou uma descrição, se preferir.",
+            "usage": "contextual_example_not_requirement"
+          }
+        ],
+        "option_tables": [
+          {
+            "headers": [
+              "Estilo",
+              "Características"
+            ],
+            "rows": [
+              {
+                "Estilo": "Contemporâneo acolhedor",
+                "Características": "Linhas simples, madeira, tecidos e iluminação suave."
+              },
+              {
+                "Estilo": "Minimalista",
+                "Características": "Poucos elementos, superfícies livres e organização visual."
+              },
+              {
+                "Estilo": "Escandinavo",
+                "Características": "Tons claros, madeira clara e mobiliário funcional."
+              },
+              {
+                "Estilo": "Industrial",
+                "Características": "Metal, madeira e acabamentos de aparência mais bruta."
+              },
+              {
+                "Estilo": "Clássico contemporâneo",
+                "Características": "Formas elegantes, composição equilibrada e detalhes discretos."
+              }
+            ],
+            "usage": "observed_options_not_exhaustive"
+          }
+        ],
+        "source_refs": [
+          {
+            "repository_relative_file": "docs/validation/image-card-flows-20261020/probes.json",
+            "card_name": "Design de interiores"
+          }
+        ],
+        "limitations": [
+          "Only completed captured responses supply these examples. Association and nesting should be checked against repository raw Markdown."
+        ]
+      }
+    },
+    {
+      "name": "Logo",
+      "category": "Modelos",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie um pequeno conjunto de opções distintas de logotipo para minha marca, empresa ou projeto. Use conceitos diferentes em cada opção e garanta que todas sejam reconhecíveis em tamanhos pequenos e grandes. Preserve todos os textos fornecidos exatamente como estão. Não invente nomes de marcas, slogans ou textos adicionais.\n\nFaça perguntas para esclarecer detalhes sobre a marca e o propósito, os textos obrigatórios, a impressão desejada e o estilo visual. Apresente sugestões de estilo relevantes para o logotipo quando disponíveis.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "flow_status": "bounded_conversation_response_observed",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/modelos-modal.json",
+          "card_name": "Logo"
+        }
+      ],
+      "clarification_instruction": "explicit_in_observed_prompt",
+      "question_observations": {
+        "observed_at": "2026-10-20",
+        "universal": false,
+        "usage": "contextual_examples_not_requirements",
+        "questions": [
+          {
+            "text": "Qual é a marca e o que você quer que o logotipo comunique? Vamos definir estes quatro pontos antes de criar as opções.",
+            "usage": "contextual_example_not_requirement"
+          },
+          {
+            "text": "Qual é o nome da marca, empresa ou projeto?",
+            "usage": "contextual_example_not_requirement"
+          },
+          {
+            "text": "O que ela faz e para quem?",
+            "usage": "contextual_example_not_requirement"
+          },
+          {
+            "text": "Onde o logotipo será mais usado: site, redes sociais, documentos, aplicativo, produtos, fachada ou outro suporte?",
+            "usage": "contextual_example_not_requirement"
+          },
+          {
+            "text": "Cole o texto exatamente como deve aparecer, preservando maiúsculas, minúsculas, acentos e pontuação.",
+            "usage": "contextual_example_not_requirement"
+          },
+          {
+            "text": "Há alguma impressão ou associação que você quer evitar?",
+            "usage": "contextual_example_not_requirement"
+          },
+          {
+            "text": "Qual direção mais interessa a você? Pode escolher até duas ou deixar a escolha por minha conta. Informe também se existem cores, símbolos ou elementos que devem ser preservados ou evitados. Se houver um logotipo atual ou referências visuais, envie.",
+            "usage": "contextual_example_not_requirement"
+          }
+        ],
+        "option_tables": [
+          {
+            "headers": [
+              "Impressão",
+              "Características visuais que podemos explorar"
+            ],
+            "rows": [
+              {
+                "Impressão": "Confiança e solidez",
+                "Características visuais que podemos explorar": "Formas estáveis, proporções equilibradas e letras firmes."
+              },
+              {
+                "Impressão": "Sofisticação e discrição",
+                "Características visuais que podemos explorar": "Poucos elementos, espaçamento cuidadoso e detalhes contidos."
+              },
+              {
+                "Impressão": "Proximidade e acolhimento",
+                "Características visuais que podemos explorar": "Curvas suaves, formas abertas e tipografia acessível."
+              },
+              {
+                "Impressão": "Originalidade e personalidade",
+                "Características visuais que podemos explorar": "Um gesto visual próprio e uma composição expressiva."
+              },
+              {
+                "Impressão": "Precisão e modernidade",
+                "Características visuais que podemos explorar": "Geometria clara, organização e traços consistentes."
+              },
+              {
+                "Impressão": "Tradição e permanência",
+                "Características visuais que podemos explorar": "Referências clássicas simplificadas e tipografia de caráter histórico."
+              }
+            ],
+            "usage": "observed_options_not_exhaustive"
+          },
+          {
+            "headers": [
+              "Opção",
+              "Direção",
+              "Como seria"
+            ],
+            "rows": [
+              {
+                "Opção": "A",
+                "Direção": "Tipográfico",
+                "Como seria": "O próprio nome como elemento principal, com letras e espaçamentos cuidadosamente trabalhados."
+              },
+              {
+                "Opção": "B",
+                "Direção": "Monograma",
+                "Como seria": "Uma composição compacta com as iniciais ou a sigla que você autorizar."
+              },
+              {
+                "Opção": "C",
+                "Direção": "Símbolo geométrico",
+                "Como seria": "Uma forma simples e própria, construída a partir de uma ideia ligada à marca, acompanhada do nome."
+              },
+              {
+                "Opção": "D",
+                "Direção": "Símbolo orgânico",
+                "Como seria": "Curvas e formas fluidas para uma identidade mais humana, natural ou expressiva."
+              },
+              {
+                "Opção": "E",
+                "Direção": "Emblema contemporâneo",
+                "Como seria": "Nome e símbolo organizados em uma estrutura compacta, com poucos detalhes."
+              }
+            ],
+            "usage": "observed_options_not_exhaustive"
+          }
+        ],
+        "source_refs": [
+          {
+            "repository_relative_file": "docs/validation/image-card-flows-20261020/probes.json",
+            "card_name": "Logo"
+          }
+        ],
+        "limitations": [
+          "Only completed captured responses supply these examples. Association and nesting should be checked against repository raw Markdown."
+        ]
+      }
+    },
+    {
+      "name": "Ilustração",
+      "category": "Modelos",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma ilustração que expresse minha ideia com tema, composição, técnica e atmosfera bem definidos. Preserve com exatidão os detalhes fornecidos ou presentes nas referências; não adicione elementos narrativos conflitantes nem textos inventados.\n\nFaça perguntas de esclarecimento para definir o tema, a intenção, o uso pretendido, os detalhes das referências a preservar e o estilo visual. Apresente opções relevantes de estilo de ilustração quando disponíveis.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "flow_status": "bounded_conversation_response_observed",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/modelos-modal.json",
+          "card_name": "Ilustração"
+        }
+      ],
+      "clarification_instruction": "explicit_in_observed_prompt",
+      "question_observations": {
+        "observed_at": "2026-10-20",
+        "universal": false,
+        "usage": "contextual_examples_not_requirements",
+        "questions": [
+          {
+            "text": "Qual é a ideia central que você quer transformar em ilustração? Pode responder em frases curtas e anexar referências, se houver.",
+            "usage": "contextual_example_not_requirement"
+          },
+          {
+            "text": "O que deve aparecer? Uma pessoa, um objeto, um lugar, uma cena ou um conceito?",
+            "usage": "contextual_example_not_requirement"
+          },
+          {
+            "text": "O que a imagem deve comunicar? Você prefere uma representação direta da ideia ou uma metáfora visual, mais aberta à interpretação?",
+            "usage": "contextual_example_not_requirement"
+          },
+          {
+            "text": "Onde a ilustração será usada: cartaz, publicação em rede social, capa, material impresso, site ou outro suporte?",
+            "usage": "contextual_example_not_requirement"
+          },
+          {
+            "text": "Você tem alguma imagem, fotografia ou desenho de referência? Ao enviar, indique:",
+            "usage": "contextual_example_not_requirement"
+          },
+          {
+            "text": "Qual composição combina melhor com sua intenção?",
+            "usage": "contextual_example_not_requirement"
+          },
+          {
+            "text": "Que atmosfera você procura? Por exemplo: serena, íntima, melancólica, misteriosa, lúdica, solene ou inquietante.",
+            "usage": "contextual_example_not_requirement"
+          },
+          {
+            "text": "Qual dessas direções você prefere? Se estiver em aberto, basta descrever o tema e a sensação desejada para eu definir uma proposta coerente.",
+            "usage": "contextual_example_not_requirement"
+          }
+        ],
+        "option_tables": [
+          {
+            "headers": [
+              "Opção",
+              "Direção visual",
+              "Características"
+            ],
+            "rows": [
+              {
+                "Opção": "1",
+                "Direção visual": "Vetor minimalista",
+                "Características": "Formas simplificadas, cores chapadas e contornos precisos."
+              },
+              {
+                "Opção": "2",
+                "Direção visual": "Aquarela",
+                "Características": "Transparências, manchas suaves e bordas orgânicas."
+              },
+              {
+                "Opção": "3",
+                "Direção visual": "Guache",
+                "Características": "Cores opacas, formas bem definidas e textura de pintura."
+              },
+              {
+                "Opção": "4",
+                "Direção visual": "Nanquim ou gravura",
+                "Características": "Traços, hachuras, contraste e textura gráfica."
+              },
+              {
+                "Opção": "5",
+                "Direção visual": "Pintura digital",
+                "Características": "Luz, volume e materiais trabalhados, com acabamento realista ou estilizado."
+              },
+              {
+                "Opção": "6",
+                "Direção visual": "Colagem artística",
+                "Características": "Recortes, sobreposições e combinação de texturas."
+              }
+            ],
+            "usage": "observed_options_not_exhaustive"
+          }
+        ],
+        "source_refs": [
+          {
+            "repository_relative_file": "docs/validation/image-card-flows-20261020/probes.json",
+            "card_name": "Ilustração"
+          }
+        ],
+        "limitations": [
+          "Only completed captured responses supply these examples. Association and nesting should be checked against repository raw Markdown."
+        ]
+      }
+    },
+    {
+      "name": "Retrato profissional",
+      "category": "Modelos",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma foto de rosto ou retrato que apresente a pessoa com clareza para o uso pretendido. Use a foto enviada apenas para preservar a identidade, a estrutura facial, o tom de pele e os traços marcantes. Reinterprete a iluminação, o ângulo, a pose, a expressão, a roupa, o segundo plano, as sombras, a tonalidade de cor e a qualidade informal da foto.\n\nPeça uma foto nítida da pessoa e, em seguida, faça perguntas de esclarecimento para definir o uso pretendido, o estilo do retrato e a iluminação. Apresente direções de estilo de retrato relevantes, quando disponíveis.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "flow_status": "modal_observed_conversation_not_included",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/modelos-modal.json",
+          "card_name": "Retrato profissional"
+        }
+      ],
+      "clarification_instruction": "explicit_in_observed_prompt"
+    },
+    {
+      "name": "Ícone",
+      "category": "Modelos",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie um conjunto de ícones que represente a ideia solicitada com clareza no tamanho previsto. Mantenha os símbolos simples, legíveis e consistentes em forma, peso visual, nível de detalhe e perspectiva. Não adicione imagens sem relação com a ideia, rótulos ou estilos visuais incompatíveis.\n\nFaça perguntas para esclarecer o tema dos ícones, o uso pretendido e o estilo visual. Apresente opções relevantes de estilo para os ícones, quando disponíveis.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "flow_status": "modal_observed_conversation_not_included",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/modelos-modal.json",
+          "card_name": "Ícone"
+        }
+      ],
+      "clarification_instruction": "explicit_in_observed_prompt"
+    },
+    {
+      "name": "Foto de produto",
+      "category": "Modelos",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma fotografia de produto que apresente meu produto de forma fiel e profissional para o uso pretendido. Preserve o formato, as proporções, os materiais, as cores, os elementos da marca, os rótulos e os detalhes funcionais. Não redesenhe o produto nem invente características, acabamentos, elementos da marca, rótulos ou acessórios.\n\nPeça uma imagem do produto ou uma descrição clara e, em seguida, faça perguntas de esclarecimento para definir os detalhes a preservar, o cenário, a iluminação e o estilo fotográfico. Apresente abordagens fotográficas relevantes, quando disponíveis.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "flow_status": "modal_observed_conversation_not_included",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/modelos-modal.json",
+          "card_name": "Foto de produto"
+        }
+      ],
+      "clarification_instruction": "explicit_in_observed_prompt"
+    },
+    {
+      "name": "Produtos personalizados",
+      "category": "Modelos",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie um design para produtos personalizados que aplique minha ideia, arte ou marca de forma natural ao item escolhido. Adapte o design ao formato, à escala, ao local de aplicação, à superfície e ao método de produção do item. Preserve exatamente o texto ou a arte fornecidos; não adicione logotipos, elementos gráficos, locais de aplicação ou características do produto sem relação com o pedido.\n\nFaça perguntas de esclarecimento para definir o item, a arte ou o texto, o local de aplicação, o público-alvo e o estilo visual. Apresente opções relevantes de produtos personalizados e sugestões de estilo quando disponíveis.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "flow_status": "modal_observed_conversation_not_included",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/modelos-modal.json",
+          "card_name": "Produtos personalizados"
+        }
+      ],
+      "clarification_instruction": "explicit_in_observed_prompt"
+    },
+    {
+      "name": "Infográfico",
+      "category": "Modelos",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie um infográfico que facilite a compreensão das minhas informações e da minha mensagem principal. Organize o conteúdo com estrutura e hierarquia claras, rótulos legíveis e fatos ou dados precisos. Não invente fatos, dados, estatísticas, fontes ou conclusões.\n\nFaça perguntas para esclarecer a mensagem principal, os dados ou o conteúdo fornecidos, o público, o uso pretendido, o nível de detalhamento e o estilo visual. Apresente opções de estilo relevantes para o infográfico, quando disponíveis.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "flow_status": "modal_observed_conversation_not_included",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/modelos-modal.json",
+          "card_name": "Infográfico"
+        }
+      ],
+      "clarification_instruction": "explicit_in_observed_prompt"
+    },
+    {
+      "name": "Panfleto",
+      "category": "Modelos",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie um folheto que transmita minha mensagem com clareza e torne as informações essenciais fáceis de encontrar. Use uma hierarquia clara, mantenha os detalhes obrigatórios legíveis e deixe o próximo passo evidente. Preserve todos os detalhes fornecidos exatamente como estão; não invente nomes, datas, locais, preços, informações de contato, patrocinadores, ofertas ou textos adicionais.\n\nFaça perguntas de esclarecimento para definir o objetivo, o conteúdo obrigatório, a ação desejada, o formato e a distribuição, o layout e o estilo visual. Apresente opções relevantes de layout e estilo quando disponíveis.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "flow_status": "modal_observed_conversation_not_included",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/modelos-modal.json",
+          "card_name": "Panfleto"
+        }
+      ],
+      "clarification_instruction": "explicit_in_observed_prompt"
+    },
+    {
+      "name": "Capa de livro",
+      "category": "Modelos",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma capa de livro que reflita o conteúdo, o gênero, o público e o tom da obra. Estabeleça uma hierarquia visual bem definida entre título, nome do autor, texto de apoio e imagens, e mantenha a legibilidade tanto em tamanho real quanto em miniatura. Preserve todos os textos fornecidos exatamente como estão; não invente subtítulos, citações, prêmios, marcas de editoras, detalhes de séries ou textos promocionais.\n\nFaça perguntas de esclarecimento para definir o título e o autor, o tema e o gênero, o público, os detalhes que devem ser incluídos ou evitados e o estilo visual. Apresente opções de estilo para a capa que sejam pertinentes, quando disponíveis.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "flow_status": "modal_observed_conversation_not_included",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/modelos-modal.json",
+          "card_name": "Capa de livro"
+        }
+      ],
+      "clarification_instruction": "explicit_in_observed_prompt"
+    },
+    {
+      "name": "Mockup de aplicativo",
+      "category": "Modelos",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie um mockup de aplicativo que mostre claramente a tela e a experiência do usuário desejadas. Garanta a coerência entre o objetivo da tela, a hierarquia, as ações principais, o espaçamento e os componentes. Mantenha os rótulos e o conteúdo exatamente como foram fornecidos; não invente afirmações, preços, contas ou recursos que contrariem o briefing.\n\nFaça perguntas de esclarecimento para definir o objetivo do aplicativo, o público-alvo, a tela desejada, as ações principais, o conteúdo necessário, a plataforma e o estilo visual. Apresente opções relevantes de estilo para a interface, quando disponíveis.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "flow_status": "modal_observed_conversation_not_included",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/modelos-modal.json",
+          "card_name": "Mockup de aplicativo"
+        }
+      ],
+      "clarification_instruction": "explicit_in_observed_prompt"
+    },
+    {
+      "name": "Embalagem",
+      "category": "Modelos",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma embalagem que represente com clareza meu produto e minha marca na embalagem física. Adapte o design ao formato, à escala, aos materiais e às superfícies utilizáveis da embalagem, com as informações obrigatórias organizadas em uma hierarquia clara. Preserve os elementos da marca e as informações do produto exatamente como foram fornecidos; não invente alegações, ingredientes, certificações, textos legais, quantidades ou códigos de barras.\n\nFaça perguntas de esclarecimento para definir o produto, os elementos da marca ou conteúdos obrigatórios, o tipo, o tamanho, o formato e os materiais da embalagem, as superfícies que receberão o design e o estilo visual. Apresente opções de estilo relevantes para a embalagem, quando disponíveis.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "flow_status": "modal_observed_conversation_not_included",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/modelos-modal.json",
+          "card_name": "Embalagem"
+        }
+      ],
+      "clarification_instruction": "explicit_in_observed_prompt"
+    },
+    {
+      "name": "Anúncio",
+      "category": "Modelos",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie um anúncio que comunique minha oferta com clareza e ajude a alcançar o objetivo pretendido. Estabeleça uma hierarquia clara para o produto ou serviço, a mensagem principal, os detalhes complementares e a ação. Mantenha todos os textos e detalhes exatamente como foram fornecidos; não invente preços, descontos, depoimentos, resultados, termos, endossos ou textos adicionais.\n\nFaça perguntas de esclarecimento para definir a oferta, a mensagem principal, a ação desejada, o conteúdo obrigatório, o local de veiculação, o público e o estilo visual. Apresente opções de estilo relevantes para a campanha, quando disponíveis.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "flow_status": "modal_observed_conversation_not_included",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/modelos-modal.json",
+          "card_name": "Anúncio"
+        }
+      ],
+      "clarification_instruction": "explicit_in_observed_prompt"
+    },
+    {
+      "name": "Miniatura",
+      "category": "Modelos",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma miniatura que comunique minha ideia de imediato, mesmo em tamanho pequeno. Use um único ponto focal marcante, uma hierarquia clara e um texto curto, legível e adequado ao contexto de uso. Preserve exatamente os detalhes fornecidos; não invente nomes, afirmações, rótulos ou textos adicionais.\n\nPeça uma imagem do conteúdo que a miniatura vai representar e, em seguida, faça perguntas para esclarecer o texto necessário, o público ou o contexto e o estilo visual. Apresente opções de estilo relevantes para a miniatura, quando disponíveis.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "flow_status": "modal_observed_conversation_not_included",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/modelos-modal.json",
+          "card_name": "Miniatura"
+        }
+      ],
+      "clarification_instruction": "explicit_in_observed_prompt"
+    },
+    {
+      "name": "Mockup de site",
+      "category": "Modelos",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie um mockup de site que apresente com clareza o objetivo da página, o conteúdo e a principal ação do usuário. Estabeleça uma hierarquia de informações bem definida, navegação e ações fáceis de entender e uma interface coerente. Preserve exatamente os nomes, textos, preços e afirmações fornecidos; não invente depoimentos, logotipos de clientes, métricas ou detalhes do negócio.\n\nFaça perguntas de esclarecimento para definir o objetivo do site, o público, o conteúdo necessário e o estilo visual. Apresente opções relevantes de estilo para a interface, quando disponíveis.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "flow_status": "modal_observed_conversation_not_included",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/modelos-modal.json",
+          "card_name": "Mockup de site"
+        }
+      ],
+      "clarification_instruction": "explicit_in_observed_prompt"
+    },
+    {
+      "name": "Vista aérea",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Transform this picture to a drone view angle.",
+      "prompt_status": "visible_text_no_truncation_detected",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Vista aérea"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Lata colecionável",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Usando uma lata retangular de colecionador, preencha os dois lados com objetos que sejam a minha cara, com base apenas no que você sabe sobre mim, e pinte-a com a minha cor favorita.",
+      "prompt_status": "visible_text_no_truncation_detected",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Lata colecionável"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "De volta aos anos 80",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Usando a foto que enviei, mostre como seria minha aparência por volta de 1985. Preserve minha identidade, meus traços faciais, meu tom de pele e minha idade, mantendo minha aparência reconhecível. Reimagine meu cabelo, minhas roupas, meus acessórios e o ambiente ao meu redor com o estilo ousado e inconfundível de meados dos anos 1980: silhuetas expressivas, acessórios marcantes, detalhes em camadas, cores e texturas características. Faça a imagem parecer uma fotografia autêntica de 1985, com granulação analógica, cores desbotadas, flash direto e suavidade sutil. Adicione um carimbo de data vermelho-alaranjado em um dos cantos inferiores, fiel ao estilo dos anos 1980. Sem pôsteres reconhecíveis. Sem objetos modernos ou texto.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "De volta aos anos 80"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Caricatura",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma caricatura minha com base no que você sabe sobre mim e meus interesses. Use um estilo lúdico e exagerado, com feições desproporcionalmente grandes, linhas marcantes, expressões bem-humoradas, um visual de cartum com traço solto e pouco texto.",
+      "prompt_status": "visible_text_no_truncation_detected",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Caricatura"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Esboço",
+      "category": "Em alta",
+      "kind": "sketch_editor",
+      "prompt_observed": null,
+      "prompt_status": "not_applicable_editor",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar editor de esboço",
+          "\"alternar\" Selecionar, Value: 0",
+          "\"alternar\" Caneta, Value: 1",
+          "\"alternar\" Texto, Value: 0",
+          "\"alternar\" Formas, Value: 0",
+          "\"alternar\" Borracha, Value: 0",
+          "(disabled) Desfazer",
+          "(disabled) Refazer",
+          "\"alternar\" Usar branco, Value: 1",
+          "\"alternar\" Usar cinza, Value: 0",
+          "\"alternar\" Usar marrom, Value: 0",
+          "\"alternar\" Usar vermelho, Value: 0",
+          "\"alternar\" Usar laranja, Value: 0",
+          "\"alternar\" Usar amarelo, Value: 0",
+          "\"alternar\" Usar verde, Value: 0",
+          "\"alternar\" Usar verde-azulado, Value: 0",
+          "\"alternar\" Usar ciano, Value: 0",
+          "\"alternar\" Usar azul, Value: 0",
+          "\"alternar\" Usar índigo, Value: 0",
+          "\"alternar\" Usar roxo, Value: 0",
+          "\"alternar\" Usar rosa, Value: 0",
+          "(disabled) Anexar esboço"
+        ],
+        "editor_controls_ax": [
+          "36 controle deslizante Espessura do traço, Value: 12, Secondary Actions: Increment, Decrement",
+          "41 quadro de cores Escolher uma cor personalizada, Value: rgb 0.65882 0.33333 0.96863 1"
+        ]
+      },
+      "flow_status": "editor_only_no_conversation_probe",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Esboço"
+        }
+      ]
+    },
+    {
+      "name": "Figurinhas",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie um pacote de figurinhas de meme com base nas imagens anexadas, remixando-as com 😎😛💕🚀🥳. Use expressões exageradas de reação da internet, incluindo choro, confusão, choque, presunção, olhar de lado e incredulidade impassível, com poses constrangedoras, texturas de recorte lo-fi e humor absurdo.",
+      "prompt_status": "visible_text_no_truncation_detected",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Figurinhas"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Oktoberfest retrô",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Use a foto anexada como referência de identidade para a pessoa ou as pessoas em primeiro plano, preservando os traços faciais. Crie uma foto espontânea da Oktoberfest dos anos 1980: em plena gargalhada, com a boca aberta e os cantos dos olhos franzidos de alegria. Vestindo trajes bávaros tradicionais e recatados. Cada pessoa carrega, em cada mão, cinco canecas enormes de vidro cheias de cerveja, segurando-as pelas alças, com espuma transbordando. As mãos ficam escondidas atrás das canecas. Tenda de cerveja movimentada, multidões vestindo lederhosen, banda de metais em um palco elevado, folhagens suspensas, vigas de madeira, toldo azul e branco, lâmpadas acesas. Enquadramento da cintura para cima, com leve efeito de grande-angular, canecas dominando o primeiro plano. Tons quentes de âmbar, flash direto, foco suave, granulação de filme analógico, cores desbotadas. Adicione um carimbo de data em vermelho-alaranjado, fiel ao padrão dos anos 1980, em um dos cantos inferiores. Sem logotipos.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Oktoberfest retrô"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Cabine de fotos",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Usando o retrato que enviei como referência de identidade, crie uma colagem de fotos de cabine fotográfica: três tiras verticais em preto e branco, lado a lado e desalinhadas, com quatro fotos em cada tira. Cada tira deve ficar levemente inclinada para se sobrepor às outras em uma composição 9:16. Preserve a identidade facial, as roupas e os penteados das pessoas. As poses e expressões são variadas, divertidas e bobas. Em algumas fotos, as pessoas ficam parcial ou totalmente fora do enquadramento, trocam de lugar ou aparecem mais perto da câmera. Use flash direto com luz dura, contraste extremo, pretos fechados, brancos estourados, poucos tons médios e perda de detalhes. Adicione granulação grossa de filme, superexposição, bordas pretas grossas e marcas de desgaste muito leves. Impressão de cabine fotográfica analógica.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Cabine de fotos"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Câmera digital dos anos 2000",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Preserve os traços da pessoa retratada e o ambiente da imagem de referência, recriando a cena no estilo de uma foto espontânea tirada com câmera digital no início dos anos 2000: óculos de sol e acessórios típicos da época, roupas datadas, penteado exagerado do início dos anos 2000 e detalhes do ambiente ajustados para combinar. Flash direto da câmera, exposição irregular, áreas iluminadas da pele levemente estouradas, sombras duras, fundos mais escuros em ambientes internos e de baixo contraste em ambientes externos. Foco suave, ruído digital discreto nas sombras e compressão JPEG sutil. Enquadramento casual e um pouco desajeitado. Apenas a imagem, sem marcações de hora ou data.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Câmera digital dos anos 2000"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Anime",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma imagem em um estilo de arte anime popular a partir do elemento enviado. Use line-work marcante, com leve variação, e cel shading mínimo com formas chapadas de sombra. Use cores brilhantes e saturadas e uma iluminação gráfica limpa. O estilo traz proporções de personagem exageradas e em estilo cartoon, com traços faciais simples e muito expressivos que permitem uma ampla gama de emoções, além de anatomia alongada e bem variada. Transforme o ambiente em um espaço levemente distorcido, com uma distorção de perspectiva divertida e objetos simplificados. A composição e o tom devem ter energia, animação e comicidade, em um mundo totalmente estilizado e não realista.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver mais",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Anime"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Retrato dos anos 70",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Preserve os traços da pessoa e o ambiente da imagem de referência, recriando a cena como um retrato sem pose em slide de 1970 a 1975: óculos de sol e acessórios típicos do período, roupas de época, cabelo do início dos anos 70 e detalhes do ambiente ajustados para combinar. Adicione tons de vermelho quentes e desbotados, pretos levemente fechados, granulação fina de filme analógico e uma vinheta suave. Dê à imagem o tom levemente amarelado e desbotado pelo sol de um antigo slide de família, com variações sutis de cor nas sombras.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Retrato dos anos 70"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Pintura impressionista",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme esta foto em uma pintura impressionista.",
+      "prompt_status": "visible_text_no_truncation_detected",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Pintura impressionista"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Coleção de pins",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Com base no que você sabe sobre mim e meus interesses, crie um conjunto de 8 pins esmaltados hiper-realistas ilustrados em uma imagem 4×5. Um pin médio é um retrato meu, um pin pequeno é uma palavra que me descreve e um pin pequeno é meu nome. O estilo é ousado, plano, com cores vivas e chamativas. Se ainda não souber o bastante sobre mim, use pistas da foto.",
+      "prompt_status": "visible_text_no_truncation_detected",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Coleção de pins"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Embaixo d’água",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie um retrato subaquático em close extremo logo após a pessoa saltar em uma piscina ou em água rasa e cristalina. Mantenha o clima calmo, leve e etéreo, destacando os reflexos da luz. Sem esforço nem urgência.",
+      "prompt_status": "visible_text_no_truncation_detected",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Embaixo d’água"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Avatar 3D",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma renderização 3D com acabamento brilhante e premium, em estilo \"designer toy\" da(s) pessoa(s), usando a imagem enviada como única referência. Renderize uma cabeça flutuante por pessoa (sem duplicação), recortada com precisão abaixo da mandíbula, com pescoço visível e a cabeça inteira bem enquadrada. Estilo: figura de vinil de alta qualidade, com formas ultralisas e simplificadas, volumes arredondados e fortes reflexos brilhantes nas principais áreas do rosto. O cabelo deve ser estruturado, brilhante e estilizado, incluindo acessórios divertidos. Inclua óculos escuros retrô tipo máscara e oversized, com armação e lentes em cores vibrantes e combinando. Use iluminação de estúdio forte, com brilhos bem marcados. Fundo: céu azul com nuvens suaves.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Avatar 3D"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Pintura acrílica",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme cada imagem em uma pintura acrílica vibrante, com aspecto plano. Reduza cada objeto a formas simplificadas de cor sólida. Sem sombreamento, sem sombras, sem degradês. Adicione textura de pintura à mão, com contornos imperfeitos e bordas irregulares. Mínimo de detalhes.",
+      "prompt_status": "visible_text_no_truncation_detected",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Pintura acrílica"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Miniatura de feltro",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme a foto enviada em uma obra de arte têxtil criada por feltragem com agulha. Estilo de miniatura artesanal em lã feltrada com agulha, formas arredondadas e simplificadas, poucos detalhes faciais, fibras macias e felpudas, textura visível da lã, imperfeições artesanais que transmitem aconchego, bonecos fofinhos de feltro, diorama em miniatura, iluminação quente e suave, estética encantadora de stop-motion.",
+      "prompt_status": "visible_text_no_truncation_detected",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Miniatura de feltro"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Carta de tarô",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma carta de tarô com base no que você sabe sobre mim, no estilo clássico Rider-Waite. Me represente como uma figura desenhada à mão, com traços de tinta preta fortes, porém imperfeitos, com leve tremor e variação, cores chapadas sem sombreamento. Sobreponha elementos visuais sutis de tarô ao redor da figura. Adicione textura de papel e aspecto de impressão.",
+      "prompt_status": "visible_text_no_truncation_detected",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Carta de tarô"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Estátua",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma estátua neoclássica grega detalhada em mármore branco de Carrara respeitando a imagem enviada. Se a imagem tiver uma pessoa, retrate-a na estátua como uma poderosa figura alegórica em movimento, com vestes esvoaçantes, pose confiante e expressão séria. Se não for uma pessoa, não adicione uma pessoa. Inclua elementos da foto para dar personalidade à estátua e artefatos históricos não genéricos com base no que você sabe sobre mim. Em uma sala de museu. Fotorrealista, com profundidade de campo média, perspectiva natural e iluminação quente de museu criando sombras dramáticas e realistas.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "(disabled) Enviar uma foto",
+          "\"alternar\" (disabled) Foto 1, Value: 0",
+          "\"alternar\" (disabled) Foto 2, Value: 0",
+          "\"alternar\" (disabled) Foto 3, Value: 0",
+          "\"alternar\" (disabled) Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Estátua"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Mundo de massinha",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme a figura e o ambiente da imagem enviada em um mundo artesanal de animação em stop-motion com massinha. Preserve a identidade, a pose, o figurino, o ambiente e a composição, recriando tudo de forma lúdica em esculturas. Dê ao rosto uma expressão bem definida, animada e cheia de personalidade, em vez de uma expressão fotográfica neutra. Modele a pele, o cabelo, as roupas, os objetos e o cenário em massinha de modelar fosca, com impressões digitais visíveis, marcas de modelagem, bordas irregulares, formas volumosas e imperfeições artesanais. Use iluminação de estúdio para miniaturas e profundidade física. O resultado deve parecer um cenário real de stop-motion fotografado, não uma imagem de computação gráfica com acabamento liso.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Mundo de massinha"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Kit de modelismo",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme esta cena em uma cartela de peças de um kit de modelismo em plástico, usando uma única cor. Escolha uma cor vibrante que se destaque na cena. Mantenha cada pessoa e cada animal em uma só peça. Faça o fundo em um tom mais escuro da cor da cartela.",
+      "prompt_status": "visible_text_no_truncation_detected",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Kit de modelismo"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Arcade de 16 bits",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme a figura principal e o ambiente da imagem enviada em pixel art no estilo de um jogo de luta retrô de fliperama de 16 bits. Preserve a identidade ao redesenhar o figurino com formas marcantes e fáceis de reconhecer, típicas de personagens de fliperama. Dê ao personagem o nome de \"Player 1\" e coloque-o em uma pose de corpo inteiro, com expressões exageradas. Evite dar aos pixels um acabamento vetorial moderno e polido. Recrie o ambiente como um cenário detalhado de jogo de luta em vista lateral, com elementos em pixels organizados em camadas, iluminação dramática e elementos de interface de fliperama típicos da época.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Arcade de 16 bits"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Estilo manuscrito",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Adicione uma sobreposição desenhada à mão sobre a imagem. O resultado final deve ser estiloso, descontraído e casual sem esforço. Regras do desenho: use linhas finas, desenhadas à mão, como se fossem feitas com uma caneta branca. Mantenha um estilo de traço contínuo: rústico e levemente irregular. Adicione contornos acompanhando as bordas externas dos objetos. Use setas ou linhas pontilhadas para guiar o olhar do observador. Regras do texto: texto manuscrito. Mantenha-o curto, como um monólogo interno casual. Tom: estilo diário, breve e focado na emoção. Os comentários devem ser positivos e delicados. Decorações: adicione vapor, brilhos, corações e rostinhos tipo emoticon com moderação. Evite exagerar; deixe algum “espaço negativo”.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Estilo manuscrito"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Guia de maquiagem",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie um infográfico de alta qualidade no estilo “Guia de Análise de Maquiagem” com base na foto de retrato que enviei. Dê a ele um visual profissional e limpo, como uma matéria moderna de revista de beleza. Use a foto enviada como base, preservando os traços faciais reais e mantendo a pessoa reconhecível, sem retoques excessivos. Priorize elementos visuais que destaquem os pontos principais, com pouco texto e sem parágrafos longos. Use proporção 9:16.",
+      "prompt_status": "visible_text_no_truncation_detected",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Guia de maquiagem"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Rabisco",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Desenhe novamente a imagem anexada do jeito mais desajeitado, rabiscado e completamente patético possível. Use um fundo branco e faça parecer que foi desenhada com o mouse num programa de pintura antigo de computador. Deve ser vagamente parecida, mas também nem tanto, meio que combinando mas também toda errada de um jeito confuso e esquisito, com aquela cara de baixa qualidade, pixel por pixel, que deixa bem claro como ela é ruim. Aliás, quer saber? Tanto faz, desenhe do jeito que você quiser.",
+      "prompt_status": "visible_text_no_truncation_detected",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Rabisco"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Seu boneco de cabeça grande",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma fotografia de estúdio de um boneco de plástico com cabeça de mola, barato e produzido em massa, inspirado na foto enviada. Use como referência a identidade e os traços exatos do rosto da pessoa, mas deixe o rosto mais jovem, com um sorriso largo e amigável e cabelo de plástico moldado em mechas grossas. O brinquedo deve ter a aparência de um objeto fotografado de verdade, não de uma imagem gerada por computador (CGI) ou de uma renderização 3D. Cabeça desproporcionalmente grande, comicamente enorme, com cerca de 12 vezes o tamanho do corpo minúsculo. Rosto simplificado de vinil moldado, com olhos pintados, sobrancelhas pintadas, sorriso moldado, limites visíveis da pintura, minúsculos desalinhamentos na pintura, linhas sutis de junção do molde, textura de plástico moldado por injeção, pequenas marcas de desgaste e reflexos especulares suaves. Cabelo de plástico moldado com sulcos largos esculpidos, não fios individuais. Ambiente inspirado na foto.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Seu boneco de cabeça grande"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Versão mini",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme esta foto em um mundo mágico de “Mini Eu”, onde versões minúsculas e animadas de você ganham vida ao seu redor. Esses minipersonagens fofos em estilo 3D interagem com o seu dia a dia — sobem nos seus ombros, sentam na sua bolsa, acenam, brincam e imitam suas poses — criando uma cena divertida, emotiva e digna de um story nas redes sociais, cheia de personalidade e narrativa. A foto original fica intocada, enquanto os personagens minúsculos dão vida à imagem com profundidade, movimento, sombras realistas e uma vibe estética suave.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Versão mini"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Corte transversal",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme o assunto principal da imagem enviada em um diagrama educacional de corte limpo sobre um fundo branco. Mantenha as características distintas do assunto da imagem original, mostre uma seção transversal ou interior em camadas que seja verossímil e adicione legendas explicativas claras. O visual deve assemelhar-se a um gráfico de livro didático ou de museu de ciências, priorizando a clareza e a precisão em vez de um estilo dramático ou artístico.",
+      "prompt_status": "visible_text_no_truncation_detected",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Corte transversal"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Melhore fotos",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Melhore a qualidade da minha foto e deixe-a mais nítida.",
+      "prompt_status": "visible_text_no_truncation_detected",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Melhore fotos"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Desejo de viajar",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Use esta imagem para criar uma colagem de viagem, colocando o elemento principal da imagem original em um destino de viagem, dentro de uma foto instantânea, com ambientação adequada ao local e iluminação, cor e qualidade de foto instantânea. Inclua um cartão-postal de algum destino menos visitado, com uma mensagem em caneta de tinta azul me inspirando a viajar para novos lugares. A imagem deve parecer íntima, pessoal e bem organizada. Adicione lembranças e pequenos detalhes que criem um clima de recordação, em uma composição equilibrada e com luz natural.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Desejo de viajar"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Flash noturno",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme a foto em uma fotografia noturna chique com flash. Use flash direto na câmera, forte, com realces distintos, sombras profundas e leve superexposição na pessoa. Defina a cena à noite, com um fundo escuro e um clima dramático, mantendo cores e texturas realistas. Adicione um ar espontâneo e editorial, enquadramento levemente imperfeito, energia de movimento e expressão natural. Enfatize o alto contraste, os brilhos na pele e um efeito de granulação sutil para uma estética \"raw\" fashion noturna.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Flash noturno"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Pôster blueprint",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie um pôster estilo blueprint com um único assunto, usando apenas o tema principal da imagem enviada. Renderize-o como um desenho técnico limpo em linhas brancas sobre um fundo azul-cobalto profundo, estilo blueprint, com uma grade sutil. Use linework esquemático 2D plano, contornos ortográficos, linhas de construção, marcas de medição, setas e o mínimo de rótulos técnicos. A composição também pode incluir de 2 a 3 estudos menores em destaque ou vistas alternativas. Mantenha o layout simples e equilibrado, sem sombreamento, sem 3D, sem iluminação e sem objetos extras.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Pôster blueprint"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Colorimetria",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma arte de coloração pessoal usando este retrato. Mostre comparações lado a lado de cores de roupa para destacar quais cores valorizam mais a pessoa. Priorize o visual, apenas com rótulos curtos e sem parágrafos.",
+      "prompt_status": "visible_text_no_truncation_detected",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Colorimetria"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Quadrinho",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma tira em quadrinhos a partir do elemento principal da imagem enviada. Dê à tira um estilo marcante de quadrinhos coloridos de jornal de domingo, com contornos grossos, texturas em meio-tom e cores vibrantes dos anos 1980. Escolha um elemento visual claro e exagerado da foto e construa a história em torno dele, chegando a um desfecho engraçado ou inesperado. Mantenha os diálogos curtos, naturais e fáceis de ler, e faça a piada funcionar de primeira, sem aleatoriedade nem confusão.",
+      "prompt_status": "visible_text_no_truncation_detected",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Quadrinho"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Quadrinho estilo anime",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma tira em quadrinhos totalmente original, simples, em preto e branco, no estilo mangá retrô desenhado à mão com tinta. Use de 2 a 3 quadros horizontais. Use a imagem enviada como referência do personagem; redesenhe a pessoa inteiramente em formato mangá, com traço e sombreamento consistentes em todos os quadros. Interprete a pessoa como protagonista e, com base na aparência dela, crie um encontro inspirador com uma estrutura clara de “apresentação-reforço-reviravolta”: o primeiro quadro estabelece o contexto, o segundo desenvolve a situação e o terceiro traz uma surpresa. Mantenha os diálogos curtos, naturais e otimistas. Sem tecnologia.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Quadrinho estilo anime"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Jornal de fantasia",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme a pessoa da foto enviada em uma capa de jornal vintage em preto e branco, com um toque fantasioso. Coloque-a como retrato principal no centro, no estilo de uma foto antiga em gravura. Cerque-a com manchetes grandes e exageradas, colunas estreitas de jornal e subtítulos divertidos. Use tinta preta de alto contraste sobre fundo branco puro, textura sutil de papel e fontes serifadas clássicas. Adicione manchetes excêntricas, mágicas ou bem-humoradas para criar um tom charmoso e levemente surreal. Mantenha o layout denso, editorial e que lembre um antigo jornal de fantasia. Garanta que o rosto continue reconhecível, mas estilizado para combinar com a estética de jornal impresso.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Jornal de fantasia"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Tira de filme",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Transforme a imagem enviada em film stills cinematográficos sequenciais de 3 quadros (quadros horizontais empilhados verticalmente), em full bleed de ponta a ponta. Cada quadro deve mostrar um momento diferente da mesma cena, com progressão clara. Varie a composição, o ângulo de câmera e as distâncias para criar sensação de movimento e narrativa. Use um visual cinematográfico, de tons mais frios, alto contraste e pretos profundos, com color grade natural. Adicione granulação sutil, leve motion blur e imperfeições naturais para emular fotografia analógica. Mantenha a composição espontânea e emocionalmente realista, com sensação de movimento e narrativa silenciosa. Estética geral: cinematográfica, nostálgica e orgânica, como film stills sem tratamento.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Tira de filme"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Papel de parede hiper-realista",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Crie uma imagem macro da natureza de uma cena com texturas realistas, profundidade de campo rasa com bokeh cremoso, em um ambiente natural ao ar livre. A imagem tem uma qualidade analógica, imperfeita, wabi sabi, de filme 35mm — granulação, reprodução natural de cores e uma curva de contraste suave. Detalhe ultrarrealista, fotografia macro, proporção 9:16. Antes de criar a imagem, faça uma pergunta complementar com uma lista numerada de algumas opções inesperadas de tema e depois renderize a imagem.",
+      "prompt_status": "full_rendered_modal_text_verified",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "modified_clarification_only_probe_pending_not_native",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Papel de parede hiper-realista"
+        }
+      ],
+      "clarification_instruction": "explicit_followup_then_render_in_observed_prompt"
+    },
+    {
+      "name": "Cor do cabelo",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Mostre algumas opções de cor de cabelo que combinem comigo. Organize da mais escura à mais clara e inclua o loiro como uma das opções. Foque só no visual e em nomes curtos e descritivos. O layout deve ser moderno e minimalista.",
+      "prompt_status": "visible_text_no_truncation_detected",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Cor do cabelo"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    },
+    {
+      "name": "Leitura de mão",
+      "category": "Em alta",
+      "kind": "prompt_modal",
+      "prompt_observed": "Use esta imagem para criar um infográfico completo de guia de leitura de mão. Observe as linhas da palma e destaque as principais, analise a palma em detalhe e apresente a leitura sobre um fundo off-white em um estilo editorial clean, minimalista e luxuoso. Use linhas finas, cards arredondados, espaçamento elegante e uma estética sofisticada de alto padrão. Mantenha o foco na leitura da mão em si.",
+      "prompt_status": "visible_text_no_truncation_detected",
+      "controls_observed": {
+        "buttons_ax": [
+          "Fechar caixa de diálogo",
+          "Ver menos",
+          "(disabled) Proporções anteriores",
+          "Avançar para as próximas proporções",
+          "\"alternar\" Automático, Value: 1",
+          "\"alternar\" 1:1, Value: 0",
+          "\"alternar\" 2:3, Value: 0",
+          "\"alternar\" 3:2, Value: 0",
+          "\"alternar\" 16:9, Value: 0",
+          "\"alternar\" 9:16, Value: 0",
+          "(disabled) Imagens sugeridas anteriores",
+          "Próximas imagens sugeridas",
+          "Enviar uma foto",
+          "\"alternar\" Foto 1, Value: 0",
+          "\"alternar\" Foto 2, Value: 0",
+          "\"alternar\" Foto 3, Value: 0",
+          "\"alternar\" Foto 4, Value: 0",
+          "(disabled) Experimente"
+        ],
+        "editor_controls_ax": []
+      },
+      "flow_status": "native_probe_omitted_to_avoid_generation",
+      "source_refs": [
+        {
+          "repository_relative_file": "docs/validation/image-card-flows-20261020/em-alta-modal.json",
+          "card_name": "Leitura de mão"
+        }
+      ],
+      "clarification_instruction": "no_explicit_clarification_wording_in_observed_prompt"
+    }
+  ]
+}

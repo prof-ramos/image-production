@@ -17,6 +17,12 @@ Read [the run contract](references/run-contract.md) to prepare a JSON brief and 
 
 Create a new run in a user-approved output location with `prepare`. Keep the original brief and references untouched. Every reference must have a role (`reference`, `edit-target`, `insert`, or `brand-kit`); its bytes are snapshotted and hashed. If no brand kit is supplied, record that explicitly; do not invent one.
 
+## Card and style references
+
+When the user requests a ChatGPT Images card or a matching style, consult [the observed card catalog](references/chatgpt-images-catalog.json) and [its evidence limits](references/chatgpt-images-evidence.md). Match the card name and category, then use its observed prompt and controls to inform the brief. The catalog records the UI on 2026-10-20; it is not the historical 2026-10-19 snapshot and does not guarantee the live UI or generation result. Esboço is an editor observation without a prompt; do not invent one.
+
+Before generating, clarify indispensable missing content, identity/reference preservation, intended use and style choices informed by the selected card. Skip questions already answered by the user's brief. Observed conversational questions or options, when documented with provenance, are contextual examples rather than universal rules or a fixed sequence. Do not invent unobserved question sets, reuse personal probe input as a default, or interpret a catalog prompt as authorization to generate before required clarification. Follow the active user's instructions and the installed imagegen skill.
+
 ## Coordinated roles and portability
 
 The coordinated workflow requires all four definitions: `image_coordinator`, `image_producer`, `image_technical`, and `image_visual`. Prefer native roles when the host exposes them; files alone do not prove native discovery. If the host supports generic subagents, an explicit-load mode is supported: read each role TOML and pass its full `developer_instructions` to the corresponding assigned worker, identifying the role and definition path in the task. Record this as explicit-load mode, never native activation. If a definition or required delegation capability is missing, record the coordinated run as `blocked`. A simple standalone image can instead use `$imagegen` directly.

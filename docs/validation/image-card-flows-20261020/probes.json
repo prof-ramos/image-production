@@ -1,0 +1,1087 @@
+{
+  "observed_at": "2026-10-20",
+  "scope": "Only completed saved response captures; missing cards are not inferred.",
+  "probes": [
+    {
+      "card": "Cartaz",
+      "category": "Modelos",
+      "observed_at": "2026-10-20",
+      "response_rounds": 2,
+      "source": {
+        "file": "cartaz.json",
+        "readable_file": "source-cartaz.md"
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "text": "Qual é a ideia central?",
+          "input": "free_text",
+          "details": "O que o cartaz deve comunicar e o que você quer provocar em quem o vê: curiosidade, impacto, reflexão, identificação, vontade de participar ou outra reação?",
+          "evidence_refs": [
+            "cartaz-initial-ui"
+          ],
+          "options": [],
+          "allows_free_text": true
+        },
+        {
+          "id": "q2",
+          "text": "Qual é o texto obrigatório?",
+          "input": "free_text",
+          "details": "Cole o texto completo exatamente como deverá aparecer, incluindo grafia, pontuação e maiúsculas. Se houver uma frase ou informação que deva receber mais destaque, indique.",
+          "evidence_refs": [
+            "cartaz-initial-ui"
+          ],
+          "options": [],
+          "allows_free_text": true
+        },
+        {
+          "id": "q3",
+          "text": "Onde e por quem ele será visto?",
+          "input": "free_text",
+          "details": "Informe o uso previsto: impressão, publicação no Instagram, story, WhatsApp, tela ou outro contexto. Diga também quem é o público e, se houver, o tamanho obrigatório. Se ainda não souber as dimensões, basta informar o uso.",
+          "evidence_refs": [
+            "cartaz-initial-ui"
+          ],
+          "options": [],
+          "allows_free_text": true
+        },
+        {
+          "id": "q4",
+          "text": "Qual composição você prefere?",
+          "input": "conversational_choice",
+          "options": [
+            {
+              "value": "A",
+              "label": "Texto protagonista",
+              "description": "Tipografia ocupa a maior parte do cartaz; imagens e elementos gráficos têm papel de apoio.",
+              "id": "q4-A",
+              "evidence_refs": [
+                "cartaz-initial-ui"
+              ]
+            },
+            {
+              "value": "B",
+              "label": "Imagem protagonista",
+              "description": "Uma imagem concentra a atenção; o texto entra em uma área de leitura bem definida.",
+              "id": "q4-B",
+              "evidence_refs": [
+                "cartaz-initial-ui"
+              ]
+            },
+            {
+              "value": "C",
+              "label": "Composição editorial",
+              "description": "Texto e imagem dividem o espaço, com alinhamentos precisos e hierarquia organizada.",
+              "id": "q4-C",
+              "evidence_refs": [
+                "cartaz-initial-ui"
+              ]
+            },
+            {
+              "value": "D",
+              "label": "Composição dinâmica",
+              "description": "Assimetria, diferenças de escala e uso expressivo do espaço criam movimento e tensão visual.",
+              "id": "q4-D",
+              "evidence_refs": [
+                "cartaz-initial-ui"
+              ]
+            }
+          ],
+          "evidence_refs": [
+            "cartaz-initial-ui"
+          ],
+          "allows_free_text": null
+        },
+        {
+          "id": "q5",
+          "text": "Que linguagem visual combina com sua ideia?",
+          "input": "conversational_choice_or_combination",
+          "options": [
+            {
+              "label": "Minimalista",
+              "description": "poucos elementos, bastante espaço livre e contraste controlado.",
+              "id": "q5-1",
+              "evidence_refs": [
+                "cartaz-initial-ui"
+              ]
+            },
+            {
+              "label": "Artística e poética",
+              "description": "metáfora visual, textura e significados sugeridos.",
+              "id": "q5-2",
+              "evidence_refs": [
+                "cartaz-initial-ui"
+              ]
+            },
+            {
+              "label": "Gráfica e contundente",
+              "description": "formas marcantes, tipografia forte e contraste alto.",
+              "id": "q5-3",
+              "evidence_refs": [
+                "cartaz-initial-ui"
+              ]
+            },
+            {
+              "label": "Fotográfica",
+              "description": "fotografia como base, com tratamento de luz e cor coerente com a mensagem.",
+              "id": "q5-4",
+              "evidence_refs": [
+                "cartaz-initial-ui"
+              ]
+            },
+            {
+              "label": "Retrô e impressa",
+              "description": "linguagem de cartazes antigos, gravura, colagem ou serigrafia.",
+              "id": "q5-5",
+              "evidence_refs": [
+                "cartaz-initial-ui"
+              ]
+            }
+          ],
+          "evidence_refs": [
+            "cartaz-initial-ui"
+          ],
+          "allows_free_text": null
+        },
+        {
+          "id": "q6",
+          "text": "O que deve ser usado ou evitado?",
+          "input": "free_text_or_attachments",
+          "details": "Anexe imagens, referências ou logotipos que devam entrar no cartaz. Informe também cores obrigatórias, elementos proibidos e qualquer preferência de tipografia. Se enviar uma referência, diga o que deseja aproveitar nela: composição, cores, fonte, imagem ou atmosfera.",
+          "evidence_refs": [
+            "cartaz-initial-ui"
+          ],
+          "options": [],
+          "allows_free_text": true
+        },
+        {
+          "id": "bq1",
+          "text": "Que interpretação de “Vae Victis” deve orientar o cartaz?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Imponência e domínio",
+              "description": "transmitir autoridade, força e a dureza de uma vitória.",
+              "id": "bq1-A",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            },
+            {
+              "value": "B",
+              "label": "Vulnerabilidade e consequência",
+              "description": "enfatizar a fragilidade e o peso da derrota.",
+              "id": "bq1-B",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            },
+            {
+              "value": "C",
+              "label": "Tensão ambígua",
+              "description": "fazer poder e fragilidade coexistirem, permitindo diferentes interpretações.",
+              "id": "bq1-C",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            }
+          ],
+          "when": [
+            {
+              "question_id": "q1",
+              "operator": "text_equals",
+              "value": "Vae Victis",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q2",
+              "operator": "text_equals",
+              "value": "Vae Victis",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q4",
+              "operator": "option_selected",
+              "value": "q4-D",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q3",
+              "operator": "other",
+              "value": "other_fields: em aberto",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q5",
+              "operator": "other",
+              "value": "other_fields: em aberto",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q6",
+              "operator": "other",
+              "value": "other_fields: em aberto",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q1",
+              "operator": "other",
+              "value": "generation_prohibited: true",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            }
+          ],
+          "evidence_refs": [
+            "cartaz-followup-ui"
+          ],
+          "allows_free_text": null
+        },
+        {
+          "id": "bq2",
+          "text": "Onde o cartaz será visto e por quem?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Digital, principalmente no celular",
+              "description": "informe o canal, se já estiver definido.",
+              "id": "bq2-A",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            },
+            {
+              "value": "B",
+              "label": "Impresso, para parede ou exposição",
+              "description": "informe o tamanho aproximado, se souber.",
+              "id": "bq2-B",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            },
+            {
+              "value": "C",
+              "label": "Digital e impresso",
+              "description": "indique qual uso deve orientar primeiro a composição.",
+              "id": "bq2-C",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            },
+            {
+              "value": "D",
+              "label": "Peça artística pessoal",
+              "description": "formato e aplicação ainda livres.",
+              "id": "bq2-D",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            }
+          ],
+          "follow_up": "O público será você, pessoas que acompanham seu trabalho ou outro grupo?",
+          "when": [
+            {
+              "question_id": "q1",
+              "operator": "text_equals",
+              "value": "Vae Victis",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q2",
+              "operator": "text_equals",
+              "value": "Vae Victis",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q4",
+              "operator": "option_selected",
+              "value": "q4-D",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q3",
+              "operator": "other",
+              "value": "other_fields: em aberto",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q5",
+              "operator": "other",
+              "value": "other_fields: em aberto",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q6",
+              "operator": "other",
+              "value": "other_fields: em aberto",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q1",
+              "operator": "other",
+              "value": "generation_prohibited: true",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            }
+          ],
+          "evidence_refs": [
+            "cartaz-followup-ui"
+          ],
+          "allows_free_text": null
+        },
+        {
+          "id": "bq3",
+          "text": "Qual linguagem visual você prefere para a composição dinâmica?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Abstrata e material",
+              "description": "Formas, sombras, superfícies e desgaste sugerem a ideia sem representar uma cena literal.",
+              "id": "bq3-A",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            },
+            {
+              "value": "B",
+              "label": "Tipográfica e gráfica",
+              "description": "As próprias palavras constroem a composição, com diferenças de escala, posição e peso.",
+              "id": "bq3-B",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            },
+            {
+              "value": "C",
+              "label": "Fotográfica e conceitual",
+              "description": "Uma imagem central funciona como metáfora, com enquadramento e iluminação expressivos.",
+              "id": "bq3-C",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            },
+            {
+              "value": "D",
+              "label": "Colagem e gravura",
+              "description": "Recortes, sobreposições e texturas de impressão criam uma aparência tátil e artesanal.",
+              "id": "bq3-D",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            }
+          ],
+          "when": [
+            {
+              "question_id": "q1",
+              "operator": "text_equals",
+              "value": "Vae Victis",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q2",
+              "operator": "text_equals",
+              "value": "Vae Victis",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q4",
+              "operator": "option_selected",
+              "value": "q4-D",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q3",
+              "operator": "other",
+              "value": "other_fields: em aberto",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q5",
+              "operator": "other",
+              "value": "other_fields: em aberto",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q6",
+              "operator": "other",
+              "value": "other_fields: em aberto",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q1",
+              "operator": "other",
+              "value": "generation_prohibited: true",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            }
+          ],
+          "evidence_refs": [
+            "cartaz-followup-ui"
+          ],
+          "allows_free_text": null
+        },
+        {
+          "id": "bq4",
+          "text": "Que personalidade a tipografia deve ter?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Solene",
+              "description": "letras serifadas, proporções firmes e presença monumental.",
+              "id": "bq4-A",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            },
+            {
+              "value": "B",
+              "label": "Contemporânea e incisiva",
+              "description": "letras sem serifa, fortes ou condensadas.",
+              "id": "bq4-B",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            },
+            {
+              "value": "C",
+              "label": "Expressiva e irregular",
+              "description": "desenho de letras com caráter manual, preservando a leitura.",
+              "id": "bq4-C",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            },
+            {
+              "value": "D",
+              "label": "Em aberto",
+              "description": "escolher a tipografia depois de definir a linguagem visual.",
+              "id": "bq4-D",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            }
+          ],
+          "when": [
+            {
+              "question_id": "q1",
+              "operator": "text_equals",
+              "value": "Vae Victis",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q2",
+              "operator": "text_equals",
+              "value": "Vae Victis",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q4",
+              "operator": "option_selected",
+              "value": "q4-D",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q3",
+              "operator": "other",
+              "value": "other_fields: em aberto",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q5",
+              "operator": "other",
+              "value": "other_fields: em aberto",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q6",
+              "operator": "other",
+              "value": "other_fields: em aberto",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q1",
+              "operator": "other",
+              "value": "generation_prohibited: true",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            }
+          ],
+          "evidence_refs": [
+            "cartaz-followup-ui"
+          ],
+          "allows_free_text": null
+        },
+        {
+          "id": "bq5",
+          "text": "Que direção de cor você considera mais adequada?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Preto e branco",
+              "description": "contraste direto, com pouca distração.",
+              "id": "bq5-A",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            },
+            {
+              "value": "B",
+              "label": "Neutros e uma cor de destaque",
+              "description": "base contida, com um ponto de tensão.",
+              "id": "bq5-B",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            },
+            {
+              "value": "C",
+              "label": "Tons escuros e terrosos",
+              "description": "atmosfera densa, associada à matéria e ao desgaste.",
+              "id": "bq5-C",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            },
+            {
+              "value": "D",
+              "label": "Cores intensas e contrastantes",
+              "description": "impacto gráfico e maior energia visual.",
+              "id": "bq5-D",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            },
+            {
+              "value": "E",
+              "label": "Em aberto",
+              "description": "definir a paleta a partir do conceito escolhido.",
+              "id": "bq5-E",
+              "evidence_refs": [
+                "cartaz-followup-ui"
+              ]
+            }
+          ],
+          "when": [
+            {
+              "question_id": "q1",
+              "operator": "text_equals",
+              "value": "Vae Victis",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q2",
+              "operator": "text_equals",
+              "value": "Vae Victis",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q4",
+              "operator": "option_selected",
+              "value": "q4-D",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q3",
+              "operator": "other",
+              "value": "other_fields: em aberto",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q5",
+              "operator": "other",
+              "value": "other_fields: em aberto",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q6",
+              "operator": "other",
+              "value": "other_fields: em aberto",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q1",
+              "operator": "other",
+              "value": "generation_prohibited: true",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            }
+          ],
+          "evidence_refs": [
+            "cartaz-followup-ui"
+          ],
+          "allows_free_text": null
+        },
+        {
+          "id": "bq6",
+          "text": "Há referências ou elementos que você quer excluir?",
+          "details": "Você deseja evitar representações literais, símbolos militares ou jurídicos, figuras humanas, alguma cor ou algum estilo de fonte? Há uma imagem de referência cuja composição, textura ou tipografia você gostaria de aproveitar?",
+          "options": [],
+          "when": [
+            {
+              "question_id": "q1",
+              "operator": "text_equals",
+              "value": "Vae Victis",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q2",
+              "operator": "text_equals",
+              "value": "Vae Victis",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q4",
+              "operator": "option_selected",
+              "value": "q4-D",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q3",
+              "operator": "other",
+              "value": "other_fields: em aberto",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q5",
+              "operator": "other",
+              "value": "other_fields: em aberto",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q6",
+              "operator": "other",
+              "value": "other_fields: em aberto",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            },
+            {
+              "question_id": "q1",
+              "operator": "other",
+              "value": "generation_prohibited: true",
+              "evidence_refs": [
+                "cartaz-answer-ui"
+              ]
+            }
+          ],
+          "evidence_refs": [
+            "cartaz-followup-ui"
+          ],
+          "allows_free_text": null
+        }
+      ],
+      "universal": false,
+      "portable_question_scope": "initial_round_only",
+      "limitations": [
+        "The second round depends on personal probe input; use repository provenance and exclude those inputs from portable defaults."
+      ]
+    },
+    {
+      "card": "Design de interiores",
+      "category": "Modelos",
+      "observed_at": "2026-10-20",
+      "round": 1,
+      "evidence_type": "observed_native_ui_copied_markdown",
+      "source": {
+        "file": "probe-design-de-interiores-round-1.md",
+        "sha256": "4b70b01ec96d6c191c8c5b4597f8fa17ff0bb09c9e465510bedbd4d85df913f0",
+        "conversation_url": "https://chatgpt.com/c/6ad71666-ed4c-83e8-8065-d1a765960860"
+      },
+      "raw_markdown": "**Envie uma foto do ambiente que você quer transformar — ou uma descrição, se preferir.**\n\nPara servir de referência:\n\n- **Fotos:** uma visão ampla e, se possível, mais um ou dois ângulos mostrando portas, janelas, piso, teto e móveis existentes.\n- **Descrição:** qual é o cômodo, como está organizado, onde ficam portas, janelas e elementos fixos e quais móveis já existem. Inclua medidas apenas se você as souber.\n\nDepois de conhecer o espaço, farei perguntas sobre **como você o utiliza, o que deseja mudar, quais restrições existem e o que precisa ser preservado**.\n\nPara a decoração, podemos explorar opções como:\n\n| Estilo | Características |\n|---|---|\n| **Contemporâneo acolhedor** | Linhas simples, madeira, tecidos e iluminação suave. |\n| **Minimalista** | Poucos elementos, superfícies livres e organização visual. |\n| **Escandinavo** | Tons claros, madeira clara e mobiliário funcional. |\n| **Industrial** | Metal, madeira e acabamentos de aparência mais bruta. |\n| **Clássico contemporâneo** | Formas elegantes, composição equilibrada e detalhes discretos. |\n\nA proposta será construída a partir da referência fornecida, respeitando a arquitetura e as proporções existentes.\n\n",
+      "groups": [],
+      "questions": [
+        {
+          "id": "q1",
+          "text": "Envie uma foto do ambiente que você quer transformar — ou uma descrição, se preferir.",
+          "group": null,
+          "evidence_type": "observed_request",
+          "usage": "contextual_example_not_requirement"
+        }
+      ],
+      "option_tables": [
+        {
+          "headers": [
+            "Estilo",
+            "Características"
+          ],
+          "rows": [
+            {
+              "Estilo": "Contemporâneo acolhedor",
+              "Características": "Linhas simples, madeira, tecidos e iluminação suave."
+            },
+            {
+              "Estilo": "Minimalista",
+              "Características": "Poucos elementos, superfícies livres e organização visual."
+            },
+            {
+              "Estilo": "Escandinavo",
+              "Características": "Tons claros, madeira clara e mobiliário funcional."
+            },
+            {
+              "Estilo": "Industrial",
+              "Características": "Metal, madeira e acabamentos de aparência mais bruta."
+            },
+            {
+              "Estilo": "Clássico contemporâneo",
+              "Características": "Formas elegantes, composição equilibrada e detalhes discretos."
+            }
+          ],
+          "usage": "observed_options_not_exhaustive"
+        }
+      ],
+      "universal": false,
+      "limitations": [
+        "Automatic extraction is partial: raw Markdown is authoritative for wording, nesting and contextual associations.",
+        "Only this response round observed; no answers or downstream generation established by this record."
+      ]
+    },
+    {
+      "card": "Logo",
+      "category": "Modelos",
+      "observed_at": "2026-10-20",
+      "round": 1,
+      "evidence_type": "observed_native_ui_copied_markdown",
+      "source": {
+        "file": "probe-logo-round-1.md",
+        "sha256": "ca2a69d38da3359af2d372595b969d06555511c3ee819cd6aa4bcff199d3fb01",
+        "conversation_url": "https://chatgpt.com/c/6ad7176a-3134-83e8-ac95-92abb66ee026"
+      },
+      "raw_markdown": "**Qual é a marca e o que você quer que o logotipo comunique?** Vamos definir estes quatro pontos antes de criar as opções.\n\n### 1. Marca, propósito e uso\n\n- Qual é o nome da marca, empresa ou projeto?\n- O que ela faz e para quem?\n- Onde o logotipo será mais usado: site, redes sociais, documentos, aplicativo, produtos, fachada ou outro suporte?\n\n### 2. Textos obrigatórios\n\n**Cole o texto exatamente como deve aparecer**, preservando maiúsculas, minúsculas, acentos e pontuação.\n\nSe houver uma sigla ou outro texto que também deva integrar o logotipo, informe a grafia exata e se seu uso é obrigatório ou opcional.\n\n### 3. Impressão desejada\n\nEscolha até **três características principais**, ou descreva com suas palavras:\n\n| Impressão | Características visuais que podemos explorar |\n|---|---|\n| **Confiança e solidez** | Formas estáveis, proporções equilibradas e letras firmes. |\n| **Sofisticação e discrição** | Poucos elementos, espaçamento cuidadoso e detalhes contidos. |\n| **Proximidade e acolhimento** | Curvas suaves, formas abertas e tipografia acessível. |\n| **Originalidade e personalidade** | Um gesto visual próprio e uma composição expressiva. |\n| **Precisão e modernidade** | Geometria clara, organização e traços consistentes. |\n| **Tradição e permanência** | Referências clássicas simplificadas e tipografia de caráter histórico. |\n\nHá alguma impressão ou associação que você quer evitar?\n\n### 4. Estilo visual e restrições\n\nEstas são direções possíveis para explorarmos:\n\n| Opção | Direção | Como seria |\n|---|---|---|\n| **A** | **Tipográfico** | O próprio nome como elemento principal, com letras e espaçamentos cuidadosamente trabalhados. |\n| **B** | **Monograma** | Uma composição compacta com as iniciais ou a sigla que você autorizar. |\n| **C** | **Símbolo geométrico** | Uma forma simples e própria, construída a partir de uma ideia ligada à marca, acompanhada do nome. |\n| **D** | **Símbolo orgânico** | Curvas e formas fluidas para uma identidade mais humana, natural ou expressiva. |\n| **E** | **Emblema contemporâneo** | Nome e símbolo organizados em uma estrutura compacta, com poucos detalhes. |\n\n**Qual direção mais interessa a você?** Pode escolher até duas ou deixar a escolha por minha conta. Informe também se existem cores, símbolos ou elementos que devem ser preservados ou evitados. Se houver um logotipo atual ou referências visuais, envie.\n\nA proposta inicial será de **três conceitos distintos**, apresentados em tamanho ampliado, reduzido e em uma única cor, para avaliar reconhecimento e legibilidade.\n\n",
+      "groups": [
+        "1. Marca, propósito e uso",
+        "2. Textos obrigatórios",
+        "3. Impressão desejada",
+        "4. Estilo visual e restrições"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "text": "Qual é a marca e o que você quer que o logotipo comunique? Vamos definir estes quatro pontos antes de criar as opções.",
+          "group": null,
+          "evidence_type": "observed_text",
+          "usage": "contextual_example_not_requirement"
+        },
+        {
+          "id": "q2",
+          "text": "Qual é o nome da marca, empresa ou projeto?",
+          "group": "1. Marca, propósito e uso",
+          "evidence_type": "observed_text",
+          "usage": "contextual_example_not_requirement"
+        },
+        {
+          "id": "q3",
+          "text": "O que ela faz e para quem?",
+          "group": "1. Marca, propósito e uso",
+          "evidence_type": "observed_text",
+          "usage": "contextual_example_not_requirement"
+        },
+        {
+          "id": "q4",
+          "text": "Onde o logotipo será mais usado: site, redes sociais, documentos, aplicativo, produtos, fachada ou outro suporte?",
+          "group": "1. Marca, propósito e uso",
+          "evidence_type": "observed_text",
+          "usage": "contextual_example_not_requirement"
+        },
+        {
+          "id": "q5",
+          "text": "Cole o texto exatamente como deve aparecer, preservando maiúsculas, minúsculas, acentos e pontuação.",
+          "group": "2. Textos obrigatórios",
+          "evidence_type": "observed_request",
+          "usage": "contextual_example_not_requirement"
+        },
+        {
+          "id": "q6",
+          "text": "Há alguma impressão ou associação que você quer evitar?",
+          "group": "3. Impressão desejada",
+          "evidence_type": "observed_text",
+          "usage": "contextual_example_not_requirement"
+        },
+        {
+          "id": "q7",
+          "text": "Qual direção mais interessa a você? Pode escolher até duas ou deixar a escolha por minha conta. Informe também se existem cores, símbolos ou elementos que devem ser preservados ou evitados. Se houver um logotipo atual ou referências visuais, envie.",
+          "group": "4. Estilo visual e restrições",
+          "evidence_type": "observed_text",
+          "usage": "contextual_example_not_requirement"
+        }
+      ],
+      "option_tables": [
+        {
+          "headers": [
+            "Impressão",
+            "Características visuais que podemos explorar"
+          ],
+          "rows": [
+            {
+              "Impressão": "Confiança e solidez",
+              "Características visuais que podemos explorar": "Formas estáveis, proporções equilibradas e letras firmes."
+            },
+            {
+              "Impressão": "Sofisticação e discrição",
+              "Características visuais que podemos explorar": "Poucos elementos, espaçamento cuidadoso e detalhes contidos."
+            },
+            {
+              "Impressão": "Proximidade e acolhimento",
+              "Características visuais que podemos explorar": "Curvas suaves, formas abertas e tipografia acessível."
+            },
+            {
+              "Impressão": "Originalidade e personalidade",
+              "Características visuais que podemos explorar": "Um gesto visual próprio e uma composição expressiva."
+            },
+            {
+              "Impressão": "Precisão e modernidade",
+              "Características visuais que podemos explorar": "Geometria clara, organização e traços consistentes."
+            },
+            {
+              "Impressão": "Tradição e permanência",
+              "Características visuais que podemos explorar": "Referências clássicas simplificadas e tipografia de caráter histórico."
+            }
+          ],
+          "usage": "observed_options_not_exhaustive"
+        },
+        {
+          "headers": [
+            "Opção",
+            "Direção",
+            "Como seria"
+          ],
+          "rows": [
+            {
+              "Opção": "A",
+              "Direção": "Tipográfico",
+              "Como seria": "O próprio nome como elemento principal, com letras e espaçamentos cuidadosamente trabalhados."
+            },
+            {
+              "Opção": "B",
+              "Direção": "Monograma",
+              "Como seria": "Uma composição compacta com as iniciais ou a sigla que você autorizar."
+            },
+            {
+              "Opção": "C",
+              "Direção": "Símbolo geométrico",
+              "Como seria": "Uma forma simples e própria, construída a partir de uma ideia ligada à marca, acompanhada do nome."
+            },
+            {
+              "Opção": "D",
+              "Direção": "Símbolo orgânico",
+              "Como seria": "Curvas e formas fluidas para uma identidade mais humana, natural ou expressiva."
+            },
+            {
+              "Opção": "E",
+              "Direção": "Emblema contemporâneo",
+              "Como seria": "Nome e símbolo organizados em uma estrutura compacta, com poucos detalhes."
+            }
+          ],
+          "usage": "observed_options_not_exhaustive"
+        }
+      ],
+      "universal": false,
+      "limitations": [
+        "Automatic extraction is partial: raw Markdown is authoritative for wording, nesting and contextual associations.",
+        "Only this response round observed; no answers or downstream generation established by this record."
+      ]
+    },
+    {
+      "card": "Ilustração",
+      "category": "Modelos",
+      "observed_at": "2026-10-20",
+      "round": 1,
+      "evidence_type": "observed_native_ui_copied_markdown",
+      "source": {
+        "file": "probe-ilustracao-round-1.md",
+        "sha256": "1464ca67b0448d55ccfbb36e73ec5f080a504fb14a97f6db1d0bcf79d751e738",
+        "conversation_url": "https://chatgpt.com/c/6ad7182a-c3dc-83e9-bdb6-bff067c3f5e5"
+      },
+      "raw_markdown": "**Qual é a ideia central que você quer transformar em ilustração?** Pode responder em frases curtas e anexar referências, se houver.\n\n### 1. Tema e intenção\n\n- **O que deve aparecer?** Uma pessoa, um objeto, um lugar, uma cena ou um conceito?\n- **O que a imagem deve comunicar?** Você prefere uma representação direta da ideia ou uma metáfora visual, mais aberta à interpretação?\n\n### 2. Uso e formato\n\nOnde a ilustração será usada: cartaz, publicação em rede social, capa, material impresso, site ou outro suporte?\n\nSe você já souber, informe **orientação e tamanho**: vertical, horizontal ou quadrado; dimensões em centímetros ou pixels.\n\n### 3. Referências e detalhes obrigatórios\n\nVocê tem alguma imagem, fotografia ou desenho de referência? Ao enviar, indique:\n\n- **O que precisa ser preservado com exatidão:** aparência, proporções, objetos, roupas, cores, cenário ou outros detalhes.\n- **O que serve apenas como inspiração:** técnica, composição, iluminação ou atmosfera.\n- **O que deve ser evitado:** elementos, símbolos ou interpretações incompatíveis com sua ideia.\n\nSe houver texto obrigatório, envie a redação exata. **Sem texto fornecido, a ilustração será criada sem texto.**\n\n### 4. Composição e atmosfera\n\nQual composição combina melhor com sua intenção?\n\n- **A — Foco central:** um elemento dominante, leitura imediata e espaço ao redor.\n- **B — Cena ampla:** o ambiente e as relações entre os elementos ajudam a comunicar a ideia.\n- **C — Composição dinâmica:** assimetria, diagonais e recortes sugerem movimento ou tensão.\n- **D — Composição contemplativa:** poucos elementos, espaços vazios e ritmo visual calmo.\n\nQue atmosfera você procura? Por exemplo: **serena, íntima, melancólica, misteriosa, lúdica, solene ou inquietante**.\n\n### 5. Estilo e técnica\n\nEstas são algumas direções possíveis; a escolha pode ser ajustada ao tema:\n\n| Opção | Direção visual | Características |\n|---|---|---|\n| **1** | **Vetor minimalista** | Formas simplificadas, cores chapadas e contornos precisos. |\n| **2** | **Aquarela** | Transparências, manchas suaves e bordas orgânicas. |\n| **3** | **Guache** | Cores opacas, formas bem definidas e textura de pintura. |\n| **4** | **Nanquim ou gravura** | Traços, hachuras, contraste e textura gráfica. |\n| **5** | **Pintura digital** | Luz, volume e materiais trabalhados, com acabamento realista ou estilizado. |\n| **6** | **Colagem artística** | Recortes, sobreposições e combinação de texturas. |\n\n**Qual dessas direções você prefere?** Se estiver em aberto, basta descrever o tema e a sensação desejada para eu definir uma proposta coerente.",
+      "groups": [
+        "1. Tema e intenção",
+        "2. Uso e formato",
+        "3. Referências e detalhes obrigatórios",
+        "4. Composição e atmosfera",
+        "5. Estilo e técnica"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "text": "Qual é a ideia central que você quer transformar em ilustração? Pode responder em frases curtas e anexar referências, se houver.",
+          "group": null,
+          "evidence_type": "observed_text",
+          "usage": "contextual_example_not_requirement"
+        },
+        {
+          "id": "q2",
+          "text": "O que deve aparecer? Uma pessoa, um objeto, um lugar, uma cena ou um conceito?",
+          "group": "1. Tema e intenção",
+          "evidence_type": "observed_text",
+          "usage": "contextual_example_not_requirement"
+        },
+        {
+          "id": "q3",
+          "text": "O que a imagem deve comunicar? Você prefere uma representação direta da ideia ou uma metáfora visual, mais aberta à interpretação?",
+          "group": "1. Tema e intenção",
+          "evidence_type": "observed_text",
+          "usage": "contextual_example_not_requirement"
+        },
+        {
+          "id": "q4",
+          "text": "Onde a ilustração será usada: cartaz, publicação em rede social, capa, material impresso, site ou outro suporte?",
+          "group": "2. Uso e formato",
+          "evidence_type": "observed_text",
+          "usage": "contextual_example_not_requirement"
+        },
+        {
+          "id": "q5",
+          "text": "Você tem alguma imagem, fotografia ou desenho de referência? Ao enviar, indique:",
+          "group": "3. Referências e detalhes obrigatórios",
+          "evidence_type": "observed_text",
+          "usage": "contextual_example_not_requirement"
+        },
+        {
+          "id": "q6",
+          "text": "Qual composição combina melhor com sua intenção?",
+          "group": "4. Composição e atmosfera",
+          "evidence_type": "observed_text",
+          "usage": "contextual_example_not_requirement"
+        },
+        {
+          "id": "q7",
+          "text": "Que atmosfera você procura? Por exemplo: serena, íntima, melancólica, misteriosa, lúdica, solene ou inquietante.",
+          "group": "4. Composição e atmosfera",
+          "evidence_type": "observed_text",
+          "usage": "contextual_example_not_requirement"
+        },
+        {
+          "id": "q8",
+          "text": "Qual dessas direções você prefere? Se estiver em aberto, basta descrever o tema e a sensação desejada para eu definir uma proposta coerente.",
+          "group": "5. Estilo e técnica",
+          "evidence_type": "observed_text",
+          "usage": "contextual_example_not_requirement"
+        }
+      ],
+      "option_tables": [
+        {
+          "headers": [
+            "Opção",
+            "Direção visual",
+            "Características"
+          ],
+          "rows": [
+            {
+              "Opção": "1",
+              "Direção visual": "Vetor minimalista",
+              "Características": "Formas simplificadas, cores chapadas e contornos precisos."
+            },
+            {
+              "Opção": "2",
+              "Direção visual": "Aquarela",
+              "Características": "Transparências, manchas suaves e bordas orgânicas."
+            },
+            {
+              "Opção": "3",
+              "Direção visual": "Guache",
+              "Características": "Cores opacas, formas bem definidas e textura de pintura."
+            },
+            {
+              "Opção": "4",
+              "Direção visual": "Nanquim ou gravura",
+              "Características": "Traços, hachuras, contraste e textura gráfica."
+            },
+            {
+              "Opção": "5",
+              "Direção visual": "Pintura digital",
+              "Características": "Luz, volume e materiais trabalhados, com acabamento realista ou estilizado."
+            },
+            {
+              "Opção": "6",
+              "Direção visual": "Colagem artística",
+              "Características": "Recortes, sobreposições e combinação de texturas."
+            }
+          ],
+          "usage": "observed_options_not_exhaustive"
+        }
+      ],
+      "universal": false,
+      "limitations": [
+        "Automatic extraction is partial: raw Markdown is authoritative for wording, nesting and contextual associations.",
+        "Only this response round observed; no answers or downstream generation established by this record."
+      ]
+    }
+  ],
+  "limitations": [
+    "The collection may be extended incrementally; this file does not establish all 16 first rounds are complete.",
+    "Question examples and option tables describe bounded observations, not universal requirements."
+  ]
+}

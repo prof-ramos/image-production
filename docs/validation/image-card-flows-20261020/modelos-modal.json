@@ -1,0 +1,556 @@
+{
+  "observed_at": "2026-10-20",
+  "source_url": "https://chatgpt.com/images/",
+  "method": "Native Comet modal UI via CUA; accessibility text, not hidden state",
+  "category": "Modelos",
+  "inventory": [
+    "Cartaz",
+    "Design de interiores",
+    "Logo",
+    "Ilustração",
+    "Retrato profissional",
+    "Ícone",
+    "Foto de produto",
+    "Produtos personalizados",
+    "Infográfico",
+    "Panfleto",
+    "Capa de livro",
+    "Mockup de aplicativo",
+    "Embalagem",
+    "Anúncio",
+    "Miniatura",
+    "Mockup de site"
+  ],
+  "cards": [
+    {
+      "name": "Design de interiores",
+      "prompt_observed": "Crie uma visualização de design de interiores que mostre como meu espaço poderia ficar e funcionar. Preserve a arquitetura existente e as proporções do ambiente; não invente alterações estruturais, aberturas, elementos fixos ou dimensões.\n\nPeça uma foto ou descrição do ambiente e depois faça perguntas para esclarecer como o espaço é usado, quais mudanças são desejadas ou quais restrições existem, quais itens devem ser preservados e qual é o estilo de decoração. Apresente opções relevantes de estilos de decoração quando disponíveis.",
+      "prompt_complete": true,
+      "modal_options": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "probe_status": "modal_only_no_submission",
+      "prompt_observed_ax": "Crie uma visualização de design de interiores que mostre como meu espaço poderia ficar e funcionar. Preserve a arquitetura existente e as proporções do ambiente; não invente alterações estruturais, aberturas, elementos fixos ou dimensões.\n\nPeça uma foto ou descrição do ambiente e depois faça perguntas para esclarecer como o espaço é usado, quais mudanças são desejadas ou quais restrições existem, quais itens devem ser preservados e qual é o estilo de decoração. Apresente opções relevantes de estilos de deco",
+      "prompt_complete_ax": false,
+      "prompt_capture_method": "Rendered modal text copied via native UI Cmd+A/C, pasted into TextEdit via Cmd+V; exact card heading and Proporção/Fotos delimiters verified offline.",
+      "prompt_source_ref": {
+        "file": "modelos-rendered-source.txt",
+        "section": "=== UI CARD: Modelos | Design de interiores ===",
+        "sha256": "415fe8bc92c15db916ffa54f6dc14a25e452b50329aadd65b988f0a24e707c0f"
+      }
+    },
+    {
+      "name": "Logo",
+      "prompt_observed": "Crie um pequeno conjunto de opções distintas de logotipo para minha marca, empresa ou projeto. Use conceitos diferentes em cada opção e garanta que todas sejam reconhecíveis em tamanhos pequenos e grandes. Preserve todos os textos fornecidos exatamente como estão. Não invente nomes de marcas, slogans ou textos adicionais.\n\nFaça perguntas para esclarecer detalhes sobre a marca e o propósito, os textos obrigatórios, a impressão desejada e o estilo visual. Apresente sugestões de estilo relevantes para o logotipo quando disponíveis.",
+      "prompt_complete": true,
+      "modal_options": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "probe_status": "modal_only_no_submission",
+      "prompt_observed_ax": "Crie um pequeno conjunto de opções distintas de logotipo para minha marca, empresa ou projeto. Use conceitos diferentes em cada opção e garanta que todas sejam reconhecíveis em tamanhos pequenos e grandes. Preserve todos os textos fornecidos exatamente como estão. Não invente nomes de marcas, slogans ou textos adicionais.\n\nFaça perguntas para esclarecer detalhes sobre a marca e o propósito, os textos obrigatórios, a impressão desejada e o estilo visual. Apresente sugestões de estilo relevantes para o logoti",
+      "prompt_complete_ax": false,
+      "prompt_capture_method": "Rendered modal text copied via native UI Cmd+A/C, pasted into TextEdit via Cmd+V; exact card heading and Proporção/Fotos delimiters verified offline.",
+      "prompt_source_ref": {
+        "file": "modelos-rendered-source.txt",
+        "section": "=== UI CARD: Modelos | Logo ===",
+        "sha256": "415fe8bc92c15db916ffa54f6dc14a25e452b50329aadd65b988f0a24e707c0f"
+      }
+    },
+    {
+      "name": "Ilustração",
+      "prompt_observed": "Crie uma ilustração que expresse minha ideia com tema, composição, técnica e atmosfera bem definidos. Preserve com exatidão os detalhes fornecidos ou presentes nas referências; não adicione elementos narrativos conflitantes nem textos inventados.\n\nFaça perguntas de esclarecimento para definir o tema, a intenção, o uso pretendido, os detalhes das referências a preservar e o estilo visual. Apresente opções relevantes de estilo de ilustração quando disponíveis.",
+      "prompt_complete": true,
+      "modal_options": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "probe_status": "modal_only_no_submission",
+      "prompt_observed_ax": "Crie uma ilustração que expresse minha ideia com tema, composição, técnica e atmosfera bem definidos. Preserve com exatidão os detalhes fornecidos ou presentes nas referências; não adicione elementos narrativos conflitantes nem textos inventados.\n\nFaça perguntas de esclarecimento para definir o tema, a intenção, o uso pretendido, os detalhes das referências a preservar e o estilo visual. Apresente opções relevantes de estilo de ilustração quando disponíveis.",
+      "prompt_complete_ax": true,
+      "prompt_capture_method": "Rendered modal text copied via native UI Cmd+A/C, pasted into TextEdit via Cmd+V; exact card heading and Proporção/Fotos delimiters verified offline.",
+      "prompt_source_ref": {
+        "file": "modelos-rendered-source.txt",
+        "section": "=== UI CARD: Modelos | Ilustração ===",
+        "sha256": "415fe8bc92c15db916ffa54f6dc14a25e452b50329aadd65b988f0a24e707c0f"
+      }
+    },
+    {
+      "name": "Retrato profissional",
+      "prompt_observed": "Crie uma foto de rosto ou retrato que apresente a pessoa com clareza para o uso pretendido. Use a foto enviada apenas para preservar a identidade, a estrutura facial, o tom de pele e os traços marcantes. Reinterprete a iluminação, o ângulo, a pose, a expressão, a roupa, o segundo plano, as sombras, a tonalidade de cor e a qualidade informal da foto.\n\nPeça uma foto nítida da pessoa e, em seguida, faça perguntas de esclarecimento para definir o uso pretendido, o estilo do retrato e a iluminação. Apresente direções de estilo de retrato relevantes, quando disponíveis.",
+      "prompt_complete": true,
+      "modal_options": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "probe_status": "modal_only_no_submission",
+      "prompt_observed_ax": "Crie uma foto de rosto ou retrato que apresente a pessoa com clareza para o uso pretendido. Use a foto enviada apenas para preservar a identidade, a estrutura facial, o tom de pele e os traços marcantes. Reinterprete a iluminação, o ângulo, a pose, a expressão, a roupa, o segundo plano, as sombras, a tonalidade de cor e a qualidade informal da foto.\n\nPeça uma foto nítida da pessoa e, em seguida, faça perguntas de esclarecimento para definir o uso pretendido, o estilo do retrato e a iluminação. Apresente dir",
+      "prompt_complete_ax": false,
+      "prompt_capture_method": "Rendered modal text copied via native UI Cmd+A/C, pasted into TextEdit via Cmd+V; exact card heading and Proporção/Fotos delimiters verified offline.",
+      "prompt_source_ref": {
+        "file": "modelos-rendered-source.txt",
+        "section": "=== UI CARD: Modelos | Retrato profissional ===",
+        "sha256": "415fe8bc92c15db916ffa54f6dc14a25e452b50329aadd65b988f0a24e707c0f"
+      }
+    },
+    {
+      "name": "Ícone",
+      "prompt_observed": "Crie um conjunto de ícones que represente a ideia solicitada com clareza no tamanho previsto. Mantenha os símbolos simples, legíveis e consistentes em forma, peso visual, nível de detalhe e perspectiva. Não adicione imagens sem relação com a ideia, rótulos ou estilos visuais incompatíveis.\n\nFaça perguntas para esclarecer o tema dos ícones, o uso pretendido e o estilo visual. Apresente opções relevantes de estilo para os ícones, quando disponíveis.",
+      "prompt_complete": true,
+      "modal_options": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "probe_status": "modal_only_no_submission",
+      "prompt_observed_ax": "Crie um conjunto de ícones que represente a ideia solicitada com clareza no tamanho previsto. Mantenha os símbolos simples, legíveis e consistentes em forma, peso visual, nível de detalhe e perspectiva. Não adicione imagens sem relação com a ideia, rótulos ou estilos visuais incompatíveis.\n\nFaça perguntas para esclarecer o tema dos ícones, o uso pretendido e o estilo visual. Apresente opções relevantes de estilo para os ícones, quando disponíveis.",
+      "prompt_complete_ax": true,
+      "prompt_capture_method": "Rendered modal text copied via native UI Cmd+A/C, pasted into TextEdit via Cmd+V; exact card heading and Proporção/Fotos delimiters verified offline.",
+      "prompt_source_ref": {
+        "file": "modelos-rendered-source.txt",
+        "section": "=== UI CARD: Modelos | Ícone ===",
+        "sha256": "415fe8bc92c15db916ffa54f6dc14a25e452b50329aadd65b988f0a24e707c0f"
+      }
+    },
+    {
+      "name": "Foto de produto",
+      "prompt_observed": "Crie uma fotografia de produto que apresente meu produto de forma fiel e profissional para o uso pretendido. Preserve o formato, as proporções, os materiais, as cores, os elementos da marca, os rótulos e os detalhes funcionais. Não redesenhe o produto nem invente características, acabamentos, elementos da marca, rótulos ou acessórios.\n\nPeça uma imagem do produto ou uma descrição clara e, em seguida, faça perguntas de esclarecimento para definir os detalhes a preservar, o cenário, a iluminação e o estilo fotográfico. Apresente abordagens fotográficas relevantes, quando disponíveis.",
+      "prompt_complete": true,
+      "modal_options": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "probe_status": "modal_only_no_submission",
+      "prompt_observed_ax": "Crie uma fotografia de produto que apresente meu produto de forma fiel e profissional para o uso pretendido. Preserve o formato, as proporções, os materiais, as cores, os elementos da marca, os rótulos e os detalhes funcionais. Não redesenhe o produto nem invente características, acabamentos, elementos da marca, rótulos ou acessórios.\n\nPeça uma imagem do produto ou uma descrição clara e, em seguida, faça perguntas de esclarecimento para definir os detalhes a preservar, o cenário, a iluminação e o estilo fot",
+      "prompt_complete_ax": false,
+      "prompt_capture_method": "Rendered modal text copied via native UI Cmd+A/C, pasted into TextEdit via Cmd+V; exact card heading and Proporção/Fotos delimiters verified offline.",
+      "prompt_source_ref": {
+        "file": "modelos-rendered-source.txt",
+        "section": "=== UI CARD: Modelos | Foto de produto ===",
+        "sha256": "415fe8bc92c15db916ffa54f6dc14a25e452b50329aadd65b988f0a24e707c0f"
+      }
+    },
+    {
+      "name": "Produtos personalizados",
+      "prompt_observed": "Crie um design para produtos personalizados que aplique minha ideia, arte ou marca de forma natural ao item escolhido. Adapte o design ao formato, à escala, ao local de aplicação, à superfície e ao método de produção do item. Preserve exatamente o texto ou a arte fornecidos; não adicione logotipos, elementos gráficos, locais de aplicação ou características do produto sem relação com o pedido.\n\nFaça perguntas de esclarecimento para definir o item, a arte ou o texto, o local de aplicação, o público-alvo e o estilo visual. Apresente opções relevantes de produtos personalizados e sugestões de estilo quando disponíveis.",
+      "prompt_complete": true,
+      "modal_options": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "probe_status": "modal_only_no_submission",
+      "prompt_observed_ax": "Crie um design para produtos personalizados que aplique minha ideia, arte ou marca de forma natural ao item escolhido. Adapte o design ao formato, à escala, ao local de aplicação, à superfície e ao método de produção do item. Preserve exatamente o texto ou a arte fornecidos; não adicione logotipos, elementos gráficos, locais de aplicação ou características do produto sem relação com o pedido.\n\nFaça perguntas de esclarecimento para definir o item, a arte ou o texto, o local de aplicação, o público-alvo e o e",
+      "prompt_complete_ax": false,
+      "prompt_capture_method": "Rendered modal text copied via native UI Cmd+A/C, pasted into TextEdit via Cmd+V; exact card heading and Proporção/Fotos delimiters verified offline.",
+      "prompt_source_ref": {
+        "file": "modelos-rendered-source.txt",
+        "section": "=== UI CARD: Modelos | Produtos personalizados ===",
+        "sha256": "415fe8bc92c15db916ffa54f6dc14a25e452b50329aadd65b988f0a24e707c0f"
+      }
+    },
+    {
+      "name": "Cartaz",
+      "prompt_observed": "Crie um cartaz que expresse minha ideia com uma hierarquia clara, textos obrigatórios legíveis, imagens e tipografia que funcionem em conjunto no contexto de visualização previsto. Preserve todos os detalhes exatamente como foram fornecidos; não invente nomes, datas, locais, patrocinadores ou logotipos, nem inclua texto adicional.\n\nFaça perguntas para esclarecer e definir a mensagem, o conteúdo obrigatório, o layout e o estilo visual do cartaz. Apresente opções relevantes de layout e estilo visual quando disponíveis.",
+      "prompt_complete": true,
+      "modal_options": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "probe_status": "observed_two_rounds",
+      "prompt_observed_ax": "Crie um cartaz que expresse minha ideia com uma hierarquia clara, textos obrigatórios legíveis, imagens e tipografia que funcionem em conjunto no contexto de visualização previsto. Preserve todos os detalhes exatamente como foram fornecidos; não invente nomes, datas, locais, patrocinadores ou logotipos, nem inclua texto adicional.\n\nFaça perguntas para esclarecer e definir a mensagem, o conteúdo obrigatório, o layout e o estilo visual do cartaz. Apresente opções relevantes de layout e estilo visual quando disponíveis.",
+      "prompt_complete_ax": true,
+      "prompt_capture_method": "Rendered modal text copied via native UI Cmd+A/C, pasted into TextEdit via Cmd+V; exact card heading and Proporção/Fotos delimiters verified offline.",
+      "prompt_source_ref": {
+        "file": "modelos-rendered-source.txt",
+        "section": "=== UI CARD: Modelos | Cartaz ===",
+        "sha256": "415fe8bc92c15db916ffa54f6dc14a25e452b50329aadd65b988f0a24e707c0f"
+      }
+    },
+    {
+      "name": "Infográfico",
+      "prompt_observed": "Crie um infográfico que facilite a compreensão das minhas informações e da minha mensagem principal. Organize o conteúdo com estrutura e hierarquia claras, rótulos legíveis e fatos ou dados precisos. Não invente fatos, dados, estatísticas, fontes ou conclusões.\n\nFaça perguntas para esclarecer a mensagem principal, os dados ou o conteúdo fornecidos, o público, o uso pretendido, o nível de detalhamento e o estilo visual. Apresente opções de estilo relevantes para o infográfico, quando disponíveis.",
+      "prompt_complete": true,
+      "capture_method": "CUA accessibility text",
+      "modal_options": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "probe_status": "modal_only_no_submission",
+      "prompt_observed_ax": "Crie um infográfico que facilite a compreensão das minhas informações e da minha mensagem principal. Organize o conteúdo com estrutura e hierarquia claras, rótulos legíveis e fatos ou dados precisos. Não invente fatos, dados, estatísticas, fontes ou conclusões.\n\nFaça perguntas para esclarecer a mensagem principal, os dados ou o conteúdo fornecidos, o público, o uso pretendido, o nível de detalhamento e o estilo visual. Apresente opções de estilo relevantes para o infográfico, quando disponíveis.",
+      "prompt_complete_ax": true,
+      "prompt_capture_method": "Rendered modal text copied via native UI Cmd+A/C, pasted into TextEdit via Cmd+V; exact card heading and Proporção/Fotos delimiters verified offline.",
+      "prompt_source_ref": {
+        "file": "modelos-rendered-source.txt",
+        "section": "=== UI CARD: Modelos | Infográfico ===",
+        "sha256": "415fe8bc92c15db916ffa54f6dc14a25e452b50329aadd65b988f0a24e707c0f"
+      }
+    },
+    {
+      "name": "Panfleto",
+      "prompt_observed": "Crie um folheto que transmita minha mensagem com clareza e torne as informações essenciais fáceis de encontrar. Use uma hierarquia clara, mantenha os detalhes obrigatórios legíveis e deixe o próximo passo evidente. Preserve todos os detalhes fornecidos exatamente como estão; não invente nomes, datas, locais, preços, informações de contato, patrocinadores, ofertas ou textos adicionais.\n\nFaça perguntas de esclarecimento para definir o objetivo, o conteúdo obrigatório, a ação desejada, o formato e a distribuição, o layout e o estilo visual. Apresente opções relevantes de layout e estilo quando disponíveis.",
+      "prompt_complete": true,
+      "capture_method": "CUA accessibility text",
+      "modal_options": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "probe_status": "modal_only_no_submission",
+      "prompt_observed_ax": "Crie um folheto que transmita minha mensagem com clareza e torne as informações essenciais fáceis de encontrar. Use uma hierarquia clara, mantenha os detalhes obrigatórios legíveis e deixe o próximo passo evidente. Preserve todos os detalhes fornecidos exatamente como estão; não invente nomes, datas, locais, preços, informações de contato, patrocinadores, ofertas ou textos adicionais.\n\nFaça perguntas de esclarecimento para definir o objetivo, o conteúdo obrigatório, a ação desejada, o formato e a distribuiç",
+      "prompt_complete_ax": false,
+      "prompt_capture_method": "Rendered modal text copied via native UI Cmd+A/C, pasted into TextEdit via Cmd+V; exact card heading and Proporção/Fotos delimiters verified offline.",
+      "prompt_source_ref": {
+        "file": "modelos-rendered-source.txt",
+        "section": "=== UI CARD: Modelos | Panfleto ===",
+        "sha256": "415fe8bc92c15db916ffa54f6dc14a25e452b50329aadd65b988f0a24e707c0f"
+      }
+    },
+    {
+      "name": "Capa de livro",
+      "prompt_observed": "Crie uma capa de livro que reflita o conteúdo, o gênero, o público e o tom da obra. Estabeleça uma hierarquia visual bem definida entre título, nome do autor, texto de apoio e imagens, e mantenha a legibilidade tanto em tamanho real quanto em miniatura. Preserve todos os textos fornecidos exatamente como estão; não invente subtítulos, citações, prêmios, marcas de editoras, detalhes de séries ou textos promocionais.\n\nFaça perguntas de esclarecimento para definir o título e o autor, o tema e o gênero, o público, os detalhes que devem ser incluídos ou evitados e o estilo visual. Apresente opções de estilo para a capa que sejam pertinentes, quando disponíveis.",
+      "prompt_complete": true,
+      "capture_method": "CUA accessibility text",
+      "modal_options": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "probe_status": "modal_only_no_submission",
+      "prompt_observed_ax": "Crie uma capa de livro que reflita o conteúdo, o gênero, o público e o tom da obra. Estabeleça uma hierarquia visual bem definida entre título, nome do autor, texto de apoio e imagens, e mantenha a legibilidade tanto em tamanho real quanto em miniatura. Preserve todos os textos fornecidos exatamente como estão; não invente subtítulos, citações, prêmios, marcas de editoras, detalhes de séries ou textos promocionais.\n\nFaça perguntas de esclarecimento para definir o título e o autor, o tema e o gênero, o públi",
+      "prompt_complete_ax": false,
+      "prompt_capture_method": "Rendered modal text copied via native UI Cmd+A/C, pasted into TextEdit via Cmd+V; exact card heading and Proporção/Fotos delimiters verified offline.",
+      "prompt_source_ref": {
+        "file": "modelos-rendered-source.txt",
+        "section": "=== UI CARD: Modelos | Capa de livro ===",
+        "sha256": "415fe8bc92c15db916ffa54f6dc14a25e452b50329aadd65b988f0a24e707c0f"
+      }
+    },
+    {
+      "name": "Mockup de aplicativo",
+      "prompt_observed": "Crie um mockup de aplicativo que mostre claramente a tela e a experiência do usuário desejadas. Garanta a coerência entre o objetivo da tela, a hierarquia, as ações principais, o espaçamento e os componentes. Mantenha os rótulos e o conteúdo exatamente como foram fornecidos; não invente afirmações, preços, contas ou recursos que contrariem o briefing.\n\nFaça perguntas de esclarecimento para definir o objetivo do aplicativo, o público-alvo, a tela desejada, as ações principais, o conteúdo necessário, a plataforma e o estilo visual. Apresente opções relevantes de estilo para a interface, quando disponíveis.",
+      "prompt_complete": true,
+      "capture_method": "CUA accessibility text",
+      "modal_options": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "probe_status": "modal_only_no_submission",
+      "prompt_observed_ax": "Crie um mockup de aplicativo que mostre claramente a tela e a experiência do usuário desejadas. Garanta a coerência entre o objetivo da tela, a hierarquia, as ações principais, o espaçamento e os componentes. Mantenha os rótulos e o conteúdo exatamente como foram fornecidos; não invente afirmações, preços, contas ou recursos que contrariem o briefing.\n\nFaça perguntas de esclarecimento para definir o objetivo do aplicativo, o público-alvo, a tela desejada, as ações principais, o conteúdo necessário, a plataf",
+      "prompt_complete_ax": false,
+      "prompt_capture_method": "Rendered modal text copied via native UI Cmd+A/C, pasted into TextEdit via Cmd+V; exact card heading and Proporção/Fotos delimiters verified offline.",
+      "prompt_source_ref": {
+        "file": "modelos-rendered-source.txt",
+        "section": "=== UI CARD: Modelos | Mockup de aplicativo ===",
+        "sha256": "415fe8bc92c15db916ffa54f6dc14a25e452b50329aadd65b988f0a24e707c0f"
+      }
+    },
+    {
+      "name": "Embalagem",
+      "prompt_observed": "Crie uma embalagem que represente com clareza meu produto e minha marca na embalagem física. Adapte o design ao formato, à escala, aos materiais e às superfícies utilizáveis da embalagem, com as informações obrigatórias organizadas em uma hierarquia clara. Preserve os elementos da marca e as informações do produto exatamente como foram fornecidos; não invente alegações, ingredientes, certificações, textos legais, quantidades ou códigos de barras.\n\nFaça perguntas de esclarecimento para definir o produto, os elementos da marca ou conteúdos obrigatórios, o tipo, o tamanho, o formato e os materiais da embalagem, as superfícies que receberão o design e o estilo visual. Apresente opções de estilo relevantes para a embalagem, quando disponíveis.",
+      "prompt_complete": true,
+      "capture_method": "CUA screenshot transcribed",
+      "modal_options": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "probe_status": "modal_only_no_submission",
+      "prompt_observed_ax": "Crie uma embalagem que represente com clareza meu produto e minha marca na embalagem física. Adapte o design ao formato, à escala, aos materiais e às superfícies utilizáveis da embalagem, com as informações obrigatórias organizadas em uma hierarquia clara. Preserve os elementos da marca e as informações do produto exatamente como foram fornecidos; não invente alegações, ingredientes, certificações, textos legais, quantidades ou códigos de barras.\n\nFaça perguntas de esclarecimento para definir o produto, os elementos da marca ou conteúdos obrigatórios, o tipo, o tamanho, o formato e os materiais da embalagem, as superfícies que receberão o design e o estilo visual. Apresente opções de estilo relevantes para a embalagem, quando disponíveis.",
+      "prompt_complete_ax": true,
+      "prompt_capture_method": "Rendered modal text copied via native UI Cmd+A/C, pasted into TextEdit via Cmd+V; exact card heading and Proporção/Fotos delimiters verified offline.",
+      "prompt_source_ref": {
+        "file": "modelos-rendered-source.txt",
+        "section": "=== UI CARD: Modelos | Embalagem ===",
+        "sha256": "415fe8bc92c15db916ffa54f6dc14a25e452b50329aadd65b988f0a24e707c0f"
+      }
+    },
+    {
+      "name": "Anúncio",
+      "prompt_observed": "Crie um anúncio que comunique minha oferta com clareza e ajude a alcançar o objetivo pretendido. Estabeleça uma hierarquia clara para o produto ou serviço, a mensagem principal, os detalhes complementares e a ação. Mantenha todos os textos e detalhes exatamente como foram fornecidos; não invente preços, descontos, depoimentos, resultados, termos, endossos ou textos adicionais.\n\nFaça perguntas de esclarecimento para definir a oferta, a mensagem principal, a ação desejada, o conteúdo obrigatório, o local de veiculação, o público e o estilo visual. Apresente opções de estilo relevantes para a campanha, quando disponíveis.",
+      "prompt_complete": true,
+      "capture_method": "CUA accessibility text",
+      "modal_options": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "probe_status": "modal_only_no_submission",
+      "prompt_observed_ax": "Crie um anúncio que comunique minha oferta com clareza e ajude a alcançar o objetivo pretendido. Estabeleça uma hierarquia clara para o produto ou serviço, a mensagem principal, os detalhes complementares e a ação. Mantenha todos os textos e detalhes exatamente como foram fornecidos; não invente preços, descontos, depoimentos, resultados, termos, endossos ou textos adicionais.\n\nFaça perguntas de esclarecimento para definir a oferta, a mensagem principal, a ação desejada, o conteúdo obrigatório, o local de v",
+      "prompt_complete_ax": false,
+      "prompt_capture_method": "Rendered modal text copied via native UI Cmd+A/C, pasted into TextEdit via Cmd+V; exact card heading and Proporção/Fotos delimiters verified offline.",
+      "prompt_source_ref": {
+        "file": "modelos-rendered-source.txt",
+        "section": "=== UI CARD: Modelos | Anúncio ===",
+        "sha256": "415fe8bc92c15db916ffa54f6dc14a25e452b50329aadd65b988f0a24e707c0f"
+      }
+    },
+    {
+      "name": "Miniatura",
+      "prompt_observed": "Crie uma miniatura que comunique minha ideia de imediato, mesmo em tamanho pequeno. Use um único ponto focal marcante, uma hierarquia clara e um texto curto, legível e adequado ao contexto de uso. Preserve exatamente os detalhes fornecidos; não invente nomes, afirmações, rótulos ou textos adicionais.\n\nPeça uma imagem do conteúdo que a miniatura vai representar e, em seguida, faça perguntas para esclarecer o texto necessário, o público ou o contexto e o estilo visual. Apresente opções de estilo relevantes para a miniatura, quando disponíveis.",
+      "prompt_complete": true,
+      "capture_method": "CUA accessibility text",
+      "modal_options": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "probe_status": "modal_only_no_submission",
+      "prompt_observed_ax": "Crie uma miniatura que comunique minha ideia de imediato, mesmo em tamanho pequeno. Use um único ponto focal marcante, uma hierarquia clara e um texto curto, legível e adequado ao contexto de uso. Preserve exatamente os detalhes fornecidos; não invente nomes, afirmações, rótulos ou textos adicionais.\n\nPeça uma imagem do conteúdo que a miniatura vai representar e, em seguida, faça perguntas para esclarecer o texto necessário, o público ou o contexto e o estilo visual. Apresente opções de estilo relevantes pa",
+      "prompt_complete_ax": false,
+      "prompt_capture_method": "Rendered modal text copied via native UI Cmd+A/C, pasted into TextEdit via Cmd+V; exact card heading and Proporção/Fotos delimiters verified offline.",
+      "prompt_source_ref": {
+        "file": "modelos-rendered-source.txt",
+        "section": "=== UI CARD: Modelos | Miniatura ===",
+        "sha256": "415fe8bc92c15db916ffa54f6dc14a25e452b50329aadd65b988f0a24e707c0f"
+      }
+    },
+    {
+      "name": "Mockup de site",
+      "prompt_observed": "Crie um mockup de site que apresente com clareza o objetivo da página, o conteúdo e a principal ação do usuário. Estabeleça uma hierarquia de informações bem definida, navegação e ações fáceis de entender e uma interface coerente. Preserve exatamente os nomes, textos, preços e afirmações fornecidos; não invente depoimentos, logotipos de clientes, métricas ou detalhes do negócio.\n\nFaça perguntas de esclarecimento para definir o objetivo do site, o público, o conteúdo necessário e o estilo visual. Apresente opções relevantes de estilo para a interface, quando disponíveis.",
+      "prompt_complete": true,
+      "capture_method": "CUA accessibility text",
+      "modal_options": {
+        "aspect_ratios": [
+          "Automático",
+          "1:1",
+          "2:3",
+          "3:2",
+          "16:9",
+          "9:16"
+        ],
+        "default": "Automático",
+        "photo_controls": [
+          "Enviar uma foto",
+          "Foto 1",
+          "Foto 2",
+          "Foto 3",
+          "Foto 4"
+        ]
+      },
+      "probe_status": "modal_only_no_submission",
+      "prompt_observed_ax": "Crie um mockup de site que apresente com clareza o objetivo da página, o conteúdo e a principal ação do usuário. Estabeleça uma hierarquia de informações bem definida, navegação e ações fáceis de entender e uma interface coerente. Preserve exatamente os nomes, textos, preços e afirmações fornecidos; não invente depoimentos, logotipos de clientes, métricas ou detalhes do negócio.\n\nFaça perguntas de esclarecimento para definir o objetivo do site, o público, o conteúdo necessário e o estilo visual. Apresente o",
+      "prompt_complete_ax": false,
+      "prompt_capture_method": "Rendered modal text copied via native UI Cmd+A/C, pasted into TextEdit via Cmd+V; exact card heading and Proporção/Fotos delimiters verified offline.",
+      "prompt_source_ref": {
+        "file": "modelos-rendered-source.txt",
+        "section": "=== UI CARD: Modelos | Mockup de site ===",
+        "sha256": "415fe8bc92c15db916ffa54f6dc14a25e452b50329aadd65b988f0a24e707c0f"
+      }
+    }
+  ],
+  "limitations": [
+    "Current inventory not equivalent to historical56 snapshot",
+    "Some accessibility strings stop at500 characters even with Ver mais; explicitly partial, never guessed",
+    "Only Cartaz conversation probed so far"
+  ],
+  "rendered_capture_limitations": [
+    "Only sections with matching card heading and Proporção/Fotos delimiters accepted.",
+    "An unrelated clipboard section was rejected and omitted; Mockup de aplicativo was subsequently recaptured from a separate UI text source.",
+    "This snapshot contains 16 verified Modelos prompts; it does not establish completion of later UI captures."
+  ]
+}

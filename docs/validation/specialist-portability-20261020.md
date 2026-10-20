@@ -44,3 +44,7 @@ Nova tentativa oficial de recuperar material cloud: `codex cloud list --json --l
 ## Recuperação posterior dos pilotos — 20/10/2026
 
 A afirmação anterior de pilotos não recuperados foi superada após o usuário fornecer `12-ativos-transparentes-sem-api-2026-10-19.zip`. O [registro de recuperação](pilot-transparent-assets-20261019/README.md) conserva evidências, prompts e pareceres com hashes; o pacote completo ficou localmente em `work/recovered/`. O catálogo de 56 prompts continua ausente. Os pareceres 10/2 são históricos; a margem de 10% acrescentada pelo fluxo anterior não é requisito original do usuário.
+
+## Catálogo atual reconstruído pela interface — 20/10/2026
+
+Após indicação do usuário, a interface autenticada de ChatGPT Images foi inventariada por CUA: 16 Modelos e 40 Em alta. Foram coletados 55 prompts completos de modais e os controles do editor Esboço. Texto renderizado foi copiado pela interface para superar o truncamento da acessibilidade, sem ler estado oculto ou rede. O [relatório de cobertura](image-card-flows-20261020/coverage.md) distingue modais, editor e perguntas conversacionais efetivamente observadas. O catálogo atual não recupera nem prova equivalência com o snapshot histórico de 19/10/2026, embora a contagem também seja 56. Nenhuma imagem foi gerada para esta extração.

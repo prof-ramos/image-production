@@ -1,0 +1,104 @@
+{
+  "updated_at": "2026-10-20T07:31:21.708729+00:00",
+  "source": "Native CUA card Experimente; no images or additional content supplied unless recorded",
+  "generation_requested": false,
+  "complete": false,
+  "cards": [
+    {
+      "name": "Cartaz",
+      "status": "observed",
+      "response_rounds": 2,
+      "source": "cartaz.json"
+    },
+    {
+      "name": "Design de interiores",
+      "status": "observed",
+      "response_rounds": 1,
+      "source": "work/card-ui-rendered/remaining-rendered.txt#PROBE"
+    },
+    {
+      "name": "Logo",
+      "status": "observed",
+      "response_rounds": 1,
+      "source": "work/card-ui-rendered/remaining-rendered.txt#PROBE"
+    },
+    {
+      "name": "Ilustração",
+      "status": "observed",
+      "response_rounds": 1,
+      "source": "probe-ilustracao-round-1.md"
+    },
+    {
+      "name": "Retrato profissional",
+      "status": "pending",
+      "response_rounds": 0,
+      "source": null
+    },
+    {
+      "name": "Ícone",
+      "status": "not_started",
+      "response_rounds": 0,
+      "source": null
+    },
+    {
+      "name": "Foto de produto",
+      "status": "not_started",
+      "response_rounds": 0,
+      "source": null
+    },
+    {
+      "name": "Produtos personalizados",
+      "status": "not_started",
+      "response_rounds": 0,
+      "source": null
+    },
+    {
+      "name": "Infográfico",
+      "status": "not_started",
+      "response_rounds": 0,
+      "source": null
+    },
+    {
+      "name": "Panfleto",
+      "status": "not_started",
+      "response_rounds": 0,
+      "source": null
+    },
+    {
+      "name": "Capa de livro",
+      "status": "not_started",
+      "response_rounds": 0,
+      "source": null
+    },
+    {
+      "name": "Mockup de aplicativo",
+      "status": "not_started",
+      "response_rounds": 0,
+      "source": null
+    },
+    {
+      "name": "Embalagem",
+      "status": "not_started",
+      "response_rounds": 0,
+      "source": null
+    },
+    {
+      "name": "Anúncio",
+      "status": "not_started",
+      "response_rounds": 0,
+      "source": null
+    },
+    {
+      "name": "Miniatura",
+      "status": "not_started",
+      "response_rounds": 0,
+      "source": null
+    },
+    {
+      "name": "Mockup de site",
+      "status": "not_started",
+      "response_rounds": 0,
+      "source": null
+    }
+  ]
+}
