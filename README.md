@@ -23,7 +23,8 @@ Para atualizar, refaça o build e reinstale após incrementar a versão no manif
 ## Atualização ligada à main
 
 O objetivo é que cada mudança distribuível integrada à `main` produza uma versão
-consistente do plugin e da skill. **A automação ainda não foi implementada.** Hoje,
+consistente do plugin e da skill. **A publicação automática ainda não foi implementada.**
+O CI já está definido para testes e build, sem publicar ou instalar. Hoje,
 o marketplace aponta para `work/plugin-dist/image-production`, uma pasta local
 ignorada pelo Git. Fazer merge não publica o pacote nem atualiza o Codex instalado.
 
@@ -123,6 +124,14 @@ O helper é offline e não gera imagens. Aprovação registra a revisão informa
 ```sh
 uv run --with-requirements requirements-dev.txt python -m unittest discover -s tests -v
 ```
+
+O [workflow de CI](.github/workflows/ci.yml) executa essa suíte e
+`python scripts/build_plugin.py` em todos os PRs, pushes na `main` e execução
+manual, com Python 3.10 e 3.13 em Ubuntu. A execução hospedada depende de enviar o
+workflow ao GitHub; este arquivo não configura proteção de branch nem publicação.
+
+Os testes CLI de CodeRabbit usam um executável `gh` isolado, sem tokens ou rede,
+para cobrir paginação, falha de envio, deduplicação e mudança de commit.
 
 A suíte usa fixtures sintéticas locais, sem API, credenciais ou geração paga. O validador oficial `quick_validate.py` do Skill Creator pode ser executado contra `.agents/skills/image-production` num runtime com PyYAML. Ele valida estrutura, não comportamento.
 
