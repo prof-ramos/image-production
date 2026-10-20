@@ -9,6 +9,10 @@ DESTINATION = ROOT / "work/plugin-dist/image-production"
 
 
 def build():
+    # Check lexical ancestors before traversal or writes can follow a parent link.
+    for path in (DESTINATION, *(ROOT / part for part in DESTINATION.relative_to(ROOT).parents)):
+        if path.is_symlink():
+            raise ValueError("Generated plugin path must not contain a symlink")
     source = ROOT / ".agents/skills/image-production"
     # Validate the entire canonical source before touching the previous build.
     # copytree otherwise dereferences file and directory symlinks by default.

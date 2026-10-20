@@ -80,6 +80,44 @@ class PluginBuilderTests(unittest.TestCase):
                 elif outside.exists():
                     outside.unlink()
 
+    def test_destination_ancestor_symlinks_preserve_external_tree(self):
+        # Following either parent would let rmtree replace an external old build.
+        for ancestor in ('work', 'work/plugin-dist'):
+            with self.subTest(ancestor=ancestor):
+                self.create_fixture()
+                outside = self.root / 'external'
+                external_build = outside / ('plugin-dist/image-production' if ancestor == 'work'
+                                            else 'image-production')
+                sentinel = external_build / 'skills/image-production/sentinel.txt'
+                sentinel.parent.mkdir(parents=True)
+                sentinel.write_bytes(b'external build must survive')
+                link = self.root / ancestor
+                link.parent.mkdir(parents=True, exist_ok=True)
+                link.symlink_to(outside, target_is_directory=True)
+                source_before = (self.source / 'SKILL.md').read_bytes()
+                before = {str(p.relative_to(outside)): p.read_bytes()
+                          for p in outside.rglob('*') if p.is_file()}
+                result = self.run_builder()
+                after = {str(p.relative_to(outside)): p.read_bytes()
+                         for p in outside.rglob('*') if p.is_file()}
+                self.assertEqual(after, before)
+                self.assertNotEqual(result.returncode, 0)
+                self.assertIn('symlink', result.stderr.lower())
+                self.assertEqual((self.source / 'SKILL.md').read_bytes(), source_before)
+
+    def test_dangling_destination_ancestors_are_rejected(self):
+        for ancestor in ('work', 'work/plugin-dist'):
+            with self.subTest(ancestor=ancestor):
+                self.create_fixture()
+                missing = self.root / 'missing-external'
+                link = self.root / ancestor
+                link.parent.mkdir(parents=True, exist_ok=True)
+                link.symlink_to(missing, target_is_directory=True)
+                result = self.run_builder()
+                self.assertNotEqual(result.returncode, 0)
+                self.assertIn('symlink', result.stderr.lower())
+                self.assertFalse(missing.exists())
+
     def test_rejected_source_does_not_create_destination(self):
         self.create_fixture()
         (self.source / 'missing').symlink_to(self.root / 'absent')
