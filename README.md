@@ -1,6 +1,24 @@
 # image-production
 
-Skill para produzir imagens raster no Codex com brief, referências de marca, `$imagegen`, entrega local e revisão documentada. **v1 em homologação**, sem instalação global automática.
+Skill para produzir imagens raster no Codex com brief, referências de marca, `$imagegen`, entrega local e revisão documentada. **v1 em homologação**. O catálogo integra a base do plugin; ZIP é somente uma cópia opcional.
+
+## Instalar o plugin local
+
+A fonte única da skill e do catálogo fica em [`.agents/skills/image-production`](.agents/skills/image-production/SKILL.md). O build cria um pacote mínimo local com manifests e `skills/`, sem `.git`, artefatos de `work/` ou conversas de validação. Execute na raiz do checkout:
+
+```sh
+python3 scripts/build_plugin.py
+codex plugin marketplace add .
+codex plugin add image-production@image-production-local
+```
+
+Inicie uma nova sessão com `[@Image Production](plugin://image-production@image-production-local)`. A skill do plugin consulta o [índice](.agents/skills/image-production/references/chatgpt-images-index.md), carrega o card solicitado no [catálogo](.agents/skills/image-production/references/chatgpt-images-catalog.json) e usa suas perguntas/opções observadas para esclarecer apenas o que falta no briefing. Não exige extrair ou anexar ZIP.
+
+São 56 cards observados em 20/10/2026: 55 prompts e Esboço como editor. Inclui primeira rodada dos 16 Modelos e Wallpaper com pedido modificado para evitar geração; os exemplos não são um formulário fixo nem cobertura de todas as ramificações. Consulte os [limites de evidência](.agents/skills/image-production/references/chatgpt-images-evidence.md).
+
+Para atualizar, refaça o build e reinstale após incrementar a versão no manifest de origem. Edite a fonte no repositório; o cache instalado é gerenciado pelo Codex. O plugin distribui a skill e suas referências. Os papéis de especialistas continuam exigindo a configuração de projeto descrita abaixo; instalar o plugin não ativa esses papéis automaticamente.
+
+[Verificação de instalação e descoberta do plugin](docs/validation/plugin-base-20261020.md).
 
 ## Usar no repositório
 
@@ -18,7 +36,7 @@ Copiar somente a pasta `image-production` para `.agents/skills/` de outro projet
 4. Preserve um `agents.max_threads` local menor; não aumente o limite para instalar estes papéis. A chave atual `agents.max_concurrent_threads_per_session` exclui a sessão principal; `max_threads` é um alias legado. O protocolo admite até dois workers e deve respeitar qualquer limite menor do host. Esse limite não autoriza gerações simultâneas.
 5. Confirme a confiança do projeto no Codex: projetos não confiáveis ignoram a configuração `.codex/`. A confiança deve abranger somente o projeto revisado, preservando sandbox e aprovações. Inicie nova sessão e confirme que o host descobriu os quatro papéis e consegue usá-los. Os arquivos de exemplo, por si só, não comprovam descoberta; a validação do Codex CLI 0.163.0 em 20/10/2026 está no relatório abaixo.
 
-Se o host não expuser papéis nativos mas admitir subagentes genéricos, use o modo de carga explícita: leia cada TOML e forneça integralmente suas `developer_instructions` ao worker correspondente, registrando papel e caminho. Isso não comprova ativação nativa. O fluxo coordenado fica bloqueado quando faltar uma definição ou a capacidade necessária de delegação. Para uma imagem simples e independente, use `$imagegen` diretamente. Instalação global fica fora desta versão.
+Se o host não expuser papéis nativos mas admitir subagentes genéricos, use o modo de carga explícita: leia cada TOML e forneça integralmente suas `developer_instructions` ao worker correspondente, registrando papel e caminho. Isso não comprova ativação nativa. O fluxo coordenado fica bloqueado quando faltar uma definição ou a capacidade necessária de delegação. Para uma imagem simples e independente, use `$imagegen` diretamente. A instalação do plugin disponibiliza a skill; a configuração dos especialistas permanece separada.
 
 O coordenador é o único escritor do manifest e aguarda os relatórios separados de `image_technical` e `image_visual`, ambos relativos ao mesmo SHA256 do candidato. Use até dois workers simultâneos e apenas uma geração por vez. O limite de duas correções por asset acumula todo o histórico, inclusive retomadas. A caneca histórica não deve ser gerada novamente.
 

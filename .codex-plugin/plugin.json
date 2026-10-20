@@ -1,0 +1,20 @@
+{
+  "name": "image-production",
+  "version": "0.1.1",
+  "description": "Produção de imagens com referências, catálogo observado de ChatGPT Images, perguntas e opções contextuais, entrega local e revisão documentada.",
+  "author": {
+    "name": "prof-ramos"
+  },
+  "skills": "./.agents/skills/",
+  "interface": {
+    "displayName": "Image Production",
+    "shortDescription": "Imagens com briefing e revisão",
+    "longDescription": "Produção de imagens com referências, catálogo observado de ChatGPT Images, perguntas e opções contextuais, entrega local e revisão documentada.",
+    "developerName": "prof-ramos",
+    "category": "Creativity",
+    "capabilities": [
+      "Interactive"
+    ],
+    "defaultPrompt": "Use o catálogo para esclarecer o briefing antes de produzir uma imagem."
+  }
+}
