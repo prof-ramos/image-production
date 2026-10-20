@@ -17,6 +17,16 @@ Read [the run contract](references/run-contract.md) to prepare a JSON brief and 
 
 Create a new run in a user-approved output location with `prepare`. Keep the original brief and references untouched. Every reference must have a role (`reference`, `edit-target`, `insert`, or `brand-kit`); its bytes are snapshotted and hashed. If no brand kit is supplied, record that explicitly; do not invent one.
 
+## Coordinated roles and portability
+
+The coordinated workflow requires the host to discover all four roles: `image_coordinator`, `image_producer`, `image_technical`, and `image_visual`. Check actual host availability before starting; configuration files alone do not prove discovery. If any role is unavailable, record the coordinated run as `blocked` and explain the missing role. A simple standalone image can instead use `$imagegen` directly.
+
+Copying this skill alone does not install the role definitions in the source repository's `.codex/agents/`. See the repository README and `.codex/config.toml` example. Copy the skill and role files into the target project without overwriting existing directories or files; resolve collisions manually. Manually merge the four `[agents.image_coordinator]`, `[agents.image_producer]`, `[agents.image_technical]`, and `[agents.image_visual]` sections into the host's configuration, each with `config_file = "agents/<name>.toml"` relative to that configuration file. Never automate the merge or replace the configuration. Preserve local model, authentication, sandbox, comments, roles, and a lower existing `agents.max_threads`; prefer at most 3 total threads (one coordinator plus two workers). Start a new session and confirm host discovery. Do not report discovery as validated without evidence.
+
+The coordinator alone writes `manifest.json` and invokes helper commands that mutate the run. Workers return evidence and proposals without modifying the manifest. Run at most two workers simultaneously, with only one image generation in flight. The coordinator waits for both independent reviews before recording a decision: `image_technical` and `image_visual` each submit a separate report identifying the same candidate SHA256. Do not combine the reports or transfer approval between hashes.
+
+Count corrections per asset across the complete recorded history, including resumed sessions: allow at most two corrective generations in total, never two more per session. Preserve earlier candidates and reports. Do not regenerate the historical mug (caneca histórica); retain its existing evidence and artifacts.
+
 ## Generate or edit
 
 For local images, inspect with `view_image` before editing or passing references. Identify each image's role and use only the reference mechanism supported by the live tool. Preserve edition invariants explicitly. Check transparency requirements separately from scene/backdrop.
@@ -29,7 +39,7 @@ Run `collect` for each candidate, supplying its actual returned path, saved prom
 
 Read [the quality rubric](references/quality-rubric.md). Inspect each candidate at intended size; compare references and original edit targets. For transparency, also inspect on light and dark backgrounds. Record per-criterion score and concrete evidence in a review JSON and submit it with `review`. Do not infer text, brand fidelity or clean edges from file metadata. Never manufacture inspection evidence. Only use `na` with an explicit reason and only when the criterion does not apply.
 
-Use a targeted correction for a specific defect; after two corrective attempts for the same asset, stop automatic iteration and report remaining issues. Preserve previous candidates. `review` approves a run only if every requested variant is collected and every applicable criterion scores 2. The helper's approval records the reviewer assertions; it is not an automated visual judge.
+Use a targeted correction for a specific defect; after two cumulative corrective attempts for the same asset across its recorded history, stop automatic iteration and report remaining issues. Preserve previous candidates. `review` approves a run only if every requested variant is collected and every applicable criterion scores 2. The helper's approval records the reviewer assertions; it is not an automated visual judge.
 
 On missing tools, limits or unrecoverable errors, use `status` to record `blocked` or `failed` with a brief sanitized explanation. Do not include keys, access URLs or full integration logs. To resume in a new session, read `manifest.json`, verify artifacts using `verify`, and continue from recorded state. Resume uses the snapshots inside the run; the original reference files do not need to remain. A malformed manifest or inconsistent stored approval fails before any write. Manual reselection requires resetting stale approval to `needs_revision`, then verifying and reviewing again. Mutate a run from one process at a time.
 

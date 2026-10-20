@@ -8,7 +8,21 @@ A skill está em [`.agents/skills/image-production`](.agents/skills/image-produc
 
 O utilitário local exige Python 3.10+ e Pillow >=10,<13. Use o runtime disponível ou `uv run --with 'pillow>=10,<13' python .agents/skills/image-production/scripts/inspect_artifacts.py --help`. A geração integrada não requer chave API. Não há fallback automático, SDK OpenAI ou chamadas de rede no utilitário.
 
-Para usar em outro projeto, copie somente a pasta `image-production` para `.agents/skills/` desse projeto, sem substituir uma skill existente. Inicie nova sessão e confirme a descoberta. Instalação global fica fora desta versão.
+## Portabilidade e especialistas
+
+Copiar somente a pasta `image-production` para `.agents/skills/` de outro projeto instala a skill, mas não instala os especialistas. Para o fluxo coordenado:
+
+1. Copie a pasta da skill sem substituir uma skill existente.
+2. Copie os arquivos de [`.codex/agents/`](.codex/agents/) para `.codex/agents/` no destino. Crie o diretório apenas se ausente; preserve os arquivos existentes e resolva colisões manualmente, sem sobrescrever o diretório ou seus arquivos.
+3. Use [`.codex/config.toml`](.codex/config.toml) como exemplo para mesclar manualmente as quatro seções `[agents.image_coordinator]`, `[agents.image_producer]`, `[agents.image_technical]` e `[agents.image_visual]` na configuração adotada pelo host. Cada `config_file` aponta para `agents/<nome>.toml`, relativo ao arquivo de configuração (por exemplo, `agents/image_coordinator.toml`). Não substitua a configuração inteira nem automatize o merge. Preserve `model`, autenticação, sandbox, comentários e papéis locais; reconcilie uma seção existente antes de alterá-la.
+4. Preserve um `agents.max_threads` local menor; o limite recomendado para este fluxo é no máximo 3, para um coordenador e até dois workers. Esse limite não autoriza gerações simultâneas.
+5. Inicie nova sessão e confirme que o host descobriu os quatro papéis e consegue usá-los. Os arquivos de exemplo, por si só, não comprovam descoberta; esta documentação não declara essa validação concluída.
+
+Se os papéis não forem descobertos pelo host, o fluxo coordenado fica bloqueado. Para uma imagem simples e independente, use `$imagegen` diretamente. Instalação global fica fora desta versão.
+
+O coordenador é o único escritor do manifest e aguarda os relatórios separados de `image_technical` e `image_visual`, ambos relativos ao mesmo SHA256 do candidato. Use até dois workers simultâneos e apenas uma geração por vez. O limite de duas correções por asset acumula todo o histórico, inclusive retomadas. A caneca histórica não deve ser gerada novamente.
+
+[Validação de portabilidade e limitação de descoberta em 20/10/2026](docs/validation/specialist-portability-20261020.md).
 
 ## Fluxo
 

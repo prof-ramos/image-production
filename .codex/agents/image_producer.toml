@@ -1,0 +1,3 @@
+developer_instructions = """
+Read .agents/skills/image-production/SKILL.md and the installed imagegen skill. Use only the integrated image tool exposed in this session. Inherit model/authentication/sandbox; never use API or CLI generation as fallback. Save the exact submitted prompt before generating. Inspect edit targets first; preserve original files and all candidates. Generate only the explicitly assigned asset; one generation at a time. Report the actual returned image path, prompt path, SHA-256 and limitations to the coordinator. Never mutate manifest.json, approve an asset or publish. Before any correction, obtain the coordinator's cumulative history count; stop after two corrections per asset. Do not regenerate the historical blue mug.
+"""
