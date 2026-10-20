@@ -1,0 +1,514 @@
+{
+  "date": "2026-10-19",
+  "scope": "12 transparent assets from the user-supplied cookbook",
+  "generation": "Integrated image_gen only; no developer image API or SDK",
+  "method": "Original text prompts for all baselines; targeted text-only refinements when needed. transparent_background=true; no reference image conditioning.",
+  "model_note": "The integrated tool does not expose model/quality/size selection. The supplied article says its displayed reference images were retained from GPT Image 2, not measured GPT Image 2.5 results.",
+  "equivalence": "Semantic/material/functional equivalence and required chart values; not pixel identity, exact geometry or backend equivalence.",
+  "approval_scope": "Independent visual test verdict; no automatic publication or institutional approval.",
+  "approved": 10,
+  "needs_revision": 2,
+  "image_calls": 14,
+  "generation_audit": [
+    {
+      "name": "amber-parfum",
+      "source": "/workspace/generated_images/exec-d9619b19-283d-44b8-8506-e28158bfed6b.png",
+      "calls": 1,
+      "prompt_unchanged": true,
+      "reference_conditioning": false,
+      "transparent_background": true,
+      "attempt": 1
+    },
+    {
+      "name": "amber-parfum",
+      "source": "/workspace/generated_images/exec-fe9f4d11-14f5-4e8b-a300-222dde0ad6e5.png",
+      "attempt": 2,
+      "calls": 1,
+      "prompt_unchanged": true,
+      "reference_conditioning": false
+    },
+    {
+      "name": "botanical-oil",
+      "source": "/workspace/generated_images/exec-08dc7460-4a99-4da2-8603-3881068f94eb.png",
+      "attempt": 1,
+      "prompt_unchanged": true,
+      "reference_conditioning": false,
+      "calls": 1
+    },
+    {
+      "name": "botanical-oil",
+      "source": "/workspace/generated_images/exec-f51fd5c7-5e13-49ca-b46c-37140cacff8c.png",
+      "attempt": 2,
+      "calls": 1,
+      "prompt_unchanged": true,
+      "reference_conditioning": false
+    },
+    {
+      "name": "reed-diffuser",
+      "source": "/workspace/generated_images/exec-48f7e8d1-8ed0-4153-aa60-24e9e6315ce2.png",
+      "calls": 1,
+      "prompt_unchanged": true,
+      "reference_conditioning": false,
+      "transparent_background": true,
+      "attempt": 1
+    },
+    {
+      "name": "garden-candle",
+      "source": "/workspace/generated_images/exec-21e34d13-6032-4eb7-871e-f1bbdae7da6d.png",
+      "attempt": 1,
+      "prompt_unchanged": true,
+      "reference_conditioning": false,
+      "calls": 1
+    },
+    {
+      "name": "quarterly-revenue-growth",
+      "source": "/workspace/generated_images/exec-7c0c5a4f-4cea-4e27-8848-eceef4fcac82.png",
+      "attempt": 1,
+      "calls": 1,
+      "prompt_unchanged": true,
+      "reference_conditioning": false
+    },
+    {
+      "name": "regional-pipeline-mix",
+      "source": "/workspace/generated_images/exec-248b94bf-138c-4ce5-b042-1e9272a3d7d5.png",
+      "attempt": 1,
+      "calls": 1,
+      "prompt_unchanged": true,
+      "reference_conditioning": false
+    },
+    {
+      "name": "design-app-icon",
+      "source": "/workspace/generated_images/exec-1878260a-02a0-493c-a11a-52de28d3c782.png",
+      "attempt": 1,
+      "calls": 1,
+      "prompt_unchanged": true,
+      "reference_conditioning": false
+    },
+    {
+      "name": "design-sticker",
+      "source": "/workspace/generated_images/exec-9dda935f-f62b-405a-b8f4-3ae8ef7c2ae5.png",
+      "attempt": 1,
+      "calls": 1,
+      "prompt_unchanged": true,
+      "reference_conditioning": false
+    },
+    {
+      "name": "design-decoration",
+      "source": "/workspace/generated_images/exec-9d3ac463-ace5-42af-a9c3-98019b203214.png",
+      "attempt": 1,
+      "calls": 1,
+      "prompt_unchanged": true,
+      "reference_conditioning": false
+    },
+    {
+      "name": "merchandise-design",
+      "source": "/workspace/generated_images/exec-d75d2553-b6ea-461b-a5ac-a5aa40b71107.png",
+      "attempt": 1,
+      "calls": 1,
+      "prompt_unchanged": true,
+      "reference_conditioning": false
+    },
+    {
+      "name": "merchandise-blank-tshirt",
+      "source": "/workspace/generated_images/exec-2e5d0973-0885-451c-bae4-500f03e9ce38.png",
+      "attempt": 1,
+      "calls": 1,
+      "prompt_unchanged": true,
+      "reference_conditioning": false
+    },
+    {
+      "name": "merchandise-blank-sweatshirt",
+      "source": "/workspace/generated_images/exec-b0ef76fd-bbd3-4eea-bb07-3c06224f390a.png",
+      "attempt": 1,
+      "calls": 1,
+      "prompt_unchanged": true,
+      "reference_conditioning": false
+    }
+  ],
+  "assets": [
+    {
+      "name": "amber-parfum",
+      "label": "Perfume âmbar",
+      "group": "stillroom",
+      "state": "needs_revision",
+      "selected_attempt": 2,
+      "attempts": 2,
+      "run_id": "de515251-051e-4627-bf46-25f3d0a9495c",
+      "image": "imagens/amber-parfum.png",
+      "reference": "referencias/amber-parfum.png",
+      "reference_url": "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/multimodal/images/transparent-image-assets/amber-parfum.png",
+      "reference_sha256": "77ad0d7af5d5f1297d491703ccc183db9126030c6236bb9cf69da4d14d975a21",
+      "metadata": {
+        "format": "PNG",
+        "width": 1145,
+        "height": 1374,
+        "bytes": 1188300,
+        "sha256": "780528af20af3bb8e1e427b3b4fd907f66b17f83966845c6e3434863876368af",
+        "has_alpha": true,
+        "transparent_pixels": 1014498,
+        "visible_pixels": 558732
+      },
+      "scores": {
+        "objective": 2,
+        "text_facts": "na",
+        "composition": 1,
+        "brand_reference": 2,
+        "visual_integrity": 2,
+        "preservation": "na",
+        "transparency": 2
+      }
+    },
+    {
+      "name": "botanical-oil",
+      "label": "Óleo botânico",
+      "group": "stillroom",
+      "state": "needs_revision",
+      "selected_attempt": 2,
+      "attempts": 2,
+      "run_id": "8f076365-ca70-4cff-bbec-8385b1bf2ef1",
+      "image": "imagens/botanical-oil.png",
+      "reference": "referencias/botanical-oil.png",
+      "reference_url": "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/multimodal/images/transparent-image-assets/botanical-oil.png",
+      "reference_sha256": "2463e590aaeeb7dd690c9a2a7d7feb95dd90bf76d18ca9070e83056392447653",
+      "metadata": {
+        "format": "PNG",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 1361133,
+        "sha256": "c71b4e303e90dec94eb8477ad6f66e351c27602859f7edebb464534a45d47284",
+        "has_alpha": true,
+        "transparent_pixels": 1278156,
+        "visible_pixels": 294708
+      },
+      "scores": {
+        "objective": 2,
+        "text_facts": "na",
+        "composition": 1,
+        "brand_reference": 2,
+        "visual_integrity": 2,
+        "preservation": "na",
+        "transparency": 2
+      }
+    },
+    {
+      "name": "reed-diffuser",
+      "label": "Difusor",
+      "group": "stillroom",
+      "state": "approved",
+      "selected_attempt": 1,
+      "attempts": 1,
+      "run_id": "5e3810f6-b93d-43db-ad88-678c1c000a6b",
+      "image": "imagens/reed-diffuser.png",
+      "reference": "referencias/reed-diffuser.png",
+      "reference_url": "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/multimodal/images/transparent-image-assets/reed-diffuser.png",
+      "reference_sha256": "a3dfa7406e6f27ecf788e2875a619a93464e972af52a099d9bca25c0bb881b17",
+      "metadata": {
+        "format": "PNG",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 2205451,
+        "sha256": "61b1d7e8072f79c13ed4b5982f06a83ce592171ab50c1f5941eef3bb949c3dd9",
+        "has_alpha": true,
+        "transparent_pixels": 941250,
+        "visible_pixels": 631614
+      },
+      "scores": {
+        "objective": 2,
+        "text_facts": 2,
+        "composition": 2,
+        "brand_reference": 2,
+        "visual_integrity": 2,
+        "preservation": "na",
+        "transparency": 2
+      }
+    },
+    {
+      "name": "garden-candle",
+      "label": "Vela",
+      "group": "stillroom",
+      "state": "approved",
+      "selected_attempt": 1,
+      "attempts": 1,
+      "run_id": "58866065-1cec-491e-a9d9-f220fd0fb9e6",
+      "image": "imagens/garden-candle.png",
+      "reference": "referencias/garden-candle.png",
+      "reference_url": "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/multimodal/images/transparent-image-assets/garden-candle.png",
+      "reference_sha256": "e1a800e217786db7141c216c24be4a7a96c3f5920987533f8b139b4b9d4ebc5a",
+      "metadata": {
+        "format": "PNG",
+        "width": 1230,
+        "height": 1278,
+        "bytes": 1770858,
+        "sha256": "a2d76633cf4e7dddc34fccf84dcddd0d05c58b17b0fc84f0d19b374f1cbc81bd",
+        "has_alpha": true,
+        "transparent_pixels": 649497,
+        "visible_pixels": 922443
+      },
+      "scores": {
+        "objective": 2,
+        "text_facts": 2,
+        "composition": 2,
+        "brand_reference": 2,
+        "visual_integrity": 2,
+        "preservation": "na",
+        "transparency": 2
+      }
+    },
+    {
+      "name": "quarterly-revenue-growth",
+      "label": "Receita trimestral",
+      "group": "charts",
+      "state": "approved",
+      "selected_attempt": 1,
+      "attempts": 1,
+      "run_id": "b35b5405-1230-4caf-a77d-820cabf298e4",
+      "image": "imagens/quarterly-revenue-growth.png",
+      "reference": "referencias/quarterly-revenue-growth.png",
+      "reference_url": "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/multimodal/images/transparent-image-assets/quarterly-revenue-growth.png",
+      "reference_sha256": "08fd071982e38198780bdd893abaeaa1f898ee29634ff58b46d1edc61e03c87d",
+      "metadata": {
+        "format": "PNG",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 1239110,
+        "sha256": "5c617aebc87ad384aa74bc4530c873eaf8e2a5e3c252ed6ce7a42d7d410c433b",
+        "has_alpha": true,
+        "transparent_pixels": 1028933,
+        "visible_pixels": 543931
+      },
+      "scores": {
+        "objective": 2,
+        "text_facts": 2,
+        "composition": 2,
+        "brand_reference": 2,
+        "visual_integrity": 2,
+        "preservation": "na",
+        "transparency": 2
+      }
+    },
+    {
+      "name": "regional-pipeline-mix",
+      "label": "Mix regional",
+      "group": "charts",
+      "state": "approved",
+      "selected_attempt": 1,
+      "attempts": 1,
+      "run_id": "ba13cfda-13d3-48c0-8f54-e4facf50bd7c",
+      "image": "imagens/regional-pipeline-mix.png",
+      "reference": "referencias/regional-pipeline-mix.png",
+      "reference_url": "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/multimodal/images/transparent-image-assets/regional-pipeline-mix.png",
+      "reference_sha256": "8721513611fc93db6c8e9809eea0893118280c137f38e387702dbbbeb2cbb128",
+      "metadata": {
+        "format": "PNG",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 1246243,
+        "sha256": "c109a377b574f832f9ef5ce1925c19a5d2deca06f1d83f9a8f1178067913ac43",
+        "has_alpha": true,
+        "transparent_pixels": 1183188,
+        "visible_pixels": 389676
+      },
+      "scores": {
+        "objective": 2,
+        "text_facts": 2,
+        "composition": 2,
+        "brand_reference": 2,
+        "visual_integrity": 2,
+        "preservation": "na",
+        "transparency": 2
+      }
+    },
+    {
+      "name": "design-app-icon",
+      "label": "Ícone de aplicativo",
+      "group": "design",
+      "state": "approved",
+      "selected_attempt": 1,
+      "attempts": 1,
+      "run_id": "ee30ece7-00b2-4871-88ff-6c103953103f",
+      "image": "imagens/design-app-icon.png",
+      "reference": "referencias/design-app-icon.png",
+      "reference_url": "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/multimodal/images/transparent-image-assets/design-app-icon.png",
+      "reference_sha256": "3b4e675911bd65d782ad18fd3822d22b0d4f8e56fa414cd3cf1215e8caa85926",
+      "metadata": {
+        "format": "PNG",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1736088,
+        "sha256": "107912c765be6d66dbb039bd84328417dde3a7063c238013b2ae4d2ceaf2c635",
+        "has_alpha": true,
+        "transparent_pixels": 441185,
+        "visible_pixels": 1131331
+      },
+      "scores": {
+        "objective": 2,
+        "text_facts": 2,
+        "composition": 2,
+        "brand_reference": 2,
+        "visual_integrity": 2,
+        "preservation": "na",
+        "transparency": 2
+      }
+    },
+    {
+      "name": "design-sticker",
+      "label": "Adesivo de morango",
+      "group": "design",
+      "state": "approved",
+      "selected_attempt": 1,
+      "attempts": 1,
+      "run_id": "5a02807e-79a2-425a-86d0-fcb5d96065af",
+      "image": "imagens/design-sticker.png",
+      "reference": "referencias/design-sticker.png",
+      "reference_url": "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/multimodal/images/transparent-image-assets/design-sticker.png",
+      "reference_sha256": "5167aa8b8a456b65a9c083aad437da77564deade03e1a0ee02bdb686831d8996",
+      "metadata": {
+        "format": "PNG",
+        "width": 1223,
+        "height": 1286,
+        "bytes": 1662444,
+        "sha256": "ccd1f00369bde4d42de474b152559bbd7728d60ef555474931ad9fe7abd49778",
+        "has_alpha": true,
+        "transparent_pixels": 717149,
+        "visible_pixels": 855629
+      },
+      "scores": {
+        "objective": 2,
+        "text_facts": 2,
+        "composition": 2,
+        "brand_reference": 2,
+        "visual_integrity": 2,
+        "preservation": "na",
+        "transparency": 2
+      }
+    },
+    {
+      "name": "design-decoration",
+      "label": "Ramo botânico",
+      "group": "design",
+      "state": "approved",
+      "selected_attempt": 1,
+      "attempts": 1,
+      "run_id": "b6b2ce4b-a024-4f11-82ba-a311336fc864",
+      "image": "imagens/design-decoration.png",
+      "reference": "referencias/design-decoration.png",
+      "reference_url": "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/multimodal/images/transparent-image-assets/design-decoration.png",
+      "reference_sha256": "d73059a500a9b78fb66e0a912bc0af6236770af5270baf353dd66c7e5e39828f",
+      "metadata": {
+        "format": "PNG",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 1807599,
+        "sha256": "c884312bfc88ba7a665c6d2004739af506475d56289c18c2a10a8e1d0f0b9641",
+        "has_alpha": true,
+        "transparent_pixels": 1194119,
+        "visible_pixels": 378745
+      },
+      "scores": {
+        "objective": 2,
+        "text_facts": 2,
+        "composition": 2,
+        "brand_reference": 2,
+        "visual_integrity": 2,
+        "preservation": "na",
+        "transparency": 2
+      }
+    },
+    {
+      "name": "merchandise-design",
+      "label": "Estampa",
+      "group": "merchandise",
+      "state": "approved",
+      "selected_attempt": 1,
+      "attempts": 1,
+      "run_id": "56c529a2-39d5-4430-b953-0d03756ca2ce",
+      "image": "imagens/merchandise-design.png",
+      "reference": "referencias/merchandise-design.png",
+      "reference_url": "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/multimodal/images/transparent-image-assets/merchandise-design.png",
+      "reference_sha256": "bf0f75a5c2207f3cdd7245907f7a26469fc7c02a2530ef1eda7e25095ecd763f",
+      "metadata": {
+        "format": "PNG",
+        "width": 1312,
+        "height": 1199,
+        "bytes": 3235152,
+        "sha256": "4bb32c091cef133b1f4bc4a40fa00707165f1e86a3e5c3b75435092cc9da28b2",
+        "has_alpha": true,
+        "transparent_pixels": 454719,
+        "visible_pixels": 1118369
+      },
+      "scores": {
+        "objective": 2,
+        "text_facts": 2,
+        "composition": 2,
+        "brand_reference": 2,
+        "visual_integrity": 2,
+        "preservation": "na",
+        "transparency": 2
+      }
+    },
+    {
+      "name": "merchandise-blank-tshirt",
+      "label": "Camiseta marfim",
+      "group": "merchandise",
+      "state": "approved",
+      "selected_attempt": 1,
+      "attempts": 1,
+      "run_id": "0e67b9ae-2dde-474f-9da7-37ce664e41b7",
+      "image": "imagens/merchandise-blank-tshirt.png",
+      "reference": "referencias/merchandise-blank-tshirt.png",
+      "reference_url": "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/multimodal/images/transparent-image-assets/merchandise-blank-tshirt.png",
+      "reference_sha256": "729738b13632808918adb396c872044be7cf12a846809eacb316763c15dbe9a1",
+      "metadata": {
+        "format": "PNG",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 1544847,
+        "sha256": "738860fdeeb2d63e475532ce11172d935e2d303f29f5e71aeb399d5b638b4278",
+        "has_alpha": true,
+        "transparent_pixels": 857858,
+        "visible_pixels": 715006
+      },
+      "scores": {
+        "objective": 2,
+        "text_facts": 2,
+        "composition": 2,
+        "brand_reference": 2,
+        "visual_integrity": 2,
+        "preservation": "na",
+        "transparency": 2
+      }
+    },
+    {
+      "name": "merchandise-blank-sweatshirt",
+      "label": "Moletom verde",
+      "group": "merchandise",
+      "state": "approved",
+      "selected_attempt": 1,
+      "attempts": 1,
+      "run_id": "dfbc3c71-f932-4555-ac36-18549c02b5c9",
+      "image": "imagens/merchandise-blank-sweatshirt.png",
+      "reference": "referencias/merchandise-blank-sweatshirt.png",
+      "reference_url": "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/multimodal/images/transparent-image-assets/merchandise-blank-sweatshirt.png",
+      "reference_sha256": "a458c01bd9413148fd8cf24d96da5292776256bc32dce54cb5211b010d2070b0",
+      "metadata": {
+        "format": "PNG",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 2109204,
+        "sha256": "c5404905f19083548224627f5e89a6a5852eaf2406b902872d95c407e81d0149",
+        "has_alpha": true,
+        "transparent_pixels": 568213,
+        "visible_pixels": 1004651
+      },
+      "scores": {
+        "objective": 2,
+        "text_facts": 2,
+        "composition": 2,
+        "brand_reference": 2,
+        "visual_integrity": 2,
+        "preservation": "na",
+        "transparency": 2
+      }
+    }
+  ]
+}

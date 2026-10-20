@@ -1,0 +1,17 @@
+{
+  "name": "image-production-local",
+  "plugins": [
+    {
+      "name": "image-production",
+      "source": {
+        "source": "local",
+        "path": "./work/plugin-dist/image-production"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Creativity"
+    }
+  ]
+}

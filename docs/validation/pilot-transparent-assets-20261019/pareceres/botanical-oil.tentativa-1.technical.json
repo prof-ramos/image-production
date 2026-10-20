@@ -1,0 +1,70 @@
+{
+  "name": "botanical-oil",
+  "role": "image_technical",
+  "activation": "Generic worker explicitly loaded technical role TOML.",
+  "run_id": "6916e9af-1318-4d04-a557-d876daa51ba8",
+  "candidate_relative": "final/botanical-oil.png",
+  "sha256": "39a136988a7b549e11ad0d986264c41883db56f05c6faa5bf54c32b57662f92d",
+  "verdict": "pass",
+  "checks": {
+    "helper_valid": true,
+    "run_id_matches": true,
+    "candidate_path_matches": true,
+    "candidate_sha256_matches": true,
+    "full_decode": true,
+    "single_frame": true,
+    "supported_format": true,
+    "metadata_matches": true,
+    "real_transparency_and_visible_pixels": true,
+    "input_hashes_match": true,
+    "prompt_hash_matches": true,
+    "submitted_prompt_matches": true,
+    "frozen_manifest_hash_matches": true,
+    "manifest_unchanged": true
+  },
+  "helper": {
+    "command": [
+      "/workspace/image-production/.venv/bin/python",
+      "/workspace/image-production/.agents/skills/image-production/scripts/inspect_artifacts.py",
+      "verify",
+      "--run",
+      "/workspace/image-production/work/cookbook-transparent-reproduction/runs/6916e9af-1318-4d04-a557-d876daa51ba8"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"valid\": true, \"state\": \"generated\", \"outputs\": 1}",
+    "stderr": ""
+  },
+  "independent_check": {
+    "command": "Python/Pillow read-only decode, hash and alpha verification via stdin using .venv/bin/python",
+    "exit_code": 0,
+    "inputs": [
+      {
+        "path": "inputs/ref-1.png",
+        "recorded": "2463e590aaeeb7dd690c9a2a7d7feb95dd90bf76d18ca9070e83056392447653",
+        "actual": "2463e590aaeeb7dd690c9a2a7d7feb95dd90bf76d18ca9070e83056392447653"
+      }
+    ],
+    "prompt_sha256": "ad5e40ce1db63a62916e4035a3eb1098ef8400e095cea993959819237abba883",
+    "manifest_sha256": "0eee596ceb4af0b257407121267d430e0690a32fb6e4f51ddae9635c3411706b"
+  },
+  "metadata": {
+    "format": "PNG",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 1497210,
+    "sha256": "39a136988a7b549e11ad0d986264c41883db56f05c6faa5bf54c32b57662f92d",
+    "has_alpha": true,
+    "transparent_pixels": 1170198,
+    "visible_pixels": 402666,
+    "frames": 1,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      254
+    ]
+  },
+  "limitations": [
+    "Technical integrity only; alpha does not establish visual quality, preservation or absence of halos.",
+    "No visual reports read; candidates, references and manifests unchanged."
+  ]
+}

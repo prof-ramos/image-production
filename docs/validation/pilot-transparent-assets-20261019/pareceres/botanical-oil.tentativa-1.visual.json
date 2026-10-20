@@ -1,0 +1,42 @@
+{
+  "name": "botanical-oil",
+  "run_id": "6916e9af-1318-4d04-a557-d876daa51ba8",
+  "candidate_relative": "final/botanical-oil.png",
+  "sha256": "39a136988a7b549e11ad0d986264c41883db56f05c6faa5bf54c32b57662f92d",
+  "role": "image_visual",
+  "verdict": "needs_revision",
+  "prompt_improvement": "Add: Fit the entire bottle including bulb and base inside the central 80% of the canvas height, with at least 10% clear transparent space above and below.",
+  "review": {
+    "reviewer": "Independent visual reviewer; explicitly loaded image_visual role instructions",
+    "criteria": {
+      "objective": {
+        "score": 2,
+        "evidence": "Slim cylindrical amber bottle contains golden oil and a delicate green fennel sprig; brass dropper cap, ivory bulb and internal pipette are visible."
+      },
+      "text_facts": {
+        "score": 2,
+        "evidence": "No readable writing, label text or watermark appears."
+      },
+      "composition": {
+        "score": 1,
+        "evidence": "The complete bottle is visible and horizontally centered, but the bulb and base sit very close to the top and bottom canvas edges. Vertical clearance is narrow rather than the requested generous padding."
+      },
+      "brand_reference": {
+        "score": 2,
+        "evidence": "Honey-amber cylindrical glass, warm oil, brushed brass, ivory rubber and green fennel match the requested reference subject and materials. Different shoulders and sprig arrangement are acceptable for fresh generation."
+      },
+      "visual_integrity": {
+        "score": 2,
+        "evidence": "Glass contours, cap, bulb, oil level and pipette form coherent geometry. Fennel stems, fine leaves and small flower clusters remain legible through the rendered oil."
+      },
+      "preservation": {
+        "score": "na",
+        "evidence": "Fresh text-only generation; the reference is an evaluation example, not an edit target."
+      },
+      "transparency": {
+        "score": 2,
+        "evidence": "Light and dark composites show a clean exterior silhouette around bulb, cap, shoulders and base, without broad haze, rectangular backdrop or cast shadow. Fine internal botanical detail and glass reflections remain useful on both backgrounds."
+      }
+    }
+  }
+}

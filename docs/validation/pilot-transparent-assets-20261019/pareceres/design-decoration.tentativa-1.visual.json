@@ -1,0 +1,41 @@
+{
+  "name": "design-decoration",
+  "run_id": "b6b2ce4b-a024-4f11-82ba-a311336fc864",
+  "candidate_relative": "final/design-decoration.png",
+  "sha256": "c884312bfc88ba7a665c6d2004739af506475d56289c18c2a10a8e1d0f0b9641",
+  "role": "image_visual",
+  "verdict": "approved",
+  "review": {
+    "reviewer": "Independent visual reviewer; explicitly loaded image_visual role instructions",
+    "criteria": {
+      "objective": {
+        "score": 2,
+        "evidence": "One delicate botanical sprig has fine dark-sage stems, muted green leaves and small coral berries."
+      },
+      "text_facts": {
+        "score": 2,
+        "evidence": "No readable text or watermark appears."
+      },
+      "composition": {
+        "score": 2,
+        "evidence": "The complete branched arrangement is visible with open spacing between leaves and berry clusters; its thin stem and leaf tips remain intact."
+      },
+      "brand_reference": {
+        "score": 2,
+        "evidence": "Delicate editorial leaf texture, muted sage palette, fine branches and coral berries correspond to the source. More berries and a different branch arrangement are acceptable prompt-compliant variations."
+      },
+      "visual_integrity": {
+        "score": 2,
+        "evidence": "Fine stems connect coherently to leaves and berry clusters. Leaf veins, pointed tips and small berry details remain legible without broken or fused broad shapes."
+      },
+      "preservation": {
+        "score": "na",
+        "evidence": "Fresh text-only generation; source pixels and exact artwork geometry were not preservation targets."
+      },
+      "transparency": {
+        "score": 2,
+        "evidence": "Inspected light and dark composites show destination background through the interbranch, interleaf and berry-cluster gaps. Fine stems remain useful without broad green haze, opaque panels or cast shadows."
+      }
+    }
+  }
+}

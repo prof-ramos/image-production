@@ -1,0 +1,70 @@
+{
+  "name": "merchandise-blank-tshirt",
+  "role": "image_technical",
+  "activation": "Generic worker explicitly loaded technical role TOML.",
+  "run_id": "0e67b9ae-2dde-474f-9da7-37ce664e41b7",
+  "candidate_relative": "final/merchandise-blank-tshirt.png",
+  "sha256": "738860fdeeb2d63e475532ce11172d935e2d303f29f5e71aeb399d5b638b4278",
+  "verdict": "pass",
+  "checks": {
+    "helper_valid": true,
+    "run_id_matches": true,
+    "candidate_path_matches": true,
+    "candidate_sha256_matches": true,
+    "full_decode": true,
+    "single_frame": true,
+    "supported_format": true,
+    "metadata_matches": true,
+    "real_transparency_and_visible_pixels": true,
+    "input_hashes_match": true,
+    "prompt_hash_matches": true,
+    "submitted_prompt_matches": true,
+    "frozen_manifest_hash_matches": true,
+    "manifest_unchanged": true
+  },
+  "helper": {
+    "command": [
+      "/workspace/image-production/.venv/bin/python",
+      "/workspace/image-production/.agents/skills/image-production/scripts/inspect_artifacts.py",
+      "verify",
+      "--run",
+      "/workspace/image-production/work/cookbook-transparent-reproduction/runs/0e67b9ae-2dde-474f-9da7-37ce664e41b7"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"valid\": true, \"state\": \"generated\", \"outputs\": 1}",
+    "stderr": ""
+  },
+  "independent_check": {
+    "command": "Python/Pillow read-only decode, hash and alpha verification via stdin using .venv/bin/python",
+    "exit_code": 0,
+    "inputs": [
+      {
+        "path": "inputs/ref-1.png",
+        "recorded": "729738b13632808918adb396c872044be7cf12a846809eacb316763c15dbe9a1",
+        "actual": "729738b13632808918adb396c872044be7cf12a846809eacb316763c15dbe9a1"
+      }
+    ],
+    "prompt_sha256": "63b05000a1b6da0fb0de5110a67072553659a1261c25bb5e195e6519f0a3ed30",
+    "manifest_sha256": "6043b48470953823dbb77b65c73b96e2dad0ec58208f7c4529555eb0767aad7b"
+  },
+  "metadata": {
+    "format": "PNG",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 1544847,
+    "sha256": "738860fdeeb2d63e475532ce11172d935e2d303f29f5e71aeb399d5b638b4278",
+    "has_alpha": true,
+    "transparent_pixels": 857858,
+    "visible_pixels": 715006,
+    "frames": 1,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      254
+    ]
+  },
+  "limitations": [
+    "Technical integrity only; alpha does not validate visual quality, text, design fidelity or absence of halos.",
+    "No visual or generation reports read; candidates, references and manifests unchanged."
+  ]
+}

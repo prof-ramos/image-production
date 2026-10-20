@@ -1,0 +1,30 @@
+# Project roles only: merge these tables into an existing config; never replace it.
+# Keep any lower existing concurrency cap. Project coordination permits at most two workers.
+
+[agents.chief_of_staff]
+description = "Coordinate long-running project work, delegate bounded tasks and preserve historical knowledge."
+config_file = "agents/chief_of_staff.toml"
+
+[agents.image_coordinator]
+description = "Coordinate image runs and reconcile independent reviews."
+config_file = "agents/image_coordinator.toml"
+
+[agents.image_producer]
+description = "Prepare prompts and generate one image at a time."
+config_file = "agents/image_producer.toml"
+
+[agents.image_technical]
+description = "Inspect artifact bytes and integrity without visual approval."
+config_file = "agents/image_technical.toml"
+
+[agents.image_visual]
+description = "Review the exact candidate against the brief and references."
+config_file = "agents/image_visual.toml"
+
+[agents.image_director]
+description = "Resolve complex briefs, art direction, reference roles and precise edit prompts before generation."
+config_file = "agents/image_director.toml"
+
+[agents.image_eval_designer]
+description = "Design bounded evaluations and audit image workflow regressions without generating images."
+config_file = "agents/image_eval_designer.toml"

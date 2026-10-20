@@ -1,0 +1,1 @@
+{"type":"object","properties":{"state":{"type":"string","enum":["prepared","generated","needs_revision","approved","blocked","failed"]},"manifest":{"type":"string"},"outputs":{"type":"array","items":{"type":"string"}},"limitations":{"type":"array","items":{"type":"string"}}},"required":["state","manifest","outputs","limitations"],"additionalProperties":false}

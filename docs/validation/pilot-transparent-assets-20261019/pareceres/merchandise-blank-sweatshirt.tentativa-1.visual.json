@@ -1,0 +1,41 @@
+{
+  "name": "merchandise-blank-sweatshirt",
+  "run_id": "dfbc3c71-f932-4555-ac36-18549c02b5c9",
+  "candidate_relative": "final/merchandise-blank-sweatshirt.png",
+  "sha256": "c5404905f19083548224627f5e89a6a5852eaf2406b902872d95c407e81d0149",
+  "role": "image_visual",
+  "verdict": "approved",
+  "review": {
+    "reviewer": "Independent visual reviewer; explicitly loaded image_visual role instructions",
+    "criteria": {
+      "objective": {
+        "score": 2,
+        "evidence": "One photorealistic forest-green crew-neck sweatshirt is laid flat, front-facing, with a blank chest and no wearer, hanger or mannequin."
+      },
+      "text_facts": {
+        "score": 2,
+        "evidence": "No readable text, logo or watermark appears."
+      },
+      "composition": {
+        "score": 2,
+        "evidence": "The sweatshirt is centered and fully visible through both cuffs, shoulder contours, neckline and ribbed waistband. Its sleeve-to-body gaps remain open."
+      },
+      "brand_reference": {
+        "score": 2,
+        "evidence": "Forest-green knit, long sleeves, ribbed collar, cuffs and waistband correspond to the source premium sweatshirt concept. Different sleeve spread and folds are acceptable fresh-generation variations."
+      },
+      "visual_integrity": {
+        "score": 2,
+        "evidence": "Garment seams, ribbing and fabric folds are coherent, with no missing cuffs, broken contours, logo or graphic. The chest provides a clear blank area."
+      },
+      "preservation": {
+        "score": "na",
+        "evidence": "Fresh text-only generation; exact reference pixels and geometry were not preservation targets."
+      },
+      "transparency": {
+        "score": 2,
+        "evidence": "White and dark composites show clean exterior edges and transparent gaps between each sleeve and torso. No material green haze, filled background or external cast shadow is visible; darker cloth folds are natural internal shading."
+      }
+    }
+  }
+}

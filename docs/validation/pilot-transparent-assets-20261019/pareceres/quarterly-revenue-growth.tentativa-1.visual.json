@@ -1,0 +1,41 @@
+{
+  "name": "quarterly-revenue-growth",
+  "run_id": "b35b5405-1230-4caf-a77d-820cabf298e4",
+  "candidate_relative": "final/quarterly-revenue-growth.png",
+  "sha256": "5c617aebc87ad384aa74bc4530c873eaf8e2a5e3c252ed6ce7a42d7d410c433b",
+  "role": "image_visual",
+  "verdict": "approved",
+  "review": {
+    "reviewer": "Independent visual reviewer; explicitly loaded image_visual role instructions",
+    "criteria": {
+      "objective": {
+        "score": 2,
+        "evidence": "Exactly four ascending bars, quarter labels, dollar labels and one turquoise upward-trend arrow are present."
+      },
+      "text_facts": {
+        "score": 2,
+        "evidence": "Direct visual inspection on the dark composite reads Q1 $42M, Q2 $51M, Q3 $63M and Q4 $78M. The shared-baseline bar heights are visually consistent with the required proportions: Q1 slightly over half Q4, Q2 about two-thirds, and Q3 about four-fifths."
+      },
+      "composition": {
+        "score": 2,
+        "evidence": "Bars share a baseline, labels align above and below their respective bars, and the trend arrow clears the labels. All elements are fully visible and white lettering is legible on the intended dark background."
+      },
+      "brand_reference": {
+        "score": 2,
+        "evidence": "Cobalt, bright blue, azure and turquoise progression and the upward revenue narrative correspond to the source. Simpler flat bars and omission of source axes are acceptable prompt-compliant variations."
+      },
+      "visual_integrity": {
+        "score": 2,
+        "evidence": "Bar edges and arrow are coherent; text is readable without malformed characters, overlaps or missing marks."
+      },
+      "preservation": {
+        "score": "na",
+        "evidence": "Fresh text-only generation; exact source pixels and artwork geometry were not preservation targets."
+      },
+      "transparency": {
+        "score": 2,
+        "evidence": "Light and dark composites show clean surrounding and interbar space with no filled plot panel, rectangular backdrop or material broad halo. White labels are intentionally assessed on dark; their low white-background contrast is not a defect."
+      }
+    }
+  }
+}

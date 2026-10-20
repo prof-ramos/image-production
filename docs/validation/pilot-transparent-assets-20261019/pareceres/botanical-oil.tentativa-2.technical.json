@@ -1,0 +1,83 @@
+{
+  "name": "botanical-oil",
+  "role": "image_technical",
+  "activation": "Generic worker explicitly loaded technical role TOML.",
+  "run_id": "8f076365-ca70-4cff-bbec-8385b1bf2ef1",
+  "candidate_relative": "final/botanical-oil.png",
+  "sha256": "c71b4e303e90dec94eb8477ad6f66e351c27602859f7edebb464534a45d47284",
+  "verdict": "pass",
+  "checks": {
+    "helper_valid": true,
+    "run_id_matches": true,
+    "candidate_path_matches": true,
+    "candidate_sha256_matches": true,
+    "full_decode": true,
+    "single_frame": true,
+    "supported_format": true,
+    "metadata_matches": true,
+    "real_transparency_and_visible_pixels": true,
+    "input_hashes_match": true,
+    "prompt_hash_matches": true,
+    "submitted_prompt_matches": true,
+    "frozen_manifest_hash_matches": true,
+    "manifest_unchanged": true
+  },
+  "helper": {
+    "command": [
+      "/workspace/image-production/.venv/bin/python",
+      "/workspace/image-production/.agents/skills/image-production/scripts/inspect_artifacts.py",
+      "verify",
+      "--run",
+      "/workspace/image-production/work/cookbook-transparent-reproduction/runs/8f076365-ca70-4cff-bbec-8385b1bf2ef1"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"valid\": true, \"state\": \"generated\", \"outputs\": 1}",
+    "stderr": ""
+  },
+  "independent_check": {
+    "command": "Python/Pillow read-only decode, hash, alpha and bounding-box verification via stdin using .venv/bin/python",
+    "exit_code": 0,
+    "inputs": [
+      {
+        "path": "inputs/ref-1.png",
+        "recorded": "2463e590aaeeb7dd690c9a2a7d7feb95dd90bf76d18ca9070e83056392447653",
+        "actual": "2463e590aaeeb7dd690c9a2a7d7feb95dd90bf76d18ca9070e83056392447653"
+      }
+    ],
+    "prompt_sha256": "70351e2176318c74f76074b160a00eacfe6bd40dd805d3dbef219dd63ddf92dd",
+    "manifest_sha256": "886ddc4ad4191daf887845348bddfc34901d3ee8292a3dc861b51d9123ccc42c"
+  },
+  "metadata": {
+    "format": "PNG",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 1361133,
+    "sha256": "c71b4e303e90dec94eb8477ad6f66e351c27602859f7edebb464534a45d47284",
+    "has_alpha": true,
+    "transparent_pixels": 1278156,
+    "visible_pixels": 294708,
+    "frames": 1,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha_positive_bbox": [
+      49,
+      103,
+      972,
+      1520
+    ]
+  },
+  "marginfractions": {
+    "left": 0.0478515625,
+    "top": 0.06705729166666667,
+    "right": 0.05078125,
+    "bottom": 0.010416666666666666
+  },
+  "limitations": [
+    "Technical integrity only; alpha does not validate visual quality, text, design fidelity or absence of halos.",
+    "Bounding box covers every alpha>0 pixel; margin fractions are geometric evidence only.",
+    "No visual reports read; candidates, references and manifests unchanged."
+  ]
+}

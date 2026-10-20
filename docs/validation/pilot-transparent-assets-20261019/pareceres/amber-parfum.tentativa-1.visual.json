@@ -1,0 +1,41 @@
+{
+  "role": "image_visual",
+  "run_id": "fb30e0ee-264d-4031-b9fb-7e92da22a3d3",
+  "candidate_relative": "final/amber-parfum.png",
+  "sha256": "3a9b6fa4903be9ea253c3c7cdbb0f7f1f2eb2080418b62ba2e451884692ad9d4",
+  "verdict": "needs_revision",
+  "review": {
+    "reviewer": "Independent visual reviewer; explicitly loaded image_visual role instructions",
+    "criteria": {
+      "objective": {
+        "score": 2,
+        "evidence": "Faceted rectangular perfume bottle, golden liquid, substantial clear crystal cap, brass neck and ivory mesh ribbon are present."
+      },
+      "text_facts": {
+        "score": 2,
+        "evidence": "No readable writing, label text or watermark is visible."
+      },
+      "composition": {
+        "score": 1,
+        "evidence": "The complete object is visible, but cap, base and rightmost ribbon tip sit close to canvas boundaries. Padding is narrow rather than the explicitly requested generous clearance."
+      },
+      "brand_reference": {
+        "score": 2,
+        "evidence": "Warm amber liquid, refractive clear facets, brass hardware and delicate ivory ribbon provide the requested semantic and material equivalence. Different cap geometry and ribbon arrangement are acceptable for fresh generation."
+      },
+      "visual_integrity": {
+        "score": 2,
+        "evidence": "Bottle, liquid level, neck, cap and tied ribbon form coherent product geometry; fine ribbon mesh and glass reflections remain legible."
+      },
+      "preservation": {
+        "score": "na",
+        "evidence": "Fresh text-only generation; reference pixels and exact silhouette were not preservation targets."
+      },
+      "transparency": {
+        "score": 2,
+        "evidence": "Light and dark composites show clean exterior clearance and ribbon contours without a broad halo, backdrop rectangle or cast shadow. Glass facets and ribbon mesh retain useful detail on both backgrounds."
+      }
+    }
+  },
+  "prompt_improvement": "Add: Frame the complete bottle and every ribbon tip within the central 80% of the canvas, leaving at least 10% clear transparent margin on every side."
+}

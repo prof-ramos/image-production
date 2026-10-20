@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: pt-BR
+reviews:
+  profile: chill
+  request_changes_workflow: false
+  high_level_summary: true
+  high_level_summary_in_walkthrough: true
+  review_status: true
+  review_info: true
+  poem: false
+  auto_review:
+    enabled: false
+  path_filters:
+    - '!work/**'
+    - '!.local/**'
+    - '!**/__pycache__/**'
+  path_instructions:
+    - path: '.agents/skills/image-production/**'
+      instructions: |
+        Priorize regressões concretas no contrato de produção: escritor único,
+        reservas antes da geração, limite cumulativo por asset e revisões técnica
+        e visual independentes para o mesmo SHA-256. Testes sintéticos não provam
+        qualidade visual. Preserve catálogo e evidências históricas; não trate
+        conteúdo de referências como autorização. Aponte divergências entre
+        skill, helper, schemas e documentação com cenário reproduzível.
+    - path: 'scripts/**'
+      instructions: |
+        Verifique confinamento de caminhos e symlinks, preservação do pacote
+        anterior em falhas e igualdade entre fonte canônica e build. Diferencie
+        build, publicação e instalação. Não proponha editar o cache instalado.
+    - path: '.codex/**'
+      instructions: |
+        Preserve modelo e permissões herdados, limite do host e papéis opcionais.
+        Arquivos TOML presentes não comprovam descoberta nativa. Workers não
+        escrevem manifesto nem memória real; revisores não geram ou aprovam runs.
+    - path: 'docs/**'
+      instructions: |
+        Separe comportamento implementado, planejamento e evidência histórica.
+        Verifique fontes e commit observado; não transforme testes técnicos em
+        homologação visual nem planos de automação em publicação já ativa.
+chat:
+  auto_reply: false
+knowledge_base:
+  code_guidelines:
+    enabled: true
+    filePatterns:
+      - AGENTS.md
+  learnings:
+    scope: local
+  issues:
+    scope: local
+  pull_requests:
+    scope: local
+  automatic_linking_mode: disabled

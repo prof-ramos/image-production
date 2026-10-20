@@ -1,0 +1,157 @@
+{
+  "date": "2026-10-16",
+  "environment": {
+    "os": "macOS 27.0.1",
+    "arch": "arm64",
+    "cli": "0.163.0",
+    "python": "3.12.15"
+  },
+  "unit_tests": 14,
+  "quick_validate": "passed",
+  "exec_json_output_schema": "passed",
+  "implicit_selection": "observed; catalog context-budget warning persists",
+  "samples": [
+    {
+      "sample": "assets/initial.png",
+      "surface": "exec",
+      "mode": "built-in",
+      "state": "needs_revision",
+      "metadata": {
+        "format": "PNG",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 1638809,
+        "sha256": "60c75d603ca38d737bcf1f89124473801852c31a1ad2b92f57dadd5c7ebed737",
+        "has_alpha": true,
+        "transparent_pixels": 840402,
+        "visible_pixels": 732462
+      },
+      "prompt": "Use case: product-mockup\nAsset type: catalog preview for internal reviewers; synthetic technical smoke test.\nPrimary request: one blue ceramic mug, fully visible including its handle, clean studio product photograph.\nComposition/framing: centered single mug with comfortable clear margins; entire mug visible.\nMaterials/textures: blue glazed ceramic.\nBackground: genuinely transparent background with real alpha, clean isolated product edges.\nConstraints: exactly one mug; no logo, no text, no watermark, no extra objects. No brand kit or references supplied; no brand identity implied.\n",
+      "review": {
+        "reviewer": "Coordinator visual inspection; overrides earlier CLI reviewer",
+        "criteria": {
+          "objective": {
+            "score": 2,
+            "evidence": "Inspected the generated 1536x1024 image and light/dark composites: exactly one blue glazed ceramic mug, fully visible including handle, without visible text or logo; suitable as a synthetic catalog preview."
+          },
+          "text_facts": {
+            "score": "na",
+            "evidence": "Brief supplies no copy or factual claims; no text is required."
+          },
+          "composition": {
+            "score": 2,
+            "evidence": "Entire rim, base and right handle fit within the frame, with clear margins on all sides; single product is the obvious focus. No destination pixel size was specified."
+          },
+          "brand_reference": {
+            "score": "na",
+            "evidence": "No brand kit or reference images supplied in the brief; no brand fidelity claim made."
+          },
+          "visual_integrity": {
+            "score": 1,
+            "evidence": "Mug is intact; extraneous blue halo compromises placement on a new background."
+          },
+          "preservation": {
+            "score": "na",
+            "evidence": "New generation with no edit target or preservation invariants."
+          },
+          "transparency": {
+            "score": 1,
+            "evidence": "Real alpha exists, but a broad blue haze surrounds the mug and occupies the handle opening. Not a clean reusable cutout."
+          }
+        },
+        "reviewed_at": "2026-10-16T20:37:00.720564+00:00"
+      },
+      "earlier_cli_review": {
+        "reviewer": "Codex visual inspection",
+        "criteria": {
+          "objective": {
+            "score": 2,
+            "evidence": "Inspected the generated 1536x1024 image and light/dark composites: exactly one blue glazed ceramic mug, fully visible including handle, without visible text or logo; suitable as a synthetic catalog preview."
+          },
+          "text_facts": {
+            "score": "na",
+            "evidence": "Brief supplies no copy or factual claims; no text is required."
+          },
+          "composition": {
+            "score": 2,
+            "evidence": "Entire rim, base and right handle fit within the frame, with clear margins on all sides; single product is the obvious focus. No destination pixel size was specified."
+          },
+          "brand_reference": {
+            "score": "na",
+            "evidence": "No brand kit or reference images supplied in the brief; no brand fidelity claim made."
+          },
+          "visual_integrity": {
+            "score": 2,
+            "evidence": "At the displayed native dimensions, rim ellipse, cylindrical body and connected curved handle are coherent. Glaze highlights and surface texture are continuous; no material visible geometry defect or extra object observed."
+          },
+          "preservation": {
+            "score": "na",
+            "evidence": "New generation with no edit target or preservation invariants."
+          },
+          "transparency": {
+            "score": 2,
+            "evidence": "Helper confirms real alpha with visible and transparent pixels. Inspected inspection-light.png and inspection-dark.png at 1536x1024: exterior background and handle opening show each destination background, without painted checkerboard or material visible halo. Original candidate bytes retained unchanged."
+          }
+        },
+        "reviewed_at": "2026-10-16T20:36:13.066671+00:00"
+      }
+    },
+    {
+      "sample": "assets/edit.png",
+      "surface": "desktop",
+      "mode": "built-in",
+      "state": "needs_revision",
+      "metadata": {
+        "format": "PNG",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 1577437,
+        "sha256": "12376ca12679e15d5edabb1e3fb6ced7a420a5b5ef4b8a7d9178b718679f64ba",
+        "has_alpha": true,
+        "transparent_pixels": 837976,
+        "visible_pixels": 734888
+      },
+      "prompt": "Use case: background-extraction\nEdit target: local blue ceramic mug reference. Remove only the blue haze and halo outside the mug and within the handle opening. Make all background areas genuinely fully transparent right up to clean object edges. Preserve the mug shape, handle, proportions, position, glossy blue color, lighting and ceramic texture. No added objects, no text, no logos. Do not paint a checkerboard.",
+      "review": {
+        "reviewer": "Coordinator visual inspection",
+        "criteria": {
+          "objective": {
+            "score": 1,
+            "evidence": "An edit was produced, but the requested removal of the blue halo did not succeed."
+          },
+          "composition": {
+            "score": 2,
+            "evidence": "Mug and complete handle remain within the frame."
+          },
+          "visual_integrity": {
+            "score": 1,
+            "evidence": "Broad blue haze remains outside the silhouette and within the handle opening."
+          },
+          "brand_reference": {
+            "score": 2,
+            "evidence": "Blue ceramic mug appearance remains recognizable; reference is synthetic, no brand kit."
+          },
+          "preservation": {
+            "score": 1,
+            "evidence": "Overall shape and blue ceramic are similar; pixel-exact preservation is not established and highlights changed."
+          },
+          "transparency": {
+            "score": 1,
+            "evidence": "Alpha is present but broad blue halo remains; clean-cutout requirement fails visual inspection."
+          },
+          "text_facts": {
+            "score": "na",
+            "evidence": "No text or factual copy requested."
+          }
+        },
+        "reviewed_at": "2026-10-16T20:37:38.640666+00:00"
+      }
+    }
+  ],
+  "new_cli_session_resume": {
+    "state": "needs_revision",
+    "schema_valid": true,
+    "verify_valid": true,
+    "new_generation": false
+  }
+}

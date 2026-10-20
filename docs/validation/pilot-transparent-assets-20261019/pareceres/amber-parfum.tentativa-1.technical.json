@@ -1,0 +1,14 @@
+{
+  "role": "image_technical",
+  "run_id": "fb30e0ee-264d-4031-b9fb-7e92da22a3d3",
+  "candidate_relative": "final/amber-parfum.png",
+  "sha256": "3a9b6fa4903be9ea253c3c7cdbb0f7f1f2eb2080418b62ba2e451884692ad9d4",
+  "verdict": "pass",
+  "helper_exit_code": 0,
+  "checks": "Independent decode, alpha, recorded metadata, candidate/input/prompt hashes and frozen manifest all matched.",
+  "alpha_extrema": [
+    0,
+    254
+  ],
+  "note": "Coordinator-transcribed summary of independent technical report; no visual claim."
+}

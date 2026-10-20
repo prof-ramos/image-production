@@ -1,0 +1,41 @@
+{
+  "name": "garden-candle",
+  "run_id": "58866065-1cec-491e-a9d9-f220fd0fb9e6",
+  "candidate_relative": "final/garden-candle.png",
+  "sha256": "a2d76633cf4e7dddc34fccf84dcddd0d05c58b17b0fc84f0d19b374f1cbc81bd",
+  "role": "image_visual",
+  "verdict": "approved",
+  "review": {
+    "reviewer": "Independent visual reviewer; explicitly loaded image_visual role instructions",
+    "criteria": {
+      "objective": {
+        "score": 2,
+        "evidence": "Heavy smoky-amber and milky frosted tumbler contains ivory wax and one lit wick; fine ivory cotton cord ties a small dried eucalyptus sprig to its exterior."
+      },
+      "text_facts": {
+        "score": 2,
+        "evidence": "Exactly one candle flame is visible. No readable text, labels or watermark appears."
+      },
+      "composition": {
+        "score": 2,
+        "evidence": "The complete tumbler, flame, eucalyptus and cord ends are visible with clear space around them. The wider vessel remains a balanced product composition; exact reference proportions are not required."
+      },
+      "brand_reference": {
+        "score": 2,
+        "evidence": "Amber glass, milky frosting, creamy wax, warm reflections, ivory cotton and muted dried eucalyptus provide the requested material and subject equivalence to the official example."
+      },
+      "visual_integrity": {
+        "score": 2,
+        "evidence": "Rim ellipse, thick glass base, wax surface and wick are coherent. Cotton fibers and eucalyptus leaf veins remain legible; no missing or broken essential parts are visible."
+      },
+      "preservation": {
+        "score": "na",
+        "evidence": "Fresh text-only generation; the reference is an evaluation example, not an edit target."
+      },
+      "transparency": {
+        "score": 2,
+        "evidence": "Light and dark composites show clean clearance around the flame, rim, sides, eucalyptus and base. Cord fibers and botanical edges remain useful; no material broad halo, backdrop rectangle or cast shadow is visible."
+      }
+    }
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Incremental native Images probe observations",
+  "type": "object",
+  "required": [
+    "observed_at",
+    "scope",
+    "probes",
+    "limitations"
+  ],
+  "properties": {
+    "observed_at": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "probes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "card",
+          "category",
+          "observed_at",
+          "source",
+          "questions",
+          "universal",
+          "limitations"
+        ],
+        "properties": {
+          "card": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "observed_at": {
+            "type": "string"
+          },
+          "round": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "response_rounds": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "evidence_type": {
+            "type": "string"
+          },
+          "source": {
+            "type": "object"
+          },
+          "raw_markdown": {
+            "type": "string"
+          },
+          "groups": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "questions": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "option_tables": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "bullet_items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "group",
+                "indent_columns",
+                "marker",
+                "text",
+                "raw_line",
+                "usage"
+              ],
+              "properties": {
+                "group": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "indent_columns": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "marker": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "raw_line": {
+                  "type": "string"
+                },
+                "usage": {
+                  "type": "string"
+                },
+                "source_line": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "universal": {
+            "const": false
+          },
+          "portable_question_scope": {
+            "type": "string"
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "raw_markdown_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "choice_groups": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "inline_options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "group",
+                "kind",
+                "source_excerpt",
+                "items",
+                "universal"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "group": {
+                  "type": "string"
+                },
+                "kind": {
+                  "const": "illustrative_alternatives_in_prose_not_exhaustive"
+                },
+                "source_excerpt": {
+                  "type": "string"
+                },
+                "source_json_pointer": {
+                  "type": "string"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "universal": {
+                  "const": false
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "inline_options_status": {
+            "type": "string"
+          },
+          "probe_mode": {
+            "type": "string"
+          },
+          "prompt_delta": {
+            "type": "string"
+          },
+          "submission_method": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rejected_captures": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,14 @@
+{
+  "role": "image_technical",
+  "run_id": "5e3810f6-b93d-43db-ad88-678c1c000a6b",
+  "candidate_relative": "final/reed-diffuser.png",
+  "sha256": "61b1d7e8072f79c13ed4b5982f06a83ce592171ab50c1f5941eef3bb949c3dd9",
+  "verdict": "pass",
+  "helper_exit_code": 0,
+  "checks": "Independent decode, alpha, recorded metadata, candidate/input/prompt hashes and frozen manifest all matched.",
+  "alpha_extrema": [
+    0,
+    254
+  ],
+  "note": "Coordinator-transcribed summary of independent technical report; no visual claim."
+}

@@ -1,0 +1,42 @@
+{
+  "name": "amber-parfum",
+  "role": "image_visual",
+  "run_id": "de515251-051e-4627-bf46-25f3d0a9495c",
+  "candidate_relative": "final/amber-parfum.png",
+  "sha256": "780528af20af3bb8e1e427b3b4fd907f66b17f83966845c6e3434863876368af",
+  "verdict": "needs_revision",
+  "review": {
+    "reviewer": "Independent visual reviewer; explicit image-visual role-file loading",
+    "criteria": {
+      "objective": {
+        "score": 2,
+        "evidence": "One complete luxury eau-de-parfum bottle is visible: rectangular honey-amber faceted glass body, golden liquid, heavy crystal cap, brass neck and an ivory organza ribbon. No extra object or plinth."
+      },
+      "text_facts": {
+        "score": "na",
+        "evidence": "No text or factual labels are required. No readable writing, label or watermark is visible."
+      },
+      "composition": {
+        "score": 1,
+        "evidence": "The bottle and ribbon are fully visible but do not fit the requested central 80% with at least 10% margin on every side. Visual inspection of both composites shows the ribbon too near the right edge and the cap/base too near the vertical edges. Read-only alpha >64 bounding box is (297,121,1060,1246) on 1145x1374: top 8.81%, right 7.42%, bottom 9.32%, left 25.94%. These visible-object margins already fail without counting faint alpha outside the silhouette."
+      },
+      "brand_reference": {
+        "score": 2,
+        "evidence": "Compared with the official reference, the candidate reproduces the essential premium material vocabulary: clear faceted crystal, honey-gold fragrance, softly rounded rectangular bottle, brushed brass neck and fine sheer ivory ribbon. The different ribbon curl and bottle proportions are compatible with a fresh prompt-only generation; pixel identity is not required."
+      },
+      "visual_integrity": {
+        "score": 2,
+        "evidence": "Cap facets, shoulders, heavy glass base and liquid refractions form coherent bottle geometry. The ribbon has fine woven texture, soft folds and a complete tapered tail; no conspicuous broken contour or malformed attachment is visible at the inspected resolution."
+      },
+      "preservation": {
+        "score": "na",
+        "evidence": "This is a fresh text-only generation. The official example is an evaluation reference, not an edit target or conditioning image."
+      },
+      "transparency": {
+        "score": 2,
+        "evidence": "Viewed original candidate plus white and dark composites, alongside the corresponding reference views. Background around the cap, bottle, ribbon and their intervening spaces is visually clean on both destinations, without a material broad halo, rectangular matte, painted checkerboard or cast shadow. Fine glass highlights and ribbon edges remain useful; this visual finding does not assert that every exterior pixel has exactly zero alpha."
+      }
+    }
+  },
+  "prompt_improvement": "For a future separately authorized attempt, place the entire bottle-and-ribbon group inside the central 70% of the canvas, with at least 15% empty margin around its outermost tips; center the combined group, not only the bottle, and keep the ribbon compact. Retain current glass, brass and organza material quality."
+}

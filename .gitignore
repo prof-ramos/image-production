@@ -5,3 +5,8 @@
 __pycache__/
 .venv/
 work/
+.pytest_cache/
+*.pyc
+
+# Project-local OptMem state and launcher (never shipped with the plugin).
+.local/

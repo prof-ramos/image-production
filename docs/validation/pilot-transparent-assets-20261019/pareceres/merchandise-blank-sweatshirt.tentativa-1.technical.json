@@ -1,0 +1,70 @@
+{
+  "name": "merchandise-blank-sweatshirt",
+  "role": "image_technical",
+  "activation": "Generic worker explicitly loaded technical role TOML.",
+  "run_id": "dfbc3c71-f932-4555-ac36-18549c02b5c9",
+  "candidate_relative": "final/merchandise-blank-sweatshirt.png",
+  "sha256": "c5404905f19083548224627f5e89a6a5852eaf2406b902872d95c407e81d0149",
+  "verdict": "pass",
+  "checks": {
+    "helper_valid": true,
+    "run_id_matches": true,
+    "candidate_path_matches": true,
+    "candidate_sha256_matches": true,
+    "full_decode": true,
+    "single_frame": true,
+    "supported_format": true,
+    "metadata_matches": true,
+    "real_transparency_and_visible_pixels": true,
+    "input_hashes_match": true,
+    "prompt_hash_matches": true,
+    "submitted_prompt_matches": true,
+    "frozen_manifest_hash_matches": true,
+    "manifest_unchanged": true
+  },
+  "helper": {
+    "command": [
+      "/workspace/image-production/.venv/bin/python",
+      "/workspace/image-production/.agents/skills/image-production/scripts/inspect_artifacts.py",
+      "verify",
+      "--run",
+      "/workspace/image-production/work/cookbook-transparent-reproduction/runs/dfbc3c71-f932-4555-ac36-18549c02b5c9"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"valid\": true, \"state\": \"generated\", \"outputs\": 1}",
+    "stderr": ""
+  },
+  "independent_check": {
+    "command": "Python/Pillow read-only decode, hash and alpha verification via stdin using .venv/bin/python",
+    "exit_code": 0,
+    "inputs": [
+      {
+        "path": "inputs/ref-1.png",
+        "recorded": "a458c01bd9413148fd8cf24d96da5292776256bc32dce54cb5211b010d2070b0",
+        "actual": "a458c01bd9413148fd8cf24d96da5292776256bc32dce54cb5211b010d2070b0"
+      }
+    ],
+    "prompt_sha256": "519e52ca7c251ed1539205b8d2f81fafdecc6f80009ea7762cf1dc0d7fc1bfde",
+    "manifest_sha256": "02e6a516cf2881550abf7e98e3f78aac64e607f9f1e0e17eaaecfc2bfb691dc6"
+  },
+  "metadata": {
+    "format": "PNG",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 2109204,
+    "sha256": "c5404905f19083548224627f5e89a6a5852eaf2406b902872d95c407e81d0149",
+    "has_alpha": true,
+    "transparent_pixels": 568213,
+    "visible_pixels": 1004651,
+    "frames": 1,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      254
+    ]
+  },
+  "limitations": [
+    "Technical integrity only; alpha does not validate visual quality, text, design fidelity or absence of halos.",
+    "No visual or generation reports read; candidates, references and manifests unchanged."
+  ]
+}

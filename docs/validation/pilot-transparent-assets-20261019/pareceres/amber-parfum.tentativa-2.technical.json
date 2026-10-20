@@ -1,0 +1,83 @@
+{
+  "name": "amber-parfum",
+  "role": "image_technical",
+  "activation": "Generic worker explicitly loaded technical role TOML.",
+  "run_id": "de515251-051e-4627-bf46-25f3d0a9495c",
+  "candidate_relative": "final/amber-parfum.png",
+  "sha256": "780528af20af3bb8e1e427b3b4fd907f66b17f83966845c6e3434863876368af",
+  "verdict": "pass",
+  "checks": {
+    "helper_valid": true,
+    "run_id_matches": true,
+    "candidate_path_matches": true,
+    "candidate_sha256_matches": true,
+    "full_decode": true,
+    "single_frame": true,
+    "supported_format": true,
+    "metadata_matches": true,
+    "real_transparency_and_visible_pixels": true,
+    "input_hashes_match": true,
+    "prompt_hash_matches": true,
+    "submitted_prompt_matches": true,
+    "frozen_manifest_hash_matches": true,
+    "manifest_unchanged": true
+  },
+  "helper": {
+    "command": [
+      "/workspace/image-production/.venv/bin/python",
+      "/workspace/image-production/.agents/skills/image-production/scripts/inspect_artifacts.py",
+      "verify",
+      "--run",
+      "/workspace/image-production/work/cookbook-transparent-reproduction/runs/de515251-051e-4627-bf46-25f3d0a9495c"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"valid\": true, \"state\": \"generated\", \"outputs\": 1}",
+    "stderr": ""
+  },
+  "independent_check": {
+    "command": "Python/Pillow read-only decode, hash, alpha and bounding-box verification via stdin using .venv/bin/python",
+    "exit_code": 0,
+    "inputs": [
+      {
+        "path": "inputs/ref-1.png",
+        "recorded": "77ad0d7af5d5f1297d491703ccc183db9126030c6236bb9cf69da4d14d975a21",
+        "actual": "77ad0d7af5d5f1297d491703ccc183db9126030c6236bb9cf69da4d14d975a21"
+      }
+    ],
+    "prompt_sha256": "8a4b04acb374f9af4bbb5e5507f2e54d8fdce992291f0d954d812f7bc5efbf58",
+    "manifest_sha256": "40590680d988701bdd386e57f73915d697d56c9445c96b1d39c4c41429693329"
+  },
+  "metadata": {
+    "format": "PNG",
+    "width": 1145,
+    "height": 1374,
+    "bytes": 1188300,
+    "sha256": "780528af20af3bb8e1e427b3b4fd907f66b17f83966845c6e3434863876368af",
+    "has_alpha": true,
+    "transparent_pixels": 1014498,
+    "visible_pixels": 558732,
+    "frames": 1,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_positive_bbox": [
+      0,
+      19,
+      1121,
+      1374
+    ]
+  },
+  "marginfractions": {
+    "left": 0.0,
+    "top": 0.013828238719068414,
+    "right": 0.02096069868995633,
+    "bottom": 0.0
+  },
+  "limitations": [
+    "Technical integrity only; alpha does not validate visual quality, text, design fidelity or absence of halos.",
+    "Bounding box covers every alpha>0 pixel; margin fractions are geometric evidence only.",
+    "No visual reports read; candidates, references and manifests unchanged."
+  ]
+}

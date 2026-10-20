@@ -1,0 +1,70 @@
+{
+  "name": "design-decoration",
+  "role": "image_technical",
+  "activation": "Generic worker explicitly loaded technical role TOML.",
+  "run_id": "b6b2ce4b-a024-4f11-82ba-a311336fc864",
+  "candidate_relative": "final/design-decoration.png",
+  "sha256": "c884312bfc88ba7a665c6d2004739af506475d56289c18c2a10a8e1d0f0b9641",
+  "verdict": "pass",
+  "checks": {
+    "helper_valid": true,
+    "run_id_matches": true,
+    "candidate_path_matches": true,
+    "candidate_sha256_matches": true,
+    "full_decode": true,
+    "single_frame": true,
+    "supported_format": true,
+    "metadata_matches": true,
+    "real_transparency_and_visible_pixels": true,
+    "input_hashes_match": true,
+    "prompt_hash_matches": true,
+    "submitted_prompt_matches": true,
+    "frozen_manifest_hash_matches": true,
+    "manifest_unchanged": true
+  },
+  "helper": {
+    "command": [
+      "/workspace/image-production/.venv/bin/python",
+      "/workspace/image-production/.agents/skills/image-production/scripts/inspect_artifacts.py",
+      "verify",
+      "--run",
+      "/workspace/image-production/work/cookbook-transparent-reproduction/runs/b6b2ce4b-a024-4f11-82ba-a311336fc864"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"valid\": true, \"state\": \"generated\", \"outputs\": 1}",
+    "stderr": ""
+  },
+  "independent_check": {
+    "command": "Python/Pillow read-only decode, hash and alpha verification via stdin using .venv/bin/python",
+    "exit_code": 0,
+    "inputs": [
+      {
+        "path": "inputs/ref-1.png",
+        "recorded": "d73059a500a9b78fb66e0a912bc0af6236770af5270baf353dd66c7e5e39828f",
+        "actual": "d73059a500a9b78fb66e0a912bc0af6236770af5270baf353dd66c7e5e39828f"
+      }
+    ],
+    "prompt_sha256": "9ff8557ada9360bd1f378883b7c066aaf2d5ae7a899e6967fd498e6f1b4da3ac",
+    "manifest_sha256": "8db27e0b2d857bc686828eb1ef4c76f40f10572086e919d886b83ff1d5ad9140"
+  },
+  "metadata": {
+    "format": "PNG",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 1807599,
+    "sha256": "c884312bfc88ba7a665c6d2004739af506475d56289c18c2a10a8e1d0f0b9641",
+    "has_alpha": true,
+    "transparent_pixels": 1194119,
+    "visible_pixels": 378745,
+    "frames": 1,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      254
+    ]
+  },
+  "limitations": [
+    "Technical integrity only; alpha does not validate visual quality, text, design fidelity or absence of halos.",
+    "No visual or generation self-reports read; candidates, references and manifests unchanged."
+  ]
+}
