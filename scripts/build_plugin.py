@@ -9,16 +9,18 @@ ROOT = Path(__file__).resolve().parents[1]
 DESTINATION = ROOT / "work/plugin-dist/image-production"
 
 
-def build():
+def build(*, root=None, version=None):
+    root = Path(root) if root is not None else ROOT
+    destination = root / "work/plugin-dist/image-production"
     # Check lexical ancestors before traversal or writes can follow a parent link.
-    for path in (DESTINATION, *(ROOT / part for part in DESTINATION.relative_to(ROOT).parents)):
+    for path in (destination, *(root / part for part in destination.relative_to(root).parents)):
         if path.is_symlink():
             raise ValueError("Generated plugin path must not contain a symlink")
-    source = ROOT / ".agents/skills/image-production"
+    source = root / ".agents/skills/image-production"
     # Validate the entire canonical source before touching the previous build.
     # copytree otherwise dereferences file and directory symlinks by default.
-    for path in source.relative_to(ROOT).parents:
-        if (ROOT / path).is_symlink():
+    for path in source.relative_to(root).parents:
+        if (root / path).is_symlink():
             raise ValueError("Canonical skill path must not contain a symlink")
     if source.is_symlink():
         raise ValueError("Canonical skill directory must not be a symlink")
@@ -30,14 +32,16 @@ def build():
             raise ValueError(f"Unexpected symlink in canonical skill: {relative}")
     if not (source / "SKILL.md").is_file():
         raise ValueError("Canonical skill requires a regular SKILL.md")
-    manifest = json.loads((ROOT / ".codex-plugin/plugin.json").read_text())
+    manifest = json.loads((root / ".codex-plugin/plugin.json").read_text())
+    if version is not None:
+        manifest["version"] = version
     manifest["skills"] = "./skills/"
-    if DESTINATION.is_symlink():
+    if destination.is_symlink():
         raise ValueError("Generated plugin directory must not be a symlink")
-    if DESTINATION.exists() and not DESTINATION.is_dir():
+    if destination.exists() and not destination.is_dir():
         raise ValueError("Generated plugin destination must be a directory")
-    for path in DESTINATION.rglob("*"):
-        relative = path.relative_to(DESTINATION).as_posix()
+    for path in destination.rglob("*"):
+        relative = path.relative_to(destination).as_posix()
         if path.is_symlink():
             raise ValueError(f"Unexpected symlink in generated plugin: {relative}")
         if path.is_file() and relative not in ("plugin.json", ".codex-plugin/plugin.json"):
@@ -49,8 +53,8 @@ def build():
     portable["$schema"] = "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json"
     portable["extensions"] = {"com.openai": {"interface": manifest["interface"]}}
     portable_text = json.dumps(portable, ensure_ascii=False, indent=2) + "\n"
-    DESTINATION.parent.mkdir(parents=True, exist_ok=True)
-    stage = Path(tempfile.mkdtemp(prefix=".image-production-", dir=DESTINATION.parent))
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    stage = Path(tempfile.mkdtemp(prefix=".image-production-", dir=destination.parent))
     backup = stage.with_name(stage.name + ".previous")
     try:
         shutil.copytree(source, stage / "skills/image-production",
@@ -59,20 +63,21 @@ def build():
         overlay.parent.mkdir()
         overlay.write_text(overlay_text)
         (stage / "plugin.json").write_text(portable_text)
-        if DESTINATION.exists():
-            DESTINATION.rename(backup)
+        if destination.exists():
+            destination.rename(backup)
         try:
-            stage.rename(DESTINATION)
+            stage.rename(destination)
         except OSError:
             if backup.exists():
-                backup.rename(DESTINATION)
+                backup.rename(destination)
             raise
     finally:
         if stage.exists():
             shutil.rmtree(stage)
     if backup.exists():
         shutil.rmtree(backup)
-    print(DESTINATION)
+    print(destination)
+    return destination
 
 
 if __name__ == "__main__":
