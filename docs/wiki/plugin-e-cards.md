@@ -26,3 +26,8 @@ locais sem commit. Fontes: [orientação aos agentes](../../AGENTS.md) e
 [fluxo documentado](../../README.md#atualização-ligada-à-main). Trata-se de direção
 para implementação; a automação não existe e o build/reinstalação seguem manuais.
 Este registro complementa, sem substituir, o procedimento local anterior.
+
+Em 2026-10-20, `prof-ramos/image-production@b91f62ebea02800b52778366c8b5ff56ce39f3f4`
+adicionou CI para testes/build, sem publicar nem instalar. Isso supera somente a
+parte de verificações ainda não automatizadas do plano acima; release e atualização
+local continuam pendentes. Fonte: [CI e testes](ci-testes.md).
