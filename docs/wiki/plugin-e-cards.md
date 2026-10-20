@@ -31,3 +31,9 @@ Em 2026-10-20, `prof-ramos/image-production@b91f62ebea02800b52778366c8b5ff56ce39
 adicionou CI para testes/build, sem publicar nem instalar. Isso supera somente a
 parte de verificações ainda não automatizadas do plano acima; release e atualização
 local continuam pendentes. Fonte: [CI e testes](ci-testes.md).
+
+Em 2026-10-20, `prof-ramos/image-production@89895ee69bc6cddc6a91f34e29309d302a65d98d`
+implementou publicação automática em branch Git e atualizador CLI, com 82 testes
+locais e duas revisões independentes sem achados. Isso supera automação inexistente
+como implementação local; ativação hospedada ainda depende da integração. Fonte:
+[publicação automática](publicacao-automatica.md).

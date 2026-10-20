@@ -34,3 +34,10 @@ geral. Isso supera a contagem anterior de seis como inventário completo; os qua
 papéis obrigatórios de produção e os dois opcionais de imagem continuam iguais.
 Fontes e limites: [coordenação do projeto](coordenacao.md). Sem nova prova de
 ativação nativa; configurações e revisão de instruções foram verificadas.
+
+Em 2026-10-20, em `prof-ramos/image-production@bea9f975e6d8a2d8813cd7e49432d93472ee3efa`,
+a descoberta nativa dos sete papéis foi confirmada no Codex CLI 0.163.0: config/read
+carregou a camada do projeto e uma sessão nova expôs os sete nomes em agent_type.
+Isso supera os registros anteriores de descoberta ainda não verificada para as
+definições presentes nesse commit. Não comprova dispatch nem comportamento de
+produção de todos eles. Fonte: [relatório](../validation/native-seven-agents-20261020.md).

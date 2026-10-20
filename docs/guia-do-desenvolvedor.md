@@ -5,9 +5,7 @@ como plugin, especialistas de projeto e utilitários Python. O helper de artefat
 é offline; a geração depende da ferramenta integrada de imagens disponível na
 sessão do Codex.
 
-Este guia descreve a implementação observada em 20/10/2026, com base em
-`prof-ramos/image-production@f7f16a151cd6b961b92d684c537afebef640fe7a`.
-A publicação automática permanece planejada. O workflow de CI existe, mas sua
+A publicação automática está implementada no workflow após testes da `main`; sua
 execução hospedada ainda não foi comprovada nas evidências locais desse estado.
 
 ## 1. Configuração
@@ -111,7 +109,9 @@ Somente o coordenador escreve notas reais.
 | `scripts/export_coderabbit.py` | Coleta de feedback via GitHub CLI, somente leitura |
 | `.coderabbit.yaml` | Configuração das revisões CodeRabbit |
 | `tests/` e `tests/fixtures/` | Testes e simulação isolada do CLI GitHub |
-| `.github/workflows/ci.yml` | Testes e build no CI |
+| `.github/workflows/ci.yml` | Testes, preparação e publicação condicionada à `main` |
+| `scripts/release_plugin.py` | Preparação, verificação e promoção Git da release |
+| `scripts/update_plugin.py` | Atualização pelo Codex e conferência da instalação |
 | `docs/agents/` | Regras de tickets, domínio e distribuição |
 | `docs/reviews/` | Protocolo de revisão e triagem |
 | `docs/wiki/` | Memória histórica com fontes e commits |
@@ -184,10 +184,12 @@ Ao preparar uma nova versão instalável, atualize a versão no manifest de orig
 refaça o build e reinstale pelo fluxo do Codex. Preserve a identidade do plugin;
 confira versão e conteúdo do pacote. Edite a fonte, não o cache instalado.
 
-O CI executa verificações; não publica nem instala. Fazer merge na `main` ainda
-não sincroniza automaticamente plugin, cópias avulsas da skill ou especialistas.
-Consulte [publicação e atualização](agents/releases.md) para o plano e os limites
-atuais. Não trate o marketplace local baseado em `work/` como release remoto.
+O CI prepara e valida a release em PRs; após um push aprovado na `main`, o job
+publicador promove o marketplace Git na branch `plugin-release`. A instalação
+local é separada: `python3 scripts/update_plugin.py` usa o CLI do Codex e verifica
+versão e hashes. Cópias avulsas da skill e configuração de agentes exigem
+atualização explícita. Consulte [publicação e atualização](agents/releases.md)
+para ativação, recuperação e limites.
 
 ## 4. Abordagem de teste
 
@@ -212,11 +214,14 @@ python -m unittest discover -s tests -p 'test_review_cli.py' -v
 | `test_review_export.py` | Seleção e classificação do feedback exportado |
 | `test_review_request.py` | Decisão de solicitação, duplicatas e limites |
 | `test_review_cli.py` | Scripts completos com `gh` simulado: páginas adicionais, falhas de envio e mudança de head |
+| `test_release.py` | Snapshots Git, proveniência, promoção, falhas e atualização pelo Codex isolado quando instalado |
 
 O CI está configurado para PRs, pushes na `main` e execução manual, com Python
 3.10 e 3.13 em Ubuntu. O [relatório de validação](validation/ci-review-cli-20261020.md)
 registra 73 testes locais aprovados em cada uma dessas versões; esse número é uma
-evidência histórica, não uma contagem fixa a preservar.
+evidência histórica, não uma contagem fixa a preservar. A
+[validação de publicação automática](validation/automatic-release-20261020.md)
+registra 82 testes e a atualização nativa do plugin em ambiente isolado.
 
 Validação de estrutura da skill com `quick_validate.py` é complementar e depende
 da instalação local do Skill Creator; o script não é distribuído neste repo.
@@ -245,6 +250,8 @@ candidatos/prompts e registre as revisões independentes no contrato de produç�
 | Script recusa outro pedido de review | Confira duplicata, estado do PR, intervalo e limite de rodadas. Não apague comentários para contornar a contagem |
 | Envio de comentário falhou ou ficou incerto | Leia os comentários do PR antes de tentar novamente; pode ter havido entrega mesmo sem resposta de sucesso |
 | Coleta exportada está vazia | Confira o código de saída. Falhas de acesso ou mudança de head descartam o relatório; arquivo vazio não significa aprovação |
+| Publicação ausente ou falhou | Confira o job publicador do push na `main`, o SHA ainda na ponta e a permissão `contents: write`; reexecute o run correto após resolver a causa |
+| Atualização diverge da versão esperada | Aguarde o término da publicação e repita `python3 scripts/update_plugin.py`; mantenha o cache sob gestão do Codex |
 | Checks do CI ausentes | Confira se o workflow chegou à branch remota e se o evento foi disparado; use `gh pr checks`/`gh run list`. Arquivo local não prova execução hospedada |
 | OptMem ausente | Consulte a wiki e configure pelo procedimento documentado; o estado local não faz parte do plugin |
 
