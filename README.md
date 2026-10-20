@@ -66,7 +66,7 @@ Copiar somente a pasta `image-production` para `.agents/skills/` de outro projet
 4. Preserve um `agents.max_threads` local menor; não aumente o limite para instalar estes papéis. A chave atual `agents.max_concurrent_threads_per_session` exclui a sessão principal; `max_threads` é um alias legado. O protocolo admite até dois workers e deve respeitar qualquer limite menor do host. Esse limite não autoriza gerações simultâneas.
 5. Confirme a confiança do projeto no Codex: projetos não confiáveis ignoram a configuração `.codex/`. A confiança deve abranger somente o projeto revisado, preservando sandbox e aprovações. Inicie nova sessão e confirme que o host descobriu os quatro papéis e consegue usá-los. Os arquivos de exemplo, por si só, não comprovam descoberta; a validação do Codex CLI 0.163.0 em 20/10/2026 está no relatório abaixo.
 
-Se o host não expuser papéis nativos mas admitir subagentes genéricos, use o modo de carga explícita: leia cada TOML e forneça integralmente suas `developer_instructions` ao worker correspondente, registrando papel e caminho. Isso não comprova ativação nativa. O fluxo coordenado fica bloqueado quando faltar uma definição ou a capacidade necessária de delegação. Para uma imagem simples e independente, use `$imagegen` diretamente. A instalação do plugin disponibiliza a skill; a configuração dos especialistas permanece separada.
+Se o host não expuser papéis nativos mas admitir subagentes genéricos, use o modo de carga explícita: leia cada TOML e forneça integralmente suas `developer_instructions` ao worker correspondente, registrando papel e caminho. Isso não comprova ativação nativa. O fluxo coordenado fica bloqueado quando faltar uma definição ou a capacidade necessária de delegação. Para uma peça de comunicação simples e independente, entre por `$image-production`: resolva o briefing antes de delegar a geração ao `$imagegen`. Para outras imagens simples, esclareça apenas os requisitos pertinentes antes de usar o gerador. A instalação do plugin disponibiliza a skill; a configuração dos especialistas permanece separada.
 
 O coordenador é o único escritor do manifest e aguarda os relatórios separados de `image_technical` e `image_visual`, ambos relativos ao mesmo SHA256 do candidato. Use até dois workers simultâneos e apenas uma geração por vez. O limite de duas correções por asset acumula todo o histórico, inclusive retomadas. A caneca histórica não deve ser gerada novamente.
 
@@ -108,7 +108,16 @@ Os arquivos não comprovam ativação nativa nem iniciam execução em segundo p
 
 ## Fluxo
 
-1. Normalizar brief e identificar papéis das referências/brand kit.
+Convites, posts, stories, carrosséis, anúncios e outras peças de comunicação passam
+por [briefing adaptativo](.agents/skills/image-production/references/communication-brief.md),
+mesmo sem card: o plugin aproveita as informações e anexos da conversa e pergunta
+só o que falta sobre uso/envio, público/finalidade, marca, dados/ação e estilo.
+Pode propor textos para aprovação antes de gerar; não inventa fatos nem transforma
+“evento fictício” automaticamente em texto da arte. Briefing completo segue sem
+confirmação repetida; ausência de logo e escolhas visuais delegadas são respeitadas.
+Tarefas como recorte ou edição de fundo não recebem um formulário de marketing.
+
+1. Resolver o briefing aplicável e a redação, normalizar o brief e identificar papéis das referências/brand kit.
 2. Antes de gerar, criar execução com `prepare --asset-key <chave-estável>` por variante; preservar o root/ledger. Para corrigir, usar `--continue-from <último-run>` e selecionar as chaves existentes, sem renomeá-las. A reserva consome uma tentativa mesmo se cancelada.
 3. Aplicar `imagegen`, salvar prompt realmente enviado e inspecionar resultado.
 4. Copiar candidatos sem sobrescrever e verificar formato, dimensões e alfa.
