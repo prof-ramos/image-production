@@ -1,0 +1,31 @@
+{
+  "files": {
+    "agent-bundle/README.md": "f9e7682f9493bfd6fbe9b1464003c9b782428b6f40de1503fa865e055158e983",
+    "agent-bundle/agents/chief_of_staff.toml": "b1e9907f3577a71a189365cd8ffbaee3e58b6ad69db6f9d1fabdd4d847796ef7",
+    "agent-bundle/agents/image_coordinator.toml": "21d8a1198cadd8968c7780ffc0a5a28ed8c5f1f35cc85ab957d2886b7892fb9f",
+    "agent-bundle/agents/image_director.toml": "5b6734b9552adc24d7e8c2ff28a0a045ac6246b809866a17e389fe3108b4357f",
+    "agent-bundle/agents/image_eval_designer.toml": "5a13201ec9f51e3796fd7f4f9c8f51a41d6d78b2e1a29232cfcfe0ed2d354fb4",
+    "agent-bundle/agents/image_producer.toml": "2f030aa0168df3129271b58578797d25a1597f69223d67dcaa9d9248e6170cc7",
+    "agent-bundle/agents/image_technical.toml": "264564ab11d9f5bd3be7c872dacf5b8ac67274d95f2875057e3a1c3fc4677112",
+    "agent-bundle/agents/image_visual.toml": "4faf7ffb22a55648cdd74346579cdcd0b524b8f02e7f51d26f30853c5cf0ec9a",
+    "agent-bundle/config.example.toml": "1e06bfd210e266c34e46aa0c116829b9bbc6e837b23fa4e7343668c59ecf0103",
+    "plugins/image-production/.codex-plugin/plugin.json": "368af3e356e60fb6c4235b9dece6ce3842f48738584581220cb9a1a2ddd434aa",
+    "plugins/image-production/plugin.json": "10d1cc8a0039a0f868f878f3f231d10d8ecd624c40331ab53e85bedc1bd99eab",
+    "plugins/image-production/skills/image-production/SKILL.md": "d6c76e815645b1a8a912f96284c54cf9012791e4822ac6f5f586b9b66e91e298",
+    "plugins/image-production/skills/image-production/references/agent-evals.md": "a1bae3ba3a5670f54501cb654fbfaa41ce2502a53ea46d53ceb95a8c052b9501",
+    "plugins/image-production/skills/image-production/references/agent-playbook.md": "41e939a51771969fa281bd5cd65a83f8c8bba7b7e7e75e9520f869500c939806",
+    "plugins/image-production/skills/image-production/references/chatgpt-images-catalog.json": "9d34a7e80c7913bd059998010a1901ceacc0046f8e842c670449c080be5893dd",
+    "plugins/image-production/skills/image-production/references/chatgpt-images-catalog.schema.json": "d2187f0e1eb3380dad572f44656f1759f3bf177127d4f610e8eaee477979fdf4",
+    "plugins/image-production/skills/image-production/references/chatgpt-images-evidence.md": "3b823d4d988d4548c5d535d89e7c804a821b5e788d9ba2c1094769697b747368",
+    "plugins/image-production/skills/image-production/references/chatgpt-images-index.md": "056987b8df21e5b24bd78e7b19bb441d39e78d5124e373f56a1f62086c9535d8",
+    "plugins/image-production/skills/image-production/references/quality-rubric.md": "4b2bfae88da434c57e1872bf92fcdfae73dbfc31bd44c0704353e01fc8b5cf43",
+    "plugins/image-production/skills/image-production/references/result.schema.json": "ad136b897184581e908414752cd8ee987993f50598923f3eb5ee85c278a2360f",
+    "plugins/image-production/skills/image-production/references/run-contract.md": "3f7db219f35977825ffbb0bbae9051dec763353c8d378e9a013c18f94c15c4af",
+    "plugins/image-production/skills/image-production/references/specialist-installation.md": "33240cad1378155ec30d42d0e6025f0ef3ecbab67dc885c4cff125db3caf0df2",
+    "plugins/image-production/skills/image-production/scripts/inspect_artifacts.py": "26ce916b5f25e58fc87b03348a39698de178fb2ee080e4d07ef96033842f4516"
+  },
+  "repository": "prof-ramos/image-production",
+  "schema_version": 1,
+  "source_sha": "c40075a8769261a1099c40e9fe686637a0024ca6",
+  "version": "0.1.5-main.gc40075a8769261a1099c40e9fe686637a0024ca6"
+}
