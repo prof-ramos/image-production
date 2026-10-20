@@ -79,3 +79,18 @@ arquivos históricos versionados. O CodeRabbit continuou sem revisar por limite
 
 A publicação automática segue como trabalho separado na branch local
 feat/automatic-plugin-release. A integração do PR #4 não a ativa por si só.
+
+## Publicação automática ativada
+
+Em 2026-10-20 o PR #5 foi integrado em
+`prof-ramos/image-production@c40075a8769261a1099c40e9fe686637a0024ca6`. A publicação
+hospedada e a instalação local pelo updater foram verificadas. O ciclo completo,
+SHAs e fontes estão em [publicação automática](publicacao-automatica.md#primeira-publicação-e-instalação-comprovadas--2026-10-20).
+Isso conclui a implementação/ativação antes registrada apenas como trabalho local.
+
+CodeRabbit aceitou a revisão do PR #5 no head `prof-ramos/image-production@44ee5dcb9a96cdb802448327581540a9e22f5df7` e encontrou um Minor documental,
+corrigido em `prof-ramos/image-production@3fa7b4bd860d9267ecb2e3e801567e1c2e81c577`.
+O CI desse novo head passou; o código não mudou após a revisão. Nenhum pedido
+extra foi feito após esgotar a cota informada. Codex GitHub e revisões independentes
+também não encontraram problemas acionáveis no código. A descoberta nativa dos
+sete agentes já estava comprovada; isso não implica dispatch de todos eles.
