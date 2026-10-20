@@ -25,9 +25,16 @@ Before generating, clarify indispensable missing content, identity/reference pre
 
 ## Coordinated roles and portability
 
+For complex briefs, series, selective edits, workflow changes or regressions, read
+[the specialist playbook](references/agent-playbook.md) to route optional direction
+and evaluation work. These advisory roles supplement the four required roles.
+
 The coordinated workflow requires all four definitions: `image_coordinator`, `image_producer`, `image_technical`, and `image_visual`. Prefer native roles when the host exposes them; files alone do not prove native discovery. If the host supports generic subagents, an explicit-load mode is supported: read each role TOML and pass its full `developer_instructions` to the corresponding assigned worker, identifying the role and definition path in the task. Record this as explicit-load mode, never native activation. If a definition or required delegation capability is missing, record the coordinated run as `blocked`. A simple standalone image can instead use `$imagegen` directly.
 
-Copying this skill alone does not install the role definitions in the source repository's `.codex/agents/`. See the repository README and `.codex/config.toml` example. Copy the skill and role files into the target project without overwriting existing directories or files; resolve collisions manually. Manually merge the four `[agents.image_coordinator]`, `[agents.image_producer]`, `[agents.image_technical]`, and `[agents.image_visual]` sections into the host's configuration, each with `config_file = "agents/<name>.toml"` relative to that configuration file. Never automate the merge or replace the configuration. Preserve local model, authentication, sandbox, comments, roles, and a lower existing `agents.max_threads`; never increase the cap for installation. Current agents.max_concurrent_threads_per_session excludes the primary session; max_threads is a legacy alias. The protocol permits at most two workers and obeys any lower host cap. Confirm the reviewed project is trusted by Codex: untrusted projects skip project .codex layers. Do not reduce sandbox or approvals to enable discovery. Start a new session and check native discovery; if unavailable, document explicit-load mode when supported. Do not report native discovery as validated without evidence.
+When installing or moving specialists to another project, read
+[the installation reference](references/specialist-installation.md). Plugin
+installation alone does not activate project role definitions. Preserve existing
+model, authentication, permissions and lower concurrency limits.
 
 The coordinator alone writes `manifest.json` and invokes helper commands that mutate the run. Workers return evidence and proposals without modifying the manifest. Run at most two workers simultaneously, with only one image generation in flight. The coordinator waits for both independent reviews before recording a decision: `image_technical` and `image_visual` each submit a separate report with `role` (`technical` or `visual`), `candidate_sha256` matching the current candidate, and distinct `reviewer` identifiers. Submit both JSON reports separately through `review`; the helper retains and evaluates both role-specific verdicts. Do not combine the reports or transfer approval between hashes.
 

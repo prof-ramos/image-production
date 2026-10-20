@@ -16,3 +16,11 @@ config_file = "agents/image_technical.toml"
 [agents.image_visual]
 description = "Review the exact candidate against the brief and references."
 config_file = "agents/image_visual.toml"
+
+[agents.image_director]
+description = "Resolve complex briefs, art direction, reference roles and precise edit prompts before generation."
+config_file = "agents/image_director.toml"
+
+[agents.image_eval_designer]
+description = "Design bounded evaluations and audit image workflow regressions without generating images."
+config_file = "agents/image_eval_designer.toml"

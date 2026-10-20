@@ -20,6 +20,45 @@ Para atualizar, refaça o build e reinstale após incrementar a versão no manif
 
 [Verificação de instalação e descoberta do plugin](docs/validation/plugin-base-20261020.md).
 
+## Atualização ligada à main
+
+O objetivo é que cada mudança distribuível integrada à `main` produza uma versão
+consistente do plugin e da skill. **A automação ainda não foi implementada.** Hoje,
+o marketplace aponta para `work/plugin-dist/image-production`, uma pasta local
+ignorada pelo Git. Fazer merge não publica o pacote nem atualiza o Codex instalado.
+
+O fluxo definido para implementação é:
+
+1. No PR, executar os testes, validar a skill e construir o plugin, conferindo
+   manifests, referências e igualdade entre os arquivos canônicos e empacotados.
+2. Após a integração à `main`, construir e publicar uma versão rastreável a partir
+   desse commit, com versão, identificação do commit e hashes dos arquivos.
+   Publicar somente quando as verificações passarem.
+3. Disponibilizar o pacote por um marketplace Git, substituindo a dependência da
+   pasta local `work/` na distribuição. Preservar versões anteriores para permitir
+   retorno a uma versão conhecida.
+4. Oferecer um único comando local para buscar a versão publicada, atualizar a
+   instalação e verificar a versão efetivamente instalada. A etapa local é
+   distinta da publicação no GitHub; não editar diretamente o cache do Codex.
+
+A instalação principal recomendada é pelo plugin. A relação entre as formas de
+uso será:
+
+| Forma de uso | Como recebe a atualização |
+| --- | --- |
+| Skill embutida no plugin | Acompanha a atualização da instalação do plugin |
+| Skill neste checkout | Acompanha a atualização do repositório local |
+| Skill copiada separadamente | Exige sincronização explícita; não acompanha o plugin automaticamente |
+| Especialistas em `.codex/agents/` | Exigem atualização separada, preservando a configuração local |
+
+Até esse fluxo existir, siga o build e a reinstalação manuais descritos acima.
+Os especialistas continuam sujeitos à seção de portabilidade abaixo. A automação
+de publicação deve contemplar sua distribuição, sem presumir que instalar o plugin
+instala ou ativa esses papéis.
+
+Referência do formato de distribuição:
+[empacotamento de plugins no Codex](https://developers.openai.com/plugins/build/plugins).
+
 ## Usar no repositório
 
 A skill está em [`.agents/skills/image-production`](.agents/skills/image-production/SKILL.md), descoberta pelo Codex ao iniciar uma sessão neste projeto. Peça `$image-production` com finalidade, referências, variações e destino. A sessão precisa ter a skill `imagegen` e a ferramenta integrada disponíveis. A skill não instala nem implementa o gerador.
@@ -41,6 +80,31 @@ Se o host não expuser papéis nativos mas admitir subagentes genéricos, use o 
 O coordenador é o único escritor do manifest e aguarda os relatórios separados de `image_technical` e `image_visual`, ambos relativos ao mesmo SHA256 do candidato. Use até dois workers simultâneos e apenas uma geração por vez. O limite de duas correções por asset acumula todo o histórico, inclusive retomadas. A caneca histórica não deve ser gerada novamente.
 
 [Validação de portabilidade e limitação de descoberta em 20/10/2026](docs/validation/specialist-portability-20261020.md).
+
+## Especialistas reutilizáveis
+
+O projeto define seis papéis em `.codex/agents/`: quatro para produção e dois opcionais.
+
+| Papel | Responsabilidade |
+| --- | --- |
+| `image_coordinator` | Briefing, reservas, histórico e decisão final |
+| `image_director` | Direção de arte, referências e proposta de prompt para pedidos complexos |
+| `image_producer` | Geração integrada e preservação do prompt enviado |
+| `image_technical` | Integridade dos arquivos e evidência técnica |
+| `image_visual` | Revisão visual independente contra o briefing |
+| `image_eval_designer` | Cenários de avaliação e análise de regressões do fluxo |
+
+Diretor e avaliador são opcionais. Para transportá-los, copie também seus TOMLs e
+mescle as seções correspondentes da configuração, seguindo os mesmos cuidados de
+portabilidade acima. O plugin continua distribuindo somente a skill e referências;
+a instalação dos papéis é separada. Os modelos são herdados da sessão.
+
+O [guia de encaminhamento](.agents/skills/image-production/references/agent-playbook.md)
+define quando chamar cada um e o que devem devolver. Os
+[cenários de avaliação](.agents/skills/image-production/references/agent-evals.md)
+permitem verificar comportamento sem gerar imagens. Exemplo de pedido:
+“Use image_director para preparar este briefing e depois siga o fluxo coordenado.”
+Para manutenção: “Use image_eval_designer para avaliar esta mudança no fluxo.”
 
 ## Fluxo
 
@@ -69,6 +133,26 @@ A [revisão independente de 19/10/2026](docs/validation/independent-review-20261
 [Piloto recuperado: 12 ativos transparentes, prompts e pareceres históricos](docs/validation/pilot-transparent-assets-20261019/README.md).
 
 [Catálogo observado de 56 cards e fluxos de esclarecimento](docs/validation/image-card-flows-20261020/README.md): 55 prompts completos e o editor Esboço, coletados em 20/10/2026; exemplos conversacionais têm cobertura delimitada. A cópia portátil está nas referências da skill.
+
+## Revisão com CodeRabbit
+
+A [configuração](.coderabbit.yaml) orienta revisões em português, com foco nos
+contratos deste projeto. O [fluxo de triagem](docs/reviews/coderabbit.md) reúne
+comentários, confirma achados e transforma defeitos reais em correções e testes.
+
+```sh
+python3 scripts/export_coderabbit.py 4 > /tmp/image-production-pr4-coderabbit.json
+```
+
+Após criar um PR pronto, solicite a revisão com
+`python3 scripts/request_coderabbit.py <numero-do-pr>`; sem número, o script usa o
+PR da branch atual. Evita duplicatas por commit e limita frequência e rodadas.
+Use `--dry-run` para conferir o comentário sem enviar.
+
+O coletor usa `gh` autenticado, é somente de leitura e identifica feedback de outro
+commit. Integração preparada localmente; App, acesso OSS, visibilidade e revisão
+real ainda não verificados. O disparo é manual e não há cobrança ou autofix
+ativados por esta implementação. CodeRabbit não substitui revisão visual de imagens.
 
 ## Planejamento e fontes
 
