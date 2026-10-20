@@ -5,8 +5,9 @@ como plugin, especialistas de projeto e utilitários Python. O helper de artefat
 é offline; a geração depende da ferramenta integrada de imagens disponível na
 sessão do Codex.
 
-A publicação automática está implementada no workflow após testes da `main`; sua
-execução hospedada ainda não foi comprovada nas evidências locais desse estado.
+A publicação automática roda no workflow após os testes da `main`. A execução
+hospedada e a instalação real foram verificadas em 20/10/2026; consulte as
+[evidências de ativação](validation/automatic-release-20261020.md#ativação-remota-e-instalação-real--20102026).
 
 ## 1. Configuração
 

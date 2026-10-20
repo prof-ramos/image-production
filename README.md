@@ -32,9 +32,9 @@ continua em `.agents/skills/image-production/`; o marketplace do checkout serve
 ao desenvolvimento local e a distribuição usa um marketplace Git pronto para
 instalação, sem build na máquina do usuário.
 
-A automação está implementada; sua primeira publicação hospedada depende da
-integração desta mudança à `main` e precisa ser confirmada no GitHub.
-Depois que a branch de distribuição existir, instale ou atualize com:
+A publicação hospedada e a instalação real foram verificadas em 20/10/2026;
+consulte as [evidências de ativação](docs/validation/automatic-release-20261020.md#ativação-remota-e-instalação-real--20102026).
+Para instalar ou atualizar a distribuição publicada:
 
 ```sh
 python3 scripts/update_plugin.py
