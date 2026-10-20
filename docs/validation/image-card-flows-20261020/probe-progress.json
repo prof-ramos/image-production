@@ -1,104 +1,117 @@
 {
-  "updated_at": "2026-10-20T07:31:21.708729+00:00",
+  "updated_at": "2026-10-20T08:22:09.547204+00:00",
   "source": "Native CUA card Experimente; no images or additional content supplied unless recorded",
   "generation_requested": false,
-  "complete": false,
+  "complete": true,
   "cards": [
     {
       "name": "Cartaz",
       "status": "observed",
       "response_rounds": 2,
-      "source": "cartaz.json"
+      "source": "probes.json"
     },
     {
       "name": "Design de interiores",
       "status": "observed",
       "response_rounds": 1,
-      "source": "work/card-ui-rendered/remaining-rendered.txt#PROBE"
+      "source": "probes.json"
     },
     {
       "name": "Logo",
       "status": "observed",
       "response_rounds": 1,
-      "source": "work/card-ui-rendered/remaining-rendered.txt#PROBE"
+      "source": "probes.json"
     },
     {
       "name": "Ilustração",
       "status": "observed",
       "response_rounds": 1,
-      "source": "probe-ilustracao-round-1.md"
+      "source": "probes.json"
     },
     {
       "name": "Retrato profissional",
-      "status": "pending",
-      "response_rounds": 0,
-      "source": null
+      "status": "observed",
+      "response_rounds": 1,
+      "source": "probes.json"
     },
     {
       "name": "Ícone",
-      "status": "not_started",
-      "response_rounds": 0,
-      "source": null
+      "status": "observed",
+      "response_rounds": 1,
+      "source": "probes.json",
+      "validation": "Recaptured after UI Copiado confirmation; topic/table/tail checked against AX"
     },
     {
       "name": "Foto de produto",
-      "status": "not_started",
-      "response_rounds": 0,
-      "source": null
+      "status": "observed",
+      "response_rounds": 1,
+      "source": "probes.json",
+      "started_at": "2026-10-20T07:43:05.230924+00:00",
+      "submission_confirmed": "Conversation URL and user prompt visible in UI; no image supplied"
     },
     {
       "name": "Produtos personalizados",
-      "status": "not_started",
-      "response_rounds": 0,
-      "source": null
+      "status": "observed",
+      "response_rounds": 1,
+      "source": "probes.json"
     },
     {
       "name": "Infográfico",
-      "status": "not_started",
-      "response_rounds": 0,
-      "source": null
+      "status": "observed",
+      "response_rounds": 1,
+      "source": "probes.json"
     },
     {
       "name": "Panfleto",
-      "status": "not_started",
-      "response_rounds": 0,
-      "source": null
+      "status": "observed",
+      "response_rounds": 1,
+      "source": "probes.json"
     },
     {
       "name": "Capa de livro",
-      "status": "not_started",
-      "response_rounds": 0,
-      "source": null
+      "status": "observed",
+      "response_rounds": 1,
+      "source": "probes.json"
     },
     {
       "name": "Mockup de aplicativo",
-      "status": "not_started",
-      "response_rounds": 0,
-      "source": null
+      "status": "observed",
+      "response_rounds": 1,
+      "source": "probes.json"
     },
     {
       "name": "Embalagem",
-      "status": "not_started",
-      "response_rounds": 0,
-      "source": null
+      "status": "observed",
+      "response_rounds": 1,
+      "source": "probes.json"
     },
     {
       "name": "Anúncio",
-      "status": "not_started",
-      "response_rounds": 0,
-      "source": null
+      "status": "observed",
+      "response_rounds": 1,
+      "source": "probes.json"
     },
     {
       "name": "Miniatura",
-      "status": "not_started",
-      "response_rounds": 0,
-      "source": null
+      "status": "observed",
+      "response_rounds": 1,
+      "source": "probes.json"
     },
     {
       "name": "Mockup de site",
-      "status": "not_started",
-      "response_rounds": 0,
-      "source": null
+      "status": "observed",
+      "response_rounds": 1,
+      "source": "probes.json"
+    },
+    {
+      "name": "Papel de parede hiper-realista",
+      "category": "Em alta",
+      "status": "observed",
+      "response_rounds": 1,
+      "probe_mode": "modified_clarification_only_not_native",
+      "source": "probes.json"
     }
-  ]
+  ],
+  "modelos_first_rounds_complete": true,
+  "completion_scope": "16 native Modelos first rounds and one modified clarification-only Wallpaper probe; 38 direct Em alta native probes omitted; Esboço editor only."
 }

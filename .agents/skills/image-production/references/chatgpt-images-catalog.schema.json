@@ -133,6 +133,86 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "bullet_items": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              },
+              "response_markdown_observed": {
+                "type": "string"
+              },
+              "response_text_scope": {
+                "type": "string"
+              },
+              "initial_round_observed_fields": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              },
+              "global_answer_option_observed": {
+                "type": "string"
+              },
+              "choice_groups": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              },
+              "inline_options": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "group",
+                    "kind",
+                    "source_excerpt",
+                    "items",
+                    "universal"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "group": {
+                      "type": "string"
+                    },
+                    "kind": {
+                      "const": "illustrative_alternatives_in_prose_not_exhaustive"
+                    },
+                    "source_excerpt": {
+                      "type": "string"
+                    },
+                    "source_json_pointer": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "universal": {
+                      "const": false
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "inline_options_status": {
+                "type": "string"
+              },
+              "probe_mode": {
+                "type": "string"
+              },
+              "prompt_delta": {
+                "type": "string"
+              },
+              "submission_method": {
+                "type": "string"
               }
             },
             "additionalProperties": false

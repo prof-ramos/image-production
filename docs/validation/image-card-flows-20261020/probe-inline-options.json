@@ -1,0 +1,1552 @@
+{
+  "observed_at": "2026-10-20",
+  "method": "Manual derived indexing of literal visible prose alternatives; excerpts audited against saved source. Lists are illustrative, not fixed menus or requirements.",
+  "records": [
+    {
+      "card": "Cartaz",
+      "source_filename": "cartaz.json",
+      "source_sha256": "6b89aba694f540c956eb9e0e86d3ab6d7364cfdb2f3857d6be0a4d2c8724c792",
+      "inline_options": [
+        {
+          "id": "q1-prose",
+          "group": "Qual é a ideia central?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "O que o cartaz deve comunicar e o que você quer provocar em quem o vê: curiosidade, impacto, reflexão, identificação, vontade de participar ou outra reação?",
+          "source_json_pointer": "/observed/questions/0/details",
+          "items": [
+            "curiosidade",
+            "impacto",
+            "reflexão",
+            "identificação",
+            "vontade de participar",
+            "outra reação"
+          ],
+          "universal": false
+        },
+        {
+          "id": "q3-prose",
+          "group": "Onde e por quem ele será visto?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Informe o uso previsto: impressão, publicação no Instagram, story, WhatsApp, tela ou outro contexto. Diga também quem é o público e, se houver, o tamanho obrigatório. Se ainda não souber as dimensões, basta informar o uso.",
+          "source_json_pointer": "/observed/questions/2/details",
+          "items": [
+            "impressão",
+            "publicação no Instagram",
+            "story",
+            "WhatsApp",
+            "tela",
+            "outro contexto"
+          ],
+          "universal": false
+        },
+        {
+          "id": "q6-prose",
+          "group": "O que deve ser usado ou evitado?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Anexe imagens, referências ou logotipos que devam entrar no cartaz. Informe também cores obrigatórias, elementos proibidos e qualquer preferência de tipografia. Se enviar uma referência, diga o que deseja aproveitar nela: composição, cores, fonte, imagem ou atmosfera.",
+          "source_json_pointer": "/observed/questions/5/details",
+          "items": [
+            "composição",
+            "cores",
+            "fonte",
+            "imagem",
+            "atmosfera"
+          ],
+          "universal": false
+        }
+      ]
+    },
+    {
+      "card": "Design de interiores",
+      "source_filename": "probe-design-de-interiores-round-1.md",
+      "source_sha256": "9a34fdb1b7eb5c5de671727aa9afa8926b359fc0ccb2168ceb7e6e8b09fca41d",
+      "inline_options": [
+        {
+          "id": "prose-1",
+          "group": "reference",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "**Envie uma foto do ambiente que você quer transformar — ou uma descrição, se preferir.**",
+          "items": [
+            "foto do ambiente",
+            "descrição"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-2",
+          "group": "photo-reference",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **Fotos:** uma visão ampla e, se possível, mais um ou dois ângulos mostrando portas, janelas, piso, teto e móveis existentes.",
+          "items": [
+            "uma visão ampla",
+            "mais um ou dois ângulos"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-3",
+          "group": "description-reference",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **Descrição:** qual é o cômodo, como está organizado, onde ficam portas, janelas e elementos fixos e quais móveis já existem. Inclua medidas apenas se você as souber.",
+          "items": [
+            "qual é o cômodo",
+            "como está organizado",
+            "onde ficam portas, janelas e elementos fixos",
+            "quais móveis já existem"
+          ],
+          "universal": false
+        }
+      ]
+    },
+    {
+      "card": "Logo",
+      "source_filename": "probe-logo-round-1.md",
+      "source_sha256": "023d0ac3cb57b3b22c7ab39cf28687db3f7dcb1226ddf2352d66f91d4a4e8075",
+      "inline_options": [
+        {
+          "id": "prose-1",
+          "group": "1. Marca, propósito e uso",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- Onde o logotipo será mais usado: site, redes sociais, documentos, aplicativo, produtos, fachada ou outro suporte?",
+          "items": [
+            "site",
+            "redes sociais",
+            "documentos",
+            "aplicativo",
+            "produtos",
+            "fachada",
+            "outro suporte"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-2",
+          "group": "2. Textos obrigatórios",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Se houver uma sigla ou outro texto que também deva integrar o logotipo, informe a grafia exata e se seu uso é obrigatório ou opcional.",
+          "items": [
+            "obrigatório",
+            "opcional"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-3",
+          "group": "4. Estilo visual e restrições",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "**Qual direção mais interessa a você?** Pode escolher até duas ou deixar a escolha por minha conta. Informe também se existem cores, símbolos ou elementos que devem ser preservados ou evitados. Se houver um logotipo atual ou referências visuais, envie.",
+          "items": [
+            "escolher até duas",
+            "deixar a escolha por minha conta"
+          ],
+          "universal": false
+        }
+      ]
+    },
+    {
+      "card": "Ilustração",
+      "source_filename": "probe-ilustracao-round-1.md",
+      "source_sha256": "426bfc7e4d1ae3fc427a71f1fafa3ae8041f8bce51ad786b47e8da7a5bbb186d",
+      "inline_options": [
+        {
+          "id": "prose-1",
+          "group": "1. Tema e intenção",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **O que deve aparecer?** Uma pessoa, um objeto, um lugar, uma cena ou um conceito?",
+          "items": [
+            "Uma pessoa",
+            "um objeto",
+            "um lugar",
+            "uma cena",
+            "um conceito"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-2",
+          "group": "1. Tema e intenção",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **O que a imagem deve comunicar?** Você prefere uma representação direta da ideia ou uma metáfora visual, mais aberta à interpretação?",
+          "items": [
+            "representação direta da ideia",
+            "metáfora visual"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-3",
+          "group": "2. Uso e formato",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Onde a ilustração será usada: cartaz, publicação em rede social, capa, material impresso, site ou outro suporte?",
+          "items": [
+            "cartaz",
+            "publicação em rede social",
+            "capa",
+            "material impresso",
+            "site",
+            "outro suporte"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-4",
+          "group": "2. Uso e formato",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Se você já souber, informe **orientação e tamanho**: vertical, horizontal ou quadrado; dimensões em centímetros ou pixels.",
+          "items": [
+            "vertical",
+            "horizontal",
+            "quadrado",
+            "dimensões em centímetros ou pixels"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-5",
+          "group": "3. Referências e detalhes obrigatórios",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **O que precisa ser preservado com exatidão:** aparência, proporções, objetos, roupas, cores, cenário ou outros detalhes.",
+          "items": [
+            "aparência",
+            "proporções",
+            "objetos",
+            "roupas",
+            "cores",
+            "cenário",
+            "outros detalhes"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-6",
+          "group": "3. Referências e detalhes obrigatórios",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **O que serve apenas como inspiração:** técnica, composição, iluminação ou atmosfera.",
+          "items": [
+            "técnica",
+            "composição",
+            "iluminação",
+            "atmosfera"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-7",
+          "group": "3. Referências e detalhes obrigatórios",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **O que deve ser evitado:** elementos, símbolos ou interpretações incompatíveis com sua ideia.",
+          "items": [
+            "elementos",
+            "símbolos",
+            "interpretações incompatíveis com sua ideia"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-8",
+          "group": "4. Composição e atmosfera",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Que atmosfera você procura? Por exemplo: **serena, íntima, melancólica, misteriosa, lúdica, solene ou inquietante**.",
+          "items": [
+            "serena",
+            "íntima",
+            "melancólica",
+            "misteriosa",
+            "lúdica",
+            "solene",
+            "inquietante"
+          ],
+          "universal": false
+        }
+      ]
+    },
+    {
+      "card": "Retrato profissional",
+      "source_filename": "probe-retrato-profissional-round-1.md",
+      "source_sha256": "fc2f53571600abb581c8192b8a438fcb24487986fd4032205bc232fa156d79f5",
+      "inline_options": [
+        {
+          "id": "prose-1",
+          "group": "photo-reference",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Envie uma **foto nítida da pessoa**, de preferência de frente ou levemente de lado, com o rosto inteiro visível, os olhos em foco e sem filtros que alterem os traços. Pode ser uma foto de celular; a roupa e o fundo atuais não precisam corresponder ao resultado desejado.",
+          "items": [
+            "de frente",
+            "levemente de lado",
+            "foto de celular"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-2",
+          "group": "1. Onde ele será usado?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Por exemplo: **perfil profissional/LinkedIn, site institucional, redes sociais, apresentação pessoal, divulgação de trabalho ou impressão**. Isso orienta o enquadramento, a expressão e a formalidade.",
+          "items": [
+            "perfil profissional/LinkedIn",
+            "site institucional",
+            "redes sociais",
+            "apresentação pessoal",
+            "divulgação de trabalho",
+            "impressão"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-3",
+          "group": "3. Que iluminação você imagina?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Você pode enviar a foto e responder no formato: **Uso: … | Direção: … | Iluminação: …**. Se algum ponto estiver em aberto, indique qual impressão deseja transmitir — por exemplo, proximidade, seriedade, confiança ou criatividade.",
+          "items": [
+            "proximidade",
+            "seriedade",
+            "confiança",
+            "criatividade"
+          ],
+          "universal": false
+        }
+      ]
+    },
+    {
+      "card": "Ícone",
+      "source_filename": "probe-icone-round-1.md",
+      "source_sha256": "0d129af788758ae6b497fe12366872c9fb27784c26030c517da76e10b30ad3b8",
+      "inline_options": [
+        {
+          "id": "prose-1",
+          "group": "1. O que os ícones devem representar?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Informe o **tema do conjunto** e os **conceitos de cada ícone**. Por exemplo: organização pessoal → agenda, tarefas, estudos, finanças e saúde.",
+          "items": [
+            "agenda",
+            "tarefas",
+            "estudos",
+            "finanças",
+            "saúde"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-2",
+          "group": "2. Onde você vai usar os ícones?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Indique o contexto: **site, aplicativo, apresentação, documento, planner, material impresso** ou outro.",
+          "items": [
+            "site",
+            "aplicativo",
+            "apresentação",
+            "documento",
+            "planner",
+            "material impresso",
+            "outro"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-3",
+          "group": "2. Onde você vai usar os ícones?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Se souber, informe o tamanho de exibição. Se não souber, descreva onde aparecerão — por exemplo, “ao lado dos itens de um menu” ou “no cabeçalho de cada seção do planner”. Isso permite definir o nível de detalhe adequado.",
+          "items": [
+            "ao lado dos itens de um menu",
+            "no cabeçalho de cada seção do planner"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-4",
+          "group": "3. Qual direção visual você prefere?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "> **Estilo:** A, B, C ou D  ",
+          "items": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "universal": false
+        }
+      ]
+    },
+    {
+      "card": "Produtos personalizados",
+      "source_filename": "probe-produtos-personalizados-round-1.md",
+      "source_sha256": "60240bbf693282564bc94a64e3d5d1ad5ab85fcbb12c325a304cb253cf3d1555",
+      "inline_options": [
+        {
+          "id": "prose-1",
+          "group": "opening",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "**Qual produto você quer personalizar e o que deve aparecer nele?** Você pode enviar a arte pronta, escrever o texto exato ou descrever a ideia.",
+          "items": [
+            "enviar a arte pronta",
+            "escrever o texto exato",
+            "descrever a ideia"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-2",
+          "group": "1. Qual será o produto?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "| **Camiseta ou moletom** | Texto em destaque, ilustração central ou aplicação discreta. |",
+          "items": [
+            "Camiseta",
+            "moletom",
+            "Texto em destaque",
+            "ilustração central",
+            "aplicação discreta"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-3",
+          "group": "1. Qual será o produto?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "| **Ecobag** | Composição gráfica, frase ou ilustração com boa leitura à distância. |",
+          "items": [
+            "Composição gráfica",
+            "frase",
+            "ilustração com boa leitura à distância"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-4",
+          "group": "1. Qual será o produto?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "| **Caneca ou garrafa** | Composição concentrada em uma face ou distribuída pela superfície disponível. |",
+          "items": [
+            "Caneca",
+            "garrafa",
+            "Composição concentrada em uma face",
+            "distribuída pela superfície disponível"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-5",
+          "group": "1. Qual será o produto?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "| **Caderno ou agenda** | Capa tipográfica, arte ilustrada ou identidade institucional. |",
+          "items": [
+            "Caderno",
+            "agenda",
+            "Capa tipográfica",
+            "arte ilustrada",
+            "identidade institucional"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-6",
+          "group": "1. Qual será o produto?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "| **Boné** | Símbolo ou texto curto, com poucos detalhes. |",
+          "items": [
+            "Símbolo",
+            "texto curto"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-7",
+          "group": "3. Onde você quer a aplicação?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Indique a região do produto e se prefere algo **discreto, intermediário ou em destaque**. Por exemplo: frente da camiseta, uma face da caneca ou capa do caderno.",
+          "items": [
+            "discreto",
+            "intermediário",
+            "em destaque",
+            "frente da camiseta",
+            "uma face da caneca",
+            "capa do caderno"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-8",
+          "group": "4. Para quem será e com qual finalidade?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "É para **uso pessoal, presente, equipe, evento, divulgação institucional ou venda**? Descreva brevemente quem vai usar o produto e a impressão que ele deve transmitir.",
+          "items": [
+            "uso pessoal",
+            "presente",
+            "equipe",
+            "evento",
+            "divulgação institucional",
+            "venda"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-9",
+          "group": "production-specifications",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "**Se houver fornecedor ou produção já definidos**, envie também o gabarito ou as especificações disponíveis: medidas, material, cor do produto e técnica de aplicação. Você não precisa escolher a técnica agora; essas informações servirão para adequar o design à produção.",
+          "items": [
+            "gabarito",
+            "medidas",
+            "material",
+            "cor do produto",
+            "técnica de aplicação"
+          ],
+          "universal": false
+        }
+      ]
+    },
+    {
+      "card": "Infográfico",
+      "source_filename": "probe-infografico-round-1.md",
+      "source_sha256": "147ebb54895080cc78e4b2628de43ca07bb7027550beec1f8ca1090fb2311db1",
+      "inline_options": [
+        {
+          "id": "prose-1",
+          "group": "1. Mensagem principal",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Qual é a ideia central que precisa ficar clara? Pode escrever em uma frase, por exemplo: “Quero explicar como funciona…” ou “Quero mostrar a diferença entre…”.",
+          "items": [
+            "Quero explicar como funciona…",
+            "Quero mostrar a diferença entre…"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-2",
+          "group": "2. Conteúdo e dados",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Envie o texto, a tabela, a planilha, a imagem ou os links que servirão de base.",
+          "items": [
+            "texto",
+            "tabela",
+            "planilha",
+            "imagem",
+            "links"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-3",
+          "group": "3. Público",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Quem vai ler: público geral, associados, diretoria, estudantes, equipe interna ou especialistas? Essas pessoas já conhecem o assunto ou precisam de uma explicação introdutória?",
+          "items": [
+            "público geral",
+            "associados",
+            "diretoria",
+            "estudantes",
+            "equipe interna",
+            "especialistas",
+            "já conhecem o assunto",
+            "precisam de uma explicação introdutória"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-4",
+          "group": "4. Uso e formato",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **Redes sociais:** publicação única, carrossel ou story.",
+          "items": [
+            "publicação única",
+            "carrossel",
+            "story"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-5",
+          "group": "4. Uso e formato",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **Apresentação:** slide ou projeção.",
+          "items": [
+            "slide",
+            "projeção"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-6",
+          "group": "4. Uso e formato",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **Documento:** relatório, material de estudo ou PDF.",
+          "items": [
+            "relatório",
+            "material de estudo",
+            "PDF"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-7",
+          "group": "4. Uso e formato",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **Impressão:** folha, cartaz ou outro tamanho.",
+          "items": [
+            "folha",
+            "cartaz",
+            "outro tamanho"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-8",
+          "group": "4. Uso e formato",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **Site:** leitura em celular, computador ou ambos.",
+          "items": [
+            "celular",
+            "computador",
+            "ambos"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-9",
+          "group": "5. Nível de detalhamento",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Você prefere uma versão **sintética**, com os pontos essenciais; **intermediária**, com contexto e explicações curtas; ou **detalhada**, com informações de apoio, ressalvas e referências?",
+          "items": [
+            "sintética",
+            "intermediária",
+            "detalhada"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-10",
+          "group": "6. Estilo visual",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Há cores, fontes, logotipo ou alguma referência visual que devo seguir? **Se você não tiver preferência, adotarei o estilo editorial limpo** e definirei a estrutura — etapas, comparação, linha do tempo ou blocos temáticos — conforme o conteúdo.",
+          "items": [
+            "etapas",
+            "comparação",
+            "linha do tempo",
+            "blocos temáticos"
+          ],
+          "universal": false
+        }
+      ]
+    },
+    {
+      "card": "Panfleto",
+      "source_filename": "probe-panfleto-round-1.md",
+      "source_sha256": "b1e84a2dc404352ffc9899cd06cd2ff8e4bc83c3fce8bd59e08deb03c34e74cc",
+      "inline_options": [
+        {
+          "id": "prose-1",
+          "group": "1. Objetivo e público",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Informe também a finalidade: divulgar, informar, orientar, convidar ou outra.",
+          "items": [
+            "divulgar",
+            "informar",
+            "orientar",
+            "convidar",
+            "outra"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-2",
+          "group": "2. Conteúdo obrigatório",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "**Qual é o texto exato que deve aparecer?** Cole o conteúdo e envie os arquivos que precisam entrar, como logotipo, fotografias ou ilustrações.",
+          "items": [
+            "logotipo",
+            "fotografias",
+            "ilustrações"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-3",
+          "group": "3. Ação desejada",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "**O que você quer que a pessoa faça depois de ler?** Por exemplo: acessar uma página, entrar em contato, inscrever-se, comparecer ou seguir uma orientação.",
+          "items": [
+            "acessar uma página",
+            "entrar em contato",
+            "inscrever-se",
+            "comparecer",
+            "seguir uma orientação"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-4",
+          "group": "3. Ação desejada",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Se houver uma chamada obrigatória, envie a redação exata. Para usar link, contato ou QR code, forneça o endereço ou dado correspondente.",
+          "items": [
+            "link",
+            "contato",
+            "QR code"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-5",
+          "group": "4. Formato e distribuição",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "**O folheto será impresso, digital ou terá as duas versões? Onde será distribuído?**",
+          "items": [
+            "impresso",
+            "digital",
+            "as duas versões"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-6",
+          "group": "4. Formato e distribuição",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **Com uma ou duas dobras:** organiza conteúdos em painéis e exige uma sequência de leitura.",
+          "items": [
+            "uma",
+            "duas dobras"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-7",
+          "group": "4. Formato e distribuição",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **Digital:** imagem ou PDF, conforme o canal de distribuição.",
+          "items": [
+            "imagem",
+            "PDF"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-8",
+          "group": "4. Formato e distribuição",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Se você já tiver tamanho, orientação ou especificações da gráfica, envie também.",
+          "items": [
+            "tamanho",
+            "orientação",
+            "especificações da gráfica"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-9",
+          "group": "5. Layout",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "| **B — Imagem principal** | Fotografia ou ilustração fornecida como foco, acompanhada de texto breve. |",
+          "items": [
+            "Fotografia",
+            "ilustração"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-10",
+          "group": "6. Estilo visual",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "**Há cores, fontes, identidade visual ou referências que devem ser seguidas?** Você também pode indicar “defina você” para o layout e o estilo, mantendo como limites o conteúdo e os materiais fornecidos.",
+          "items": [
+            "cores",
+            "fontes",
+            "identidade visual",
+            "referências",
+            "defina você"
+          ],
+          "universal": false
+        }
+      ]
+    },
+    {
+      "card": "Capa de livro",
+      "source_filename": "probe-capa-de-livro-round-1.md",
+      "source_sha256": "ea538c0807adaee9713973dbdf14a6bf1ded2e12603fbe2bd33c9b24486564ea",
+      "inline_options": [
+        {
+          "id": "prose-1",
+          "group": "1. Título, autor e textos obrigatórios",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Se houver subtítulo ou outro texto obrigatório já definido, envie a redação integral, preservando maiúsculas, acentos e pontuação.",
+          "items": [
+            "subtítulo",
+            "outro texto obrigatório"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-2",
+          "group": "2. Conteúdo, gênero e tom",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Sobre o que é o livro? Envie uma **sinopse breve, de três a cinco frases**, ou uma descrição da ideia central.",
+          "items": [
+            "sinopse breve, de três a cinco frases",
+            "descrição da ideia central"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-3",
+          "group": "2. Conteúdo, gênero e tom",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **Gênero e subgênero**, se definidos: romance, suspense psicológico, fantasia, biografia, ensaio, obra acadêmica, poesia etc.",
+          "items": [
+            "romance",
+            "suspense psicológico",
+            "fantasia",
+            "biografia",
+            "ensaio",
+            "obra acadêmica",
+            "poesia"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-4",
+          "group": "2. Conteúdo, gênero e tom",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **Sensação que a capa deve transmitir:** mistério, tensão, delicadeza, humor, sobriedade, melancolia, estranhamento, entre outras.",
+          "items": [
+            "mistério",
+            "tensão",
+            "delicadeza",
+            "humor",
+            "sobriedade",
+            "melancolia",
+            "estranhamento"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-5",
+          "group": "3. Público",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "**Para quem o livro foi escrito?** Indique a faixa etária, quando relevante, e se o público é geral ou familiarizado com o assunto.",
+          "items": [
+            "geral",
+            "familiarizado com o assunto"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-6",
+          "group": "4. Elementos a incluir ou evitar",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Há **imagens, personagens, objetos, cenários, símbolos ou cores** que devem aparecer? E algo que você não quer na capa?",
+          "items": [
+            "imagens",
+            "personagens",
+            "objetos",
+            "cenários",
+            "símbolos",
+            "cores"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-7",
+          "group": "4. Elementos a incluir ou evitar",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Se houver referências visuais, envie-as e diga o que deseja aproveitar: atmosfera, composição, cores ou tipografia. Em obras de ficção, indique também se há alguma revelação da trama que a capa deve preservar.",
+          "items": [
+            "atmosfera",
+            "composição",
+            "cores",
+            "tipografia"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-8",
+          "group": "5. Uso e formato",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "A capa será para **livro digital, impresso ou ambos**? Você precisa **somente da frente** ou também de **lombada e contracapa**?",
+          "items": [
+            "livro digital",
+            "impresso",
+            "ambos",
+            "somente da frente",
+            "lombada e contracapa"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-9",
+          "group": "5. Uso e formato",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Se já tiver dimensões definidas ou um gabarito da gráfica, envie o material.",
+          "items": [
+            "dimensões definidas",
+            "gabarito da gráfica"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-10",
+          "group": "6. Direção visual",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "| **E** | **Clássica ou ornamental** | Molduras, padrões e tipografia tradicional estabelecem uma presença editorial mais formal. |",
+          "items": [
+            "Molduras",
+            "padrões",
+            "tipografia tradicional"
+          ],
+          "universal": false
+        }
+      ]
+    },
+    {
+      "card": "Mockup de aplicativo",
+      "source_filename": "probe-mockup-de-aplicativo-round-1.md",
+      "source_sha256": "4c1bd7e4de2ca264eda614ff74e1dc2504744e3bd6e36bb26f9e4eb7e73c3900",
+      "inline_options": [
+        {
+          "id": "prose-1",
+          "group": "2. Público-alvo",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Por exemplo: uso pessoal, equipe interna, clientes ou público geral. Informe se existe alguma necessidade específica, como leitura facilitada, uso rápido ou pouca familiaridade com tecnologia.",
+          "items": [
+            "uso pessoal",
+            "equipe interna",
+            "clientes",
+            "público geral",
+            "leitura facilitada",
+            "uso rápido",
+            "pouca familiaridade com tecnologia"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-2",
+          "group": "3. Tela e momento de uso",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Você quer **uma tela isolada ou uma pequena sequência que mostre a interação**? Ela deve representar o primeiro acesso, um estado vazio ou o aplicativo já em uso?",
+          "items": [
+            "uma tela isolada",
+            "uma pequena sequência que mostre a interação",
+            "primeiro acesso",
+            "um estado vazio",
+            "aplicativo já em uso"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-3",
+          "group": "4. Ações principais",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Indique também as ações secundárias indispensáveis e **o que deve aparecer depois da ação principal**, como uma confirmação, um resultado ou outra tela.",
+          "items": [
+            "uma confirmação",
+            "um resultado",
+            "outra tela"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-4",
+          "group": "5. Conteúdo obrigatório",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Cole os textos que devem ser preservados exatamente, incluindo títulos, nomes de seções e botões. Envie também logotipo, imagens ou uma captura da interface existente, se houver.",
+          "items": [
+            "títulos",
+            "nomes de seções",
+            "botões",
+            "logotipo",
+            "imagens",
+            "captura da interface existente"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-5",
+          "group": "5. Conteúdo obrigatório",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Para conteúdos ainda indefinidos, você prefere **marcadores explícitos**, como `[Nome do item]`, ou **sugestões de texto para revisão**?",
+          "items": [
+            "marcadores explícitos",
+            "[Nome do item]",
+            "sugestões de texto para revisão"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-6",
+          "group": "7. Estilo visual",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Informe também se você prefere **tema claro ou escuro**, se existem **cores ou fontes obrigatórias** e quais elementos visuais devem ser evitados. Se tiver um aplicativo de referência, diga **o que você gosta nele**.",
+          "items": [
+            "tema claro",
+            "escuro",
+            "cores",
+            "fontes obrigatórias"
+          ],
+          "universal": false
+        }
+      ]
+    },
+    {
+      "card": "Embalagem",
+      "source_filename": "probe-embalagem-round-1.md",
+      "source_sha256": "2d986d8bdaa4f30ac2c77e2d8cc344b8351a5fd69044ff1b701782dbddcf8c91",
+      "inline_options": [
+        {
+          "id": "prose-1",
+          "group": "1. Produto e uso",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Onde a embalagem será apresentada ou utilizada: **prateleira de loja, comércio eletrônico, entrega, presente ou outra situação**?",
+          "items": [
+            "prateleira de loja",
+            "comércio eletrônico",
+            "entrega",
+            "presente",
+            "outra situação"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-2",
+          "group": "2. Marca e conteúdo obrigatório",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "**Quais informações devem aparecer na embalagem?** Envie os textos exatamente como devem ser reproduzidos, indicando o que pertence à frente e o que pode ficar nas demais faces. Conforme o produto, isso pode incluir nome, descrição, quantidade, composição, instruções, advertências e contatos.",
+          "items": [
+            "nome",
+            "descrição",
+            "quantidade",
+            "composição",
+            "instruções",
+            "advertências",
+            "contatos"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-3",
+          "group": "2. Marca e conteúdo obrigatório",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Se houver códigos de barras, QR codes, selos ou certificações a aplicar, envie os arquivos existentes. Identifique os conteúdos ainda pendentes.",
+          "items": [
+            "códigos de barras",
+            "QR codes",
+            "selos",
+            "certificações"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-4",
+          "group": "3. Tipo, formato, tamanho e material",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "**A embalagem já existe ou sua estrutura ainda será definida?**",
+          "items": [
+            "já existe",
+            "estrutura ainda será definida"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-5",
+          "group": "3. Tipo, formato, tamanho e material",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **Tipo e formato:** caixa, frasco, pote, lata, tubo, sachê, saco, sacola, cinta, rótulo ou outro.",
+          "items": [
+            "caixa",
+            "frasco",
+            "pote",
+            "lata",
+            "tubo",
+            "sachê",
+            "saco",
+            "sacola",
+            "cinta",
+            "rótulo",
+            "outro"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-6",
+          "group": "3. Tipo, formato, tamanho e material",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **Dimensões:** largura × altura × profundidade; para formatos cilíndricos, diâmetro e altura.",
+          "items": [
+            "largura × altura × profundidade",
+            "diâmetro e altura"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-7",
+          "group": "3. Tipo, formato, tamanho e material",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **Material e aparência:** papel-cartão, kraft, plástico, vidro, metal ou outro; transparente, opaco, fosco ou brilhante.",
+          "items": [
+            "papel-cartão",
+            "kraft",
+            "plástico",
+            "vidro",
+            "metal",
+            "outro",
+            "transparente",
+            "opaco",
+            "fosco",
+            "brilhante"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-8",
+          "group": "3. Tipo, formato, tamanho e material",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- **Referência técnica:** foto, desenho com medidas ou gabarito fornecido pela gráfica ou pelo fabricante.",
+          "items": [
+            "foto",
+            "desenho com medidas",
+            "gabarito fornecido pela gráfica ou pelo fabricante"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-9",
+          "group": "4. Superfícies que receberão o design",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "**Em quais áreas a arte será aplicada?** Frente, verso, laterais, tampa, fundo, interior ou toda a superfície?",
+          "items": [
+            "Frente",
+            "verso",
+            "laterais",
+            "tampa",
+            "fundo",
+            "interior",
+            "toda a superfície"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-10",
+          "group": "4. Superfícies que receberão o design",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Há janelas transparentes, lacres, recortes ou áreas que precisam permanecer livres? Se a gráfica já informou limitações de impressão ou acabamento, encaminhe essas orientações.",
+          "items": [
+            "janelas transparentes",
+            "lacres",
+            "recortes",
+            "áreas que precisam permanecer livres"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-11",
+          "group": "5. Estilo visual",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Você pode escolher uma opção ou combinar duas. **Há referências que deseja seguir ou cores, imagens e estilos que devem ser evitados?**",
+          "items": [
+            "escolher uma opção",
+            "combinar duas",
+            "cores",
+            "imagens",
+            "estilos"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-12",
+          "group": "6. Resultado esperado",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "**Você quer primeiro uma visualização da embalagem montada — um mockup —, a arte plana para impressão ou ambos?**",
+          "items": [
+            "visualização da embalagem montada — um mockup",
+            "arte plana para impressão",
+            "ambos"
+          ],
+          "universal": false
+        }
+      ]
+    },
+    {
+      "card": "Anúncio",
+      "source_filename": "probe-anuncio-round-1.md",
+      "source_sha256": "dab196c942822823b249954f9433ea5183ed5fbab1c35a80e5230da7a93dadfe",
+      "inline_options": [
+        {
+          "id": "prose-1",
+          "group": "1. Oferta",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Informe o nome e o que está incluído. Se houver preço, condição comercial ou prazo que deva constar, envie os dados exatos.",
+          "items": [
+            "preço",
+            "condição comercial",
+            "prazo"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-2",
+          "group": "3. Objetivo e ação desejada",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Por exemplo: conhecer o produto, comprar, solicitar orçamento, entrar em contato ou fazer uma inscrição.",
+          "items": [
+            "conhecer o produto",
+            "comprar",
+            "solicitar orçamento",
+            "entrar em contato",
+            "fazer uma inscrição"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-3",
+          "group": "3. Objetivo e ação desejada",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Informe também o destino dessa ação — link, WhatsApp, perfil ou endereço — e o texto exato da chamada, caso já exista.",
+          "items": [
+            "link",
+            "WhatsApp",
+            "perfil",
+            "endereço"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-4",
+          "group": "4. Conteúdo obrigatório e materiais",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- Textos completos: título, informações complementares, chamada para ação e eventuais condições.",
+          "items": [
+            "título",
+            "informações complementares",
+            "chamada para ação",
+            "eventuais condições"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-5",
+          "group": "4. Conteúdo obrigatório e materiais",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- Fotos do produto, imagens ou outros materiais que devam ser utilizados.",
+          "items": [
+            "Fotos do produto",
+            "imagens",
+            "outros materiais"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-6",
+          "group": "5. Local de veiculação",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Por exemplo: feed ou stories do Instagram, WhatsApp, site ou material impresso. Se houver dimensões obrigatórias ou necessidade de versões para mais de um canal, informe.",
+          "items": [
+            "feed",
+            "stories do Instagram",
+            "WhatsApp",
+            "site",
+            "material impresso"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-7",
+          "group": "6. Público",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Descreva o perfil do público, a localização relevante e se essas pessoas já conhecem sua marca ou terão o primeiro contato com ela.",
+          "items": [
+            "já conhecem sua marca",
+            "primeiro contato com ela"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-8",
+          "group": "7. Estilo visual",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Você pode escolher uma opção, combinar duas ou enviar uma referência indicando o que deseja aproveitar dela. Se preferir que eu defina a direção visual, basta informar isso junto com a oferta e o público.",
+          "items": [
+            "escolher uma opção",
+            "combinar duas",
+            "enviar uma referência"
+          ],
+          "universal": false
+        }
+      ]
+    },
+    {
+      "card": "Miniatura",
+      "source_filename": "probe-miniatura-round-1.md",
+      "source_sha256": "4068e8d8ce7cf71bd6f0eb2c4b93285b7e82f3e99fffbf960be5bef09727e8f7",
+      "inline_options": [
+        {
+          "id": "prose-1",
+          "group": "image-prerequisite",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "**Envie uma imagem do conteúdo que a miniatura vai representar** — pode ser uma foto, uma captura de tela ou um frame do vídeo.",
+          "items": [
+            "uma foto",
+            "uma captura de tela",
+            "um frame do vídeo"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-2",
+          "group": "Ideia e ponto focal",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "1. **Ideia e ponto focal:** o que a pessoa deve entender à primeira vista? Qual pessoa, objeto ou detalhe merece destaque? Indique também o que precisa ser preservado exatamente como está.",
+          "items": [
+            "pessoa",
+            "objeto",
+            "detalhe"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-3",
+          "group": "Texto exato",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "2. **Texto exato:** quais palavras devem aparecer? Envie a redação final, incluindo maiúsculas e pontuação. Se quiser uma miniatura sem texto, indique.",
+          "items": [
+            "palavras devem aparecer",
+            "miniatura sem texto"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-4",
+          "group": "Contexto e público",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "3. **Contexto e público:** onde ela será usada — YouTube, curso, apresentação, site ou outra plataforma — e quem você pretende alcançar? Informe as dimensões ou a proporção, se já estiverem definidas.",
+          "items": [
+            "YouTube",
+            "curso",
+            "apresentação",
+            "site",
+            "outra plataforma",
+            "dimensões",
+            "proporção"
+          ],
+          "universal": false
+        }
+      ]
+    },
+    {
+      "card": "Mockup de site",
+      "source_filename": "probe-mockup-de-site-round-1.md",
+      "source_sha256": "6f42193af8ae908ee6201e264066b365a3c92f45ba0e530a79ece1a416451cb7",
+      "inline_options": [
+        {
+          "id": "prose-1",
+          "group": "1. Projeto e página",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- Você quer a **página inicial**, uma página de serviço ou produto, uma página de campanha ou outra?",
+          "items": [
+            "página inicial",
+            "página de serviço ou produto",
+            "página de campanha",
+            "outra"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-2",
+          "group": "1. Projeto e página",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- Qual é o objetivo dessa página: apresentar o projeto, vender, receber contatos, informar, disponibilizar conteúdo ou outro?",
+          "items": [
+            "apresentar o projeto",
+            "vender",
+            "receber contatos",
+            "informar",
+            "disponibilizar conteúdo",
+            "outro"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-3",
+          "group": "2. Público e ação principal",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- Qual deve ser a **principal ação do visitante**? Exemplos: solicitar orçamento, fazer inscrição, agendar, comprar ou acessar um conteúdo.",
+          "items": [
+            "solicitar orçamento",
+            "fazer inscrição",
+            "agendar",
+            "comprar",
+            "acessar um conteúdo"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-4",
+          "group": "3. Conteúdo obrigatório",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- Textos, títulos e itens de navegação.",
+          "items": [
+            "Textos",
+            "títulos",
+            "itens de navegação"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-5",
+          "group": "3. Conteúdo obrigatório",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- Produtos, serviços, preços e condições, quando aplicáveis.",
+          "items": [
+            "Produtos",
+            "serviços",
+            "preços",
+            "condições"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-6",
+          "group": "3. Conteúdo obrigatório",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- Logotipo, fotografias, ilustrações e outros elementos da marca.",
+          "items": [
+            "Logotipo",
+            "fotografias",
+            "ilustrações",
+            "outros elementos da marca"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-7",
+          "group": "3. Conteúdo obrigatório",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "- Informações de contato e links necessários.",
+          "items": [
+            "Informações de contato",
+            "links necessários"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-8",
+          "group": "4. Direção visual",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Você pode combinar opções. Informe também **cores ou fontes obrigatórias**, elementos que deseja evitar e, se tiver, **um ou dois sites ou imagens de referência**, explicando o que gosta neles.",
+          "items": [
+            "cores",
+            "fontes obrigatórias",
+            "sites",
+            "imagens de referência"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-9",
+          "group": "format-premise",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "**Premissa de formato:** vou considerar uma interface responsiva, com apresentação para computador e celular.",
+          "items": [
+            "computador",
+            "celular"
+          ],
+          "universal": false
+        }
+      ]
+    },
+    {
+      "card": "Foto de produto",
+      "source_filename": "probe-foto-de-produto-round-1.md",
+      "source_sha256": "7a194c62b0026e711d978c5aa740423e1d4ac8f0528ace18ee177de558f11ed2",
+      "inline_options": [
+        {
+          "id": "prose-1",
+          "group": "reference",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "**Envie uma foto nítida do produto ou uma descrição clara.** Para trabalhar com fidelidade, prefira uma imagem sem filtros, com o produto inteiro visível. Se houver rótulos, logotipos, textos pequenos ou detalhes funcionais importantes, inclua fotos aproximadas dessas áreas.",
+          "items": [
+            "foto nítida do produto",
+            "descrição clara"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-2",
+          "group": "reference-details",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "Se você não tiver imagem, descreva: **tipo de produto, formato, dimensões aproximadas, materiais, cores, marca, textos exatos dos rótulos e partes funcionais**. Elementos que não estiverem identificados na referência ou na descrição não devem ser inventados.",
+          "items": [
+            "tipo de produto",
+            "formato",
+            "dimensões aproximadas",
+            "materiais",
+            "cores",
+            "marca",
+            "textos exatos dos rótulos",
+            "partes funcionais"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-3",
+          "group": "1. Onde ela será usada?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "   Loja virtual, marketplace, redes sociais, anúncio, site ou catálogo impresso? Há tamanho ou proporção obrigatórios, como quadrado, vertical ou horizontal?",
+          "items": [
+            "Loja virtual",
+            "marketplace",
+            "redes sociais",
+            "anúncio",
+            "site",
+            "catálogo impresso",
+            "quadrado",
+            "vertical",
+            "horizontal"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-4",
+          "group": "2. Quais detalhes precisam ficar especialmente visíveis?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "   Por exemplo: nome da marca, informações do rótulo, textura, acabamento, tampa, conexões ou mecanismo de abertura. Há alguma característica que a foto de referência não mostra bem?",
+          "items": [
+            "nome da marca",
+            "informações do rótulo",
+            "textura",
+            "acabamento",
+            "tampa",
+            "conexões",
+            "mecanismo de abertura"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-5",
+          "group": "3. Qual cenário você prefere?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "   Fundo branco, fundo neutro, fundo colorido ou um ambiente de uso específico? Se desejar um ambiente, diga qual e quais elementos podem aparecer.",
+          "items": [
+            "Fundo branco",
+            "fundo neutro",
+            "fundo colorido",
+            "um ambiente de uso específico"
+          ],
+          "universal": false
+        },
+        {
+          "id": "prose-6",
+          "group": "4. Como você imagina a iluminação?",
+          "kind": "illustrative_alternatives_in_prose_not_exhaustive",
+          "source_excerpt": "   Suave e uniforme; natural, como luz de janela; ou mais marcada, com sombras e contraste? Se não tiver preferência, posso defini-la conforme o material e o uso da imagem.",
+          "items": [
+            "Suave e uniforme",
+            "natural, como luz de janela",
+            "mais marcada, com sombras e contraste"
+          ],
+          "universal": false
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Only indexed captured responses are covered; new probes need their own audited inline indexing.",
+    "Descriptions and list/table choices remain in separate choice_groups; these arrays add prose alternatives without replacing context."
+  ]
+}

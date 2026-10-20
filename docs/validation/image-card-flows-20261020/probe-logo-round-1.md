@@ -42,4 +42,3 @@ Estas são direções possíveis para explorarmos:
 **Qual direção mais interessa a você?** Pode escolher até duas ou deixar a escolha por minha conta. Informe também se existem cores, símbolos ou elementos que devem ser preservados ou evitados. Se houver um logotipo atual ou referências visuais, envie.
 
 A proposta inicial será de **três conceitos distintos**, apresentados em tamanho ampliado, reduzido e em uma única cor, para avaliar reconhecimento e legibilidade.
-

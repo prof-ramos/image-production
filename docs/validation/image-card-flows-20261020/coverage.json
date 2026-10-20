@@ -658,12 +658,23 @@
       "Cartaz",
       "Design de interiores",
       "Logo",
-      "Ilustração"
+      "Ilustração",
+      "Retrato profissional",
+      "Ícone",
+      "Foto de produto",
+      "Produtos personalizados",
+      "Infográfico",
+      "Panfleto",
+      "Capa de livro",
+      "Mockup de aplicativo",
+      "Embalagem",
+      "Anúncio",
+      "Miniatura",
+      "Mockup de site",
+      "Papel de parede hiper-realista"
     ],
-    "pending_cards_from_progress": [
-      "Retrato profissional"
-    ],
-    "modified_probe_pending": true,
+    "pending_cards_from_progress": [],
+    "modified_probe_pending": false,
     "direct_em_alta_native_probes_omitted": 38,
     "omission_reason": "Avoid generation from direct prompts; omission is not an observed absence of questions.",
     "universal": false,

@@ -24,3 +24,7 @@ As referências de evidência precisam ser conferidas manualmente: JSON Schema v
 ## Normalização do caminho Cartaz
 
 [source-cartaz.md](source-cartaz.md) é uma transcrição legível derivada de `cartaz.json`, preservando texto, proveniência e lacunas. As seis perguntas iniciais e seis perguntas do seguimento estão em `observed.questions`; as últimas têm `when` vinculado à combinação efetivamente enviada. `observed.branches` liga essa combinação às próximas perguntas, sem afirmar causalidade universal. `user_provided_example` conserva a origem anterior do exemplo; `provenance.user_example_status` registra sua posterior observação limitada. A mensagem efetivamente enviada mantém os diacríticos perdidos. `inferred` preserva hipóteses e confiança; `branch_coverage.unexplored_conditions` preserva os desconhecidos.
+
+## Método de captura por clipboard — 2026-10-20
+
+Nos probes adicionais, o marcador do card foi preparado antes de copiar a resposta no browser. O operador confirmou “Copiado” visível, colou diretamente no documento com URL de arquivo conferida e verificou início, linha distintiva da tabela e cauda antes de salvar. Não usar `app.paste` entre copiar e colar: essa operação restaura o clipboard e pode introduzir a resposta anterior. Capturas duplicadas de outro card ficam rejeitadas; uma recaptura posterior válida mantém a proveniência separada.

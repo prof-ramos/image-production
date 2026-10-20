@@ -18,4 +18,3 @@ Para a decoração, podemos explorar opções como:
 | **Clássico contemporâneo** | Formas elegantes, composição equilibrada e detalhes discretos. |
 
 A proposta será construída a partir da referência fornecida, respeitando a arquitetura e as proporções existentes.
-
