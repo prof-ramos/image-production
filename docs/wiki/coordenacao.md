@@ -24,3 +24,12 @@ de verificação em sessão nova; arquivos presentes não comprovam execução n
 
 Relacionados: [índice](index.md), [especialistas](especialistas.md),
 [memória local](memoria-local.md).
+
+Em 2026-10-20, `prof-ramos/image-production@bea9f975e6d8a2d8813cd7e49432d93472ee3efa` commitou a definição chief_of_staff e o guia antes descritos como locais sem commit. Envio remoto foi bloqueado por escopo OAuth; isso não comprova descoberta nativa. Ver [execução](execucao-main.md).
+
+Em 2026-10-20, em `prof-ramos/image-production@bea9f975e6d8a2d8813cd7e49432d93472ee3efa`,
+a descoberta nativa dos sete papéis foi confirmada no Codex CLI 0.163.0: config/read
+carregou a camada do projeto e uma sessão nova expôs os sete nomes em agent_type.
+Isso supera os registros anteriores de descoberta ainda não verificada para as
+definições presentes nesse commit. Não comprova dispatch nem comportamento de
+produção de todos eles. Fonte: [relatório](../validation/native-seven-agents-20261020.md).

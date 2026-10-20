@@ -4,10 +4,14 @@ Em 2026-10-20 o usuário aprovou esta wiki em `docs/wiki/` e OptMem como índice
 
 ## Decisões
 
+- [Publicação automática](publicacao-automatica.md) — implementação rastreável e evidência de ativação.
+
 - [Memória local](memoria-local.md) — autorização, instalação reproduzível e uso do OptMem fora da distribuição do plugin.
 - [Base do plugin e cards](plugin-e-cards.md) — fonte canônica, publicação pela main planejada e limites da coleta de prompts.
 
 ## Operação
+
+- [Integração à main](execucao-main.md) — autorização, checkpoints e bloqueios de publicação/revisão.
 
 - [Coordenação do projeto](coordenacao.md) — papel chief_of_staff, delegação proporcional e limites de ativação.
 

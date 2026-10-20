@@ -36,3 +36,12 @@ intervalo. `request_coderabbit.py 4 --dry-run` consultou GitHub com sucesso e
 preparou solicitação para head `3c08fdd5e104af5a69cc087072ff40af6e332219`, sem
 enviar. Isso supera o bloqueio de autenticação observado antes quanto a essa
 consulta; não comprova envio, aceitação do bot ou revisão concluída.
+
+Em 2026-10-20 coleta real no PR #4 observou Review skipped/Plan Free, sem prova de revisão linha a linha. Isso complementa o dry-run anterior: autenticação de leitura funciona, mas push de workflow foi recusado por escopo OAuth. Fontes e limites no [checkpoint](execucao-main.md).
+
+Em 2026-10-20, no head `prof-ramos/image-production@bea9f975e6d8a2d8813cd7e49432d93472ee3efa`
+já publicado e PR #4 retarget para main, o pedido full pelo script foi entregue.
+O bot recusou por 153 arquivos excederem 100; logo não revisou o head. Isso supera
+somente o retrato anterior de ausência de solicitação real no head novo, sem
+transformar o skip em aprovação. Fontes: [pedido](https://github.com/prof-ramos/image-production/pull/4#issuecomment-6290668201)
+e [resposta](https://github.com/prof-ramos/image-production/pull/4#issuecomment-6290669977).
