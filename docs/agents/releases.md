@@ -9,9 +9,9 @@ desenvolvimento local. A distribuição remota usa a branch `plugin-release`.
 
 O workflow `.github/workflows/ci.yml` valida testes, build e preparação da release
 em PRs, pushes na `main` e execução manual. Somente um **push na `main`**, com toda
-a matriz aprovada, habilita o job de publicação. Sua primeira execução hospedada
-precisa ser confirmada após integrar esta implementação; arquivos locais não
-comprovam publicação.
+a matriz aprovada, habilita o job de publicação. A primeira execução hospedada
+e a instalação real foram verificadas em 20/10/2026, conforme as
+[evidências de ativação](../validation/automatic-release-20261020.md#ativação-remota-e-instalação-real--20102026).
 
 O publicador lê blobs do commit validado, sem incorporar alterações locais. Exige
 frontmatter válido da skill, igualdade byte a byte da fonte empacotada e manifests
