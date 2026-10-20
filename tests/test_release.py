@@ -20,6 +20,7 @@ class ReleaseTests(unittest.TestCase):
         for name in ('scripts', '.agents/skills', '.agents/plugins', '.codex-plugin', '.codex'):
             shutil.copytree(ROOT / name, self.root / name,
                             ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+        self.base_version = json.loads((self.root / '.codex-plugin/plugin.json').read_text())['version']
         self.git('init', '-b', 'main')
         self.git('config', 'user.email', 'test@example.com')
         self.git('config', 'user.name', 'Test')
@@ -48,7 +49,7 @@ class ReleaseTests(unittest.TestCase):
         release = json.loads((self.output / 'release.json').read_text())
         self.assertEqual(release['source_sha'], self.sha)
         manifest = json.loads((payload / 'plugin.json').read_text())
-        self.assertEqual(manifest['version'], '0.1.5-main.g' + self.sha)
+        self.assertEqual(manifest['version'], self.base_version + '-main.g' + self.sha)
         self.assertTrue((self.output / 'agent-bundle/agents/chief_of_staff.toml').is_file())
         for name, digest in release['files'].items():
             self.assertEqual(hashlib.sha256((self.output / name).read_bytes()).hexdigest(), digest)
@@ -152,7 +153,7 @@ class ReleaseTests(unittest.TestCase):
         updater = [sys.executable, str(ROOT / 'scripts/update_plugin.py')]
         first = subprocess.run(updater, cwd=self.root, env=env, capture_output=True, text=True)
         self.assertEqual(first.returncode, 0, first.stderr)
-        self.assertIn('0.1.5-main.g' + self.sha, first.stdout)
+        self.assertIn(self.base_version + '-main.g' + self.sha, first.stdout)
         source = self.root / '.agents/skills/image-production/SKILL.md'
         source.write_text(source.read_text() + '\nA new revision.\n')
         self.git('add', '.')
@@ -162,9 +163,9 @@ class ReleaseTests(unittest.TestCase):
         self.assertEqual(self.run_release('publish', '--sha', next_sha).returncode, 0)
         second = subprocess.run(updater, cwd=self.root, env=env, capture_output=True, text=True)
         self.assertEqual(second.returncode, 0, second.stderr)
-        self.assertIn('0.1.5-main.g' + next_sha, second.stdout)
+        self.assertIn(self.base_version + '-main.g' + next_sha, second.stdout)
         self.assertTrue((home / 'plugins/cache/image-production-local/image-production' /
-                         ('0.1.5-main.g' + next_sha) / 'skills/image-production/SKILL.md').is_file())
+                         (self.base_version + '-main.g' + next_sha) / 'skills/image-production/SKILL.md').is_file())
 
     def test_main_advancing_during_preparation_does_not_promote(self):
         remote = Path(self.temp.name) / 'remote.git'

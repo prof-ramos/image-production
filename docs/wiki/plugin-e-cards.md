@@ -43,3 +43,10 @@ ativou publicação automática e teve pacote e instalação local verificados. 
 supera a limitação anterior de código apenas local. Fonte: [ativação](publicacao-automatica.md).
 A skill segue dentro do pacote do plugin; agentes permanecem bundle separado e
 configuração manual, sem alterar permissões do projeto automaticamente.
+
+Em 2026-10-20, sobre `prof-ramos/image-production@2553f8e` mais alterações locais,
+o briefing adaptativo passou a preceder a geração também sem card e na rota
+simples. Pacote 0.1.6 instalado e habilitado pelo CLI a partir do checkout local;
+13 arquivos conferidos, 82 testes e validador estrutural passaram. Simulações
+independentes não substituem observação numa nova conversa. Não houve publicação
+remota. Fonte: [validação do briefing](../validation/adaptive-briefing-20261020.md).

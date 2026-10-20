@@ -108,7 +108,16 @@ Os arquivos não comprovam ativação nativa nem iniciam execução em segundo p
 
 ## Fluxo
 
-1. Normalizar brief e identificar papéis das referências/brand kit.
+Convites, posts, stories, carrosséis, anúncios e outras peças de comunicação passam
+por [briefing adaptativo](.agents/skills/image-production/references/communication-brief.md),
+mesmo sem card: o plugin aproveita as informações e anexos da conversa e pergunta
+só o que falta sobre uso/envio, público/finalidade, marca, dados/ação e estilo.
+Pode propor textos para aprovação antes de gerar; não inventa fatos nem transforma
+“evento fictício” automaticamente em texto da arte. Briefing completo segue sem
+confirmação repetida; ausência de logo e escolhas visuais delegadas são respeitadas.
+Tarefas como recorte ou edição de fundo não recebem um formulário de marketing.
+
+1. Resolver o briefing aplicável e a redação, normalizar o brief e identificar papéis das referências/brand kit.
 2. Antes de gerar, criar execução com `prepare --asset-key <chave-estável>` por variante; preservar o root/ledger. Para corrigir, usar `--continue-from <último-run>` e selecionar as chaves existentes, sem renomeá-las. A reserva consome uma tentativa mesmo se cancelada.
 3. Aplicar `imagegen`, salvar prompt realmente enviado e inspecionar resultado.
 4. Copiar candidatos sem sobrescrever e verificar formato, dimensões e alfa.
