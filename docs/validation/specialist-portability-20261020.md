@@ -15,9 +15,9 @@ O protocolo atribui escrita exclusiva do manifest ao coordenador, até dois work
 - Ensaio em dois diretórios temporários, novo e com configuração existente: cópia da skill e dos quatro TOMLs, parse TOML e resolução de todos os `config_file` passaram. O cenário existente preservou comentário, modelo, sandbox, papel local e `agents.max_threads = 1` byte a byte no prefixo original. Foi um ensaio de merge manual por adição de tabelas sem colisões; não implementa um instalador nem prova merges arbitrários.
 - `git diff --check`: sem erros.
 
-## Descoberta nativa: bloqueada neste host
+## Ativação nativa: não verificada neste host
 
-Em 20/10/2026, com `codex-cli 0.163.0`, foi iniciada uma nova sessão `codex exec --ephemeral --sandbox read-only --json` no projeto, restrita a inspecionar as opções nativas de spawn, sem gerar imagens nem criar agentes. A sessão informou `available_image_roles: []`: sua ferramenta expunha `task_name`, `message`, `fork_turns`, `model`, `reasoning_effort`, sem seletor de papéis. Portanto a presença dos arquivos não valida ativação. O fluxo coordenado permanece bloqueado nesse host até uma sessão expor os quatro papéis; o fluxo simples via imagegen continua separado.
+Em 20/10/2026, com `codex-cli 0.163.0`, foi iniciada uma nova sessão `codex exec --ephemeral --sandbox read-only --json` no projeto, restrita a inspecionar as opções nativas de spawn, sem gerar imagens nem criar agentes. A sessão informou `available_image_roles: []`: sua ferramenta expunha `task_name`, `message`, `fork_turns`, `model`, `reasoning_effort`, sem seletor de papéis. Esse resultado descreve a interface genérica exposta à sessão, não demonstra que os TOMLs sejam inválidos nem verifica o mecanismo interno de descoberta do host. A ativação nativa permanece não verificada. Quando subagentes genéricos estiverem disponíveis, o modo de carga explícita das quatro definições permanece suportado; deve ser identificado como tal. Bloqueio do fluxo coordenado aplica-se à ausência de definições ou delegação necessária.
 
 `codex debug prompt-input` também não listou os papéis, mas esse comando sozinho não verifica ativação. Não foram alteradas configurações globais nem permissões para forçar descoberta.
 

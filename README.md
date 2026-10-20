@@ -18,7 +18,7 @@ Copiar somente a pasta `image-production` para `.agents/skills/` de outro projet
 4. Preserve um `agents.max_threads` local menor; o limite recomendado para este fluxo é no máximo 3, para um coordenador e até dois workers. Esse limite não autoriza gerações simultâneas.
 5. Inicie nova sessão e confirme que o host descobriu os quatro papéis e consegue usá-los. Os arquivos de exemplo, por si só, não comprovam descoberta; esta documentação não declara essa validação concluída.
 
-Se os papéis não forem descobertos pelo host, o fluxo coordenado fica bloqueado. Para uma imagem simples e independente, use `$imagegen` diretamente. Instalação global fica fora desta versão.
+Se o host não expuser papéis nativos mas admitir subagentes genéricos, use o modo de carga explícita: leia cada TOML e forneça integralmente suas `developer_instructions` ao worker correspondente, registrando papel e caminho. Isso não comprova ativação nativa. O fluxo coordenado fica bloqueado quando faltar uma definição ou a capacidade necessária de delegação. Para uma imagem simples e independente, use `$imagegen` diretamente. Instalação global fica fora desta versão.
 
 O coordenador é o único escritor do manifest e aguarda os relatórios separados de `image_technical` e `image_visual`, ambos relativos ao mesmo SHA256 do candidato. Use até dois workers simultâneos e apenas uma geração por vez. O limite de duas correções por asset acumula todo o histórico, inclusive retomadas. A caneca histórica não deve ser gerada novamente.
 
