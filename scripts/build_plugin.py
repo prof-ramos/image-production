@@ -9,6 +9,18 @@ DESTINATION = ROOT / "work/plugin-dist/image-production"
 
 
 def build():
+    source = ROOT / ".agents/skills/image-production"
+    # Validate the entire canonical source before touching the previous build.
+    # copytree otherwise dereferences file and directory symlinks by default.
+    for path in source.relative_to(ROOT).parents:
+        if (ROOT / path).is_symlink():
+            raise ValueError("Canonical skill path must not contain a symlink")
+    if source.is_symlink():
+        raise ValueError("Canonical skill directory must not be a symlink")
+    for path in source.rglob("*"):
+        if path.is_symlink():
+            relative = path.relative_to(source).as_posix()
+            raise ValueError(f"Unexpected symlink in canonical skill: {relative}")
     manifest = json.loads((ROOT / ".codex-plugin/plugin.json").read_text())
     manifest["skills"] = "./skills/"
     if DESTINATION.is_symlink():
@@ -25,7 +37,7 @@ def build():
     target = DESTINATION / "skills/image-production"
     if target.exists():
         shutil.rmtree(target)
-    shutil.copytree(ROOT / ".agents/skills/image-production", target,
+    shutil.copytree(source, target,
                     ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
     overlay = DESTINATION / ".codex-plugin/plugin.json"
     overlay.parent.mkdir(exist_ok=True)

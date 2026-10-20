@@ -1,0 +1,17 @@
+# Correções da revisão do PR #4 — 2026-10-20
+
+O PR foi marcado pronto para revisão em 20/10/2026. O Codex revisou `prof-ramos/image-production@e7832a9f39ea34dbb1491df4f0894397d51cd5f2` e publicou três apontamentos confirmados. O CodeRabbit ignorou a revisão porque a base é uma branch diferente da padrão; seu status verde não foi tratado como aprovação.
+
+## Apontamentos e comportamento corrigido
+
+- [P1 — preservar ambos os pareceres](https://github.com/prof-ramos/image-production/pull/4#discussion_r4323687701): novas execuções guardam `technical` e `visual` separadamente, com `candidate_sha256` e identificadores distintos de revisor. Ambos precisam passar para os bytes atuais; o último parecer favorável não substitui o gate do outro papel. Revisões anteriores permanecem no histórico. Execuções legadas continuam legíveis como histórico; uma nova revisão migra conservadoramente para o gate duplo. Identificadores são declarações locais, não atestação de autoria independente.
+- [P2 — orçamento entre execuções](https://github.com/prof-ramos/image-production/pull/4#discussion_r4323687713): `prepare` exige uma chave estável por variante e reserva a tentativa antes de gerar. O ledger privado `.lineages/` no root mantém uma tentativa inicial mais duas correções. Uma chave existente exige `--continue-from`; a continuação herda ou seleciona chaves existentes e não permite renomeá-las. Cada asset/run admite um candidato. Cancelamento e falha não reembolsam a reserva. Copiar apenas a pasta do run não preserva o orçamento: conservar o root/ledger. Uma chave deliberadamente diferente não pode ser reconhecida semanticamente pelo helper; o protocolo exige reutilizar a identidade real do asset.
+- [P2 — symlinks na fonte](https://github.com/prof-ramos/image-production/pull/4#discussion_r4323687720): o builder rejeita symlinks na raiz, nos ancestrais e no conteúdo da skill antes de escrever no destino. Arquivos, diretórios e links quebrados estão cobertos; uma rejeição preserva o build anterior.
+
+Não houve nova geração ou alteração de evidências históricas do catálogo/piloto. A skill, papéis e README foram alinhados à nova CLI; o [contrato](../../.agents/skills/image-production/references/run-contract.md) explica os campos e a migração. O plugin local passa à versão 0.1.2.
+
+## Verificação
+
+As reproduções dos três apontamentos falharam antes das correções e passaram depois. A revisão independente também reproduziu entradas malformadas que inicialmente causavam traceback; `review=[]`, assets contendo `null` e chaves de tipo inválido passaram a falhar com JSON/exit 2 sem alterar o manifesto. Não há repetição nem relaxamento da homologação visual histórica.
+
+Validação final: `uv run --offline --with-requirements requirements-dev.txt python -m unittest discover -s tests -v` passou com **47 testes** (44 do helper e três do builder). O validador oficial da skill, parse TOML dos quatro papéis/configuração e revisão independente dos casos malformados passaram. O plugin 0.1.2 foi reconstruído e reinstalado pelo CLI oficial; os nove arquivos canônicos instalados conferiram byte a byte. Um app-server novo com cwd `/tmp` descobriu a skill habilitada na versão instalada. O SHA256 do catálogo permaneceu `9d34a7e80c7913bd059998010a1901ceacc0046f8e842c670449c080be5893dd`. O check incremental de whitespace cobre os arquivos alterados; as fontes verbatim anteriores preservam seus bytes e quebras Markdown.

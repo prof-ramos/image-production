@@ -45,12 +45,14 @@ O coordenador é o único escritor do manifest e aguarda os relatórios separado
 ## Fluxo
 
 1. Normalizar brief e identificar papéis das referências/brand kit.
-2. Criar execução com snapshots e hashes das entradas.
+2. Antes de gerar, criar execução com `prepare --asset-key <chave-estável>` por variante; preservar o root/ledger. Para corrigir, usar `--continue-from <último-run>` e selecionar as chaves existentes, sem renomeá-las. A reserva consome uma tentativa mesmo se cancelada.
 3. Aplicar `imagegen`, salvar prompt realmente enviado e inspecionar resultado.
 4. Copiar candidatos sem sobrescrever e verificar formato, dimensões e alfa.
-5. Registrar revisão visual e limitações por critério.
+5. Registrar separadamente reviews `technical` e `visual`, com `candidate_sha256` e revisores distintos. Ambos precisam passar para o mesmo hash; um parecer favorável não apaga a reprovação do outro.
 
 O helper é offline e não gera imagens. Aprovação registra a revisão informada; não é um julgamento visual automático. Veja o [contrato operacional](.agents/skills/image-production/references/run-contract.md) e a [rubrica](.agents/skills/image-production/references/quality-rubric.md).
+
+[Correções dos três apontamentos do PR #4 e validação](docs/validation/pr4-review-fixes-20261020.md).
 
 ## Desenvolvimento e verificação
 

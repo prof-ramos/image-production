@@ -10,6 +10,7 @@ import subprocess
 import sys
 import unittest
 import zlib
+import uuid
 from unittest.mock import patch
 from pathlib import Path
 
@@ -43,12 +44,17 @@ class ArtifactsTest(unittest.TestCase):
         self.brief.update(updates)
         self.brief_file.write_text(json.dumps(self.brief))
         result = a.prepare(argparse.Namespace(root=str(self.root / 'runs'),
-                           brief=str(self.brief_file), surface='exec', cli_version='0.163.0'))
+                           brief=str(self.brief_file), surface='exec', cli_version='0.163.0',
+                           asset_key=['fixture-' + uuid.uuid4().hex for _ in range(self.brief['variants'] if type(self.brief['variants']) is int else 1)]))
         return Path(result['run'])
 
     def collect(self, run, name='mug', source=None):
+        manifest = a.load(run)[1]
+        used = {output.get('asset_key') for output in manifest['outputs']}
+        key = next((asset['asset_key'] for asset in manifest['assets'] if asset['asset_key'] not in used),
+                   manifest['assets'][0]['asset_key'])
         return a.collect(argparse.Namespace(run=str(run), source=str(source or self.image),
-                                           prompt=str(self.prompt), name=name))
+                                           prompt=str(self.prompt), name=name, asset_key=key))
 
     def review(self, run, asset='mug.png', changes=None):
         criteria = {key: {'score': 2, 'evidence': 'Synthetic test assertion, not visual QA'}
@@ -56,8 +62,200 @@ class ArtifactsTest(unittest.TestCase):
         for key, value in (changes or {}).items():
             criteria[key] = value
         path = self.root / 'review.json'
-        path.write_text(json.dumps({'reviewer': 'unit-test', 'criteria': criteria}))
+        output = next(item for item in a.load(run)[1]['outputs'] if item['path'] == 'final/' + asset)
+        for role in ('technical', 'visual'):
+            path.write_text(json.dumps({'reviewer': 'unit-test-' + role, 'role': role,
+                'candidate_sha256': output['metadata']['sha256'], 'criteria': criteria}))
+            result = a.review(argparse.Namespace(run=str(run), asset=asset, review=str(path)))
+        return result
+
+    def test_one_passing_technical_report_cannot_approve(self):
+        run = self.prepare()
+        result = self.collect(run)
+        path = self.root / 'technical-review.json'
+        path.write_text(json.dumps({'reviewer': 'technical worker', 'role': 'technical',
+            'candidate_sha256': result['metadata']['sha256'], 'criteria': {
+                key: {'score': 2, 'evidence': 'Synthetic inspected evidence'} for key in a.CRITERIA}}))
+        result = a.review(argparse.Namespace(run=str(run), asset=result['asset'], review=str(path)))
+        self.assertEqual(result['state'], 'needs_revision')
+
+    def test_fourth_attempt_for_same_stable_asset_is_rejected_before_generation(self):
+        self.brief_file.write_text(json.dumps(self.brief))
+        arguments = argparse.Namespace(root=str(self.root / 'runs'), brief=str(self.brief_file),
+                                       surface='exec', cli_version=None, asset_key='product-catalog-hero')
+        for _ in range(3):
+            prepared = a.prepare(arguments)
+            self.collect(Path(prepared['run']))
+            arguments.continue_from = prepared['run']
+        with self.assertRaises(ValueError):
+            a.prepare(arguments)
+
+    def submit_report(self, run, role, reviewer=None, sha=None, score=2, asset='mug.png'):
+        output = next(item for item in a.load(run)[1]['outputs'] if item['path'] == 'final/' + asset)
+        path = self.root / ('report-' + str(role) + '.json')
+        path.write_text(json.dumps({'reviewer': reviewer or ('worker-' + str(role)), 'role': role,
+            'candidate_sha256': sha or output['metadata']['sha256'], 'criteria': {
+                key: {'score': score, 'evidence': 'Synthetic assertion, no generation'} for key in a.CRITERIA}}))
         return a.review(argparse.Namespace(run=str(run), asset=asset, review=str(path)))
+
+    def test_independent_role_reviews_reject_wrong_hash_and_same_reviewer(self):
+        run = self.prepare()
+        self.collect(run)
+        self.assertEqual(self.submit_report(run, 'technical', reviewer='worker-1')['state'], 'needs_revision')
+        before = (run / 'manifest.json').read_bytes()
+        for role, reviewer, sha in [('visual', 'worker-1', None), ('visual', ' worker-1 ', None), ('visual', 'worker-2', '0' * 64),
+                                    ('combined', 'worker-2', None)]:
+            with self.subTest(role=role, reviewer=reviewer, sha=sha), self.assertRaises(ValueError):
+                self.submit_report(run, role, reviewer, sha)
+            self.assertEqual((run / 'manifest.json').read_bytes(), before)
+        self.assertEqual(self.submit_report(run, 'visual', reviewer='worker-2')['state'], 'approved')
+        manifest = a.load(run)[1]
+        self.assertEqual(set(manifest['outputs'][0]['reviews']), {'technical', 'visual'})
+        self.assertEqual(self.submit_report(run, 'technical', reviewer='worker-3', score=1)['state'], 'needs_revision')
+        self.assertEqual(set(a.load(run)[1]['outputs'][0]['reviews']), {'technical', 'visual'})
+
+    def test_new_run_cannot_downgrade_to_legacy_single_review_policy(self):
+        run = self.prepare()
+        self.collect(run)
+        self.submit_report(run, 'technical')
+        path = run / 'manifest.json'
+        manifest = json.loads(path.read_text())
+        manifest.pop('review_policy')
+        manifest['state'] = 'approved'
+        path.write_text(json.dumps(manifest))
+        with self.assertRaises(ValueError):
+            a.verify(argparse.Namespace(run=str(run)))
+
+    def test_legacy_approval_is_readable_but_new_review_requires_new_pair(self):
+        run = self.prepare()
+        self.collect(run)
+        self.review(run)
+        path = run / 'manifest.json'
+        legacy = json.loads(path.read_text())
+        for key in ('review_policy', 'attempt_policy', 'assets'):
+            legacy.pop(key)
+        for item in legacy['outputs']:
+            item.pop('reviews')
+            item.pop('asset_key')
+        path.write_text(json.dumps(legacy))
+        before = path.read_bytes()
+        result = a.verify(argparse.Namespace(run=str(run)))
+        self.assertEqual(result['state'], 'approved')
+        self.assertEqual(result['review_policy'], 'legacy-single-review-historical')
+        self.assertEqual(path.read_bytes(), before)
+        self.assertEqual(self.submit_report(run, 'technical')['state'], 'needs_revision')
+        self.assertEqual(set(a.load(run)[1]['outputs'][0]['reviews']), {'technical'})
+        self.assertEqual(self.submit_report(run, 'visual')['state'], 'approved')
+        self.assertGreaterEqual(len(a.load(run)[1]['outputs'][0]['review_history']), 2)
+
+    def test_stable_key_cannot_be_reset_by_fresh_prepare_or_old_parent(self):
+        self.brief_file.write_text(json.dumps(self.brief))
+        args = argparse.Namespace(root=str(self.root / 'runs'), brief=str(self.brief_file),
+                                  surface='exec', cli_version=None, asset_key=['catalog-hero'])
+        first = a.prepare(args)
+        with self.assertRaises(ValueError):
+            a.prepare(args)
+        args.continue_from = first['run']
+        second = a.prepare(args)
+        self.assertEqual(second['assets'][0]['attempt'], 1)
+        with self.assertRaises(ValueError):
+            a.prepare(args)
+        args.continue_from = second['run']
+        third = a.prepare(args)
+        self.assertEqual(third['assets'][0]['attempt'], 2)
+        args.continue_from = third['run']
+        with self.assertRaises(ValueError):
+            a.prepare(args)
+
+    def test_identical_bytes_consume_correction_budget_and_new_reviews(self):
+        run = self.prepare()
+        first = self.collect(run)
+        self.review(run)
+        args = argparse.Namespace(root=str(run.parent), brief=str(self.brief_file), surface='exec',
+                                  cli_version=None, asset_key=None, continue_from=str(run))
+        for expected in (1, 2):
+            result = a.prepare(args)
+            child = Path(result['run'])
+            copied = self.collect(child)
+            self.assertEqual(copied['metadata']['sha256'], first['metadata']['sha256'])
+            output = a.load(child)[1]['outputs'][0]
+            self.assertEqual(output['reviews'], {})
+            self.assertEqual(result['assets'][0]['attempt'], expected)
+            self.assertEqual(a.verify(argparse.Namespace(run=str(child)))['state'], 'generated')
+            args.continue_from = str(child)
+        with self.assertRaises(ValueError):
+            a.prepare(args)
+
+    def test_continuation_subset_does_not_debit_other_variant(self):
+        run = self.prepare(variants=2)
+        keys = [asset['asset_key'] for asset in a.load(run)[1]['assets']]
+        self.brief['variants'] = 1
+        self.brief_file.write_text(json.dumps(self.brief))
+        child = a.prepare(argparse.Namespace(root=str(run.parent), brief=str(self.brief_file),
+            surface='exec', cli_version=None, continue_from=str(run), asset_key=[keys[0]]))
+        self.assertEqual(child['assets'], [{'asset_key': keys[0], 'attempt': 1}])
+        second_ledger = a.read_json(a.lineage_path(run.parent, keys[1]))
+        self.assertEqual(len(second_ledger['attempts']), 1)
+        with self.assertRaises(ValueError):
+            a.prepare(argparse.Namespace(root=str(run.parent), brief=str(self.brief_file), surface='exec',
+                cli_version=None, continue_from=str(run), asset_key=['renamed-asset']))
+
+    def test_reservation_is_one_use_private_and_confined_to_original_root(self):
+        run = self.prepare()
+        key = a.load(run)[1]['assets'][0]['asset_key']
+        path = a.lineage_path(run.parent, key)
+        self.assertEqual(path.stat().st_mode & 0o777, 0o600)
+        self.collect(run)
+        before = (run / 'manifest.json').read_bytes()
+        with self.assertRaises(ValueError):
+            self.collect(run)
+        self.assertEqual((run / 'manifest.json').read_bytes(), before)
+        with self.assertRaises(ValueError):
+            a.prepare(argparse.Namespace(root=str(self.root / 'different-root'), brief=str(self.brief_file),
+                surface='exec', cli_version=None, continue_from=str(run), asset_key=None))
+        ledger = path.read_bytes()
+        outside = self.root / 'external-ledger.json'
+        outside.write_bytes(ledger)
+        path.unlink()
+        path.symlink_to(outside)
+        with self.assertRaises(ValueError):
+            a.verify(argparse.Namespace(run=str(run)))
+        self.assertEqual(outside.read_bytes(), ledger)
+
+    def test_prepare_without_stable_keys_returns_clear_cli_error(self):
+        self.brief_file.write_text(json.dumps(self.brief))
+        result = subprocess.run([sys.executable, str(SCRIPT), 'prepare', '--root', str(self.root / 'runs'),
+            '--brief', str(self.brief_file), '--surface', 'exec'], capture_output=True, text=True)
+        self.assertEqual(result.returncode, 2)
+        self.assertEqual(result.stdout, '')
+        self.assertIn('--asset-key', json.loads(result.stderr)['error'])
+        self.assertFalse((self.root / 'runs').exists())
+
+    def test_non_object_review_and_asset_records_fail_as_json_before_mutation(self):
+        run = self.prepare()
+        self.collect(run)
+        review_file = self.root / 'not-an-object.json'
+        review_file.write_text('[]')
+        manifest_file = run / 'manifest.json'
+        valid = manifest_file.read_bytes()
+        for broken_assets in (None, 'null-entry', [], {}, True):
+            manifest_file.write_bytes(valid)
+            if broken_assets is not None:
+                manifest = json.loads(valid)
+                if broken_assets == 'null-entry':
+                    manifest['assets'].append(None)
+                else:
+                    manifest['assets'][0]['asset_key'] = broken_assets
+                manifest_file.write_text(json.dumps(manifest))
+            before = manifest_file.read_bytes()
+            result = subprocess.run([sys.executable, str(SCRIPT), 'review', '--run', str(run),
+                '--asset', 'mug.png', '--review', str(review_file)], capture_output=True, text=True)
+            self.assertEqual(result.returncode, 2, result.stderr)
+            self.assertEqual(result.stdout, '')
+            self.assertEqual(list(json.loads(result.stderr)), ['error'])
+            self.assertNotIn(str(self.root), result.stderr)
+            self.assertNotIn('Traceback', result.stderr)
+            self.assertEqual(manifest_file.read_bytes(), before)
 
     def test_roundtrip_and_resume_without_source(self):
         run = self.prepare(references=[{'path': str(self.image), 'role': 'reference'}])
@@ -71,9 +269,11 @@ class ArtifactsTest(unittest.TestCase):
     def test_actual_format_hash_and_no_overwrite(self):
         run = self.prepare()
         source_bytes = self.image.read_bytes()
+        (run / 'final/mug.png').write_bytes(source_bytes)
         first = self.collect(run)
-        second = self.collect(run)
-        self.assertEqual((first['asset'], second['asset']), ('mug.png', 'mug-v2.png'))
+        self.assertEqual(first['asset'], 'mug-v2.png')
+        with self.assertRaises(ValueError):
+            self.collect(run)
         self.assertEqual((run / 'final/mug.png').read_bytes(), source_bytes)
         self.assertEqual(self.image.read_bytes(), source_bytes)
         self.assertEqual(first['metadata']['transparent_pixels'], 63)
@@ -203,9 +403,9 @@ class ArtifactsTest(unittest.TestCase):
         self.assertEqual(a.load(run)[1]['state'], 'generated')
         self.assertEqual(self.review(run, changes={'composition': {'score': 1, 'evidence': 'Crop uncertain'}})['state'], 'needs_revision')
         self.assertEqual(self.review(run)['state'], 'approved')
-        self.assertEqual(len(a.load(run)[1]['outputs'][0]['review_history']), 1)
-        self.collect(run)
-        self.assertEqual(a.load(run)[1]['state'], 'generated')
+        self.assertEqual(len(a.load(run)[1]['outputs'][0]['review_history']), 3)
+        with self.assertRaises(ValueError):
+            self.collect(run)
 
     def test_required_gate_and_evidence_and_boolean_scores(self):
         run = self.prepare(text='Olá')
@@ -486,7 +686,7 @@ class ArtifactsTest(unittest.TestCase):
                           references=[{'path': str(self.image), 'role': 'edit-target'}])
         self.brief_file.write_text(json.dumps(self.brief), encoding='utf-8')
         prepared = cli('prepare', '--root', self.root / 'runs', '--brief', self.brief_file,
-                       '--surface', 'exec')
+                       '--surface', 'exec', '--asset-key', 'png', '--asset-key', 'jpeg', '--asset-key', 'webp')
         run = Path(prepared['run'])
         self.assertEqual(prepared['state'], 'prepared')
         self.assertEqual(cli('status', '--run', run, '--state', 'blocked',
@@ -494,7 +694,7 @@ class ArtifactsTest(unittest.TestCase):
         assets = []
         for index, (source, extension) in enumerate(((self.image, '.png'), (jpeg, '.jpg'), (webp, '.webp'))):
             collected = cli('collect', '--run', run, '--source', source, '--prompt', self.prompt,
-                            '--name', f'asset-{index}')
+                            '--name', f'asset-{index}', '--asset-key', ['png', 'jpeg', 'webp'][index])
             self.assertEqual(collected['asset'], f'asset-{index}' + extension)
             self.assertEqual(collected['state'], 'generated')
             assets.append(collected['asset'])
@@ -503,10 +703,18 @@ class ArtifactsTest(unittest.TestCase):
             key: {'score': 2, 'evidence': 'Synthetic assertion, not visual approval'} for key in a.CRITERIA}}
         review_file.write_text(json.dumps(payload), encoding='utf-8')
         for index, asset in enumerate(assets):
-            reviewed = cli('review', '--run', run, '--asset', asset, '--review', review_file)
-            self.assertEqual(reviewed['state'], 'approved' if index == 2 else 'needs_revision')
+            output = a.load(run)[1]['outputs'][index]
+            for role in ('technical', 'visual'):
+                payload.update(role=role, reviewer='CLI synthetic ' + role,
+                               candidate_sha256=output['metadata']['sha256'])
+                review_file.write_text(json.dumps(payload), encoding='utf-8')
+                reviewed = cli('review', '--run', run, '--asset', asset, '--review', review_file)
+                self.assertEqual(reviewed['state'], 'approved' if index == 2 and role == 'visual' else 'needs_revision')
+        payload.update(role='visual', reviewer='CLI synthetic visual',
+                       candidate_sha256=a.load(run)[1]['outputs'][0]['metadata']['sha256'])
+        review_file.write_text(json.dumps(payload), encoding='utf-8')
         cli('review', '--run', run, '--asset', assets[0], '--review', review_file)
-        self.assertEqual(len(a.load(run)[1]['outputs'][0]['review_history']), 1)
+        self.assertEqual(len(a.load(run)[1]['outputs'][0]['review_history']), 2)
         for source in (self.image, self.prompt, jpeg, webp, brand):
             source.unlink()
         before = (run / 'manifest.json').read_bytes()
@@ -527,10 +735,10 @@ class ArtifactsTest(unittest.TestCase):
         pending = [{'review': None}]
         self.assertEqual(a.approval_state(pending, 1), 'needs_revision')
         passing = [{'review': {'criteria': {'objective': {'score': 2}, 'text_facts': {'score': 'na'}}}}]
-        self.assertEqual(a.approval_state(passing, 1), 'approved')
-        self.assertEqual(a.approval_state(passing, 2), 'needs_revision')
+        self.assertEqual(a.approval_state(passing, 1, 'legacy-single-review-historical'), 'approved')
+        self.assertEqual(a.approval_state(passing, 2, 'legacy-single-review-historical'), 'needs_revision')
         passing[0]['review']['criteria']['objective'] = {'score': 1}
-        self.assertEqual(a.approval_state(passing, 1), 'needs_revision')
+        self.assertEqual(a.approval_state(passing, 1, 'legacy-single-review-historical'), 'needs_revision')
         with self.assertRaises(ValueError):
             a.checked_review({'reviewer': 'unit-test', 'criteria': {
                 key: {'score': True, 'evidence': 'bool is not an int'} for key in a.CRITERIA
