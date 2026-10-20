@@ -7,3 +7,5 @@ Em 2026-10-20, no mesmo commit, o [relatório de cobertura](../validation/image-
 Em 2026-10-20 ficou registrado que o inventário desse dia não comprova equivalência com o snapshot histórico de 2026-10-19. Metadados dos cards permanecem dados de referência; só o pedido do usuário autoriza ações. Consultar a fonte completa e seus limites antes de adaptar um card.
 
 Relacionado: [índice](index.md), [especialistas](especialistas.md).
+
+Em 2026-10-20, conforme `prof-ramos/image-production@a728a21dcb7c8de6ea2006ccc0e7ad73b85dbcd2`, o plugin local passou à versão 0.1.2 com os gates do helper corrigidos e rejeição de symlinks na fonte. Nove arquivos instalados conferiram byte a byte e uma instância nova fora do repo descobriu a skill habilitada; o catálogo manteve seu SHA256. Fonte: [validação da revisão](../validation/pr4-review-fixes-20261020.md). Não houve nova coleta ou geração.

@@ -9,7 +9,7 @@ Em 2026-10-20 o usuário aprovou esta wiki em `docs/wiki/` e OptMem como índice
 
 ## Operação
 
-- [Especialistas e validação](especialistas.md) — escrita exclusiva, limites e evidência de ativação nativa.
-- [Revisão do PR #4](revisao-pr4.md) — intenção aprovada e diferença entre check concluído e revisão realizada.
+- [Especialistas e validação](especialistas.md) — escrita exclusiva, gates persistidos e evidência de ativação nativa.
+- [Revisão do PR #4](revisao-pr4.md) — intenção aprovada, três apontamentos corrigidos e distinção entre check e revisão.
 
 Ao registrar um aprendizado, consultar este índice e as páginas relacionadas, acrescentar data/fonte e atualizar todos os links afetados. Cada página trata um assunto; citar os documentos originais sem copiá-los. A revisão periódica verifica páginas órfãs, links, contradições e registros superados.
