@@ -18,3 +18,12 @@ Links locais e unicidade do bloco foram conferidos; `git diff --check` passou.
 Não houve criação de issues, alteração de visibilidade, permissão, publicação ou
 merge. Configuração oferece suporte às skills `triage`, `to-tickets`, `to-spec`
 e `domain-modeling`; não comprova execução ponta a ponta de cada uma delas.
+
+Em 2026-10-20 foi criado o [guia do desenvolvedor](../guia-do-desenvolvedor.md),
+a pedido do usuário, com configuração, estrutura, desenvolvimento, testes e
+solução de problemas. Base observada:
+`prof-ramos/image-production@f7f16a151cd6b961b92d684c537afebef640fe7a`; documentação
+acrescentada localmente sobre essa base. README e índice da wiki apontam para o
+guia. Links locais, cinco seções solicitadas e comandos de ajuda do helper, dos
+scripts CodeRabbit e do marketplace foram conferidos; `git diff --check` passou.
+Mudança somente documental, sem repetir a suíte ou executar ações remotas.

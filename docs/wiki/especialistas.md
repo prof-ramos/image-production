@@ -24,3 +24,13 @@ novos nem qualidade visual. Plugin local 0.1.5 reconstruído, sem reinstalação
 ## Gate persistido após revisão
 
 Em 2026-10-20, conforme `prof-ramos/image-production@a728a21dcb7c8de6ea2006ccc0e7ad73b85dbcd2`, o helper passou a persistir os dois pareceres por papel e SHA256, exigir revisores distintos e reservar tentativas por chave estável no ledger do root antes de gerar. Isso supera a implementação anterior que avaliava apenas o último parecer e não persistia o limite entre runs. A inicial mais duas correções inclui reservas canceladas; nova chave deliberada não é identidade semântica comprovada. Legado permanece histórico e nova revisão migra conservadoramente. Fonte: [correções do PR](../validation/pr4-review-fixes-20261020.md).
+
+## Papel geral de coordenação — 2026-10-20
+
+Em 2026-10-20, sobre `prof-ramos/image-production@f7f16a151cd6b961b92d684c537afebef640fe7a`
+mais alterações locais, foi acrescentado `chief_of_staff` como papel geral de
+projeto. O inventário passou a sete definições: seis de imagem e uma de coordenação
+geral. Isso supera a contagem anterior de seis como inventário completo; os quatro
+papéis obrigatórios de produção e os dois opcionais de imagem continuam iguais.
+Fontes e limites: [coordenação do projeto](coordenacao.md). Sem nova prova de
+ativação nativa; configurações e revisão de instruções foram verificadas.

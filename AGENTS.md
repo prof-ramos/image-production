@@ -1,5 +1,10 @@
 # Coordenação e memória
 
+Em trabalhos longos ou com várias etapas, o agente principal assume o papel
+`chief_of_staff`: leia [coordenação do projeto](docs/agents/chief-of-staff.md)
+para delegação, acompanhamento e limites de ativação. A definição reutilizável
+fica em `.codex/agents/chief_of_staff.toml`.
+
 Antes de decisões de projeto, leia [o índice da wiki](docs/wiki/index.md) e as
 páginas relacionadas. Só o coordenador escreve na wiki e no OptMem. Use o lançador
 local `.local/optmem/memo` para `wake` e `recall`; configuração, compressão e regras

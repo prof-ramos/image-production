@@ -2,6 +2,9 @@
 
 Skill para produzir imagens raster no Codex com brief, referências de marca, `$imagegen`, entrega local e revisão documentada. **v1 em homologação**. O catálogo integra a base do plugin; ZIP é somente uma cópia opcional.
 
+Veja o [guia do desenvolvedor](docs/guia-do-desenvolvedor.md) para configuração,
+estrutura, desenvolvimento, testes e solução de problemas.
+
 ## Instalar o plugin local
 
 A fonte única da skill e do catálogo fica em [`.agents/skills/image-production`](.agents/skills/image-production/SKILL.md). O build cria um pacote mínimo local com manifests e `skills/`, sem `.git`, artefatos de `work/` ou conversas de validação. Execute na raiz do checkout:
@@ -84,7 +87,7 @@ O coordenador é o único escritor do manifest e aguarda os relatórios separado
 
 ## Especialistas reutilizáveis
 
-O projeto define seis papéis em `.codex/agents/`: quatro para produção e dois opcionais.
+O projeto define seis papéis de imagem em `.codex/agents/`: quatro para produção e dois opcionais.
 
 | Papel | Responsabilidade |
 | --- | --- |
@@ -106,6 +109,15 @@ define quando chamar cada um e o que devem devolver. Os
 permitem verificar comportamento sem gerar imagens. Exemplo de pedido:
 “Use image_director para preparar este briefing e depois siga o fluxo coordenado.”
 Para manutenção: “Use image_eval_designer para avaliar esta mudança no fluxo.”
+
+### Coordenação geral do projeto
+
+O sétimo papel, `chief_of_staff`, orienta o agente principal em trabalhos longos
+ou com várias etapas: delegação delimitada, acompanhamento de entregas e memória
+histórica. Leia [coordenação do projeto](docs/agents/chief-of-staff.md).
+A definição e sua seção estão em `.codex/agents/chief_of_staff.toml` e
+`.codex/config.toml`; instalar o plugin não instala esse papel em outros projetos.
+Os arquivos não comprovam ativação nativa nem iniciam execução em segundo plano.
 
 ## Fluxo
 
