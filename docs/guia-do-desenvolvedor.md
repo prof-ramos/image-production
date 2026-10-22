@@ -236,6 +236,12 @@ candidatos/prompts e registre as revisões independentes no contrato de produç�
 
 ## 5. Solução de problemas
 
+Para a adaptação Hermes, consulte a
+[validação do provedor Codex](validation/hermes-codex-image-generation-20261022.md).
+Ela registra o caso em que o login é reconhecido, mas um cooldown de outro
+modelo bloqueia o gerador. Inclui correção local, geração real e limites da
+validação; não fornece um patch instalável nem comprova operação no WhatsApp.
+
 | Sintoma | Verificação e ação |
 | --- | --- |
 | `ModuleNotFoundError` para PIL, yaml ou jsonschema | Ative `.venv`, confira `python --version` e reinstale `requirements-dev.txt` nesse ambiente, ou use o comando com `uv` |

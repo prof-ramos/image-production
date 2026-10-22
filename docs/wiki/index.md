@@ -11,6 +11,8 @@ Em 2026-10-20 o usuário aprovou esta wiki em `docs/wiki/` e OptMem como índice
 
 ## Operação
 
+- [Hermes e imagens Codex](hermes-imagens.md) — cooldown por modelo, correção local, geração validada e limites de WhatsApp/upstream.
+
 - [Integração à main](execucao-main.md) — autorização, checkpoints e bloqueios de publicação/revisão.
 
 - [Coordenação do projeto](coordenacao.md) — papel chief_of_staff, delegação proporcional e limites de ativação.
