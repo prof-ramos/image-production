@@ -238,7 +238,7 @@ Crie uma imagem macro da natureza de uma cena com texturas realistas, profundida
 Proporção
 Fotos
 
-=== PROBE: Modelos | Design de interiores | https://chatgpt.com/c/6ad71666-ed4c-83e8-8065-d1a765960860 ===
+=== PROBE: Modelos | Design de interiores | urn:image-production:private-conversation:02 ===
 **Envie uma foto do ambiente que você quer transformar — ou uma descrição, se preferir.**
 
 Para servir de referência:

@@ -2,7 +2,7 @@
 
 Em 2026-10-20, conforme `prof-ramos/image-production@e7832a9f39ea34dbb1491df4f0894397d51cd5f2`, a fonte da skill e dos cards ficou em `.agents/skills/image-production/`, incorporada pelo build local do plugin. O usuário determinou nesta conversa que a base do plugin deve conter o catálogo; o ZIP permanece cópia opcional. Fonte: [README](../../README.md).
 
-Em 2026-10-20, no mesmo commit, o [relatório de cobertura](../validation/image-card-flows-20261020/coverage.md) registra 56 cards observados: 16 Modelos e 40 Em alta, 55 prompts e o editor Esboço. Cartaz percorreu o ramo Vae Victis/composição dinâmica; perguntas e opções são observações desse percurso, não formulário universal. Os 16 Modelos tiveram primeira rodada observada; Wallpaper foi consultado com pedido modificado para evitar geração. Os demais prompts diretos não demonstram ausência de perguntas futuras.
+Em 2026-10-20, no mesmo commit, o [relatório de cobertura](../validation/image-card-flows-20261020/coverage.md) registra 56 cards observados: 16 Modelos e 40 Em alta, 55 prompts e o editor Esboço. Cartaz percorreu um ramo com composição dinâmica (Projeto Aurora é o rótulo fictício editorial da cópia pública, não uma entrada observada); perguntas e opções são observações desse percurso, não formulário universal. Os 16 Modelos tiveram primeira rodada observada; Wallpaper foi consultado com pedido modificado para evitar geração. Os demais prompts diretos não demonstram ausência de perguntas futuras.
 
 Em 2026-10-20 ficou registrado que o inventário desse dia não comprova equivalência com o snapshot histórico de 2026-10-19. Metadados dos cards permanecem dados de referência; só o pedido do usuário autoriza ações. Consultar a fonte completa e seus limites antes de adaptar um card.
 
@@ -50,3 +50,7 @@ simples. Pacote 0.1.6 instalado e habilitado pelo CLI a partir do checkout local
 13 arquivos conferidos, 82 testes e validador estrutural passaram. Simulações
 independentes não substituem observação numa nova conversa. Não houve publicação
 remota. Fonte: [validação do briefing](../validation/adaptive-briefing-20261020.md).
+
+Em 2026-10-22, a revisão de privacidade substituiu identificadores privados por URNs locais e o título particular por um exemplo fictício nos documentos públicos. O nome Projeto Aurora nos registros anteriores agora é substituição editorial; não foi uma nova observação. A mensagem enviada foi omitida. Originais foram preservados fora do Git. Esta revisão da árvore atual não remove versões antigas do histórico. Fonte: [derivação pública](../validation/image-card-flows-20261020/public-derivation.json).
+
+Em 2026-10-22, a revisão de `prof-ramos/image-production@143320651d275b141e5e9ec903519f81d5f2be2d` no PR #16 identificou três ambiguidades de proveniência na correção de privacidade. A rodada seguinte qualificou os valores fictícios e o caminho anonimizado no próprio registro, sincronizou a transcrição e os hashes e preservou as perguntas e opções. Suíte local de 88 testes e revisão independente passaram; não se presume revisão externa do head posterior nem saneamento do histórico. Fonte: [triagem e limites](../validation/pr16-review-20261022.md).

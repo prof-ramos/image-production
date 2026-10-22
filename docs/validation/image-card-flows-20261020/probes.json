@@ -9,7 +9,8 @@
       "response_rounds": 2,
       "source": {
         "file": "cartaz.json",
-        "readable_file": "source-cartaz.md"
+        "readable_file": "source-cartaz.md",
+        "normalization": "Public sanitized derivative of the historical Cartaz capture. Projeto Aurora is a fictional editorial label, not an observed UI input; questions retain generic wording and explicit branch limitations."
       },
       "questions": [
         {
@@ -156,7 +157,7 @@
         },
         {
           "id": "bq1",
-          "text": "Que interpretação de “Vae Victis” deve orientar o cartaz?",
+          "text": "Que interpretação de “Projeto Aurora” deve orientar o cartaz?",
           "options": [
             {
               "value": "A",
@@ -190,7 +191,7 @@
             {
               "question_id": "q1",
               "operator": "text_equals",
-              "value": "Vae Victis",
+              "value": "Projeto Aurora",
               "evidence_refs": [
                 "cartaz-answer-ui"
               ]
@@ -198,7 +199,7 @@
             {
               "question_id": "q2",
               "operator": "text_equals",
-              "value": "Vae Victis",
+              "value": "Projeto Aurora",
               "evidence_refs": [
                 "cartaz-answer-ui"
               ]
@@ -295,7 +296,7 @@
             {
               "question_id": "q1",
               "operator": "text_equals",
-              "value": "Vae Victis",
+              "value": "Projeto Aurora",
               "evidence_refs": [
                 "cartaz-answer-ui"
               ]
@@ -303,7 +304,7 @@
             {
               "question_id": "q2",
               "operator": "text_equals",
-              "value": "Vae Victis",
+              "value": "Projeto Aurora",
               "evidence_refs": [
                 "cartaz-answer-ui"
               ]
@@ -399,7 +400,7 @@
             {
               "question_id": "q1",
               "operator": "text_equals",
-              "value": "Vae Victis",
+              "value": "Projeto Aurora",
               "evidence_refs": [
                 "cartaz-answer-ui"
               ]
@@ -407,7 +408,7 @@
             {
               "question_id": "q2",
               "operator": "text_equals",
-              "value": "Vae Victis",
+              "value": "Projeto Aurora",
               "evidence_refs": [
                 "cartaz-answer-ui"
               ]
@@ -503,7 +504,7 @@
             {
               "question_id": "q1",
               "operator": "text_equals",
-              "value": "Vae Victis",
+              "value": "Projeto Aurora",
               "evidence_refs": [
                 "cartaz-answer-ui"
               ]
@@ -511,7 +512,7 @@
             {
               "question_id": "q2",
               "operator": "text_equals",
-              "value": "Vae Victis",
+              "value": "Projeto Aurora",
               "evidence_refs": [
                 "cartaz-answer-ui"
               ]
@@ -616,7 +617,7 @@
             {
               "question_id": "q1",
               "operator": "text_equals",
-              "value": "Vae Victis",
+              "value": "Projeto Aurora",
               "evidence_refs": [
                 "cartaz-answer-ui"
               ]
@@ -624,7 +625,7 @@
             {
               "question_id": "q2",
               "operator": "text_equals",
-              "value": "Vae Victis",
+              "value": "Projeto Aurora",
               "evidence_refs": [
                 "cartaz-answer-ui"
               ]
@@ -684,7 +685,7 @@
             {
               "question_id": "q1",
               "operator": "text_equals",
-              "value": "Vae Victis",
+              "value": "Projeto Aurora",
               "evidence_refs": [
                 "cartaz-answer-ui"
               ]
@@ -692,7 +693,7 @@
             {
               "question_id": "q2",
               "operator": "text_equals",
-              "value": "Vae Victis",
+              "value": "Projeto Aurora",
               "evidence_refs": [
                 "cartaz-answer-ui"
               ]
@@ -809,7 +810,7 @@
       "source": {
         "file": "probe-design-de-interiores-round-1.md",
         "sha256": "9a34fdb1b7eb5c5de671727aa9afa8926b359fc0ccb2168ceb7e6e8b09fca41d",
-        "conversation_url": "https://chatgpt.com/c/6ad71666-ed4c-83e8-8065-d1a765960860",
+        "conversation_url": "urn:image-production:private-conversation:02",
         "normalization": "Only trailing newline padding between capture markers normalized to one final newline; wording and internal Markdown preserved."
       },
       "raw_markdown": "**Envie uma foto do ambiente que você quer transformar — ou uma descrição, se preferir.**\n\nPara servir de referência:\n\n- **Fotos:** uma visão ampla e, se possível, mais um ou dois ângulos mostrando portas, janelas, piso, teto e móveis existentes.\n- **Descrição:** qual é o cômodo, como está organizado, onde ficam portas, janelas e elementos fixos e quais móveis já existem. Inclua medidas apenas se você as souber.\n\nDepois de conhecer o espaço, farei perguntas sobre **como você o utiliza, o que deseja mudar, quais restrições existem e o que precisa ser preservado**.\n\nPara a decoração, podemos explorar opções como:\n\n| Estilo | Características |\n|---|---|\n| **Contemporâneo acolhedor** | Linhas simples, madeira, tecidos e iluminação suave. |\n| **Minimalista** | Poucos elementos, superfícies livres e organização visual. |\n| **Escandinavo** | Tons claros, madeira clara e mobiliário funcional. |\n| **Industrial** | Metal, madeira e acabamentos de aparência mais bruta. |\n| **Clássico contemporâneo** | Formas elegantes, composição equilibrada e detalhes discretos. |\n\nA proposta será construída a partir da referência fornecida, respeitando a arquitetura e as proporções existentes.\n\n",
@@ -1014,7 +1015,7 @@
       "source": {
         "file": "probe-logo-round-1.md",
         "sha256": "023d0ac3cb57b3b22c7ab39cf28687db3f7dcb1226ddf2352d66f91d4a4e8075",
-        "conversation_url": "https://chatgpt.com/c/6ad7176a-3134-83e8-ac95-92abb66ee026",
+        "conversation_url": "urn:image-production:private-conversation:03",
         "normalization": "Only trailing newline padding between capture markers normalized to one final newline; wording and internal Markdown preserved."
       },
       "raw_markdown": "**Qual é a marca e o que você quer que o logotipo comunique?** Vamos definir estes quatro pontos antes de criar as opções.\n\n### 1. Marca, propósito e uso\n\n- Qual é o nome da marca, empresa ou projeto?\n- O que ela faz e para quem?\n- Onde o logotipo será mais usado: site, redes sociais, documentos, aplicativo, produtos, fachada ou outro suporte?\n\n### 2. Textos obrigatórios\n\n**Cole o texto exatamente como deve aparecer**, preservando maiúsculas, minúsculas, acentos e pontuação.\n\nSe houver uma sigla ou outro texto que também deva integrar o logotipo, informe a grafia exata e se seu uso é obrigatório ou opcional.\n\n### 3. Impressão desejada\n\nEscolha até **três características principais**, ou descreva com suas palavras:\n\n| Impressão | Características visuais que podemos explorar |\n|---|---|\n| **Confiança e solidez** | Formas estáveis, proporções equilibradas e letras firmes. |\n| **Sofisticação e discrição** | Poucos elementos, espaçamento cuidadoso e detalhes contidos. |\n| **Proximidade e acolhimento** | Curvas suaves, formas abertas e tipografia acessível. |\n| **Originalidade e personalidade** | Um gesto visual próprio e uma composição expressiva. |\n| **Precisão e modernidade** | Geometria clara, organização e traços consistentes. |\n| **Tradição e permanência** | Referências clássicas simplificadas e tipografia de caráter histórico. |\n\nHá alguma impressão ou associação que você quer evitar?\n\n### 4. Estilo visual e restrições\n\nEstas são direções possíveis para explorarmos:\n\n| Opção | Direção | Como seria |\n|---|---|---|\n| **A** | **Tipográfico** | O próprio nome como elemento principal, com letras e espaçamentos cuidadosamente trabalhados. |\n| **B** | **Monograma** | Uma composição compacta com as iniciais ou a sigla que você autorizar. |\n| **C** | **Símbolo geométrico** | Uma forma simples e própria, construída a partir de uma ideia ligada à marca, acompanhada do nome. |\n| **D** | **Símbolo orgânico** | Curvas e formas fluidas para uma identidade mais humana, natural ou expressiva. |\n| **E** | **Emblema contemporâneo** | Nome e símbolo organizados em uma estrutura compacta, com poucos detalhes. |\n\n**Qual direção mais interessa a você?** Pode escolher até duas ou deixar a escolha por minha conta. Informe também se existem cores, símbolos ou elementos que devem ser preservados ou evitados. Se houver um logotipo atual ou referências visuais, envie.\n\nA proposta inicial será de **três conceitos distintos**, apresentados em tamanho ampliado, reduzido e em uma única cor, para avaliar reconhecimento e legibilidade.\n\n",
@@ -1400,7 +1401,7 @@
       "source": {
         "file": "probe-ilustracao-round-1.md",
         "sha256": "426bfc7e4d1ae3fc427a71f1fafa3ae8041f8bce51ad786b47e8da7a5bbb186d",
-        "conversation_url": "https://chatgpt.com/c/6ad7182a-c3dc-83e9-bdb6-bff067c3f5e5",
+        "conversation_url": "urn:image-production:private-conversation:04",
         "normalization": "Only trailing newline padding between capture markers normalized to one final newline; wording and internal Markdown preserved."
       },
       "raw_markdown": "**Qual é a ideia central que você quer transformar em ilustração?** Pode responder em frases curtas e anexar referências, se houver.\n\n### 1. Tema e intenção\n\n- **O que deve aparecer?** Uma pessoa, um objeto, um lugar, uma cena ou um conceito?\n- **O que a imagem deve comunicar?** Você prefere uma representação direta da ideia ou uma metáfora visual, mais aberta à interpretação?\n\n### 2. Uso e formato\n\nOnde a ilustração será usada: cartaz, publicação em rede social, capa, material impresso, site ou outro suporte?\n\nSe você já souber, informe **orientação e tamanho**: vertical, horizontal ou quadrado; dimensões em centímetros ou pixels.\n\n### 3. Referências e detalhes obrigatórios\n\nVocê tem alguma imagem, fotografia ou desenho de referência? Ao enviar, indique:\n\n- **O que precisa ser preservado com exatidão:** aparência, proporções, objetos, roupas, cores, cenário ou outros detalhes.\n- **O que serve apenas como inspiração:** técnica, composição, iluminação ou atmosfera.\n- **O que deve ser evitado:** elementos, símbolos ou interpretações incompatíveis com sua ideia.\n\nSe houver texto obrigatório, envie a redação exata. **Sem texto fornecido, a ilustração será criada sem texto.**\n\n### 4. Composição e atmosfera\n\nQual composição combina melhor com sua intenção?\n\n- **A — Foco central:** um elemento dominante, leitura imediata e espaço ao redor.\n- **B — Cena ampla:** o ambiente e as relações entre os elementos ajudam a comunicar a ideia.\n- **C — Composição dinâmica:** assimetria, diagonais e recortes sugerem movimento ou tensão.\n- **D — Composição contemplativa:** poucos elementos, espaços vazios e ritmo visual calmo.\n\nQue atmosfera você procura? Por exemplo: **serena, íntima, melancólica, misteriosa, lúdica, solene ou inquietante**.\n\n### 5. Estilo e técnica\n\nEstas são algumas direções possíveis; a escolha pode ser ajustada ao tema:\n\n| Opção | Direção visual | Características |\n|---|---|---|\n| **1** | **Vetor minimalista** | Formas simplificadas, cores chapadas e contornos precisos. |\n| **2** | **Aquarela** | Transparências, manchas suaves e bordas orgânicas. |\n| **3** | **Guache** | Cores opacas, formas bem definidas e textura de pintura. |\n| **4** | **Nanquim ou gravura** | Traços, hachuras, contraste e textura gráfica. |\n| **5** | **Pintura digital** | Luz, volume e materiais trabalhados, com acabamento realista ou estilizado. |\n| **6** | **Colagem artística** | Recortes, sobreposições e combinação de texturas. |\n\n**Qual dessas direções você prefere?** Se estiver em aberto, basta descrever o tema e a sensação desejada para eu definir uma proposta coerente.\n\n",
@@ -1929,7 +1930,7 @@
       "source": {
         "file": "probe-retrato-profissional-round-1.md",
         "sha256": "fc2f53571600abb581c8192b8a438fcb24487986fd4032205bc232fa156d79f5",
-        "conversation_url": "https://chatgpt.com/c/6ad718ec-2f84-83ea-81e8-84eeb99764f6",
+        "conversation_url": "urn:image-production:private-conversation:05",
         "normalization": "Only trailing newline padding between capture markers normalized to one final newline; wording and internal Markdown preserved."
       },
       "raw_markdown": "Envie uma **foto nítida da pessoa**, de preferência de frente ou levemente de lado, com o rosto inteiro visível, os olhos em foco e sem filtros que alterem os traços. Pode ser uma foto de celular; a roupa e o fundo atuais não precisam corresponder ao resultado desejado.\n\nPara definir o retrato, responda também:\n\n### 1. Onde ele será usado?\n\nPor exemplo: **perfil profissional/LinkedIn, site institucional, redes sociais, apresentação pessoal, divulgação de trabalho ou impressão**. Isso orienta o enquadramento, a expressão e a formalidade.\n\n### 2. Qual direção visual você prefere?\n\n| Direção | Características |\n|---|---|\n| **Profissional contemporâneo** | Roupa bem alinhada, fundo discreto, expressão acessível e acabamento natural. |\n| **Institucional formal** | Postura sóbria, composição organizada e presença mais séria. |\n| **Natural e acolhedor** | Expressão espontânea, ambiente simples e textura realista da pele. |\n| **Editorial** | Pose intencional, composição marcante e tratamento visual semelhante ao de um retrato de revista. |\n| **Artístico ou cinematográfico** | Sombras expressivas, atmosfera definida e maior contraste ou tratamento de cor. |\n\n### 3. Que iluminação você imagina?\n\n- **Suave e clara:** sombras discretas e rosto iluminado de maneira uniforme.\n- **Lateral de janela:** luz natural, volume no rosto e sombras suaves.\n- **Estúdio com contraste moderado:** contornos definidos e iluminação controlada.\n- **Dramática:** luz direcionada, sombras profundas e atmosfera intensa.\n\nVocê pode enviar a foto e responder no formato: **Uso: … | Direção: … | Iluminação: …**. Se algum ponto estiver em aberto, indique qual impressão deseja transmitir — por exemplo, proximidade, seriedade, confiança ou criatividade.\n\n",
@@ -2212,7 +2213,7 @@
       "source": {
         "file": "probe-icone-round-1.md",
         "sha256": "0d129af788758ae6b497fe12366872c9fb27784c26030c517da76e10b30ad3b8",
-        "conversation_url": "https://chatgpt.com/c/6ad71982-9c40-83e9-ac46-5a626d7923e8",
+        "conversation_url": "urn:image-production:private-conversation:06",
         "normalization": "Only trailing newline padding between capture markers normalized to one final newline; wording and internal Markdown preserved."
       },
       "raw_markdown": "### 1. O que os ícones devem representar?\n\nInforme o **tema do conjunto** e os **conceitos de cada ícone**. Por exemplo: organização pessoal → agenda, tarefas, estudos, finanças e saúde.\n\nSe a lista ainda estiver em aberto, diga apenas o tema e a quantidade aproximada de ícones.\n\n### 2. Onde você vai usar os ícones?\n\nIndique o contexto: **site, aplicativo, apresentação, documento, planner, material impresso** ou outro.\n\nSe souber, informe o tamanho de exibição. Se não souber, descreva onde aparecerão — por exemplo, “ao lado dos itens de um menu” ou “no cabeçalho de cada seção do planner”. Isso permite definir o nível de detalhe adequado.\n\n### 3. Qual direção visual você prefere?\n\n| Opção | Aparência | Característica principal |\n|---|---|---|\n| **A — Contorno** | Linhas uniformes, interior sem preenchimento. | Visual leve, com atenção à espessura dos traços em tamanhos pequenos. |\n| **B — Sólidos** | Formas preenchidas, poucos recortes internos. | Reconhecimento pela silhueta e maior presença visual. |\n| **C — Duas cores** | Uma cor principal e outra de apoio, sem efeitos de volume. | Permite destacar partes do símbolo mantendo a unidade do conjunto. |\n| **D — Coloridos planos** | Paleta curta e compartilhada, formas simples, sem textura. | Visual mais expressivo, adequado quando a cor faz parte da identidade. |\n\nSe houver **cores obrigatórias, fundo de aplicação ou uma referência visual**, inclua também.\n\nVocê pode responder neste formato:\n\n> **Tema:**  \n> **Ícones ou quantidade:**  \n> **Uso e tamanho, se conhecido:**  \n> **Estilo:** A, B, C ou D  \n> **Cores e referências, se houver:**\n\n",
@@ -2401,7 +2402,7 @@
       "source": {
         "file": "probe-foto-de-produto-round-1.md",
         "sha256": "7a194c62b0026e711d978c5aa740423e1d4ac8f0528ace18ee177de558f11ed2",
-        "conversation_url": "https://chatgpt.com/c/6ad71b77-b324-83e9-9d3d-19788ddc9f8f",
+        "conversation_url": "urn:image-production:private-conversation:07",
         "normalization": "Only trailing newline padding between capture markers normalized to one final newline; wording and internal Markdown preserved."
       },
       "raw_markdown": "**Envie uma foto nítida do produto ou uma descrição clara.** Para trabalhar com fidelidade, prefira uma imagem sem filtros, com o produto inteiro visível. Se houver rótulos, logotipos, textos pequenos ou detalhes funcionais importantes, inclua fotos aproximadas dessas áreas.\n\nSe você não tiver imagem, descreva: **tipo de produto, formato, dimensões aproximadas, materiais, cores, marca, textos exatos dos rótulos e partes funcionais**. Elementos que não estiverem identificados na referência ou na descrição não devem ser inventados.\n\n### Para definir a fotografia\n\n1. **Onde ela será usada?**  \n   Loja virtual, marketplace, redes sociais, anúncio, site ou catálogo impresso? Há tamanho ou proporção obrigatórios, como quadrado, vertical ou horizontal?\n\n2. **Quais detalhes precisam ficar especialmente visíveis?**  \n   Por exemplo: nome da marca, informações do rótulo, textura, acabamento, tampa, conexões ou mecanismo de abertura. Há alguma característica que a foto de referência não mostra bem?\n\n3. **Qual cenário você prefere?**  \n   Fundo branco, fundo neutro, fundo colorido ou um ambiente de uso específico? Se desejar um ambiente, diga qual e quais elementos podem aparecer.\n\n4. **Como você imagina a iluminação?**  \n   Suave e uniforme; natural, como luz de janela; ou mais marcada, com sombras e contraste? Se não tiver preferência, posso defini-la conforme o material e o uso da imagem.\n\n5. **Qual abordagem fotográfica combina com o resultado desejado?**\n\n| Abordagem | Características visuais |\n|---|---|\n| **Catálogo / e-commerce** | Produto inteiro, fundo branco ou neutro, iluminação uniforme e leitura clara de forma, cor e rótulo. |\n| **Estúdio publicitário** | Enquadramento mais expressivo, fundo controlado e luz direcionada para destacar volume e acabamento. |\n| **Ambientada** | Produto em um contexto de uso definido por você, com cenário e iluminação coerentes. |\n| **Detalhe / macro** | Aproximação de textura, material, rótulo ou componente funcional; adequada como imagem complementar. |\n\n**Se cenário, iluminação e estilo estiverem em aberto, basta enviar a referência e informar o uso pretendido.** Essas escolhas podem ser definidas a partir do produto.\n\n",
@@ -2787,7 +2788,7 @@
       "source": {
         "file": "probe-produtos-personalizados-round-1.md",
         "sha256": "60240bbf693282564bc94a64e3d5d1ad5ab85fcbb12c325a304cb253cf3d1555",
-        "conversation_url": "https://chatgpt.com/c/6ad71c30-e530-83e8-85cc-4089c9ac813a",
+        "conversation_url": "urn:image-production:private-conversation:08",
         "normalization": "Only trailing newline padding between capture markers normalized to one final newline; wording and internal Markdown preserved."
       },
       "raw_markdown": "**Qual produto você quer personalizar e o que deve aparecer nele?** Você pode enviar a arte pronta, escrever o texto exato ou descrever a ideia.\n\n### 1. Qual será o produto?\n\nAlgumas opções para orientar sua escolha:\n\n| Produto | Possibilidades de design |\n|---|---|\n| **Camiseta ou moletom** | Texto em destaque, ilustração central ou aplicação discreta. |\n| **Ecobag** | Composição gráfica, frase ou ilustração com boa leitura à distância. |\n| **Caneca ou garrafa** | Composição concentrada em uma face ou distribuída pela superfície disponível. |\n| **Caderno ou agenda** | Capa tipográfica, arte ilustrada ou identidade institucional. |\n| **Boné** | Símbolo ou texto curto, com poucos detalhes. |\n| **Adesivo** | Arte independente, com formato de recorte adequado ao desenho. |\n\nVocê também pode indicar outro item. **Se já tiver o produto, envie uma foto**, de preferência mostrando a superfície que receberá a aplicação.\n\n### 2. Qual arte ou texto deve ser usado?\n\n- **Arte ou marca existente:** envie o arquivo original disponível.\n- **Texto:** escreva exatamente como deve aparecer, incluindo maiúsculas, acentos e pontuação.\n- **Ideia ainda sem arte:** descreva o tema e os elementos que devem fazer parte do design.\n\n**Há cores ou detalhes obrigatórios? Há algo que deve ser evitado?**\n\n### 3. Onde você quer a aplicação?\n\nIndique a região do produto e se prefere algo **discreto, intermediário ou em destaque**. Por exemplo: frente da camiseta, uma face da caneca ou capa do caderno.\n\nSe ainda não tiver preferência, podemos definir o local depois de escolher o item e conhecer a arte.\n\n### 4. Para quem será e com qual finalidade?\n\nÉ para **uso pessoal, presente, equipe, evento, divulgação institucional ou venda**? Descreva brevemente quem vai usar o produto e a impressão que ele deve transmitir.\n\n### 5. Qual direção visual você prefere?\n\n| Estilo | Direção sugerida |\n|---|---|\n| **Minimalista** | Poucos elementos, espaço livre e aplicação contida. |\n| **Tipográfico** | Texto como protagonista, com atenção ao desenho e à composição das letras. |\n| **Ilustrado** | Uma imagem central com linguagem e nível de detalhe definidos. |\n| **Geométrico** | Formas simples e composição organizada. |\n| **Retrô** | Referências de uma época específica, que você pode indicar. |\n| **Institucional** | Uso consistente da identidade visual fornecida. |\n\n**Se houver fornecedor ou produção já definidos**, envie também o gabarito ou as especificações disponíveis: medidas, material, cor do produto e técnica de aplicação. Você não precisa escolher a técnica agora; essas informações servirão para adequar o design à produção.\n\n",
@@ -3265,7 +3266,7 @@
       "source": {
         "file": "probe-infografico-round-1.md",
         "sha256": "147ebb54895080cc78e4b2628de43ca07bb7027550beec1f8ca1090fb2311db1",
-        "conversation_url": "https://chatgpt.com/c/6ad71ce7-3d74-83e9-a0d8-707a53489450",
+        "conversation_url": "urn:image-production:private-conversation:09",
         "normalization": "Only trailing newline padding between capture markers normalized to one final newline; wording and internal Markdown preserved."
       },
       "raw_markdown": "**Qual é o tema do infográfico e o que você quer que a pessoa entenda ao olhar para ele?** Para definir o conteúdo e a apresentação, responda aos pontos abaixo. Você pode enviar o material ainda desorganizado.\n\n### 1. Mensagem principal\n\nQual é a ideia central que precisa ficar clara? Pode escrever em uma frase, por exemplo: “Quero explicar como funciona…” ou “Quero mostrar a diferença entre…”.\n\n### 2. Conteúdo e dados\n\nEnvie o texto, a tabela, a planilha, a imagem ou os links que servirão de base.\n\n- Quais informações e textos são obrigatórios?\n- Se houver números, quais são as fontes, as unidades e o período de referência?\n- Há alguma expressão que deve ser preservada exatamente?\n\n### 3. Público\n\nQuem vai ler: público geral, associados, diretoria, estudantes, equipe interna ou especialistas? Essas pessoas já conhecem o assunto ou precisam de uma explicação introdutória?\n\n### 4. Uso e formato\n\nOnde o infográfico será utilizado?\n\n- **Redes sociais:** publicação única, carrossel ou story.\n- **Apresentação:** slide ou projeção.\n- **Documento:** relatório, material de estudo ou PDF.\n- **Impressão:** folha, cartaz ou outro tamanho.\n- **Site:** leitura em celular, computador ou ambos.\n\nSe já houver dimensões definidas, informe-as.\n\n### 5. Nível de detalhamento\n\nVocê prefere uma versão **sintética**, com os pontos essenciais; **intermediária**, com contexto e explicações curtas; ou **detalhada**, com informações de apoio, ressalvas e referências?\n\n### 6. Estilo visual\n\nQual destas direções combina mais com o resultado desejado?\n\n| Opção | Características |\n|---|---|\n| **A — Editorial limpo** | Tipografia em destaque, espaço em branco, poucas cores e hierarquia bem marcada. |\n| **B — Institucional sóbrio** | Composição regular, cores discretas e elementos visuais contidos. |\n| **C — Didático ilustrado** | Ícones simples, blocos curtos e ilustrações que ajudam a explicar o conteúdo. |\n| **D — Analítico** | Destaque para gráficos, comparações e números, com rótulos e escalas explícitos. |\n\nHá cores, fontes, logotipo ou alguma referência visual que devo seguir? **Se você não tiver preferência, adotarei o estilo editorial limpo** e definirei a estrutura — etapas, comparação, linha do tempo ou blocos temáticos — conforme o conteúdo.\n\n",
@@ -3762,7 +3763,7 @@
       "source": {
         "file": "probe-panfleto-round-1.md",
         "sha256": "b1e84a2dc404352ffc9899cd06cd2ff8e4bc83c3fce8bd59e08deb03c34e74cc",
-        "conversation_url": "https://chatgpt.com/c/6ad71ead-018c-83e9-8950-6b15d0ea37d0",
+        "conversation_url": "urn:image-production:private-conversation:10",
         "normalization": "Only trailing newline padding between capture markers normalized to one final newline; wording and internal Markdown preserved."
       },
       "raw_markdown": "Para definir o folheto, preciso do **conteúdo que você quer comunicar e de como ele será utilizado**. Você pode responder por número e deixar as preferências visuais em aberto.\n\n### 1. Objetivo e público\n\n**Qual é o assunto do folheto, para quem ele será feito e o que essa pessoa deve entender primeiro?**  \nInforme também a finalidade: divulgar, informar, orientar, convidar ou outra.\n\n### 2. Conteúdo obrigatório\n\n**Qual é o texto exato que deve aparecer?** Cole o conteúdo e envie os arquivos que precisam entrar, como logotipo, fotografias ou ilustrações.\n\nIndique se algum trecho deve receber destaque e se há elementos que não podem ser cortados, alterados ou reposicionados.\n\n### 3. Ação desejada\n\n**O que você quer que a pessoa faça depois de ler?** Por exemplo: acessar uma página, entrar em contato, inscrever-se, comparecer ou seguir uma orientação.\n\nSe houver uma chamada obrigatória, envie a redação exata. Para usar link, contato ou QR code, forneça o endereço ou dado correspondente.\n\n### 4. Formato e distribuição\n\n**O folheto será impresso, digital ou terá as duas versões? Onde será distribuído?**\n\nOpções de formato:\n\n- **Folha simples, só frente:** adequada para uma mensagem breve.\n- **Frente e verso:** permite dar destaque à mensagem principal e acomodar os detalhes no verso.\n- **Com uma ou duas dobras:** organiza conteúdos em painéis e exige uma sequência de leitura.\n- **Digital:** imagem ou PDF, conforme o canal de distribuição.\n\nSe você já tiver tamanho, orientação ou especificações da gráfica, envie também.\n\n### 5. Layout\n\n**Qual organização combina mais com a sua intenção?**\n\n| Opção | Organização |\n|---|---|\n| **A — Mensagem em destaque** | Título dominante, informações em blocos curtos e ação em posição evidente. |\n| **B — Imagem principal** | Fotografia ou ilustração fornecida como foco, acompanhada de texto breve. |\n| **C — Informativo por seções** | Subtítulos e blocos bem separados para facilitar a consulta. |\n| **D — Sequência de leitura** | Conteúdo organizado em etapas ou painéis, adequado para orientações. |\n\n### 6. Estilo visual\n\n**Qual direção você prefere?**\n\n- **Institucional e sóbria:** cores contidas, tipografia discreta e alinhamentos regulares.\n- **Minimalista:** poucos elementos, espaços livres e destaque para o texto.\n- **Editorial contemporânea:** contraste entre títulos e corpo do texto, com composição marcada.\n- **Colorida e expressiva:** cores contrastantes e elementos gráficos com maior presença.\n\n**Há cores, fontes, identidade visual ou referências que devem ser seguidas?** Você também pode indicar “defina você” para o layout e o estilo, mantendo como limites o conteúdo e os materiais fornecidos.\n\n",
@@ -4235,7 +4236,7 @@
       "source": {
         "file": "probe-capa-de-livro-round-1.md",
         "sha256": "ea538c0807adaee9713973dbdf14a6bf1ded2e12603fbe2bd33c9b24486564ea",
-        "conversation_url": "https://chatgpt.com/c/6ad71f4a-df30-83e9-aae2-345b8728272a",
+        "conversation_url": "urn:image-production:private-conversation:11",
         "normalization": "Only trailing newline padding between capture markers normalized to one final newline; wording and internal Markdown preserved."
       },
       "raw_markdown": "Para definir a capa, preciso destas informações. **Você pode responder por número e deixar como “em aberto” o que ainda não decidiu.**\n\n### 1. Título, autor e textos obrigatórios\n\nQual é o **título exato** e como o **nome do autor** deve aparecer?\n\nSe houver subtítulo ou outro texto obrigatório já definido, envie a redação integral, preservando maiúsculas, acentos e pontuação.\n\n### 2. Conteúdo, gênero e tom\n\nSobre o que é o livro? Envie uma **sinopse breve, de três a cinco frases**, ou uma descrição da ideia central.\n\nInforme também:\n\n- **Gênero e subgênero**, se definidos: romance, suspense psicológico, fantasia, biografia, ensaio, obra acadêmica, poesia etc.\n- **Sensação que a capa deve transmitir:** mistério, tensão, delicadeza, humor, sobriedade, melancolia, estranhamento, entre outras.\n\n### 3. Público\n\n**Para quem o livro foi escrito?** Indique a faixa etária, quando relevante, e se o público é geral ou familiarizado com o assunto.\n\n### 4. Elementos a incluir ou evitar\n\nHá **imagens, personagens, objetos, cenários, símbolos ou cores** que devem aparecer? E algo que você não quer na capa?\n\nSe houver referências visuais, envie-as e diga o que deseja aproveitar: atmosfera, composição, cores ou tipografia. Em obras de ficção, indique também se há alguma revelação da trama que a capa deve preservar.\n\n### 5. Uso e formato\n\nA capa será para **livro digital, impresso ou ambos**? Você precisa **somente da frente** ou também de **lombada e contracapa**?\n\nSe já tiver dimensões definidas ou um gabarito da gráfica, envie o material.\n\n### 6. Direção visual\n\nQual destas possibilidades mais se aproxima do que você imagina? A adequação de cada uma dependerá do conteúdo e do gênero.\n\n| Opção | Estilo | Tratamento visual |\n|---|---|---|\n| **A** | **Tipográfica** | O título conduz a composição, com atenção ao desenho das letras, ao ritmo e aos espaços. |\n| **B** | **Ilustração conceitual** | Uma metáfora visual central sugere o tema e permite interpretações. |\n| **C** | **Fotografia atmosférica** | Luz, enquadramento e textura constroem a sensação desejada. |\n| **D** | **Minimalista e simbólica** | Poucos elementos, um símbolo marcante e áreas livres dão destaque ao título. |\n| **E** | **Clássica ou ornamental** | Molduras, padrões e tipografia tradicional estabelecem uma presença editorial mais formal. |\n\n**Se não tiver preferência de estilo, deixe esse ponto em aberto; definirei a direção a partir da sinopse, do público e do tom.**\n\n",
@@ -4588,7 +4589,7 @@
       "source": {
         "file": "probe-mockup-de-aplicativo-round-1.md",
         "sha256": "4c1bd7e4de2ca264eda614ff74e1dc2504744e3bd6e36bb26f9e4eb7e73c3900",
-        "conversation_url": "https://chatgpt.com/c/6ad7206d-ac9c-83e8-a7ad-c4608247ed7d",
+        "conversation_url": "urn:image-production:private-conversation:12",
         "normalization": "Only trailing newline padding between capture markers normalized to one final newline; wording and internal Markdown preserved."
       },
       "raw_markdown": "Para definir o mockup, responda aos pontos abaixo. Pode marcar como **“em aberto”** o que você ainda não decidiu.\n\n### 1. Objetivo do aplicativo\n\n**O que o aplicativo deve permitir fazer e qual problema principal deve resolver?**  \nUma frase é suficiente para começar.\n\n### 2. Público-alvo\n\n**Quem vai usar o aplicativo e em qual contexto?**  \nPor exemplo: uso pessoal, equipe interna, clientes ou público geral. Informe se existe alguma necessidade específica, como leitura facilitada, uso rápido ou pouca familiaridade com tecnologia.\n\n### 3. Tela e momento de uso\n\n**Qual tela você quer visualizar?**  \nAlgumas possibilidades, conforme a proposta do aplicativo:\n\n- **Tela inicial:** apresenta as opções e o próximo passo.\n- **Painel de acompanhamento:** mostra informações e situações relevantes.\n- **Lista e detalhe:** permite encontrar um item e consultar seu conteúdo.\n- **Formulário:** permite registrar, editar ou enviar informações.\n- **Execução de uma tarefa:** concentra a experiência na atividade principal.\n\nVocê quer **uma tela isolada ou uma pequena sequência que mostre a interação**? Ela deve representar o primeiro acesso, um estado vazio ou o aplicativo já em uso?\n\n### 4. Ações principais\n\n**Qual é a ação mais importante que a pessoa deve conseguir realizar nessa tela?**  \nIndique também as ações secundárias indispensáveis e **o que deve aparecer depois da ação principal**, como uma confirmação, um resultado ou outra tela.\n\n### 5. Conteúdo obrigatório\n\n**Quais textos, rótulos, dados e elementos precisam aparecer?**\n\nCole os textos que devem ser preservados exatamente, incluindo títulos, nomes de seções e botões. Envie também logotipo, imagens ou uma captura da interface existente, se houver.\n\nPara conteúdos ainda indefinidos, você prefere **marcadores explícitos**, como `[Nome do item]`, ou **sugestões de texto para revisão**?\n\n### 6. Plataforma\n\n**Onde o aplicativo será usado?**\n\n- iPhone/iOS.\n- Android.\n- Navegador no computador.\n- Navegador no celular.\n- Mais de uma plataforma — indique qual deve orientar o primeiro mockup.\n\n### 7. Estilo visual\n\n**Qual direção combina melhor com a experiência que você deseja?**\n\n| Opção | Direção | Características |\n|---|---|---|\n| **A** | **Minimalista** | Espaço generoso, cores contidas e poucos elementos por área, com destaque para a ação principal. |\n| **B** | **Funcional e compacto** | Informações agrupadas, navegação evidente e maior densidade de conteúdo para tarefas frequentes. |\n| **C** | **Editorial** | Tipografia com personalidade, leitura valorizada e imagens em destaque quando fizerem parte do conteúdo. |\n| **D** | **Expressivo** | Cores marcantes, contraste entre áreas e componentes com uma identidade visual mais presente. |\n\nInforme também se você prefere **tema claro ou escuro**, se existem **cores ou fontes obrigatórias** e quais elementos visuais devem ser evitados. Se tiver um aplicativo de referência, diga **o que você gosta nele**.\n\n",
@@ -5092,7 +5093,7 @@
       "source": {
         "file": "probe-embalagem-round-1.md",
         "sha256": "2d986d8bdaa4f30ac2c77e2d8cc344b8351a5fd69044ff1b701782dbddcf8c91",
-        "conversation_url": "https://chatgpt.com/c/6ad72136-3a94-83e9-9c11-8ef575667890",
+        "conversation_url": "urn:image-production:private-conversation:13",
         "normalization": "Only trailing newline padding between capture markers normalized to one final newline; wording and internal Markdown preserved."
       },
       "raw_markdown": "Para definir a embalagem, responda aos pontos abaixo. **Se algo ainda não estiver decidido, indique “em aberto”.** Você pode anexar fotos do produto, logotipo, referências e gabarito da embalagem.\n\n### 1. Produto e uso\n\n**Qual é o produto e para quem ele se destina?** Informe o nome exato, a categoria e a versão ou variante, se houver.\n\nOnde a embalagem será apresentada ou utilizada: **prateleira de loja, comércio eletrônico, entrega, presente ou outra situação**?\n\n### 2. Marca e conteúdo obrigatório\n\n**Qual é a marca e quais elementos precisam ser preservados?** Envie o logotipo e, se existirem, o manual da marca, as cores e as fontes definidas.\n\n**Quais informações devem aparecer na embalagem?** Envie os textos exatamente como devem ser reproduzidos, indicando o que pertence à frente e o que pode ficar nas demais faces. Conforme o produto, isso pode incluir nome, descrição, quantidade, composição, instruções, advertências e contatos.\n\nSe houver códigos de barras, QR codes, selos ou certificações a aplicar, envie os arquivos existentes. Identifique os conteúdos ainda pendentes.\n\n### 3. Tipo, formato, tamanho e material\n\n**A embalagem já existe ou sua estrutura ainda será definida?**\n\nInforme, se souber:\n\n- **Tipo e formato:** caixa, frasco, pote, lata, tubo, sachê, saco, sacola, cinta, rótulo ou outro.\n- **Dimensões:** largura × altura × profundidade; para formatos cilíndricos, diâmetro e altura.\n- **Material e aparência:** papel-cartão, kraft, plástico, vidro, metal ou outro; transparente, opaco, fosco ou brilhante.\n- **Referência técnica:** foto, desenho com medidas ou gabarito fornecido pela gráfica ou pelo fabricante.\n\n### 4. Superfícies que receberão o design\n\n**Em quais áreas a arte será aplicada?** Frente, verso, laterais, tampa, fundo, interior ou toda a superfície?\n\nHá janelas transparentes, lacres, recortes ou áreas que precisam permanecer livres? Se a gráfica já informou limitações de impressão ou acabamento, encaminhe essas orientações.\n\n### 5. Estilo visual\n\n**Que impressão a embalagem deve transmitir?** Estas são algumas direções possíveis:\n\n| Opção | Estilo | Características visuais |\n|---|---|---|\n| **A** | **Minimalista contemporâneo** | Poucos elementos, espaço livre e destaque para marca e produto. |\n| **B** | **Editorial sofisticado** | Tipografia marcante, alinhamentos rigorosos e hierarquia bem definida. |\n| **C** | **Artesanal contemporâneo** | Textura do material em evidência, cores terrosas e grafismos discretos. |\n| **D** | **Gráfico expressivo** | Cores contrastantes, formas fortes e composição dinâmica. |\n| **E** | **Técnico e funcional** | Informações organizadas por blocos, leitura direta e identificação rápida das variantes. |\n| **F** | **Ilustrado** | Ilustração como elemento central, com linguagem adequada ao produto e ao público. |\n\nVocê pode escolher uma opção ou combinar duas. **Há referências que deseja seguir ou cores, imagens e estilos que devem ser evitados?**\n\n### 6. Resultado esperado\n\n**Você quer primeiro uma visualização da embalagem montada — um mockup —, a arte plana para impressão ou ambos?**\n\nPara a arte de impressão, informe se já há uma gráfica ou um fabricante escolhido e envie o gabarito técnico, caso disponível.\n\n",
@@ -5577,7 +5578,7 @@
       "source": {
         "file": "probe-anuncio-round-1.md",
         "sha256": "dab196c942822823b249954f9433ea5183ed5fbab1c35a80e5230da7a93dadfe",
-        "conversation_url": "https://chatgpt.com/c/6ad721e9-83e4-83e9-8430-3a53990251c7",
+        "conversation_url": "urn:image-production:private-conversation:14",
         "normalization": "Only trailing newline padding between capture markers normalized to one final newline; wording and internal Markdown preserved."
       },
       "raw_markdown": "Para definir o anúncio, responda aos pontos abaixo. **Separe as informações de contexto dos textos que devem aparecer literalmente na peça.** Se algo estiver em aberto, marque como “a definir”.\n\n### 1. Oferta\n\n**Qual produto ou serviço será anunciado e o que você está oferecendo?**  \nInforme o nome e o que está incluído. Se houver preço, condição comercial ou prazo que deva constar, envie os dados exatos.\n\n### 2. Mensagem principal\n\n**Qual é a mensagem que a pessoa precisa perceber primeiro?**  \nEnvie a frase exata que deve receber destaque. Se ainda não houver uma frase definida, descreva a ideia e indique que o texto está pendente.\n\n### 3. Objetivo e ação desejada\n\n**O que você quer alcançar com o anúncio e qual ação espera do público?**  \nPor exemplo: conhecer o produto, comprar, solicitar orçamento, entrar em contato ou fazer uma inscrição.\n\nInforme também o destino dessa ação — link, WhatsApp, perfil ou endereço — e o texto exato da chamada, caso já exista.\n\n### 4. Conteúdo obrigatório e materiais\n\n**Quais textos e elementos precisam aparecer?**\n\n- Textos completos: título, informações complementares, chamada para ação e eventuais condições.\n- Logotipo e orientações de marca, se houver.\n- Fotos do produto, imagens ou outros materiais que devam ser utilizados.\n- Elementos que precisam ser preservados ou evitados.\n\n### 5. Local de veiculação\n\n**Onde o anúncio será publicado ou distribuído?**  \nPor exemplo: feed ou stories do Instagram, WhatsApp, site ou material impresso. Se houver dimensões obrigatórias ou necessidade de versões para mais de um canal, informe.\n\n### 6. Público\n\n**Quem você quer alcançar?**  \nDescreva o perfil do público, a localização relevante e se essas pessoas já conhecem sua marca ou terão o primeiro contato com ela.\n\n### 7. Estilo visual\n\n**Qual destas direções combina mais com a campanha?**\n\n| Opção | Direção | Características |\n|---|---|---|\n| **A** | **Minimalista** | Poucos elementos, espaço livre e destaque concentrado no produto ou na mensagem. |\n| **B** | **Comercial direto** | Oferta em evidência, detalhes organizados e chamada para ação facilmente identificável. |\n| **C** | **Editorial sofisticado** | Tipografia marcante, composição equilibrada e fotografia com presença. |\n| **D** | **Dinâmico e expressivo** | Contraste, assimetria e elementos que criam movimento na composição. |\n\nVocê pode escolher uma opção, combinar duas ou enviar uma referência indicando o que deseja aproveitar dela. Se preferir que eu defina a direção visual, basta informar isso junto com a oferta e o público.\n\n",
@@ -5942,7 +5943,7 @@
       "source": {
         "file": "probe-miniatura-round-1.md",
         "sha256": "4068e8d8ce7cf71bd6f0eb2c4b93285b7e82f3e99fffbf960be5bef09727e8f7",
-        "conversation_url": "https://chatgpt.com/c/6ad7229c-c168-83e8-8010-c604e021f27c",
+        "conversation_url": "urn:image-production:private-conversation:15",
         "normalization": "Only trailing newline padding between capture markers normalized to one final newline; wording and internal Markdown preserved."
       },
       "raw_markdown": "**Envie uma imagem do conteúdo que a miniatura vai representar** — pode ser uma foto, uma captura de tela ou um frame do vídeo.\n\nJunto da imagem, informe:\n\n1. **Ideia e ponto focal:** o que a pessoa deve entender à primeira vista? Qual pessoa, objeto ou detalhe merece destaque? Indique também o que precisa ser preservado exatamente como está.\n\n2. **Texto exato:** quais palavras devem aparecer? Envie a redação final, incluindo maiúsculas e pontuação. Se quiser uma miniatura sem texto, indique.\n\n3. **Contexto e público:** onde ela será usada — YouTube, curso, apresentação, site ou outra plataforma — e quem você pretende alcançar? Informe as dimensões ou a proporção, se já estiverem definidas.\n\n4. **Estilo visual:** qual destas direções combina com o conteúdo?\n\n| Opção | Direção visual |\n|---|---|\n| **A — Alto contraste** | Assunto em destaque, fundo simplificado, cores contrastantes e texto grande. |\n| **B — Minimalista** | Poucos elementos, espaço livre e tipografia limpa, com atenção concentrada no assunto. |\n| **C — Cinematográfica** | Iluminação expressiva, profundidade e atmosfera, mantendo um foco visual claro. |\n| **D — Editorial** | Fotografia bem enquadrada, tipografia marcante e organização semelhante à de uma capa de revista. |\n\nSe houver uma miniatura cujo estilo você queira usar como referência, envie-a junto e indique o que gostaria de aproveitar.\n\n",
@@ -6224,7 +6225,7 @@
       "source": {
         "file": "probe-mockup-de-site-round-1.md",
         "sha256": "6f42193af8ae908ee6201e264066b365a3c92f45ba0e530a79ece1a416451cb7",
-        "conversation_url": "https://chatgpt.com/c/6ad7233d-670c-83e8-a440-deb246d17c21",
+        "conversation_url": "urn:image-production:private-conversation:16",
         "normalization": "Only trailing newline padding between capture markers normalized to one final newline; wording and internal Markdown preserved."
       },
       "raw_markdown": "**Qual site você quer representar e o que o visitante deve fazer ao entrar?** Para definir o mockup, responda aos pontos abaixo. O que ainda estiver em aberto pode ficar como **“a definir”**.\n\n### 1. Projeto e página\n\n- Qual é o **nome exato** da marca, instituição ou projeto?\n- Você quer a **página inicial**, uma página de serviço ou produto, uma página de campanha ou outra?\n- Qual é o objetivo dessa página: apresentar o projeto, vender, receber contatos, informar, disponibilizar conteúdo ou outro?\n\n### 2. Público e ação principal\n\n- Quem vai acessar o site e o que essas pessoas procuram?\n- Qual deve ser a **principal ação do visitante**? Exemplos: solicitar orçamento, fazer inscrição, agendar, comprar ou acessar um conteúdo.\n- Se o botão principal já tiver um texto definido, envie a redação exata.\n\n### 3. Conteúdo obrigatório\n\nQuais seções e materiais precisam aparecer? Envie o que já existir:\n\n- Textos, títulos e itens de navegação.\n- Produtos, serviços, preços e condições, quando aplicáveis.\n- Logotipo, fotografias, ilustrações e outros elementos da marca.\n- Informações de contato e links necessários.\n\n**Os textos fornecidos serão preservados exatamente.** Indique quais conteúdos ainda dependem de definição.\n\n### 4. Direção visual\n\nQual destas opções se aproxima do resultado que você deseja?\n\n| Opção | Estilo | Características |\n|---|---|---|\n| **A** | **Minimalista e claro** | Fundo claro, poucos elementos, bastante espaço e destaque para o conteúdo e a ação principal. |\n| **B** | **Institucional sóbrio** | Composição organizada, tipografia firme, cores contidas e hierarquia formal. |\n| **C** | **Editorial** | Títulos expressivos, imagens amplas e organização que valoriza textos e leitura. |\n| **D** | **Tecnológico** | Componentes precisos, navegação objetiva e cores de destaque para ações e recursos. |\n| **E** | **Criativo e expressivo** | Tipografia marcante, contraste de escala, cores mais presentes e composição menos convencional. |\n\nVocê pode combinar opções. Informe também **cores ou fontes obrigatórias**, elementos que deseja evitar e, se tiver, **um ou dois sites ou imagens de referência**, explicando o que gosta neles.\n\n**Premissa de formato:** vou considerar uma interface responsiva, com apresentação para computador e celular.\n\n",
@@ -6766,7 +6767,7 @@
       "source": {
         "file": "probe-papel-de-parede-hiper-realista-round-1.md",
         "sha256": "7fa948b0f5c16986418cba5b9f1fb1e68b0a806929390ad4a08cc832c97b8724",
-        "conversation_url": "https://chatgpt.com/c/6ad723f8-6408-83e9-ba6c-42bfcdb4379b",
+        "conversation_url": "urn:image-production:private-conversation:17",
         "normalization": "Only trailing newline padding between capture markers normalized to one final newline; wording and internal Markdown preserved."
       },
       "raw_markdown": "**Qual destes temas você prefere como foco da fotografia macro?**\n\n1. **Uma folha quase desfeita pelo tempo** — apenas a trama delicada das nervuras, com fragmentos amarronzados e pequenas gotas de orvalho.\n\n2. **Líquens em forma de taça** — estruturas minúsculas sobre um galho caído, com bordas irregulares, verdes acinzentados e madeira úmida.\n\n3. **Uma semente presa em um fio de teia** — suspensa entre plantas, com filamentos desalinhados e gotículas que revelam sua textura.\n\n4. **A pele abandonada de uma cigarra** — a estrutura translúcida agarrada à casca de uma árvore, com fissuras e detalhes frágeis iluminados lateralmente.\n\n5. **Uma concha vazia entre musgos** — a espiral desgastada, com pequenas lascas, vestígios de terra e vegetação crescendo ao redor.\n\n6. **Um cogumelo minúsculo atravessando uma folha caída** — o chapéu delicado emergindo de uma abertura na folha, entre fibras úmidas e matéria em decomposição.",
@@ -6904,7 +6905,7 @@
       "card": "Ícone",
       "reason": "Exact response duplicated from another card; stale clipboard suspected, recapture required.",
       "duplicate_of": "Retrato profissional",
-      "conversation_url": "https://chatgpt.com/c/6ad71982-9c40-83e9-ac46-5a626d7923e8"
+      "conversation_url": "urn:image-production:private-conversation:06"
     }
   ],
   "limitations": [

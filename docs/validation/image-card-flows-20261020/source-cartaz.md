@@ -1,6 +1,8 @@
 # Cartaz — transcrição derivada da captura de 2026-10-20
 
-Fonte estruturada: [cartaz.json](cartaz.json). Transcrição derivada dos registros CUA de acessibilidade e screenshots; não é exportação interna, nova observação ou captura independente. A URL da conversa identifica a origem, sem garantir disponibilidade futura. Não houve geração de imagem. A sequência abaixo representa apenas o caminho percorrido, sem cobertura universal.
+> Revisão editorial de privacidade — 2026-10-22: cópia pública saneada. URNs substituem conversas privadas; Projeto Aurora é um exemplo fictício e a mensagem particular foi omitida. As alterações não são novas observações de interface. Originais preservados privadamente.
+
+Fonte estruturada: [cartaz.json](cartaz.json). Transcrição derivada dos registros CUA de acessibilidade e screenshots; não é exportação interna, nova observação ou captura independente. Uma URN local substitui a URL privada da conversa; não é um link de acesso. Não houve geração de imagem. A sequência abaixo representa apenas o caminho percorrido, sem cobertura universal.
 
 ## observed_at
 
@@ -12,7 +14,7 @@ https://chatgpt.com/images/
 
 ## conversation_url
 
-https://chatgpt.com/c/6ad71145-81ac-83e9-ba9d-2f35a339d784
+urn:image-production:private-conversation:01
 
 ## method
 
@@ -440,7 +442,7 @@ bq1
 
 ##### text
 
-Que interpretação de “Vae Victis” deve orientar o cartaz?
+Que interpretação de “Projeto Aurora” deve orientar o cartaz?
 
 ##### options
 
@@ -524,7 +526,7 @@ text_equals
 
 ###### value
 
-Vae Victis
+Projeto Aurora
 
 ###### evidence_refs
 
@@ -542,7 +544,7 @@ text_equals
 
 ###### value
 
-Vae Victis
+Projeto Aurora
 
 ###### evidence_refs
 
@@ -764,7 +766,7 @@ text_equals
 
 ###### value
 
-Vae Victis
+Projeto Aurora
 
 ###### evidence_refs
 
@@ -782,7 +784,7 @@ text_equals
 
 ###### value
 
-Vae Victis
+Projeto Aurora
 
 ###### evidence_refs
 
@@ -1000,7 +1002,7 @@ text_equals
 
 ###### value
 
-Vae Victis
+Projeto Aurora
 
 ###### evidence_refs
 
@@ -1018,7 +1020,7 @@ text_equals
 
 ###### value
 
-Vae Victis
+Projeto Aurora
 
 ###### evidence_refs
 
@@ -1236,7 +1238,7 @@ text_equals
 
 ###### value
 
-Vae Victis
+Projeto Aurora
 
 ###### evidence_refs
 
@@ -1254,7 +1256,7 @@ text_equals
 
 ###### value
 
-Vae Victis
+Projeto Aurora
 
 ###### evidence_refs
 
@@ -1494,7 +1496,7 @@ text_equals
 
 ###### value
 
-Vae Victis
+Projeto Aurora
 
 ###### evidence_refs
 
@@ -1512,7 +1514,7 @@ text_equals
 
 ###### value
 
-Vae Victis
+Projeto Aurora
 
 ###### evidence_refs
 
@@ -1648,7 +1650,7 @@ text_equals
 
 ###### value
 
-Vae Victis
+Projeto Aurora
 
 ###### evidence_refs
 
@@ -1666,7 +1668,7 @@ text_equals
 
 ###### value
 
-Vae Victis
+Projeto Aurora
 
 ###### evidence_refs
 
@@ -1776,11 +1778,11 @@ None
 
 ##### q1
 
-Vae Victis
+Projeto Aurora
 
 ##### q2
 
-Vae Victis
+Projeto Aurora
 
 ##### q4
 
@@ -1796,11 +1798,11 @@ document clarification only; do not generate images
 
 ##### actual_ui_message
 
-Ideia central: Vae Victis. Texto obrigatrio exato: Vae Victis. Composiço: D — Composiço dinmica. Os demais pontos ainda esto em aberto. Esta conversa serve somente para documentar o fluxo de esclarecimento: no gere imagens. Faça apenas as prximas perguntas e apresente as opçes relevantes antes de qualquer geraço.
+[Entrada particular omitida na cópia pública; os valores de exemplo foram substituídos editorialmente. Não é uma mensagem observada na interface.]
 
 ##### note
 
-Native typeText lost some diacritics; this records actual UI message rather than idealized text.
+Editorially sanitized public derivative: the submitted message is omitted; grouped answer values use a fictional title. The historic diacritic-loss observation remains documented without its private input.
 
 ### global_answer_option
 
@@ -1812,7 +1814,7 @@ Nas escolhas visuais, você pode indicar uma preferência ou escrever “decida 
 
 ##### id
 
-vae-victis-dynamic
+projeto-aurora-dynamic
 
 ##### conditions
 
@@ -1828,7 +1830,7 @@ text_equals
 
 ###### value
 
-Vae Victis
+Projeto Aurora
 
 ###### evidence_refs
 
@@ -1846,7 +1848,7 @@ text_equals
 
 ###### value
 
-Vae Victis
+Projeto Aurora
 
 ###### evidence_refs
 
@@ -1958,7 +1960,7 @@ bq6
 
 ##### observed_transition
 
-Observed follow-up after q1=Vae Victis; q2=Vae Victis; q4=D — Composição dinâmica; other_fields=em aberto; generation_prohibited=true. Only this response observed; no branch answer submitted; no downstream generation explored.
+Historical follow-up structure observed after private q1/q2 inputs (omitted), q4=D — Composição dinâmica, other_fields=em aberto and generation_prohibited=true. Projeto Aurora is a fictional editorial substitute for the public q1/q2 labels, not an observed UI input. No branch answer was submitted and no downstream generation was explored.
 
 ##### evidence_refs
 
@@ -1980,7 +1982,7 @@ accessibility
 
 ##### reference
 
-https://chatgpt.com/c/6ad71145-81ac-83e9-ba9d-2f35a339d784
+urn:image-production:private-conversation:01
 
 ##### description
 
@@ -1998,11 +2000,11 @@ action_record
 
 ##### reference
 
-https://chatgpt.com/c/6ad71145-81ac-83e9-ba9d-2f35a339d784
+urn:image-production:private-conversation:01
 
 ##### description
 
-Submitted clarification message; actual_ui_message preserves diacritics lost by native typeText.
+Historical submitted clarification; public actual_ui_message is an editorial omission marker, not the captured input.
 
 #### 3
 
@@ -2016,11 +2018,11 @@ accessibility
 
 ##### reference
 
-https://chatgpt.com/c/6ad71145-81ac-83e9-ba9d-2f35a339d784
+urn:image-production:private-conversation:01
 
 ##### description
 
-Six-question Vae Victis follow-up transcribed through CUA; repeated whitespace normalized.
+Six-question historical follow-up transcribed through CUA; public title labels are fictional editorial substitutions, not observed UI inputs. Repeated whitespace normalized.
 
 ## limitations
 
@@ -2058,7 +2060,7 @@ Question order and option sets can be contextual.
 
 #### basis
 
-Observed Vae Victis/D response differs from initial response and user-provided example
+Historical dynamic-composition response differs from the initial response and owner-provided example; the public title label is editorial fiction.
 
 #### confidence
 
@@ -2080,13 +2082,13 @@ Only this response observed; no branch answer submitted; no downstream generatio
 
 ### observed_branch_ids
 
-vae-victis-dynamic
+projeto-aurora-dynamic
 
 ### unexplored_conditions
 
 Other initial composition branches A/B/C
 
-Downstream branches from the Vae Victis follow-up options
+Downstream branches from the historical dynamic-composition follow-up; the public title label is a fictional substitute
 
 All possible question/option sets across sessions
 
@@ -2096,21 +2098,21 @@ Historical 56-card prompt snapshot
 
 ### normalization
 
-Visible accessibility text transcribed with repeated whitespace normalized; original response wording retained. Not an export of hidden page state.
+Public sanitized derivative of the 2026-10-20 CUA capture. Generic questions/options remain captured wording; owner-specific title and submitted message were editorially replaced. Projeto Aurora is a fictional public example, not an observed UI input. Private conversation URLs are local evidence URNs.
 
 ### user_example_status
 
-The user provided this example before the UI traversal. The Vae Victis/dynamic path was subsequently observed in this conversation only; it is not universal. The actual UI message, including lost diacritics, remains in observed.answers_submitted.
+The owner supplied an example before the limited UI traversal; the public derivative substitutes a fictional title and omits the submitted message. Original capture remains private. This does not establish universal branch behavior.
 
 ## user_provided_example
 
 ### central_message
 
-Vae Victis
+Projeto Aurora
 
 ### exact_text
 
-Vae Victis
+Projeto Aurora
 
 ### composition
 

@@ -4,7 +4,7 @@ Inventário atual salvo: 56 cards (16 Modelos e 40 Em alta). Capturas aceitas: 5
 
 Fontes: [inventário e AX](ui-modal-source.json), [Modelos](modelos-modal.json), [Em alta extraído](em-alta-modal.json), [cobertura estruturada](coverage.json) e [Cartaz](cartaz.json). Capturas vazias ou com heading divergente são rejeitadas; Esboço é a exceção explícita porque abre “Editor de esboços”. Modelos não fornece AX bruto nesta fonte, logo não permite rever independentemente seus headings.
 
-Cartaz: duas rodadas de resposta, 12 perguntas registradas. Somente o caminho Vae Victis/composição dinâmica foi percorrido. Não há cobertura universal, nem geração demonstrada por este inventário.
+Cartaz: duas rodadas de resposta, 12 perguntas registradas. Somente um caminho com composição dinâmica foi percorrido; Projeto Aurora é um título fictício substituído editorialmente, não a entrada histórica. Não há cobertura universal, nem geração demonstrada por este inventário.
 
 Prompts com 500 caracteres ou mais recebem alerta de possível limite de texto da UI; o texto visível permanece exato, sem completar finais. A afirmação original de completude em Modelos é preservada separadamente. Uma captura renderizada com delimitadores verificados supera a ressalva do limite AX; o texto AX anterior é preservado em Modelos. Infográfico foi verificado por esse caminho. Esboço não fornece prompt modal: a captura mostra ferramentas de desenho, espessura, cor e “Anexar esboço” desabilitado.
 

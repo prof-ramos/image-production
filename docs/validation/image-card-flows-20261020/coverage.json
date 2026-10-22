@@ -22,7 +22,7 @@
     "questions": 12,
     "source": "cartaz.json",
     "branch_coverage_universal": false,
-    "limitation": "Only captured initial response and Vae Victis/dynamic follow-up; no downstream answers or generation established."
+    "limitation": "Only initial response and historical dynamic-composition follow-up were captured; Projeto Aurora is a fictional editorial substitute, not an observed input. No downstream answers or generation established."
   },
   "cards": [
     {
