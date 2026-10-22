@@ -19,7 +19,7 @@ Em 2026-10-20 o usuário aprovou esta wiki em `docs/wiki/` e OptMem como índice
 
 - [Guia do desenvolvedor](../guia-do-desenvolvedor.md) — configuração, estrutura, desenvolvimento, testes e diagnóstico.
 
-- [CI e testes CLI](ci-testes.md) — workflow, cobertura e limites da verificação local.
+- [CI e testes CLI](ci-testes.md) — workflow, cobertura e limites da verificação local; refatoração de reservas e revisões validada em 22/10/2026.
 
 - [Configuração de skills de engenharia](skills-engenharia.md) — GitHub Issues, rótulos e documentação de domínio.
 

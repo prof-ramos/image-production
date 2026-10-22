@@ -1,5 +1,19 @@
 # CI e testes CLI
 
+## Refatoração local de reservas e revisões — 22/10/2026
+
+Sobre `prof-ramos/image-production@2dc1385767cf49e6cc5be37b4435906aa7913cb7`
+mais alterações locais sem commit, dois subagentes concentraram o histórico de
+tentativas e a política de revisão no helper existente. A revisão cruzada apontou
+uma mudança na precedência de erros de candidato inválido; o coordenador a
+corrigiu e acrescentou regressão. Os 92 testes passaram localmente em Python
+3.10 e 3.13 no macOS ARM64, e o build local passou. São dez testes adicionais;
+nenhuma nova dependência. Fonte: [registro da refatoração](../refactor-log.md#aprofundamento-de-reservas-e-revisão--22102026).
+
+Essa validação cobre o checkout modificado, não CI hospedado nem publicação.
+O pacote local foi reconstruído; o cache instalado não foi alterado. Comandos,
+formato persistido e política conservadora de tentativas foram preservados.
+
 Em 2026-10-20 o usuário aprovou implementar CI, ampliar testes dos scripts e
 reduzir o AGENTS.md. Em
 `prof-ramos/image-production@b91f62ebea02800b52778366c8b5ff56ce39f3f4` foram adicionados
