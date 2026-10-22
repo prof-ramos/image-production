@@ -15,11 +15,11 @@ Em 2026-10-20 o usuário aprovou esta wiki em `docs/wiki/` e OptMem como índice
 
 - [Integração à main](execucao-main.md) — autorização, checkpoints e bloqueios de publicação/revisão.
 
-- [Coordenação do projeto](coordenacao.md) — papel chief_of_staff, delegação proporcional e limites de ativação.
+- [Coordenação do projeto](coordenacao.md) — papel chief_of_staff, delegação proporcional, limites de ativação e retrospectiva da refatoração de 22/10/2026.
 
 - [Guia do desenvolvedor](../guia-do-desenvolvedor.md) — configuração, estrutura, desenvolvimento, testes e diagnóstico.
 
-- [CI e testes CLI](ci-testes.md) — workflow, cobertura e limites da verificação local.
+- [CI e testes CLI](ci-testes.md) — workflow, cobertura e limites da verificação local; refatoração de reservas e revisões validada em 22/10/2026.
 
 - [Configuração de skills de engenharia](skills-engenharia.md) — GitHub Issues, rótulos e documentação de domínio.
 

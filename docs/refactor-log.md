@@ -73,3 +73,36 @@ Outro corte seria pacote, adaptadores só para tirar o `Namespace`, ou uma máqu
 - `JSONDecodeError` ainda é `ValueError`; a mensagem do decoder pode citar posição, não o caminho.
 - Homologação visual P1 do issue #2 segue aberta. Halo continua `needs_revision`.
 - Merge não foi feito.
+
+## Aprofundamento de reservas e revisão — 22/10/2026
+
+Base: `prof-ramos/image-production@2dc1385767cf49e6cc5be37b4435906aa7913cb7`
+mais alterações locais ainda sem commit. Dois subagentes implementaram trechos
+delimitados do helper e fizeram revisão cruzada; o coordenador integrou os ajustes.
+
+Em 22/10/2026, a reaplicação dos hunks sobre
+`prof-ramos/image-production@f4862e59bbdf12eff6fd10c0aa57185f49729fbf` gerou
+`ec142f8dea70889d6edf349a92e2919e0b25575e`. Essa base supera `2dc1385` para
+a entrega preparada. Os 98 testes passaram em Python 3.10 e 3.13; resultados
+e limites estão na [memória de CI e testes](wiki/ci-testes.md).
+
+- `AssetReservations` concentra continuidade, limite, reserva, consumo e
+  conferência da linhagem. Os comandos deixam de manipular o ledger diretamente;
+  a leitura validada fica privada. Reservas persistidas não são devolvidas quando
+  uma gravação posterior falha.
+- `reviewed_manifest` concentra a transição pura de revisão: migração histórica,
+  substituição por papel, histórico e aprovação. Recebe a data do chamador e
+  devolve uma cópia, preservando entradas e campos adicionais.
+- `checked_candidate_reviews` aplica a mesma validação aos pareceres persistidos
+  e à substituição proposta. `review_candidate` mantém a rejeição de nomes ou
+  candidatos inválidos antes da leitura do arquivo de parecer, conforme a ordem
+  anterior; essa precedência foi corrigida após a revisão cruzada.
+- O helper continua em um arquivo, sem novas dependências, mudança de comandos,
+  formato persistido ou política de tentativas. Permanecem os limites de um
+  escritor e de ausência de transação entre vários arquivos.
+
+Os testes adicionais ficam em `tests/test_lineage_lifecycle.py` e
+`tests/test_review_transitions.py`: falhas de persistência pelo despacho CLI,
+consumo conservador, substituição de parecer, migração de múltiplas variantes,
+imutabilidade de entradas e precedência de erros. Resultados de execução estão
+na [memória de CI e testes](wiki/ci-testes.md).

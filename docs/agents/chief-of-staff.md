@@ -10,11 +10,17 @@ A definição reutilizável está em
 
 - Mantenha um plano curto com resultados esperados, responsáveis, dependências,
   evidências e bloqueios. Atualize-o quando uma descoberta mudar a próxima ação.
+- Antes de delegar alterações, registre HEAD, referência remota após `fetch` e
+  alterações locais. Reconcilie divergências com a memória e use um worktree
+  isolado quando necessário para preservar trabalho anterior.
 - Delegue execução e revisão em tarefas delimitadas, com propriedade de arquivos
   e ponteiros para requisitos, código e decisões. Avise que outros agentes podem
   editar o checkout; preserve seu trabalho. Use até dois workers simultâneos,
   respeitando limites menores do host. Workers devolvem resultados ao principal,
   sem criar descendentes.
+- Para tarefas que alterem o mesmo arquivo, atribua um único escritor ou aplique
+  as mudanças sequencialmente. Outros workers podem analisar, revisar e propor
+  patches em paralelo.
 - Resolva decisões técnicas triviais diretamente; concentre a delegação em
   tarefas concretas que se beneficiem de contexto próprio ou revisão independente.
 - O principal integra resultados, verifica artefatos e mantém diálogo com o

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Offline run bookkeeping and raster inspection; never generates images."""
 import argparse
+from copy import deepcopy
 import hashlib
 import json
 import os
@@ -196,79 +197,113 @@ def checked_asset_keys(keys, variants):
     return keys
 
 
-def checked_lineage(root, key):
-    ledger = read_json(lineage_path(root, key))
-    if (not isinstance(ledger, dict) or ledger.get('asset_key') != key
-            or not isinstance(ledger.get('attempts'), list) or not 1 <= len(ledger['attempts']) <= 3):
-        raise ValueError('Malformed asset lineage')
-    seen = set()
-    for index, entry in enumerate(ledger['attempts']):
-        if (not isinstance(entry, dict) or not isinstance(entry.get('run_id'), str)
-                or entry['run_id'] in seen or type(entry.get('ordinal')) is not int or entry['ordinal'] != index
-                or type(entry.get('collected')) is not bool):
+class AssetReservations:
+    """Root-owned attempt budget; disk failures deliberately never refund it.
+
+    Commands select/check before inspecting a candidate, then consume before
+    writing its files. Ledger details and continuation rules stay here.
+    """
+
+    def __init__(self, root):
+        self.root = root
+
+    def _read(self, key):
+        ledger = read_json(lineage_path(self.root, key))
+        if (not isinstance(ledger, dict) or ledger.get('asset_key') != key
+                or not isinstance(ledger.get('attempts'), list) or not 1 <= len(ledger['attempts']) <= 3):
             raise ValueError('Malformed asset lineage')
-        seen.add(entry['run_id'])
-    return ledger
+        seen = set()
+        for index, entry in enumerate(ledger['attempts']):
+            if (not isinstance(entry, dict) or not isinstance(entry.get('run_id'), str)
+                    or entry['run_id'] in seen or type(entry.get('ordinal')) is not int or entry['ordinal'] != index
+                    or type(entry.get('collected')) is not bool):
+                raise ValueError('Malformed asset lineage')
+            seen.add(entry['run_id'])
+        return ledger
 
+    def reserve(self, variants, supplied=None, continuation=None):
+        root = self.root
+        previous = None
+        if continuation:
+            previous_run, previous = load(continuation)
+            if previous_run.parent != root:
+                raise ValueError('Continuation must use the same output root')
+            verify_manifest(previous_run, previous)
+            if previous.get('attempt_policy') != ATTEMPT_POLICY:
+                raise ValueError('Legacy run has no stable asset lineage; audit its historical attempts before migration')
+            inherited = [asset['asset_key'] for asset in previous['assets']]
+            keys = checked_asset_keys(supplied if supplied is not None else inherited, variants)
+            if any(key not in inherited for key in keys):
+                raise ValueError('Continuation can only select existing asset keys; do not rename them')
+        else:
+            keys = checked_asset_keys(supplied, variants)
+        root.mkdir(parents=True, exist_ok=True)
+        ledgers = []
+        for key in keys:
+            path = lineage_path(root, key)
+            if previous is None:
+                if path.exists():
+                    raise ValueError('Asset key already exists; use --continue-from to retain correction history')
+                ledger = {'asset_key': key, 'attempts': []}
+            else:
+                ledger = self._read(key)
+                if ledger['attempts'][-1]['run_id'] != previous['run_id']:
+                    raise ValueError('Continue from the latest attempt, not an older run')
+                if len(ledger['attempts']) >= 3:
+                    raise ValueError('Asset correction limit reached: initial attempt plus two corrections')
+            ledgers.append(ledger)
+        run_id = str(uuid.uuid4())
+        assets = [{'asset_key': key, 'attempt': len(ledger['attempts'])}
+                  for key, ledger in zip(keys, ledgers)]
+        # Reserve before returning permission to generate; failures never refund attempts.
+        inside(root, '.lineages').mkdir(mode=0o700, exist_ok=True)
+        for ledger in ledgers:
+            ledger['attempts'].append({'run_id': run_id, 'ordinal': len(ledger['attempts']),
+                                       'collected': False, 'reserved_at': now()})
+            atomic_json(lineage_path(root, ledger['asset_key']), ledger)
+        return run_id, assets
 
-def verify_reservations(run, manifest):
-    if manifest.get('attempt_policy') != ATTEMPT_POLICY:
-        return
-    for asset in manifest['assets']:
-        ledger = checked_lineage(run.parent, asset['asset_key'])
-        reservation = next((entry for entry in ledger['attempts']
-                            if entry['run_id'] == manifest['run_id']), None)
-        if reservation is None or reservation['ordinal'] != asset['attempt']:
-            raise ValueError('Missing or inconsistent asset reservation; preserve the output root lineage')
-        outputs = [item for item in manifest['outputs'] if item['asset_key'] == asset['asset_key']]
-        if outputs and (not reservation['collected'] or reservation.get('sha256') != outputs[0]['metadata']['sha256']):
-            raise ValueError('Asset reservation does not match collected candidate')
+    def verify(self, manifest):
+        if manifest.get('attempt_policy') != ATTEMPT_POLICY:
+            return
+        for asset in manifest['assets']:
+            ledger = self._read(asset['asset_key'])
+            reservation = next((entry for entry in ledger['attempts']
+                                if entry['run_id'] == manifest['run_id']), None)
+            if reservation is None or reservation['ordinal'] != asset['attempt']:
+                raise ValueError('Missing or inconsistent asset reservation; preserve the output root lineage')
+            outputs = [item for item in manifest['outputs'] if item['asset_key'] == asset['asset_key']]
+            if outputs and (not reservation['collected'] or reservation.get('sha256') != outputs[0]['metadata']['sha256']):
+                raise ValueError('Asset reservation does not match collected candidate')
+
+    def _uncollected(self, manifest, key):
+        if manifest.get('attempt_policy') != ATTEMPT_POLICY:
+            raise ValueError('Legacy collection requires audited migration to a stable asset lineage')
+        if key is None and len(manifest['assets']) == 1:
+            key = manifest['assets'][0]['asset_key']
+        if key not in [asset['asset_key'] for asset in manifest['assets']]:
+            raise ValueError('Select a reserved --asset-key for this run')
+        ledger = self._read(key)
+        reservation = next(entry for entry in ledger['attempts'] if entry['run_id'] == manifest['run_id'])
+        if reservation['collected']:
+            raise ValueError('Asset reservation already collected; prepare a continuation before another generation')
+        return key, ledger, reservation
+
+    def select(self, manifest, key=None):
+        return self._uncollected(manifest, key)[0]
+
+    def consume(self, manifest, key, candidate_sha256):
+        key, ledger, reservation = self._uncollected(manifest, key)
+        reservation.update(collected=True, sha256=candidate_sha256)
+        atomic_json(lineage_path(self.root, key), ledger)
 
 
 def prepare(args):
     b = read_json(args.brief)
     refs = validate_brief(b)
     root = safe_path(args.root)
-    continuation = getattr(args, 'continue_from', None)
-    previous = None
-    if continuation:
-        previous_run, previous = load(continuation)
-        if previous_run.parent != root:
-            raise ValueError('Continuation must use the same output root')
-        verify_manifest(previous_run, previous)
-        if previous.get('attempt_policy') != ATTEMPT_POLICY:
-            raise ValueError('Legacy run has no stable asset lineage; audit its historical attempts before migration')
-        inherited = [asset['asset_key'] for asset in previous['assets']]
-        supplied = getattr(args, 'asset_key', None)
-        keys = checked_asset_keys(supplied if supplied is not None else inherited, b['variants'])
-        if any(key not in inherited for key in keys):
-            raise ValueError('Continuation can only select existing asset keys; do not rename them')
-    else:
-        keys = checked_asset_keys(getattr(args, 'asset_key', None), b['variants'])
-    root.mkdir(parents=True, exist_ok=True)
-    ledgers = []
-    for key in keys:
-        path = lineage_path(root, key)
-        if previous is None:
-            if path.exists():
-                raise ValueError('Asset key already exists; use --continue-from to retain correction history')
-            ledger = {'asset_key': key, 'attempts': []}
-        else:
-            ledger = checked_lineage(root, key)
-            if ledger['attempts'][-1]['run_id'] != previous['run_id']:
-                raise ValueError('Continue from the latest attempt, not an older run')
-            if len(ledger['attempts']) >= 3:
-                raise ValueError('Asset correction limit reached: initial attempt plus two corrections')
-        ledgers.append(ledger)
-    run_id = str(uuid.uuid4())
-    assets = [{'asset_key': key, 'attempt': len(ledger['attempts'])}
-              for key, ledger in zip(keys, ledgers)]
-    # Reserve before returning permission to generate; failures never refund attempts.
-    inside(root, '.lineages').mkdir(mode=0o700, exist_ok=True)
-    for ledger in ledgers:
-        ledger['attempts'].append({'run_id': run_id, 'ordinal': len(ledger['attempts']),
-                                   'collected': False, 'reserved_at': now()})
-        atomic_json(lineage_path(root, ledger['asset_key']), ledger)
+    run_id, assets = AssetReservations(root).reserve(
+        b['variants'], getattr(args, 'asset_key', None), getattr(args, 'continue_from', None))
     run = root / run_id
     run.mkdir()
     for folder in ('inputs', 'work', 'final'):
@@ -348,23 +383,7 @@ def validate_manifest(m):
             if key not in [asset['asset_key'] for asset in assets] or key in output_assets:
                 raise ValueError('Each asset reservation permits one collected candidate per run')
             output_assets.add(key)
-        if policy == REVIEW_POLICY:
-            reports = item.get('reviews', {})
-            if not isinstance(reports, dict) or set(reports) - REVIEW_ROLES:
-                raise ValueError('Malformed independent reviews')
-            for role, report in reports.items():
-                checked_role_review(report, required, role, item['metadata'].get('sha256'))
-            if len(reports) == 2 and reports['technical']['reviewer'] == reports['visual']['reviewer']:
-                raise ValueError('Independent review roles require distinct reviewers')
-            if (reports and item['review'] is None) or (item['review'] is not None and item['review'] not in reports.values()):
-                raise ValueError('Latest review must match a persisted role report')
-        history = item.get('review_history', [])
-        if not isinstance(history, list):
-            raise ValueError('Malformed review history')
-        if item['review'] is not None:
-            checked_review(item['review'], required)
-        for stored in history:
-            checked_review(stored, required)
+        checked_candidate_reviews(item, required, policy)
     if m['state'] == 'approved' and approval_state(outputs, brief['variants'], policy) != 'approved':
         raise ValueError('Approved state requires all variants and passing reviews')
     return m
@@ -376,7 +395,7 @@ def load(run_value):
 
 
 def verify_manifest(run, m):
-    verify_reservations(run, m)
+    AssetReservations(run.parent).verify(m)
     for item in m['inputs']:
         if digest(inside(run, item['path']).read_bytes()) != item['sha256']:
             raise ValueError('Input snapshot hash mismatch')
@@ -390,17 +409,8 @@ def verify_manifest(run, m):
 def collect(args):
     run, m = load(args.run)
     verify_manifest(run, m)
-    if m.get('attempt_policy') != ATTEMPT_POLICY:
-        raise ValueError('Legacy collection requires audited migration to a stable asset lineage')
-    key = getattr(args, 'asset_key', None)
-    if key is None and len(m['assets']) == 1:
-        key = m['assets'][0]['asset_key']
-    if key not in [asset['asset_key'] for asset in m['assets']]:
-        raise ValueError('Select a reserved --asset-key for this run')
-    ledger = checked_lineage(run.parent, key)
-    reservation = next(entry for entry in ledger['attempts'] if entry['run_id'] == m['run_id'])
-    if reservation['collected']:
-        raise ValueError('Asset reservation already collected; prepare a continuation before another generation')
+    reservations = AssetReservations(run.parent)
+    key = reservations.select(m, getattr(args, 'asset_key', None))
     if not re.fullmatch(r'[A-Za-z0-9_-]{1,80}', args.name):
         raise ValueError('Invalid asset name')
     source = safe_path(args.source)
@@ -411,8 +421,7 @@ def collect(args):
     encoded = safe_path(args.prompt).read_bytes()
     if not encoded.decode('utf-8').strip():
         raise ValueError('Submitted prompt must not be empty')
-    reservation.update(collected=True, sha256=metadata['sha256'])
-    atomic_json(lineage_path(run.parent, key), ledger)
+    reservations.consume(m, key, metadata['sha256'])
     extension = {'PNG': '.png', 'JPEG': '.jpg', 'WEBP': '.webp'}[metadata['format']]
     # Exclusive creation preserves earlier outputs even on a name collision.
     version = 1
@@ -477,6 +486,27 @@ def checked_role_review(payload, required, role, candidate_sha256):
     return {**checked, 'role': role, 'candidate_sha256': candidate_sha256}
 
 
+def checked_candidate_reviews(item, required, policy):
+    """One policy for persisted reports and proposed review replacements."""
+    if policy == REVIEW_POLICY:
+        reports = item.get('reviews', {})
+        if not isinstance(reports, dict) or set(reports) - REVIEW_ROLES:
+            raise ValueError('Malformed independent reviews')
+        for role, report in reports.items():
+            checked_role_review(report, required, role, item['metadata'].get('sha256'))
+        if len(reports) == 2 and reports['technical']['reviewer'] == reports['visual']['reviewer']:
+            raise ValueError('Independent review roles require distinct reviewers')
+        if (reports and item['review'] is None) or (item['review'] is not None and item['review'] not in reports.values()):
+            raise ValueError('Latest review must match a persisted role report')
+    history = item.get('review_history', [])
+    if not isinstance(history, list):
+        raise ValueError('Malformed review history')
+    if item['review'] is not None:
+        checked_review(item['review'], required)
+    for stored in history:
+        checked_review(stored, required)
+
+
 def approval_state(outputs, variants, policy=REVIEW_POLICY):
     """Separate passing technical and visual reports for every current candidate."""
     if policy == 'legacy-single-review-historical':
@@ -500,18 +530,28 @@ def approval_state(outputs, variants, policy=REVIEW_POLICY):
     return 'approved' if passed and len(outputs) == variants else 'needs_revision'
 
 
-def review(args):
-    run, m = load(args.run)
-    verify_manifest(run, m)
-    if Path(args.asset).name != args.asset:
+def review_candidate(manifest, asset):
+    """Validate the requested candidate before reading a submitted report."""
+    if Path(asset).name != asset:
         raise ValueError('Review asset must be a filename')
-    item = next((x for x in m['outputs'] if x['path'] == 'final/' + args.asset), None)
+    item = next((x for x in manifest['outputs'] if x['path'] == 'final/' + asset), None)
     if item is None:
         raise ValueError('Unknown asset')
-    payload = read_json(args.review)
+    return item
+
+
+def reviewed_manifest(manifest, asset, payload, reviewed_at):
+    """Return a new review state from a validated manifest, without clock or disk I/O.
+
+    Own migration, role replacement, history and approval together. The caller
+    supplies the timestamp; accepted and rejected updates both leave inputs intact.
+    """
+    m = deepcopy(manifest)
+    item = review_candidate(m, asset)
     if not isinstance(payload, dict):
         raise ValueError('Review must be an object')
-    checked = checked_role_review(payload, applicable_criteria(m['brief'], m['inputs']),
+    required = applicable_criteria(m['brief'], m['inputs'])
+    checked = checked_role_review(deepcopy(payload), required,
                                   payload.get('role'), item['metadata']['sha256'])
     if m.get('review_policy') != REVIEW_POLICY:
         # Historical approvals remain readable, but a new review starts a new gate.
@@ -521,15 +561,21 @@ def review(args):
             output['review'], output['reviews'] = None, {}
         m['review_policy'] = REVIEW_POLICY
     reports = item.setdefault('reviews', {})
-    other = reports.get('visual' if checked['role'] == 'technical' else 'technical')
-    if other and other['reviewer'] == checked['reviewer']:
-        raise ValueError('Independent review roles require distinct reviewers')
     if item['review'] is not None:
         item.setdefault('review_history', []).append(item['review'])
-    item['review'] = {**checked, 'reviewed_at': now()}
+    item['review'] = {**checked, 'reviewed_at': reviewed_at}
     reports[checked['role']] = item['review']
+    checked_candidate_reviews(item, required, REVIEW_POLICY)
     m['state'] = approval_state(m['outputs'], m['brief']['variants'])
     m['error'] = None
+    return m
+
+
+def review(args):
+    run, m = load(args.run)
+    verify_manifest(run, m)
+    review_candidate(m, args.asset)
+    m = reviewed_manifest(m, args.asset, read_json(args.review), now())
     save(run, m)
     return {'state': m['state'], 'asset': args.asset}
 

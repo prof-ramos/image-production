@@ -33,3 +33,22 @@ carregou a camada do projeto e uma sessão nova expôs os sete nomes em agent_ty
 Isso supera os registros anteriores de descoberta ainda não verificada para as
 definições presentes nesse commit. Não comprova dispatch nem comportamento de
 produção de todos eles. Fonte: [relatório](../validation/native-seven-agents-20261020.md).
+
+## Retrospectiva da refatoração — 22/10/2026
+
+Na entrega de `prof-ramos/image-production@ec142f8dea70889d6edf349a92e2919e0b25575e`,
+a revisão cruzada detectou uma mudança na precedência de erros de revisão. O
+coordenador restaurou o comportamento anterior e acrescentou
+`test_invalid_candidate_is_rejected_before_reading_report`; a descoberta de testes
+do CI já cobre essa regressão, dispensando outra automação. Fonte:
+[registro da refatoração](../refactor-log.md#aprofundamento-de-reservas-e-revisão--22102026).
+
+A retrospectiva desta sessão identificou duas melhorias de coordenação: conferir
+HEAD, referência remota e alterações locais antes de delegar; e definir um único
+escritor ou aplicação sequencial quando tarefas compartilham um arquivo. A
+implementação inicial partiu de `2dc1385`, enquanto a memória já citava `f4862e5`;
+o preparo da entrega reaplicou somente os hunks autorizados em worktree isolado
+sobre `f4862e5`, preservando as mudanças anteriores. Uma colisão de contexto de
+patch durante a edição compartilhada motivou a segunda orientação. As regras
+foram incorporadas ao [guia de coordenação](../agents/chief-of-staff.md), sem nova
+infraestrutura nem alteração de permissões.
