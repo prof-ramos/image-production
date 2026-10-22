@@ -80,6 +80,12 @@ Base: `prof-ramos/image-production@2dc1385767cf49e6cc5be37b4435906aa7913cb7`
 mais alterações locais ainda sem commit. Dois subagentes implementaram trechos
 delimitados do helper e fizeram revisão cruzada; o coordenador integrou os ajustes.
 
+Em 22/10/2026, a reaplicação dos hunks sobre
+`prof-ramos/image-production@f4862e59bbdf12eff6fd10c0aa57185f49729fbf` gerou
+`ec142f8dea70889d6edf349a92e2919e0b25575e`. Essa base supera `2dc1385` para
+a entrega preparada. Os 98 testes passaram em Python 3.10 e 3.13; resultados
+e limites estão na [memória de CI e testes](wiki/ci-testes.md).
+
 - `AssetReservations` concentra continuidade, limite, reserva, consumo e
   conferência da linhagem. Os comandos deixam de manipular o ledger diretamente;
   a leitura validada fica privada. Reservas persistidas não são devolvidas quando
