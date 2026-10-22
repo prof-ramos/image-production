@@ -1,14 +1,16 @@
 # Evidências dos fluxos de cards Images
 
+> Revisão editorial de privacidade — 2026-10-22: cópia pública saneada. URNs substituem conversas privadas; Projeto Aurora é um exemplo fictício e a mensagem particular foi omitida. As alterações não são novas observações de interface. Originais preservados privadamente.
+
 Em 2026-10-20, `cartaz.json` registrou uma observação limitada do card Cartaz em ChatGPT Images. [flow.schema.json](flow.schema.json) define o formato de registro; [cartaz.json](cartaz.json) preserva a captura inicial. O esquema não exige que todas as etapas já tenham sido observadas. A captura inicial foi ampliada durante a investigação; consulte seu conteúdo e limitações para saber quais etapas foram registradas.
 
 A skill REA orienta o método de distinguir observações, inferências e lacunas. A fonte desta captura é a interface nativa observada por CUA (acessibilidade e screenshot), sem estado oculto. Não foram usados ferramentas REA, CDP ou inspeção interna. Este esquema organiza evidências; sua validação não demonstra comportamento da aplicação.
 
 ## Separar o que se sabe
 
-- `observed`: somente texto, controles, perguntas, opções, respostas efetivamente enviadas e transições testemunhadas na interface. Preserve a redação literal. Registre os artefatos em `evidence` com IDs e referencie-os em `evidence_refs`.
+- `observed`: somente texto, controles, perguntas, opções, respostas efetivamente enviadas e transições testemunhadas na interface. Preserve a redação literal nas capturas privadas; na cópia pública, marque substituições editoriais e nunca as apresente como texto observado. Registre os artefatos em `evidence` com IDs e referencie-os em `evidence_refs`.
 - `inferred`: hipóteses explícitas, cada qual com `claim`, `basis` e `limitations`. Uma hipótese de ramificação não deve entrar em `observed.branches`.
-- `user_provided_example_not_yet_observed`: entrada ou exemplo fornecido pelo usuário, sem atribuir sua execução à interface. “Vae Victis” e “Dinâmico” na captura inicial pertencem a esta categoria.
+- `user_provided_example_not_yet_observed`: entrada ou exemplo fornecido pelo usuário, sem atribuir sua execução à interface. “Projeto Aurora” e “Dinâmico” na captura inicial pertencem a esta categoria.
 - `limitations`: etapas pendentes, cobertura incompleta e outras restrições. Arrays vazios de perguntas ou respostas significam ausência de captura, nunca prova de que o fluxo não pergunta nada.
 
 ## Perguntas, opções e condições
@@ -23,7 +25,7 @@ As referências de evidência precisam ser conferidas manualmente: JSON Schema v
 
 ## Normalização do caminho Cartaz
 
-[source-cartaz.md](source-cartaz.md) é uma transcrição legível derivada de `cartaz.json`, preservando texto, proveniência e lacunas. As seis perguntas iniciais e seis perguntas do seguimento estão em `observed.questions`; as últimas têm `when` vinculado à combinação efetivamente enviada. `observed.branches` liga essa combinação às próximas perguntas, sem afirmar causalidade universal. `user_provided_example` conserva a origem anterior do exemplo; `provenance.user_example_status` registra sua posterior observação limitada. A mensagem efetivamente enviada mantém os diacríticos perdidos. `inferred` preserva hipóteses e confiança; `branch_coverage.unexplored_conditions` preserva os desconhecidos.
+[source-cartaz.md](source-cartaz.md) é uma transcrição legível derivada de `cartaz.json`, preservando perguntas genéricas, proveniência e lacunas, com substituições editoriais indicadas. As seis perguntas iniciais e seis perguntas do seguimento estão em `observed.questions`; as últimas têm `when` vinculado à combinação efetivamente enviada. `observed.branches` liga essa combinação às próximas perguntas, sem afirmar causalidade universal. `user_provided_example` conserva a origem anterior do exemplo; `provenance.user_example_status` registra sua posterior observação limitada. A mensagem particular foi omitida na revisão pública de 22/10; a observação histórica de perda de diacríticos não é uma nova captura. `inferred` preserva hipóteses e confiança; `branch_coverage.unexplored_conditions` preserva os desconhecidos.
 
 ## Método de captura por clipboard — 2026-10-20
 

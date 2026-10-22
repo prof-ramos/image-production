@@ -1,7 +1,7 @@
 {
   "observed_at": "2026-10-20",
   "source_url": "https://chatgpt.com/images/",
-  "conversation_url": "https://chatgpt.com/c/6ad71145-81ac-83e9-ba9d-2f35a339d784",
+  "conversation_url": "urn:image-production:private-conversation:01",
   "method": "Native Comet UI accessibility and screenshot through CUA; no hidden state",
   "card": "Cartaz",
   "category": "Modelos",
@@ -178,7 +178,7 @@
       },
       {
         "id": "bq1",
-        "text": "Que interpretação de “Vae Victis” deve orientar o cartaz?",
+        "text": "Que interpretação de “Projeto Aurora” deve orientar o cartaz?",
         "options": [
           {
             "value": "A",
@@ -212,7 +212,7 @@
           {
             "question_id": "q1",
             "operator": "text_equals",
-            "value": "Vae Victis",
+            "value": "Projeto Aurora",
             "evidence_refs": [
               "cartaz-answer-ui"
             ]
@@ -220,7 +220,7 @@
           {
             "question_id": "q2",
             "operator": "text_equals",
-            "value": "Vae Victis",
+            "value": "Projeto Aurora",
             "evidence_refs": [
               "cartaz-answer-ui"
             ]
@@ -317,7 +317,7 @@
           {
             "question_id": "q1",
             "operator": "text_equals",
-            "value": "Vae Victis",
+            "value": "Projeto Aurora",
             "evidence_refs": [
               "cartaz-answer-ui"
             ]
@@ -325,7 +325,7 @@
           {
             "question_id": "q2",
             "operator": "text_equals",
-            "value": "Vae Victis",
+            "value": "Projeto Aurora",
             "evidence_refs": [
               "cartaz-answer-ui"
             ]
@@ -421,7 +421,7 @@
           {
             "question_id": "q1",
             "operator": "text_equals",
-            "value": "Vae Victis",
+            "value": "Projeto Aurora",
             "evidence_refs": [
               "cartaz-answer-ui"
             ]
@@ -429,7 +429,7 @@
           {
             "question_id": "q2",
             "operator": "text_equals",
-            "value": "Vae Victis",
+            "value": "Projeto Aurora",
             "evidence_refs": [
               "cartaz-answer-ui"
             ]
@@ -525,7 +525,7 @@
           {
             "question_id": "q1",
             "operator": "text_equals",
-            "value": "Vae Victis",
+            "value": "Projeto Aurora",
             "evidence_refs": [
               "cartaz-answer-ui"
             ]
@@ -533,7 +533,7 @@
           {
             "question_id": "q2",
             "operator": "text_equals",
-            "value": "Vae Victis",
+            "value": "Projeto Aurora",
             "evidence_refs": [
               "cartaz-answer-ui"
             ]
@@ -638,7 +638,7 @@
           {
             "question_id": "q1",
             "operator": "text_equals",
-            "value": "Vae Victis",
+            "value": "Projeto Aurora",
             "evidence_refs": [
               "cartaz-answer-ui"
             ]
@@ -646,7 +646,7 @@
           {
             "question_id": "q2",
             "operator": "text_equals",
-            "value": "Vae Victis",
+            "value": "Projeto Aurora",
             "evidence_refs": [
               "cartaz-answer-ui"
             ]
@@ -706,7 +706,7 @@
           {
             "question_id": "q1",
             "operator": "text_equals",
-            "value": "Vae Victis",
+            "value": "Projeto Aurora",
             "evidence_refs": [
               "cartaz-answer-ui"
             ]
@@ -714,7 +714,7 @@
           {
             "question_id": "q2",
             "operator": "text_equals",
-            "value": "Vae Victis",
+            "value": "Projeto Aurora",
             "evidence_refs": [
               "cartaz-answer-ui"
             ]
@@ -768,24 +768,24 @@
     ],
     "answers_submitted": [
       {
-        "q1": "Vae Victis",
-        "q2": "Vae Victis",
+        "q1": "Projeto Aurora",
+        "q2": "Projeto Aurora",
         "q4": "D — Composição dinâmica",
         "other_fields": "em aberto",
         "purpose": "document clarification only; do not generate images",
-        "actual_ui_message": "Ideia central: Vae Victis. Texto obrigatrio exato: Vae Victis. Composiço: D — Composiço dinmica. Os demais pontos ainda esto em aberto. Esta conversa serve somente para documentar o fluxo de esclarecimento: no gere imagens. Faça apenas as prximas perguntas e apresente as opçes relevantes antes de qualquer geraço.",
-        "note": "Native typeText lost some diacritics; this records actual UI message rather than idealized text."
+        "actual_ui_message": "[Entrada particular omitida na cópia pública; os valores de exemplo foram substituídos editorialmente. Não é uma mensagem observada na interface.]",
+        "note": "Editorially sanitized public derivative: the submitted message is omitted; grouped answer values use a fictional title. The historic diacritic-loss observation remains documented without its private input."
       }
     ],
     "global_answer_option": "Nas escolhas visuais, você pode indicar uma preferência ou escrever “decida você”.",
     "branches": [
       {
-        "id": "vae-victis-dynamic",
+        "id": "projeto-aurora-dynamic",
         "conditions": [
           {
             "question_id": "q1",
             "operator": "text_equals",
-            "value": "Vae Victis",
+            "value": "Projeto Aurora",
             "evidence_refs": [
               "cartaz-answer-ui"
             ]
@@ -793,7 +793,7 @@
           {
             "question_id": "q2",
             "operator": "text_equals",
-            "value": "Vae Victis",
+            "value": "Projeto Aurora",
             "evidence_refs": [
               "cartaz-answer-ui"
             ]
@@ -847,7 +847,7 @@
           "bq5",
           "bq6"
         ],
-        "observed_transition": "Observed follow-up after q1=Vae Victis; q2=Vae Victis; q4=D — Composição dinâmica; other_fields=em aberto; generation_prohibited=true. Only this response observed; no branch answer submitted; no downstream generation explored.",
+        "observed_transition": "Observed follow-up after q1=Projeto Aurora; q2=Projeto Aurora; q4=D — Composição dinâmica; other_fields=em aberto; generation_prohibited=true. Only this response observed; no branch answer submitted; no downstream generation explored.",
         "evidence_refs": [
           "cartaz-answer-ui",
           "cartaz-followup-ui"
@@ -858,20 +858,20 @@
       {
         "id": "cartaz-initial-ui",
         "kind": "accessibility",
-        "reference": "https://chatgpt.com/c/6ad71145-81ac-83e9-ba9d-2f35a339d784",
+        "reference": "urn:image-production:private-conversation:01",
         "description": "Initial six-question response transcribed through CUA; repeated whitespace normalized."
       },
       {
         "id": "cartaz-answer-ui",
         "kind": "action_record",
-        "reference": "https://chatgpt.com/c/6ad71145-81ac-83e9-ba9d-2f35a339d784",
-        "description": "Submitted clarification message; actual_ui_message preserves diacritics lost by native typeText."
+        "reference": "urn:image-production:private-conversation:01",
+        "description": "Historical submitted clarification; public actual_ui_message is an editorial omission marker, not the captured input."
       },
       {
         "id": "cartaz-followup-ui",
         "kind": "accessibility",
-        "reference": "https://chatgpt.com/c/6ad71145-81ac-83e9-ba9d-2f35a339d784",
-        "description": "Six-question Vae Victis follow-up transcribed through CUA; repeated whitespace normalized."
+        "reference": "urn:image-production:private-conversation:01",
+        "description": "Six-question Projeto Aurora follow-up transcribed through CUA; repeated whitespace normalized."
       }
     ]
   },
@@ -894,7 +894,7 @@
     {
       "claim": "Question order and option sets can be contextual.",
       "basis": [
-        "Observed Vae Victis/D response differs from initial response and user-provided example"
+        "Observed Projeto Aurora/D response differs from initial response and user-provided example"
       ],
       "confidence": "medium",
       "limitations": [
@@ -906,22 +906,22 @@
     "universal": false,
     "scope": "Only this response observed; no branch answer submitted; no downstream generation explored.",
     "observed_branch_ids": [
-      "vae-victis-dynamic"
+      "projeto-aurora-dynamic"
     ],
     "unexplored_conditions": [
       "Other initial composition branches A/B/C",
-      "Downstream branches from the Vae Victis follow-up options",
+      "Downstream branches from the Projeto Aurora follow-up options",
       "All possible question/option sets across sessions",
       "Historical 56-card prompt snapshot"
     ]
   },
   "provenance": {
-    "normalization": "Visible accessibility text transcribed with repeated whitespace normalized; original response wording retained. Not an export of hidden page state.",
-    "user_example_status": "The user provided this example before the UI traversal. The Vae Victis/dynamic path was subsequently observed in this conversation only; it is not universal. The actual UI message, including lost diacritics, remains in observed.answers_submitted."
+    "normalization": "Public sanitized derivative of the 2026-10-20 CUA capture. Generic questions/options remain captured wording; owner-specific title and submitted message were editorially replaced. Projeto Aurora is a fictional public example, not an observed UI input. Private conversation URLs are local evidence URNs.",
+    "user_example_status": "The owner supplied an example before the limited UI traversal; the public derivative substitutes a fictional title and omits the submitted message. Original capture remains private. This does not establish universal branch behavior."
   },
   "user_provided_example": {
-    "central_message": "Vae Victis",
-    "exact_text": "Vae Victis",
+    "central_message": "Projeto Aurora",
+    "exact_text": "Projeto Aurora",
     "composition": "Dinâmico"
   }
 }

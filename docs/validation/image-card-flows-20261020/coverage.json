@@ -22,7 +22,7 @@
     "questions": 12,
     "source": "cartaz.json",
     "branch_coverage_universal": false,
-    "limitation": "Only captured initial response and Vae Victis/dynamic follow-up; no downstream answers or generation established."
+    "limitation": "Only captured initial response and Projeto Aurora/dynamic follow-up; no downstream answers or generation established."
   },
   "cards": [
     {

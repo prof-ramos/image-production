@@ -1,0 +1,53 @@
+{
+  "revision_date": "2026-10-22",
+  "capture_date": "2026-10-20",
+  "kind": "sanitized_public_derivative",
+  "note": "Private conversation locators and owner input are withheld. Projeto Aurora is editorial fiction. Generic prompts/questions/options and limits are preserved. This current-tree correction does not remove older Git objects. Original bytes retained privately outside Git.",
+  "files": [
+    {
+      "path": "README.md",
+      "private_capture_sha256": "f2d07e11e38bc8d6ff35733c9c5370b37daabe1ad4ed23dae18467437ede2bd5",
+      "public_sha256": "96e969ef39f56f990264ad7f9192279f36d9c0d94a1ba6b6b6c382beb80d4f3a"
+    },
+    {
+      "path": "cartaz.json",
+      "private_capture_sha256": "6b89aba694f540c956eb9e0e86d3ab6d7364cfdb2f3857d6be0a4d2c8724c792",
+      "public_sha256": "5adc53bf48aaa4b998d49b7d4ac7860c6d7624e113218a293dcde02953cce45c"
+    },
+    {
+      "path": "coverage.json",
+      "private_capture_sha256": "d09ffe260b3bec642b680d00e2d18eca022068d63683b01608c3cb3d10cb41d4",
+      "public_sha256": "ea8d76088dd2da40dd1a4663ae97d23ae7b345e6636172f68a65221afb987266"
+    },
+    {
+      "path": "coverage.md",
+      "private_capture_sha256": "2a888ff701fbb7fa7885175ee7d12d401c041a73683506bb3ba8a4140d28505c",
+      "public_sha256": "5dd5d834a516e6de23513e90672328e88f5f9ec10f9761d36f987e256045bd74"
+    },
+    {
+      "path": "em-alta-modal.json",
+      "private_capture_sha256": "bad8a71758cbfb0585b00d8d402779fcf2ab7a68bd302141d8018de86bd76bcd",
+      "public_sha256": "86c95df3fff8e04a9bf88945f653aa580e7d747bf869e47fc2856f7b41ec9284"
+    },
+    {
+      "path": "em-alta-rendered-source.txt",
+      "private_capture_sha256": "0622c825e40363b499480ac3a497e87094324fd343db1c95438935817b97d16f",
+      "public_sha256": "b4161027d867bb1ae1e4e0cf2dcaf7de146a1180de7aa6db7c4c41b99e79e1d0"
+    },
+    {
+      "path": "probe-inline-options.json",
+      "private_capture_sha256": "39a1d910f9ae9e2a890a04f3c094440bbdb8daa37e92502f6174e8c84dc586ef",
+      "public_sha256": "b634776fd21c662ad35e7b6fa6e7b276dd76cf899781c0d11eafc4ee87b73d51"
+    },
+    {
+      "path": "probes.json",
+      "private_capture_sha256": "502ef3da4235eac3dadc2ae13edfbb62f13367df50db4b189d20a2c42704cff7",
+      "public_sha256": "b20af811529b0f3e6a1ca97098058faa0e4be684afa2dd414412df73d960d6fc"
+    },
+    {
+      "path": "source-cartaz.md",
+      "private_capture_sha256": "13f48bd5acbe8b15b11ad2a2ee74f6f7f557d98cdc0e48c1474bd82d21e90d8b",
+      "public_sha256": "b220d50deb5006839c986ed54cae2217109b234dd26d70906fe2ecd16cabf7f0"
+    }
+  ]
+}
