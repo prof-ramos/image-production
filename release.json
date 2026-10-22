@@ -1,6 +1,6 @@
 {
   "files": {
-    "agent-bundle/README.md": "325b01c663f5c340512b195e9425143a41a575466c0e4dc51e22e8f306148ff3",
+    "agent-bundle/README.md": "cc0ae9d6a132aedc845b3229acd0d54368e6064e91518495350345becf7387bf",
     "agent-bundle/agents/chief_of_staff.toml": "b1e9907f3577a71a189365cd8ffbaee3e58b6ad69db6f9d1fabdd4d847796ef7",
     "agent-bundle/agents/image_coordinator.toml": "21d8a1198cadd8968c7780ffc0a5a28ed8c5f1f35cc85ab957d2886b7892fb9f",
     "agent-bundle/agents/image_director.toml": "5b6734b9552adc24d7e8c2ff28a0a045ac6246b809866a17e389fe3108b4357f",
@@ -9,8 +9,8 @@
     "agent-bundle/agents/image_technical.toml": "264564ab11d9f5bd3be7c872dacf5b8ac67274d95f2875057e3a1c3fc4677112",
     "agent-bundle/agents/image_visual.toml": "4faf7ffb22a55648cdd74346579cdcd0b524b8f02e7f51d26f30853c5cf0ec9a",
     "agent-bundle/config.example.toml": "1e06bfd210e266c34e46aa0c116829b9bbc6e837b23fa4e7343668c59ecf0103",
-    "plugins/image-production/.codex-plugin/plugin.json": "f1c3c1006a91855bf001d03ab5ca011719f2283fb53d3ce72c87cdfdf0e7520b",
-    "plugins/image-production/plugin.json": "07e120e8662db22fd16136d11e8238da7aa5eaeee7a2abff90a3eacc081ab55b",
+    "plugins/image-production/.codex-plugin/plugin.json": "c0606c527edc5e4c8025acd5020612f796b8a602afac3866fd9b276abbd3f9a9",
+    "plugins/image-production/plugin.json": "85ef6a7974f71e90cc1ca88b1f5b75738450d5112c204a0babb7399f4bc73490",
     "plugins/image-production/skills/image-production/SKILL.md": "6ba83e0077d4e8e427b26a648ee8ed9e61caa2785caf807f644dcd10b47eb5a9",
     "plugins/image-production/skills/image-production/references/agent-evals.md": "a1bae3ba3a5670f54501cb654fbfaa41ce2502a53ea46d53ceb95a8c052b9501",
     "plugins/image-production/skills/image-production/references/agent-playbook.md": "41e939a51771969fa281bd5cd65a83f8c8bba7b7e7e75e9520f869500c939806",
@@ -27,6 +27,6 @@
   },
   "repository": "prof-ramos/image-production",
   "schema_version": 1,
-  "source_sha": "ea521ff29c6f0555c4fca7389c77b0ea24563825",
-  "version": "0.1.6-main.gea521ff29c6f0555c4fca7389c77b0ea24563825"
+  "source_sha": "f4862e59bbdf12eff6fd10c0aa57185f49729fbf",
+  "version": "0.1.6-main.gf4862e59bbdf12eff6fd10c0aa57185f49729fbf"
 }
