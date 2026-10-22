@@ -10,7 +10,7 @@ A skill REA orienta o método de distinguir observações, inferências e lacuna
 
 - `observed`: somente texto, controles, perguntas, opções, respostas efetivamente enviadas e transições testemunhadas na interface. Preserve a redação literal nas capturas privadas; na cópia pública, marque substituições editoriais e nunca as apresente como texto observado. Registre os artefatos em `evidence` com IDs e referencie-os em `evidence_refs`.
 - `inferred`: hipóteses explícitas, cada qual com `claim`, `basis` e `limitations`. Uma hipótese de ramificação não deve entrar em `observed.branches`.
-- `user_provided_example_not_yet_observed`: entrada ou exemplo fornecido pelo usuário, sem atribuir sua execução à interface. “Projeto Aurora” e “Dinâmico” na captura inicial pertencem a esta categoria.
+- `user_provided_example_not_yet_observed`: entrada ou exemplo fornecido pelo usuário, sem atribuir sua execução à interface. A referência ao exemplo particular e “Dinâmico” na captura inicial pertencem a esta categoria; Projeto Aurora é apenas seu rótulo fictício na cópia pública.
 - `limitations`: etapas pendentes, cobertura incompleta e outras restrições. Arrays vazios de perguntas ou respostas significam ausência de captura, nunca prova de que o fluxo não pergunta nada.
 
 ## Perguntas, opções e condições

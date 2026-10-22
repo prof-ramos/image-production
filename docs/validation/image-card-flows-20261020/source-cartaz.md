@@ -1960,7 +1960,7 @@ bq6
 
 ##### observed_transition
 
-Observed follow-up after q1=Projeto Aurora; q2=Projeto Aurora; q4=D — Composição dinâmica; other_fields=em aberto; generation_prohibited=true. Only this response observed; no branch answer submitted; no downstream generation explored.
+Historical follow-up structure observed after private q1/q2 inputs (omitted), q4=D — Composição dinâmica, other_fields=em aberto and generation_prohibited=true. Projeto Aurora is a fictional editorial substitute for the public q1/q2 labels, not an observed UI input. No branch answer was submitted and no downstream generation was explored.
 
 ##### evidence_refs
 
@@ -2022,7 +2022,7 @@ urn:image-production:private-conversation:01
 
 ##### description
 
-Six-question Projeto Aurora follow-up transcribed through CUA; repeated whitespace normalized.
+Six-question historical follow-up transcribed through CUA; public title labels are fictional editorial substitutions, not observed UI inputs. Repeated whitespace normalized.
 
 ## limitations
 
@@ -2060,7 +2060,7 @@ Question order and option sets can be contextual.
 
 #### basis
 
-Observed Projeto Aurora/D response differs from initial response and user-provided example
+Historical dynamic-composition response differs from the initial response and owner-provided example; the public title label is editorial fiction.
 
 #### confidence
 
@@ -2088,7 +2088,7 @@ projeto-aurora-dynamic
 
 Other initial composition branches A/B/C
 
-Downstream branches from the Projeto Aurora follow-up options
+Downstream branches from the historical dynamic-composition follow-up; the public title label is a fictional substitute
 
 All possible question/option sets across sessions
 

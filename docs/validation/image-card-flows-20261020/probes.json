@@ -9,7 +9,8 @@
       "response_rounds": 2,
       "source": {
         "file": "cartaz.json",
-        "readable_file": "source-cartaz.md"
+        "readable_file": "source-cartaz.md",
+        "normalization": "Public sanitized derivative of the historical Cartaz capture. Projeto Aurora is a fictional editorial label, not an observed UI input; questions retain generic wording and explicit branch limitations."
       },
       "questions": [
         {

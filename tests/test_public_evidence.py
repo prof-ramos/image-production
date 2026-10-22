@@ -53,6 +53,12 @@ class PublicEvidenceTests(unittest.TestCase):
         self.assertEqual(data["branch_coverage"]["observed_branch_ids"],
                          ["projeto-aurora-dynamic"])
         transcript = (EVIDENCE / "source-cartaz.md").read_text()
+        transition = data["observed"]["branches"][0]["observed_transition"]
+        self.assertIn("fictional editorial substitute", transition)
+        self.assertIn("not an observed UI input", transition)
+        self.assertIn(transition, transcript)
+        for evidence in data["observed"]["evidence"]:
+            self.assertIn(evidence["description"], transcript)
         message = data["observed"]["answers_submitted"][0]["actual_ui_message"]
         self.assertIn("omitida", message)
         self.assertEqual(transcript.count(message), 1)
@@ -94,6 +100,7 @@ class PublicEvidenceTests(unittest.TestCase):
         self.assertEqual(sum(bool(card.get("prompt_observed")) for card in catalog["cards"]), 55)
         report = (ROOT / "docs/validation/specialist-portability-20261020.md").read_text()
         self.assertNotRegex(report, r"/Users/[A-Za-z0-9_.-]+/")
+        self.assertIn("exemplo anonimizado; não representa o valor usado na verificação histórica", report)
 
 
 if __name__ == "__main__":
