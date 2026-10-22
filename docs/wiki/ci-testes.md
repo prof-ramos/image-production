@@ -38,3 +38,5 @@ o [run do head final](https://github.com/prof-ramos/image-production/actions/run
 comprovou os testes/preparo sem publicação. Isso supera a descrição histórica do
 CI limitado somente a testes/build para a implementação nova. Fontes adicionais:
 [relatório](../validation/automatic-release-20261020.md).
+
+Em 22/10/2026, a reaplicação da refatoração sobre `prof-ramos/image-production@f4862e59bbdf12eff6fd10c0aa57185f49729fbf` gerou `ec142f8dea70889d6edf349a92e2919e0b25575e`. Os 98 testes passaram localmente em Python 3.10 e 3.13, e o build passou. A diferença de seis testes em relação aos 92 anteriores vem da base mais recente; este registro supera a base local anterior para a entrega preparada, sem comprovar CI hospedado ou publicação. Fonte: commit e [registro da refatoração](../refactor-log.md).
