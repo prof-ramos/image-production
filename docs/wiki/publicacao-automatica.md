@@ -50,3 +50,22 @@ plano pago. A sessão aberta não foi recarregada. Fontes: run/PR acima e
 Isso supera os registros de publicação/instalação ainda não comprovadas como
 estado desse experimento. As instruções de atualização continuam distinguindo
 publicação remota, instalação local e carregamento numa sessão do host.
+
+## Refatoração publicada e instalada — 22/10/2026
+
+O [PR #17](https://github.com/prof-ramos/image-production/pull/17) integrou
+`prof-ramos/image-production@943f6e1f231a7de4dab3d251e4e64aba0322b7ba`; o
+[run 39802789986](https://github.com/prof-ramos/image-production/actions/runs/39802789986)
+concluiu testes e publicação com sucesso. Catálogo `370bdae`, payload
+`7b3e0ec4c3cfbb4fa7b417482627ce90ecfd8214`, versão
+`0.1.6-main.g943f6e1f231a7de4dab3d251e4e64aba0322b7ba`.
+
+O atualizador oficial retornou `verified: true` e a listagem Codex confirmou
+`enabled: true`. O helper instalado conferiu byte a byte com o commit integrado,
+SHA256 `7fafa24691615914b7e99dd7e197d1ffd45f3a01263ae539896fe5e59d35d2ca`.
+Na primeira tentativa houve conflito de origem do registro `image-production-local`;
+somente esse registro foi removido pelo CLI oficial antes de repetir o atualizador.
+A origem anterior exata não pôde ser recuperada na listagem/configuração consultada.
+Não houve edição manual do cache. Descoberta em nova sessão não foi verificada.
+O checkout original e seus documentos anteriores foram preservados; a entrega usou
+um worktree isolado. Relacionado: [CI e revisão](ci-testes.md).

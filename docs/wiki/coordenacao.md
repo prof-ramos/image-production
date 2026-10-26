@@ -52,3 +52,19 @@ sobre `f4862e5`, preservando as mudanças anteriores. Uma colisão de contexto d
 patch durante a edição compartilhada motivou a segunda orientação. As regras
 foram incorporadas ao [guia de coordenação](../agents/chief-of-staff.md), sem nova
 infraestrutura nem alteração de permissões.
+
+## Retrospectiva entregue — 22/10/2026
+
+Em `prof-ramos/image-production@943f6e1f231a7de4dab3d251e4e64aba0322b7ba`,
+o [PR #17](https://github.com/prof-ramos/image-production/pull/17) entregou duas
+melhorias proporcionais no guia: conferir HEAD, remoto atualizado e alterações
+locais antes da delegação; e usar um escritor por arquivo compartilhado ou aplicar
+as mudanças sequencialmente. Revisão e análise continuam podendo ocorrer em
+paralelo. A divergência entre checkout e memória e uma colisão de contexto de patch
+nesta sessão motivaram essas orientações. Fonte: [guia integrado](https://github.com/prof-ramos/image-production/blob/943f6e1f231a7de4dab3d251e4e64aba0322b7ba/docs/agents/chief-of-staff.md).
+
+A regressão de precedência de erros recebeu teste automatizado descoberto pelo CI
+existente; não foi criada outra automação para a mesma verificação. As revisões
+Standards e Spec tiveram zero achados; um ajuste documental do CodeRabbit foi
+corrigido antes da integração. O fechamento de [CI](ci-testes.md) e
+[publicação](publicacao-automatica.md) registra resultados e limites.

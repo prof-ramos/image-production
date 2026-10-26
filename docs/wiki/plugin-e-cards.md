@@ -51,6 +51,32 @@ simples. Pacote 0.1.6 instalado e habilitado pelo CLI a partir do checkout local
 independentes não substituem observação numa nova conversa. Não houve publicação
 remota. Fonte: [validação do briefing](../validation/adaptive-briefing-20261020.md).
 
+Em 2026-10-20, a conferência de
+`prof-ramos/image-production@2dc1385767cf49e6cc5be37b4435906aa7913cb7`, integrado pelo
+[PR de briefing](https://github.com/prof-ramos/image-production/pull/12), comprovou
+release remota e instalação habilitada da versão 0.1.6 com o mesmo SHA de origem;
+13 arquivos instalados conferiram com a fonte. Isso supera apenas a ausência de
+publicação e a instalação exclusivamente local do registro anterior. A fonte
+consolidada passou pela revisão independente; uma nova conversa continua sem
+homologação comportamental. Fonte: [conferência após integração](../validation/adaptive-briefing-20261020.md#conferência-após-a-integração--20102026).
+
+Em 2026-10-20, sobre a mesma fonte
+`prof-ramos/image-production@2dc1385767cf49e6cc5be37b4435906aa7913cb7`, uma conversa
+nova real no Codex CLI percorreu quatro turnos: capacidade, convite incompleto,
+resposta parcial e alteração somente da data. A skill instalada foi lida e o
+agente aguardou aprovação da redação sem reservar nem gerar. Isso supera a ausência
+de observação comportamental somente para esse percurso no CLI; não comprova a
+interface Desktop nem confiabilidade estatística. Casos e evidências estão na
+[validação observada](../validation/briefing-live-20261020.md).
+
+Na mesma data, o usuário delegou ao coordenador a decisão sobre o briefing e texto
+propostos para um piloto separado. Uma geração integrada produziu PNG opaco 2:3,
+1024×1536, com a data original 03/12. Revisões nativas técnica e visual independentes
+do mesmo SHA256 passaram, e o helper verificou o run como `approved`. Não houve
+correção, envio real pelo WhatsApp ou comparação com identidade oficial sem kit de
+marca. A geração nesta sessão é distinta da conversa CLI de teste e de suas
+fixtures sintéticas. Fonte: [piloto e seus limites](../validation/briefing-live-20261020.md).
+
 Em 2026-10-22, a revisão de privacidade substituiu identificadores privados por URNs locais e o título particular por um exemplo fictício nos documentos públicos. O nome Projeto Aurora nos registros anteriores agora é substituição editorial; não foi uma nova observação. A mensagem enviada foi omitida. Originais foram preservados fora do Git. Esta revisão da árvore atual não remove versões antigas do histórico. Fonte: [derivação pública](../validation/image-card-flows-20261020/public-derivation.json).
 
 Em 2026-10-22, a revisão de `prof-ramos/image-production@143320651d275b141e5e9ec903519f81d5f2be2d` no PR #16 identificou três ambiguidades de proveniência na correção de privacidade. A rodada seguinte qualificou os valores fictícios e o caminho anonimizado no próprio registro, sincronizou a transcrição e os hashes e preservou as perguntas e opções. Suíte local de 88 testes e revisão independente passaram; não se presume revisão externa do head posterior nem saneamento do histórico. Fonte: [triagem e limites](../validation/pr16-review-20261022.md).

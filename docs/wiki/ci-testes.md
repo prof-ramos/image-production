@@ -40,3 +40,19 @@ CI limitado somente a testes/build para a implementação nova. Fontes adicionai
 [relatório](../validation/automatic-release-20261020.md).
 
 Em 22/10/2026, a reaplicação da refatoração sobre `prof-ramos/image-production@f4862e59bbdf12eff6fd10c0aa57185f49729fbf` gerou `ec142f8dea70889d6edf349a92e2919e0b25575e`. Os 98 testes passaram localmente em Python 3.10 e 3.13, e o build passou. A diferença de seis testes em relação aos 92 anteriores vem da base mais recente; este registro supera a base local anterior para a entrega preparada, sem comprovar CI hospedado ou publicação. Fonte: commit e [registro da refatoração](../refactor-log.md).
+
+## Integração da refatoração — 22/10/2026
+
+O [PR #17](https://github.com/prof-ramos/image-production/pull/17) integrou as
+reservas e transições de revisão em `prof-ramos/image-production@943f6e1f231a7de4dab3d251e4e64aba0322b7ba`.
+Sobre a base atualizada, 98 testes passaram localmente em Python 3.10 e 3.13.
+O [CI final do PR](https://github.com/prof-ramos/image-production/actions/runs/39801971455)
+e o [CI da main](https://github.com/prof-ramos/image-production/actions/runs/39802789986)
+passaram; cada runtime hospedado registrou 98 testes, com um skip do ensaio nativo
+Codex por ausência desse CLI opcional no runner. Standards e Spec tiveram zero
+achados. CodeRabbit revisou `6e13c6f` e apontou uma nota documental, corrigida em
+`f1d4155` e com thread resolvida. A correção documental recebeu revisão independente;
+a revisão complementar do bot foi bloqueada pelo intervalo mínimo, sem novo envio.
+Fonte: [triagem integrada](https://github.com/prof-ramos/image-production/blob/943f6e1f231a7de4dab3d251e4e64aba0322b7ba/docs/validation/pr17-review-20261022.md).
+Isso supera a limitação anterior de validação exclusivamente local desta refatoração.
+Ver [publicação e instalação](publicacao-automatica.md).

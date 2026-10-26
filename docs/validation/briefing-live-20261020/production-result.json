@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-20",
+  "execution_surface": "current Desktop session, separate from fresh CLI briefing test",
+  "mode": "built-in",
+  "authorization": "After seeing the complete proposal and exact copy, actual user replied: Voce é o coordenador, voce decide. Coordinator adopted that proposal under explicit delegation. Synthetic CLI fixture was not approval.",
+  "run_path": "work/approved-pilot-20261020/2320ec8b-0007-4dc4-a50e-b75ef1b5282c",
+  "manifest_path": "work/approved-pilot-20261020/2320ec8b-0007-4dc4-a50e-b75ef1b5282c/manifest.json",
+  "artifact_path": "work/approved-pilot-20261020/2320ec8b-0007-4dc4-a50e-b75ef1b5282c/final/asof-save-date.png",
+  "submitted_prompt_path": "work/approved-pilot-20261020/2320ec8b-0007-4dc4-a50e-b75ef1b5282c/work/submitted-prompt.txt",
+  "stored_prompt_path": "work/approved-pilot-20261020/2320ec8b-0007-4dc4-a50e-b75ef1b5282c/work/prompt-1c7f92d5-2e0b-4df0-aec9-fe5d3d559dcf.txt",
+  "state": "approved",
+  "verify_result": {
+    "valid": true,
+    "state": "approved",
+    "outputs": 1
+  },
+  "metadata": {
+    "format": "PNG",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 1803844,
+    "sha256": "d6a7ca0b992c3d31fe9a78af9f970ec233a222dd388a19289c53cd9ab2e9f5b5",
+    "has_alpha": false,
+    "transparent_pixels": 0,
+    "visible_pixels": 1572864
+  },
+  "attempt": 0,
+  "corrective_generations": 0,
+  "reviews": {
+    "technical": {
+      "report_path": "work/approved-pilot-20261020/2320ec8b-0007-4dc4-a50e-b75ef1b5282c/work/technical-review.json",
+      "candidate_sha256": "d6a7ca0b992c3d31fe9a78af9f970ec233a222dd388a19289c53cd9ab2e9f5b5",
+      "scores": {
+        "objective": 2,
+        "text_facts": 2,
+        "composition": 2,
+        "brand_reference": "na",
+        "visual_integrity": 2,
+        "preservation": "na",
+        "transparency": "na"
+      }
+    },
+    "visual": {
+      "report_path": "work/approved-pilot-20261020/2320ec8b-0007-4dc4-a50e-b75ef1b5282c/work/visual-review.json",
+      "candidate_sha256": "d6a7ca0b992c3d31fe9a78af9f970ec233a222dd388a19289c53cd9ab2e9f5b5",
+      "scores": {
+        "objective": 2,
+        "text_facts": 2,
+        "composition": 2,
+        "brand_reference": "na",
+        "visual_integrity": 2,
+        "preservation": "na",
+        "transparency": "na"
+      }
+    }
+  },
+  "limits": [
+    "Actual WhatsApp transmission, compression and UI not tested",
+    "No supplied brand kit: no ASOF identity fidelity claim",
+    "Production was separate from synthetic CLI test conversation"
+  ]
+}

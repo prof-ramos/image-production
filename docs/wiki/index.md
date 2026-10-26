@@ -4,10 +4,10 @@ Em 2026-10-20 o usuário aprovou esta wiki em `docs/wiki/` e OptMem como índice
 
 ## Decisões
 
-- [Publicação automática](publicacao-automatica.md) — implementação rastreável, primeira publicação e instalação verificadas.
+- [Publicação automática](publicacao-automatica.md) — implementação rastreável e publicação/instalação da refatoração verificadas em 22/10/2026.
 
 - [Memória local](memoria-local.md) — autorização, instalação reproduzível e uso do OptMem fora da distribuição do plugin.
-- [Base do plugin e cards](plugin-e-cards.md) — fonte canônica, publicação pela main planejada e limites da coleta de prompts.
+- [Base do plugin e cards](plugin-e-cards.md) — fonte canônica, histórico dos cards, distribuição e validação observada do briefing adaptativo.
 
 ## Operação
 
@@ -15,7 +15,7 @@ Em 2026-10-20 o usuário aprovou esta wiki em `docs/wiki/` e OptMem como índice
 
 - [Integração à main](execucao-main.md) — autorização, checkpoints e bloqueios de publicação/revisão.
 
-- [Coordenação do projeto](coordenacao.md) — papel chief_of_staff, delegação proporcional, limites de ativação e retrospectiva da refatoração de 22/10/2026.
+- [Coordenação do projeto](coordenacao.md) — papel chief_of_staff, delegação proporcional, limites de ativação e retrospectiva entregue no PR #17.
 
 - [Guia do desenvolvedor](../guia-do-desenvolvedor.md) — configuração, estrutura, desenvolvimento, testes e diagnóstico.
 

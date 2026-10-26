@@ -1,0 +1,97 @@
+{
+  "date": "2026-10-20",
+  "kind": "observed_fresh_codex_cli_conversation",
+  "repository_commit": "2dc1385767cf49e6cc5be37b4435906aa7913cb7",
+  "plugin_version": "0.1.6-main.g2dc1385767cf49e6cc5be37b4435906aa7913cb7",
+  "cli_version": "0.163.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "low",
+  "sandbox": "read-only",
+  "approval_policy": "never",
+  "configuration_overrides": false,
+  "cases": [
+    {
+      "id": "asof-live-1",
+      "input": "@Image Production você consegue gerar criativos para redes sociais?",
+      "input_origin": "original_reproduction_fixture",
+      "same_conversation": true,
+      "expected": [
+        "Responder capacidade e pedir objetivo/canal/contexto sem produzir"
+      ],
+      "observed_response": "Sim. Consigo criar imagens para posts, carrosséis, stories e anúncios, adaptadas à identidade visual da sua marca.\n\nMe diga **o que você quer divulgar, em qual rede social e qual resultado busca** — por exemplo, vender, atrair seguidores ou anunciar uma novidade. Se tiver logo ou referências, pode enviar também.",
+      "observed_commands": [],
+      "completed": true,
+      "generation_or_prepare_observed": false,
+      "status": "pass",
+      "raw_jsonl_sha256": "18e55a8b22e87ee997da1e4cc78e345809c71d57f8d0ead0a5c2eecef80bc282"
+    },
+    {
+      "id": "asof-live-2",
+      "input": "Convite para o evento de fim de ano da ASOF dia 03/12 no Mundial (apenas evento ficticio)",
+      "input_origin": "original_reproduction_fixture",
+      "same_conversation": true,
+      "expected": [
+        "Reutilizar ASOF, 03/12 e Mundial",
+        "Perguntar lacunas de canal/público/materiais/informações/estilo",
+        "Propor redação para aprovação e aguardar",
+        "Não reservar tentativa nem gerar"
+      ],
+      "observed_response": "Temos **ASOF, 03/12 e Mundial**. Para preparar a arte, me diga:\n\n- Vai para feed, story ou WhatsApp? Quem receberá?\n- Usamos logo da ASOF ou seguimos sem logo?\n- Incluímos horário e endereço ou apenas data e local?\n- Prefere um visual **elegante e festivo**, institucional ou descontraído?\n\nSugiro este texto para sua aprovação:\n\n**Você é nosso convidado!**  \n**Evento de fim de ano da ASOF**  \n**03/12 • Mundial**",
+      "observed_commands": [
+        {
+          "kind": "read_installed_skill"
+        },
+        {
+          "kind": "read_installed_communication_brief"
+        }
+      ],
+      "completed": true,
+      "generation_or_prepare_observed": false,
+      "status": "pass_with_ux_observation",
+      "raw_jsonl_sha256": "01ee5232aa6f70479edffcd31b16806f84edaa09c9376a7c6e1ad25bf541ae8c"
+    },
+    {
+      "id": "asof-live-3",
+      "input": "WhatsApp, associados, só reservar a data; sem logo. Pode escolher o estilo. Não temos horário ainda.",
+      "input_origin": "synthetic_fixture_not_user_preferences_or_approval",
+      "same_conversation": true,
+      "expected": [
+        "Preservar respostas anteriores e novas",
+        "Não repetir perguntas sobre canal/público/logo/horário/estilo delegado",
+        "Propor texto de reserva de data para aprovação",
+        "Não gerar com texto ainda não aprovado"
+      ],
+      "observed_response": "Vou seguir com um visual elegante e festivo, em formato vertical para WhatsApp, sem logo e sem horário.\n\nAprova este texto?\n\n**RESERVE A DATA**  \n**Confraternização de fim de ano da ASOF**  \n**03/12 • Mundial**\n\nO [fluxo do Image Production](<installed-plugin>/references/communication-brief.md) exige aprovação da redação antes de gerar: “obtain approval of the exact wording before image production”.",
+      "observed_commands": [],
+      "completed": true,
+      "generation_or_prepare_observed": false,
+      "status": "pass_with_ux_observation",
+      "raw_jsonl_sha256": "e6a605385af9d9b879ea924206d210fcfe3eb28b8faeae7175d8feb93db98510",
+      "response_sanitization": "Machine-specific installed plugin path normalized to <installed-plugin>; this response field is not the exact raw transcript. Exact response and raw JSONL whose hash is recorded remain in ignored work/briefing-live-20261020/."
+    },
+    {
+      "id": "asof-live-4",
+      "input": "Corrigindo apenas a data: será 04/12, no mesmo local.",
+      "input_origin": "synthetic_fixture_not_user_preferences_or_approval",
+      "same_conversation": true,
+      "expected": [
+        "Atualizar somente data, mantendo local e demais decisões",
+        "Manter texto alterado aguardando aprovação",
+        "Não reiniciar briefing nem gerar"
+      ],
+      "observed_response": "Data atualizada para **04/12**, no Mundial. O texto fica assim, ainda para sua aprovação:\n\n**RESERVE A DATA**  \n**Confraternização de fim de ano da ASOF**  \n**04/12 • Mundial**",
+      "observed_commands": [],
+      "completed": true,
+      "generation_or_prepare_observed": false,
+      "status": "pass",
+      "raw_jsonl_sha256": "92b27a11118dc3c5e82c237f1e9cc83fe3ca4445cf0737e0ef52d9d817593a91"
+    }
+  ],
+  "limits": [
+    "Not a Codex Desktop UI conversation",
+    "No artwork copy approved; no image generated",
+    "Integrated image tool availability not exercised",
+    "Single model/one conversation, not statistical reliability",
+    "No automatic behavioral test harness or red-green regression claimed"
+  ]
+}

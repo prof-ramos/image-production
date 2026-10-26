@@ -44,3 +44,28 @@ conversa para carregar a skill atualizada. As simulações verificam interpreta�
 das instruções; não são homologação do comportamento de uma nova conversa nem
 avaliação visual de imagens. O gate é conversacional, não uma validação automática
 de prontidão de negócio pelo helper.
+
+## Conferência após a integração — 20/10/2026
+
+O [PR de briefing](https://github.com/prof-ramos/image-production/pull/12) foi
+integrado em `prof-ramos/image-production@2dc1385767cf49e6cc5be37b4435906aa7913cb7`.
+Isso supera o checkpoint anterior de ausência de publicação remota e instalação
+somente pelo checkout. A release e a instalação habilitada pelo marketplace Git
+apontam à versão `0.1.6-main.g2dc1385767cf49e6cc5be37b4435906aa7913cb7`;
+inventário e SHA256 dos 13 arquivos instalados conferiram com a fonte. Não foi
+necessária nova instalação nesta conferência.
+
+O [CI do merge](https://github.com/prof-ramos/image-production/actions/runs/39442317079)
+passou. A revisão independente da fonte consolidada não identificou bloqueadores
+de UX. O [achado do Codex](https://github.com/prof-ramos/image-production/pull/12#discussion_r4326318035)
+sobre o atalho no README foi corrigido em `c9dc161`; o resumo do bot ainda se refere
+ao head anterior `53eafe8`. O CodeRabbit retornou alteração de base/head e não há
+evidência suficiente de revisão substantiva concluída. Não se declara aprovação
+de nenhum bot no novo head. A conferência não gerou imagens nem observou uma nova
+conversa; preserva-se esse limite da validação comportamental.
+
+Uma etapa posterior de 20/10/2026 observou quatro turnos numa conversa CLI nova e
+produziu um piloto separado nesta sessão com duas revisões independentes. Ver
+[resultados observados e limites](briefing-live-20261020.md). Essa evidência supera
+a ausência de observação apenas nos percursos efetivamente descritos; não deve ser
+interpretada como teste da interface Desktop ou de envio pelo WhatsApp.
