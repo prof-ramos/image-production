@@ -1,4 +1,4 @@
-# Project roles only: merge these tables into an existing config; never replace it.
+# Project configuration: when installing roles elsewhere, merge only the [agents.*] tables.
 # Keep any lower existing concurrency cap. Project coordination permits at most two workers.
 
 [agents.chief_of_staff]
@@ -28,3 +28,8 @@ config_file = "agents/image_director.toml"
 [agents.image_eval_designer]
 description = "Design bounded evaluations and audit image workflow regressions without generating images."
 config_file = "agents/image_eval_designer.toml"
+
+# This repository loads the canonical .agents/skills/image-production copy.
+# Keep the installed plugin available elsewhere without loading it twice here.
+[plugins."image-production@image-production-local"]
+enabled = false

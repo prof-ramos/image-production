@@ -80,3 +80,21 @@ fixtures sintéticas. Fonte: [piloto e seus limites](../validation/briefing-live
 Em 2026-10-22, a revisão de privacidade substituiu identificadores privados por URNs locais e o título particular por um exemplo fictício nos documentos públicos. O nome Projeto Aurora nos registros anteriores agora é substituição editorial; não foi uma nova observação. A mensagem enviada foi omitida. Originais foram preservados fora do Git. Esta revisão da árvore atual não remove versões antigas do histórico. Fonte: [derivação pública](../validation/image-card-flows-20261020/public-derivation.json).
 
 Em 2026-10-22, a revisão de `prof-ramos/image-production@143320651d275b141e5e9ec903519f81d5f2be2d` no PR #16 identificou três ambiguidades de proveniência na correção de privacidade. A rodada seguinte qualificou os valores fictícios e o caminho anonimizado no próprio registro, sincronizou a transcrição e os hashes e preservou as perguntas e opções. Suíte local de 88 testes e revisão independente passaram; não se presume revisão externa do head posterior nem saneamento do histórico. Fonte: [triagem e limites](../validation/pr16-review-20261022.md).
+
+## Carregamento sem duplicação — 26/10/2026
+
+Sobre `prof-ramos/image-production@f71fe5fe544c4fecb673b0b043afc77cec172f1f`
+mais o ajuste de configuração desta limpeza, `skill-cleaner` identificou duas
+cópias idênticas de `image-production` no inventário do Codex CLI: fonte do projeto
+e plugin instalado. O override em [`.codex/config.toml`](../../.codex/config.toml)
+desativa o plugin somente neste projeto, preservando a fonte canônica e a
+instalação global. Não houve edição nem remoção de arquivos no cache do Codex.
+
+A releitura do inventário CLI confirmou uma única cópia e redução de 39 para 38
+skills, com estimativa do analisador de 2.720 para 2.629 tokens. Esses números
+pertencem ao inventário CLI consultado, não ao catálogo desta sessão Desktop.
+A varredura foi ampliada explicitamente para `~/.agents/skills` e a fonte local,
+pois os caminhos padrão do analisador não as abrangiam. Indicações de ausência de
+uso não justificaram remoção: skills efetivamente usadas nesta sessão apareciam
+com contadores zerados. Coincidências de nomes com conteúdos diferentes foram
+preservadas. Os relatórios completos ficaram fora do Git, em diretório privado.

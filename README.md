@@ -23,6 +23,10 @@ Para atualizar, refaça o build e reinstale após incrementar a versão no manif
 
 [Verificação de instalação e descoberta do plugin](docs/validation/plugin-base-20261020.md).
 
+Neste repositório, `.codex/config.toml` desativa somente a cópia instalada do
+plugin para carregar a skill canônica uma única vez. A instalação global permanece
+disponível em outros projetos; esse ajuste não faz parte da instalação dos agentes.
+
 ## Atualização ligada à main
 
 A publicação automática em `plugin-release` foi cancelada em 26/10/2026.
