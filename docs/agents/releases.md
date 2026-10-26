@@ -1,5 +1,23 @@
 # Publicação e atualização
 
+## Estado atual — 26/10/2026
+
+O usuário cancelou a distribuição pela branch `plugin-release`. O job de
+publicação foi removido do workflow; testes, build e validação do pacote continuam.
+A branch remota de distribuição deve ser removida após essa alteração chegar à
+`main`, evitando sua recriação pelo workflow anterior.
+
+A instalação e atualização seguem pelo build local e pelos comandos do
+[README](../../README.md#instalar-o-plugin-local). O script `update_plugin.py`
+depende da branch cancelada e não deve ser usado como caminho atual de atualização.
+Não alterar diretamente o cache instalado nem reativar a publicação. Os scripts de
+release e seus testes permanecem para consulta histórica.
+
+## Referência histórica — fluxo cancelado
+
+As seções abaixo descrevem a distribuição anterior ao cancelamento. Seus comandos
+de publicação e atualização remota não representam o procedimento vigente.
+
 ## Fonte e pacote
 
 A fonte canônica fica em `.agents/skills/image-production/`. O build local mantém

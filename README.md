@@ -25,30 +25,18 @@ Para atualizar, refaça o build e reinstale após incrementar a versão no manif
 
 ## Atualização ligada à main
 
-O workflow valida testes, build e preparação do pacote em PRs e na `main`. Após
-um push na `main` aprovado pela matriz, publica plugin e skill juntos na branch
-`plugin-release`, com versão única, commit de origem e hashes. A fonte canônica
-continua em `.agents/skills/image-production/`; o marketplace do checkout serve
-ao desenvolvimento local e a distribuição usa um marketplace Git pronto para
-instalação, sem build na máquina do usuário.
+A publicação automática em `plugin-release` foi cancelada em 26/10/2026.
+O CI mantém testes, build e validação do pacote em PRs e na `main`, sem publicar.
+A fonte canônica continua em `.agents/skills/image-production/`.
 
-A publicação hospedada e a instalação real foram verificadas em 20/10/2026;
-consulte as [evidências de ativação](docs/validation/automatic-release-20261020.md#ativação-remota-e-instalação-real--20102026).
-Para instalar ou atualizar a distribuição publicada:
+Para instalar uma atualização local, refaça o build e siga os comandos de
+[instalação local](#instalar-o-plugin-local). O cache é gerenciado pelo Codex;
+inicie uma nova sessão após atualizar. Cópias avulsas da skill e configurações
+de agentes exigem sincronização explícita.
 
-```sh
-python3 scripts/update_plugin.py
-```
-
-O comando usa o CLI do Codex para migrar o marketplace `image-production-local`
-para a fonte Git, atualizar o plugin e verificar os arquivos instalados. A skill
-embutida acompanha o plugin. Inicie uma nova sessão para confirmar descoberta.
-O merge não modifica automaticamente o Codex na sua máquina.
-
-Cópias avulsas da skill exigem sincronização explícita. A release também fornece
-um bundle dos sete agentes, separado do plugin, com configuração de exemplo;
-sua instalação permanece manual, preservando a configuração local.
-Veja [publicação, rollback, atualização e limites](docs/agents/releases.md).
+O atualizador `scripts/update_plugin.py` depende da distribuição remota cancelada
+e deixou de ser o caminho de atualização. Os scripts e relatórios de release
+permanecem como histórico. Veja [publicação e atualização](docs/agents/releases.md).
 
 ## Usar no repositório
 
@@ -135,8 +123,8 @@ uv run --with-requirements requirements-dev.txt python -m unittest discover -s t
 
 O [workflow de CI](.github/workflows/ci.yml) executa essa suíte e
 `python scripts/build_plugin.py` e a preparação da release em todos os PRs,
-pushes na `main` e execução manual, com Python 3.10 e 3.13 em Ubuntu. O job publicador depende da matriz aprovada e somente roda em push na `main`;
-o workflow não configura proteção de branch nem instala o plugin na sua máquina.
+pushes na `main` e execução manual, com Python 3.10 e 3.13 em Ubuntu. O workflow
+não publica, não configura proteção de branch nem instala o plugin na sua máquina.
 
 Os testes CLI de CodeRabbit usam um executável `gh` isolado, sem tokens ou rede,
 para cobrir paginação, falha de envio, deduplicação e mudança de commit.

@@ -1,5 +1,14 @@
 # Publicação automática — implementação de 2026-10-20
 
+## Cancelamento — 26/10/2026
+
+O usuário informou que `plugin-release` foi cancelado. Esta decisão supera a
+ativação registrada abaixo: publicação automática desativada, com testes, build e
+validação do pacote preservados no CI. A instalação passa a seguir o build local;
+a distribuição remota e seu atualizador deixam de ser o procedimento vigente.
+Fonte: instrução do usuário nesta sessão e [workflow](../../.github/workflows/ci.yml).
+Ver [procedimento atual](../agents/releases.md). Os registros abaixo são históricos.
+
 Em 2026-10-20 o usuário autorizou implementar publicação automática do plugin e
 da skill após integração à main. No commit
 `prof-ramos/image-production@89895ee69bc6cddc6a91f34e29309d302a65d98d`, integrado

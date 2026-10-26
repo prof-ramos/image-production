@@ -5,9 +5,9 @@ como plugin, especialistas de projeto e utilitários Python. O helper de artefat
 é offline; a geração depende da ferramenta integrada de imagens disponível na
 sessão do Codex.
 
-A publicação automática roda no workflow após os testes da `main`. A execução
-hospedada e a instalação real foram verificadas em 20/10/2026; consulte as
-[evidências de ativação](validation/automatic-release-20261020.md#ativação-remota-e-instalação-real--20102026).
+A publicação automática foi cancelada em 26/10/2026. O workflow mantém testes,
+build e validação do pacote. A instalação segue pelo build local; consulte
+[publicação e atualização](agents/releases.md) para o estado atual e histórico.
 
 ## 1. Configuração
 
@@ -185,12 +185,11 @@ Ao preparar uma nova versão instalável, atualize a versão no manifest de orig
 refaça o build e reinstale pelo fluxo do Codex. Preserve a identidade do plugin;
 confira versão e conteúdo do pacote. Edite a fonte, não o cache instalado.
 
-O CI prepara e valida a release em PRs; após um push aprovado na `main`, o job
-publicador promove o marketplace Git na branch `plugin-release`. A instalação
-local é separada: `python3 scripts/update_plugin.py` usa o CLI do Codex e verifica
-versão e hashes. Cópias avulsas da skill e configuração de agentes exigem
-atualização explícita. Consulte [publicação e atualização](agents/releases.md)
-para ativação, recuperação e limites.
+O CI prepara e valida o pacote em PRs e na `main`, sem publicação remota.
+Use os comandos de instalação local do README após o build. O script
+`update_plugin.py` depende da branch de distribuição cancelada e não é mais o
+caminho de atualização. Cópias avulsas da skill e configuração de agentes exigem
+atualização explícita. Consulte [publicação e atualização](agents/releases.md).
 
 ## 4. Abordagem de teste
 
