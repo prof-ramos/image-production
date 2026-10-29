@@ -1,0 +1,14 @@
+{
+  "source_repository": "https://github.com/NousResearch/hermes-agent",
+  "base_commit": "d923a5eb487a17c0a68801bba9ef0f56c81040a8",
+  "preserved_commit": "0cb5f80a6ef268e8196ac6cfd184cfc32b6d04c8",
+  "patch_file": "0001-scope-codex-image-credentials.patch",
+  "patch_sha256": "56107b13d679cb93aab83eafbcb501da8c4e7a1f13b5a761283ce9dd5d2e4dae",
+  "files": {
+    "agent/auxiliary_client.py": "dad2f292bfe059573bb3f93f9d7df64eb1099dda7323f5ebe036ff94d19bbbc9",
+    "agent/auxiliary_pool.py": "13edd0e70d9f655f8530344de85ae53e8d65228a6c5e45a66c6686f3f8cf528c",
+    "plugins/image_gen/openai-codex/__init__.py": "faed7ef79e81dc7d14dff8c1936b3bcfc79951742e5b3d5e8dd9ec1494e46e7b",
+    "tests/plugins/image_gen/test_codex_image_model_cooldown.py": "7f322fd1709550c5b98a18b7f067b7692a42ec794b6a7f0c09b77941e2301426",
+    "tests/plugins/image_gen/test_openai_codex_provider.py": "097ca710b66c2fad4bef84371da24324c8aa3fb9ec13b772b25f9da00985fdff"
+  }
+}
