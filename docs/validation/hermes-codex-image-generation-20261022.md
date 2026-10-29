@@ -1,5 +1,7 @@
 # Hermes: credenciais por modelo e geração nativa
 
+> Atualização de 29/10/2026: o [patch reproduzível](../patches/hermes-image-model-cooldown/README.md) foi preservado posteriormente, com nova execução de 274 testes selecionados. O relatório abaixo mantém o alcance histórico da validação de 22/10.
+
 ## Fontes e alcance
 
 Registro da investigação e da validação realizadas na VPS, conforme a
